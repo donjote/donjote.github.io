@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Donjote" />
+
+
+
+<meta name="description" content="&amp;emsp;&amp;emsp;分布式事务是一个绕不过去的挑战！微服务架构本质上就是分布式服务化架构，微服务架构的流行，让分布式事务问题日益突出！尤其是在订单业务、资金业务等系统核心业务流程中，一定要有可靠的分布式事务解决方案来保证业务数据的可靠性和准确性。 TCC事务机制简介&amp;emsp;&amp;emsp;关于TCC（Try-Confirm-Cancel）的概念，最早是由Pat Helland于2007年发表">
+<meta name="keywords" content="架构,事务">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TCC柔性事务">
+<meta property="og:url" content="http://donjote.github.io/2017/08/30/transaction_tcc/index.html">
+<meta property="og:site_name" content="Donjote 博客">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;分布式事务是一个绕不过去的挑战！微服务架构本质上就是分布式服务化架构，微服务架构的流行，让分布式事务问题日益突出！尤其是在订单业务、资金业务等系统核心业务流程中，一定要有可靠的分布式事务解决方案来保证业务数据的可靠性和准确性。 TCC事务机制简介&amp;emsp;&amp;emsp;关于TCC（Try-Confirm-Cancel）的概念，最早是由Pat Helland于2007年发表">
+<meta property="og:image" content="http://donjote.github.io/2017/08/30/transaction_tcc/1.jpg">
+<meta property="og:image" content="http://donjote.github.io/2017/08/30/transaction_tcc/2.jpg">
+<meta property="og:image" content="http://donjote.github.io/2017/08/30/transaction_tcc/3.jpg">
+<meta property="og:image" content="http://donjote.github.io/2017/08/30/transaction_tcc/4.jpg">
+<meta property="og:updated_time" content="2018-08-03T02:59:35.917Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TCC柔性事务">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;分布式事务是一个绕不过去的挑战！微服务架构本质上就是分布式服务化架构，微服务架构的流行，让分布式事务问题日益突出！尤其是在订单业务、资金业务等系统核心业务流程中，一定要有可靠的分布式事务解决方案来保证业务数据的可靠性和准确性。 TCC事务机制简介&amp;emsp;&amp;emsp;关于TCC（Try-Confirm-Cancel）的概念，最早是由Pat Helland于2007年发表">
+<meta name="twitter:image" content="http://donjote.github.io/2017/08/30/transaction_tcc/1.jpg">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Donjote 博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>TCC柔性事务 | Donjote 博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Donjote</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:donjote@icloud.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="http://www.github.com/donjote" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Electron/">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NoSQL/">NoSQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPC/">RPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React-Native/">React Native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Restful/">Restful</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weex/">Weex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yarn/">Yarn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etcd/">etcd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gRPC/">gRPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm镜像/">npm镜像</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/事务/">事务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布式架构/">分布式架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链/">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微服务/">微服务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/敏捷开发/">敏捷开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务发现/">服务发现</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深度学习/">深度学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/神经网络/">神经网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/跨平台/">跨平台</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Donjote</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Donjote</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:donjote@icloud.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="http://www.github.com/donjote" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-transaction_tcc" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/08/30/transaction_tcc/" class="article-date">
+      <time datetime="2017-08-29T16:00:00.000Z" itemprop="datePublished">2017-08-30</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      TCC柔性事务
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/架构/">架构</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/事务/">事务</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>&emsp;&emsp;分布式事务是一个绕不过去的挑战！微服务架构本质上就是分布式服务化架构，微服务架构的流行，让分布式事务问题日益突出！尤其是在订单业务、资金业务等系统核心业务流程中，一定要有可靠的分布式事务解决方案来保证业务数据的可靠性和准确性。</p>
+<h2 id="TCC事务机制简介"><a href="#TCC事务机制简介" class="headerlink" title="TCC事务机制简介"></a>TCC事务机制简介</h2><p>&emsp;&emsp;关于TCC（Try-Confirm-Cancel）的概念，最早是由Pat Helland于2007年发表的一篇名为《Life beyond Distributed Transactions:an Apostate’s Opinion》的论文提出。在该论文中，TCC还是以Tentative-Confirmation-Cancellation作为名称；正式以Try-Confirm-Cancel作为名称的，可能是Atomikos（Gregor Hohpe所著书籍《Enterprise Integration Patterns》中收录了关于TCC的介绍，提到了Atomikos的Try-Confirm-Cancel，并认为二者是相似的概念）。</p>
+<p>&emsp;&emsp;国内最早关于TCC的报道，应该是InfoQ上对阿里程立博士的一篇采访。经过程博士的这一次传道之后，TCC在国内逐渐被大家广为了解并接受。相应的实现方案和开源框架也先后被发布出来。</p>
+<p>&emsp;&emsp;TCC事务机制相对于传统事务机制（X/Open XA），其特征在于它不依赖资源管理器(RM)对XA的支持，而是通过对（由业务系统提供的）业务逻辑的调度来实现分布式事务。对于业务系统中一个特定的业务逻辑S，其对外提供服务时，必须接受一些不确定性，即对业务逻辑执行的一次调用仅是一个临时性操作，调用它的消费方服务M保留了后续的取消权。如果M认为全局事务应该rollback，它会要求取消之前的临时性操作，这就对应S的一个取消操作。而当M认为全局事务应该commit时，它会放弃之前临时性操作的取消权，这对应S的一个确认操作。 每一个初步操作，最终都会被确认或取消。因此，针对一个具体的业务服务，TCC事务机制需要业务系统提供三段业务逻辑：初步操作Try、确认操作Confirm、取消操作Cancel。</p>
+<hr>
+<p><font color="red">1. 初步操作（Try）</font><br>&emsp;&emsp;TCC事务机制中的业务逻辑（Try），从执行阶段来看，与传统事务机制中业务逻辑相同。但从业务角度来看，是不一样的。TCC机制中的Try仅是一个初步操作，它和后续的次确认一起才能真正构成一个完整的业务逻辑。因此，可以认为[传统事务机制]的业务逻辑 = [TCC事务机制]的初步操作（Try） + [TCC事务机制]的确认逻辑（Confirm）。TCC机制将传统事务机制中的业务逻辑一分为二，拆分后保留的部分即为初步操作（Try）；而分离出的部分即为确认操作（Confirm），被延迟到事务提交阶段执行。<br>TCC事务机制以初步操作（Try）为中心，确认操作（Confirm）和取消操作（Cancel）都是围绕初步操作（Try）而展开。因此，Try阶段中的操作，其保障性是最好的，即使失败，仍然有取消操作（Cancel）可以将其不良影响进行回撤。</p>
+<p><font color="red">2. 确认操作（Confirm）</font><br>&emsp;&emsp;确认操作（Confirm）是对初步操作（Try）的一个补充。当TCC事务管理器认为全局事务可以正确提交时，就会逐个执行初步操作（Try）指定的确认操作（Confirm），将初步操作（Try）未完成的事项最终完成。</p>
+<p><font color="red">3. 取消操作（Cancel）</font><br>&emsp;&emsp;取消操作（Cancel）是对初步操作（Try）的一个回撤。当TCC事务管理器认为全局事务不能正确提交时，就会逐个执行初步操作（Try）指定的取消操作（Cancel），将初步操作（Try）已完成的事项全部撤回。</p>
+</blockquote>
+<h2 id="支付宝运营架构中柔性事务"><a href="#支付宝运营架构中柔性事务" class="headerlink" title="支付宝运营架构中柔性事务"></a>支付宝运营架构中柔性事务</h2><blockquote>
+<ul>
+<li><font color="red">柔性事务：业务活动</font><blockquote>
+<p><img src="/2017/08/30/transaction_tcc/1.jpg" alt="柔性事务：业务活动"></p>
+</blockquote>
+</li>
+<li><font color="red">柔性事务：业务活动举例</font><br><img src="/2017/08/30/transaction_tcc/2.jpg" alt="柔性事务：业务活动举例"></li>
+<li><font color="red">柔性事务：TCC型业务服务</font><blockquote>
+<p><img src="/2017/08/30/transaction_tcc/3.jpg" alt="柔性事务：TCC型业务服务"></p>
+</blockquote>
+</li>
+<li><font color="red">柔性事务：TCC服务事务协调模式</font><blockquote>
+<p><img src="/2017/08/30/transaction_tcc/4.jpg" alt="柔性事务：TCC服务事务协调模式"><br>&emsp;&emsp;可以看出，柔性事务（<a href="http://localhost:4000/2017/08/25/cap/#BASE" target="_blank" rel="external">遵循BASE理论</a>）是指相对于<a href="http://localhost:4000/2017/07/08/transaction/#事务的-ACID" target="_blank" rel="external">ACID刚性事务</a>而言的。</p>
+</blockquote>
+</li>
+</ul>
+<p>&emsp;&emsp;支付宝所说的柔性事务分为：两阶段型、补偿型、异步确保型、最大努力通知型几种。由于支付宝整个架构是SOA架构，因此传统单机环境下数据库的ACID事务满足了分布式环境下的业务需要，以上几种事务类似就是针对分布式环境下业务需要设定的。其中：<br>1、两阶段型：就是分布式事务两阶段提交，对应技术上的XA、JTA/JTS。这是分布式环境下事务处理的典型模式。<br>2、补偿型：TCC型事务（Try/Confirm/Cancel）可以归为补偿型。补偿型的例子，在一个长事务（long-running）中，一个由两台服务器一起参与的事务，服务器A发起事务，服务器B参与事务，B的事务需要人工参与，所以处理时间可能很长。如果按照ACID的原则，要保持事务的隔离性、一致性，服务器A中发起的事务中使用到的事务资源将会被锁定，不允许其他应用访问到事务过程中的中间结果，直到整个事务被提交或者回滚。这就造成事务A中的资源被长时间锁定，系统的可用性将不可接受。WS-BusinessActivity提供了一种基于补偿的long-running的事务处理模型。还是上面的例子，服务器A的事务如果执行顺利，那么事务A就先行提交，如果事务B也执行顺利，则事务B也提交，整个事务就算完成。但是如果事务B执行失败，事务B本身回滚，这时事务A已经被提交，所以需要执行一个补偿操作，将已经提交的事务A执行的操作作反操作，恢复到未执行前事务A的状态。这样的SAGA事务模型，是牺牲了一定的隔离性和一致性的，但是提高了long-running事务的可用性。例子来源：OASIS的WS-BusinessActivity文档<br>3、异步确保型将一些同步阻塞的事务操作变为异步的操作，避免对数据库事务的争用，典型例子是热点账户异步记账、批量记账的处理。<br>4、最大努力型PPT中提到的例子交易的消息通知（例如商户交易结果通知重试、补单重试）</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p> <a href="https://wenku.baidu.com/view/be946bec0975f46527d3e104.html" target="_blank" rel="external">大规模SOA系统中的分布事务处事</a><br> <a href="https://wenku.baidu.com/view/d1bbd25877232f60ddcca1d9.html" target="_blank" rel="external">支付宝架构与技术</a></p>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/08/30/docker/">
+                    docker简介
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/08/25/mongodb/">
+                    MongoDB 简介
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#TCC事务机制简介"><span class="toc-number">1.</span> <span class="toc-text">TCC事务机制简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#支付宝运营架构中柔性事务"><span class="toc-number">2.</span> <span class="toc-text">支付宝运营架构中柔性事务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">3.</span> <span class="toc-text">参考</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"TCC柔性事务　| Donjote 博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/08/30/docker/" title="上一篇: docker简介">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/08/25/mongodb/" title="下一篇: MongoDB 简介">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/06/blockchain_1/">什么是区块链</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/01/restful/">RESTful API 设计指南[引用]</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/31/git/">Git使用简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/30/docker/">docker简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/30/transaction_tcc/">TCC柔性事务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/25/mongodb/">MongoDB 简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/25/nosql/">NoSQL 简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/25/cap/">CAP定理（CAP theorem）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/25/thymeleaf/">thymeleaf 使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/24/grpc_service/">gRPC服务方法的定义</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/23/grpc_introdution/">gRPC入门简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/14/tensorflow_2/">TensorFlow入门：安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/14/tensorflow_1/">TensorFlow入门：简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/13/golang_vendor/">Golang包管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/13/golang_install/">Golang简介与环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/12/deep_learning_phylogeny/">深度学习：神经网络发展史</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/11/docker_machine_mirror/">在 Docker Machine 中使用 Mirror 服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/11/etcd_1/">etcd概述和使用场景</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/11/etcd_2/">使用docker-machine搭建etcd集群</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/10/yarn/">Yarn介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/electron_install/">快速搭建Electron开发环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/electron_introdution/">Electron入门简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/08/transaction/">事务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/07/idempotent/">幂等性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/06/agile_development/">敏捷开发</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/05/nodejs_install_config/">Nodejs安装并配置淘宝镜像</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/04/weex_react_native/">Weex、React Native 对比</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/04/micro_services_1/">微服务简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/04/harbor/">企业级 Docker Registry--harbor安装和简单使用</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017-2018 Donjote
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 3;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

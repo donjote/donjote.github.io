@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Donjote" />
+
+
+
+<meta name="description" content="互联网的贸易，几乎都需要借助可资信赖的第三方信用机构来处理电子支付信息。这类系统仍然内生性地受制于“基于信用的模式”。区块链技术是构建比特币区块链网络与交易信息和加密传输的基础技术。它基于密码学原理而不基于信用，使得任何达成一致的双方直接支付，从而不需要第三方中介的参与。  区块链起源 区块链技术起源于2008年中本聪《比特币：一种点对点电子现金系统》，区块链诞生自中本聪的比特币。  拜占庭将军">
+<meta name="keywords" content="区块链">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是区块链">
+<meta property="og:url" content="http://donjote.github.io/2018/08/06/blockchain_1/index.html">
+<meta property="og:site_name" content="Donjote 博客">
+<meta property="og:description" content="互联网的贸易，几乎都需要借助可资信赖的第三方信用机构来处理电子支付信息。这类系统仍然内生性地受制于“基于信用的模式”。区块链技术是构建比特币区块链网络与交易信息和加密传输的基础技术。它基于密码学原理而不基于信用，使得任何达成一致的双方直接支付，从而不需要第三方中介的参与。  区块链起源 区块链技术起源于2008年中本聪《比特币：一种点对点电子现金系统》，区块链诞生自中本聪的比特币。  拜占庭将军">
+<meta property="og:updated_time" content="2018-08-06T06:30:31.568Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="什么是区块链">
+<meta name="twitter:description" content="互联网的贸易，几乎都需要借助可资信赖的第三方信用机构来处理电子支付信息。这类系统仍然内生性地受制于“基于信用的模式”。区块链技术是构建比特币区块链网络与交易信息和加密传输的基础技术。它基于密码学原理而不基于信用，使得任何达成一致的双方直接支付，从而不需要第三方中介的参与。  区块链起源 区块链技术起源于2008年中本聪《比特币：一种点对点电子现金系统》，区块链诞生自中本聪的比特币。  拜占庭将军">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Donjote 博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>什么是区块链 | Donjote 博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Donjote</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:donjote@icloud.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="http://www.github.com/donjote" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Electron/">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NoSQL/">NoSQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPC/">RPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React-Native/">React Native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Restful/">Restful</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weex/">Weex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yarn/">Yarn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etcd/">etcd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gRPC/">gRPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm镜像/">npm镜像</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/事务/">事务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布式架构/">分布式架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链/">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微服务/">微服务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/敏捷开发/">敏捷开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务发现/">服务发现</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深度学习/">深度学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/神经网络/">神经网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/跨平台/">跨平台</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Donjote</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Donjote</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:donjote@icloud.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="http://www.github.com/donjote" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-blockchain_1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/06/blockchain_1/" class="article-date">
+      <time datetime="2018-08-05T16:00:00.000Z" itemprop="datePublished">2018-08-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      什么是区块链
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/区块链/">区块链</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>互联网的贸易，几乎都需要借助可资信赖的<font color="red"><strong>第三方信用机构</strong></font>来处理电子支付信息。这类系统仍然内生性地受制于“基于信用的模式”。<br>区块链技术是构建比特币区块链网络与交易信息和加密传输的基础技术。它基于密码学原理而不基于信用，使得任何达成一致的<font color="red"><strong>双方直接支付</strong></font>，从而不需要第三方中介的参与。</p>
+</blockquote>
+<h2 id="区块链起源"><a href="#区块链起源" class="headerlink" title="区块链起源"></a>区块链起源</h2><blockquote>
+<p>区块链技术起源于2008年中本聪《比特币：一种点对点电子现金系统》，区块链诞生自中本聪的比特币。</p>
+</blockquote>
+<h2 id="拜占庭将军问题"><a href="#拜占庭将军问题" class="headerlink" title="拜占庭将军问题"></a>拜占庭将军问题</h2><blockquote>
+<p>拜占庭帝国派10支军队进攻一敌人，这个敌人可抵御5支军队同时攻击，这10支军队不能集合单点突破，须分开同时攻击。问题是多个将军相互并不信任(存在叛徒)时，这种状态下要保证进攻一致，需要某种分布式协议来进行远程协调。如果每个将军向其他九个将军派出一名信使，总计90次传输，每个将军会收到9条信息，可能每一封都附着不同的进攻时间。此外，部分叛徒会故意答应超过一个的攻击时间，所以他们将重新广播超过一条的信息链。这个系统变成不可靠信息和攻击时间矛盾的混合体。</p>
+<ul>
+<li>解决思路<br>拜占庭将军故事的最后，数学家设计了一套算法，让将军们在接到上一位将军的信息之后，加上自己的签名再转给自己之外的其他将军，这样的信息模块就形成了<font color="blue"><strong>区块链</strong></font>。</li>
+</ul>
+</blockquote>
+<h2 id="区块链引言"><a href="#区块链引言" class="headerlink" title="区块链引言"></a>区块链引言</h2><blockquote>
+<ul>
+<li>拜占庭将军问题延伸至互联网生活，即：在互联网大背景下，当需要与不熟悉的对手进行价值交换活动时，人们如何才能防止不会被其中的恶意破坏欺骗、迷惑从而错误决策。</li>
+<li>再把该问题抽象化，理解为：在缺少可信任中央节点和可信任通道情况下，分布在网络中的各节点应如何达成共识。</li>
+<li>这一对拜占庭将军问题的解决方案，可以推广到任何核心问题是在分布式网络上缺乏信任的领域。</li>
+</ul>
+</blockquote>
+<h2 id="区块链的目的：用于验证其信息的有效性（防伪）"><a href="#区块链的目的：用于验证其信息的有效性（防伪）" class="headerlink" title="区块链的目的：用于验证其信息的有效性（防伪）"></a><font color="red"><strong>区块链的目的：用于验证其信息的有效性（防伪）</strong></font></h2><h2 id="什么是区块链"><a href="#什么是区块链" class="headerlink" title="什么是区块链"></a>什么是区块链</h2><blockquote>
+<p>区块链是比特币的底层技术，像一个数据库账本，记载所有的交易记录。</p>
+<hr>
+<p>在一个40人以上的微信群里组局聚餐，如何统计人数？一种方式是大家纷纷发言，有个人来统计；另一种方式是大家接龙，每个人在上一个人的发言后面累加一个号并加上自己的名字，最后就能记录全部的报名人员和人数–》区块链。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>微信组局</th>
+<th>在区块链里的概念</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>接龙发帖</td>
+<td>链式数据结构（1）</td>
+</tr>
+<tr>
+<td>规则：每个人发帖 = 上一个帖子内容 + 下一个编号 + 自己的名字</td>
+<td>共识机制，根据严格的规则和公开的协议形成</td>
+</tr>
+<tr>
+<td>规则定下来后，大家自发登记</td>
+<td>去中心化，没有任何单一用户能够控制它</td>
+</tr>
+<tr>
+<td>在微信群里记录登记情况</td>
+<td>点对点对等网络</td>
+</tr>
+<tr>
+<td>只要联网就能得知最新进展</td>
+<td>博弈机制（2）</td>
+</tr>
+<tr>
+<td>为了形成40个人的报名记录，至少要有40人发40篇帖子才够，群友手机里都存档</td>
+<td>分布式（多点备份）、高冗余</td>
+</tr>
+<tr>
+<td>每篇帖子大家都看得见，更新的记录是否数字错了，人重复了，每个人都可以检查</td>
+<td>共享账薄</td>
+</tr>
+<tr>
+<td>群里的人大家都认识，各有各的名字/代号</td>
+<td>通过非对称加密技术保证陌生人可信（3）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>区块链中的“区块”指的是信息块，这个信息块内包含有一个特殊的信息就是时间戳。含有时间戳的信息块彼此互联，形成的信息块链条被称为“区块链”。</strong></p>
+<ul>
+<li>一是数据结构，接龙发帖只记录“上一贴加1”这个简单计算，而区块链里记账的信息会复杂的多，每一个区块记录了上一个区块、时间戳、从上一个区块到这个区块之间发生的所有交易记录。</li>
+<li>二是博弈机制，用来解决链式结构万一遇到分叉了怎么办？在微信组局的情景里，如果有两人同时发帖、或者有人因为网络延迟导致没有在最新的帖子后面跟帖导致重号怎么办？很自然的办法就是，哪个跟帖跟的多，以哪个为准；出现重复的人乖乖到较多的哪个跟帖后面写上自己的跟帖。区块链里也基本一样，以一定时间为限，哪条分叉较长就以哪个为准进行记录，较短的分叉上记录的交易作废，推迟到下一个时间段里记的账里。</li>
+<li>三是非对称加密技术，用来解决陌生人之间的信任问题。这是跟微信组局最大的不同，微信的认证帮助用户做了过滤，群里的都是熟人/可信的人。在区块链里利用哈希、PKI公钥体系为每个人制作了一个唯一密码生成的唯一地址，功能类似于国内网银用的“U盾”，凡是用这个”U盾”接入区块链的，就可以进行交易，别人能识别你的身份，但是无法伪装成你。这样解决了信任体系的问题。<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2>区块链是一个<font color="red">分布式账本</font>，一种通过<font color="red">去中心化、去信任</font>的方式集体维护一个可靠数据库的技术方案。<h3 id="从数据的角度来看"><a href="#从数据的角度来看" class="headerlink" title="从数据的角度来看"></a>从数据的角度来看</h3>区块链是一种几乎不可能被更改的分布式数据库。这里的“分布式”不仅体现为数据的<font color="red">分布式存储</font>，也体现为数据的<font color="red">分布式记录</font>（即由系统参与者共同维护）。<h3 id="从技术的角度来看"><a href="#从技术的角度来看" class="headerlink" title="从技术的角度来看"></a>从技术的角度来看</h3>区块链并不是一种单一的技术，而是<font color="red">多种技术整合</font>的结果。这些技术以新的结构组合在一起，形成了一种新的数据记录、存储和表达的方式。<h2 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h2><h3 id="开放，共识"><a href="#开放，共识" class="headerlink" title="开放，共识"></a>开放，共识</h3>任何人都可以参与到区块链网络，每一台设备都能作为一个节点，每个节点都允许后的一份完整的数据库拷贝。节点间基于一同共识机制，通过竞争计算共同维护整个区块链。任一节点失效，其他节点仍能正常工作。<h3 id="去中心，去信任"><a href="#去中心，去信任" class="headerlink" title="去中心，去信任"></a>去中心，去信任</h3>区块链由众多节点共同组成一个端到端的网络，不存在中心化的设备和管理机构。节点之间数据交换通过数字签名技术进行验证，无需互相信任，只要按照系统既定的规则进行，节点之间不能也无法欺骗其它节点。<h3 id="交易透明，双方匿名"><a href="#交易透明，双方匿名" class="headerlink" title="交易透明，双方匿名"></a>交易透明，双方匿名</h3>区块链的运行规则是公开透明的，所有的数据信息也是公开的，因此每一笔交易都对所有节点可见。由于节点与节点之间是去信任的，因此节点之间无需公开身份，每个参与的节点都是匿名的。<h3 id="不可篡改，可追溯"><a href="#不可篡改，可追溯" class="headerlink" title="不可篡改，可追溯"></a>不可篡改，可追溯</h3>单个甚至多个节点对数据库的修改无法影响其他节点的数据库，除非能控制整个网络中超过51%的节点同时修改，这几乎不可能发生。区块链中的每一笔交易都通过密码学方法与相邻两个区块串联，因此可以追溯到任何一笔交易的前世今生。<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="公有链"><a href="#公有链" class="headerlink" title="公有链"></a>公有链</h3>无官方组织及管理机构，无中心服务器，参与的节点按照系统规则自由接入网络、不受控制，节点间基于共识机制开展工作。<h3 id="私有链"><a href="#私有链" class="headerlink" title="私有链"></a>私有链</h3>建立在某个企业内部，系统的运作规则根据企业要求进行设定，修改甚至是读取权限仅限于少数节点，同时仍然保留着区块链的真实性和部分去中心化的特性。<h3 id="联盟链"><a href="#联盟链" class="headerlink" title="联盟链"></a>联盟链</h3>由若干机构联合发起，介于公有链和私有链之间，兼具部分去中心化的特性。</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/09/01/restful/">
+                    RESTful API 设计指南[引用]
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#区块链起源"><span class="toc-number">1.</span> <span class="toc-text">区块链起源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拜占庭将军问题"><span class="toc-number">2.</span> <span class="toc-text">拜占庭将军问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#区块链引言"><span class="toc-number">3.</span> <span class="toc-text">区块链引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#区块链的目的：用于验证其信息的有效性（防伪）"><span class="toc-number">4.</span> <span class="toc-text">区块链的目的：用于验证其信息的有效性（防伪）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是区块链"><span class="toc-number">5.</span> <span class="toc-text">什么是区块链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#定义"><span class="toc-number">6.</span> <span class="toc-text">定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#从数据的角度来看"><span class="toc-number">6.1.</span> <span class="toc-text">从数据的角度来看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#从技术的角度来看"><span class="toc-number">6.2.</span> <span class="toc-text">从技术的角度来看</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特征"><span class="toc-number">7.</span> <span class="toc-text">特征</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#开放，共识"><span class="toc-number">7.1.</span> <span class="toc-text">开放，共识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#去中心，去信任"><span class="toc-number">7.2.</span> <span class="toc-text">去中心，去信任</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#交易透明，双方匿名"><span class="toc-number">7.3.</span> <span class="toc-text">交易透明，双方匿名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#不可篡改，可追溯"><span class="toc-number">7.4.</span> <span class="toc-text">不可篡改，可追溯</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分类"><span class="toc-number">8.</span> <span class="toc-text">分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#公有链"><span class="toc-number">8.1.</span> <span class="toc-text">公有链</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#私有链"><span class="toc-number">8.2.</span> <span class="toc-text">私有链</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#联盟链"><span class="toc-number">8.3.</span> <span class="toc-text">联盟链</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"什么是区块链　| Donjote 博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/09/01/restful/" title="下一篇: RESTful API 设计指南[引用]">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/06/blockchain_1/">什么是区块链</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/01/restful/">RESTful API 设计指南[引用]</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/31/git/">Git使用简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/30/docker/">docker简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/30/transaction_tcc/">TCC柔性事务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/25/mongodb/">MongoDB 简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/25/nosql/">NoSQL 简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/25/cap/">CAP定理（CAP theorem）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/25/thymeleaf/">thymeleaf 使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/24/grpc_service/">gRPC服务方法的定义</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/23/grpc_introdution/">gRPC入门简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/14/tensorflow_2/">TensorFlow入门：安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/14/tensorflow_1/">TensorFlow入门：简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/13/golang_vendor/">Golang包管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/13/golang_install/">Golang简介与环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/12/deep_learning_phylogeny/">深度学习：神经网络发展史</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/11/docker_machine_mirror/">在 Docker Machine 中使用 Mirror 服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/11/etcd_1/">etcd概述和使用场景</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/11/etcd_2/">使用docker-machine搭建etcd集群</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/10/yarn/">Yarn介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/electron_install/">快速搭建Electron开发环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/electron_introdution/">Electron入门简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/08/transaction/">事务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/07/idempotent/">幂等性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/06/agile_development/">敏捷开发</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/05/nodejs_install_config/">Nodejs安装并配置淘宝镜像</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/04/weex_react_native/">Weex、React Native 对比</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/04/micro_services_1/">微服务简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/04/harbor/">企业级 Docker Registry--harbor安装和简单使用</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017-2018 Donjote
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 3;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

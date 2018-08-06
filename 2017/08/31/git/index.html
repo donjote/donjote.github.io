@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Donjote" />
+
+
+
+<meta name="description" content="简介 Git是一款免费、开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理  git和svn的差异 git和svn最大的差异在于git是分布式的管理方式而svn是集中式的管理方式。  集中式管理  集中式管理的工作流程图：     &amp;emsp;&amp;emsp;集中式代码管理的核心是服务器，所有开发者在开始新一天的工作之前必须从服务器获取代码，然后开发，最后解决冲突，提交。所有的">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git使用简介">
+<meta property="og:url" content="http://donjote.github.io/2017/08/31/git/index.html">
+<meta property="og:site_name" content="Donjote 博客">
+<meta property="og:description" content="简介 Git是一款免费、开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理  git和svn的差异 git和svn最大的差异在于git是分布式的管理方式而svn是集中式的管理方式。  集中式管理  集中式管理的工作流程图：     &amp;emsp;&amp;emsp;集中式代码管理的核心是服务器，所有开发者在开始新一天的工作之前必须从服务器获取代码，然后开发，最后解决冲突，提交。所有的">
+<meta property="og:image" content="http://donjote.github.io/2017/08/31/git/1.png">
+<meta property="og:image" content="http://donjote.github.io/2017/08/31/git/2.png">
+<meta property="og:updated_time" content="2018-08-03T02:59:35.901Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git使用简介">
+<meta name="twitter:description" content="简介 Git是一款免费、开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理  git和svn的差异 git和svn最大的差异在于git是分布式的管理方式而svn是集中式的管理方式。  集中式管理  集中式管理的工作流程图：     &amp;emsp;&amp;emsp;集中式代码管理的核心是服务器，所有开发者在开始新一天的工作之前必须从服务器获取代码，然后开发，最后解决冲突，提交。所有的">
+<meta name="twitter:image" content="http://donjote.github.io/2017/08/31/git/1.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Donjote 博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Git使用简介 | Donjote 博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Donjote</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:donjote@icloud.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="http://www.github.com/donjote" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Electron/">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NoSQL/">NoSQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPC/">RPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React-Native/">React Native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Restful/">Restful</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weex/">Weex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yarn/">Yarn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etcd/">etcd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gRPC/">gRPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm镜像/">npm镜像</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/事务/">事务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布式架构/">分布式架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链/">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微服务/">微服务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/敏捷开发/">敏捷开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务发现/">服务发现</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深度学习/">深度学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/神经网络/">神经网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/跨平台/">跨平台</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Donjote</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Donjote</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:donjote@icloud.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="http://www.github.com/donjote" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/08/31/git/" class="article-date">
+      <time datetime="2017-08-30T16:00:00.000Z" itemprop="datePublished">2017-08-31</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Git使用简介
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/架构/">架构</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>Git是一款免费、开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理</p>
+</blockquote>
+<h2 id="git和svn的差异"><a href="#git和svn的差异" class="headerlink" title="git和svn的差异"></a>git和svn的差异</h2><blockquote>
+<p>git和svn最大的差异在于git是分布式的管理方式而svn是集中式的管理方式。</p>
+</blockquote>
+<h3 id="集中式管理"><a href="#集中式管理" class="headerlink" title="集中式管理"></a>集中式管理</h3><blockquote>
+<ul>
+<li>集中式管理的工作流程图：<blockquote>
+<p><img src="/2017/08/31/git/1.png" alt="集中式管理的工作流程图"></p>
+</blockquote>
+</li>
+</ul>
+<p>&emsp;&emsp;集中式代码管理的核心是服务器，所有开发者在开始新一天的工作之前必须从服务器获取代码，然后开发，最后解决冲突，提交。所有的版本信息都放在服务器上。如果脱离了服务器，开发者基本上是不可以工作。下面举例说明：</p>
+<p><font color="red"> <strong>开始新一天的工作：</strong></font></p>
+<ol>
+<li>从服务器下载项目组最新代码。</li>
+<li>进入自己的分支，进行工作，每隔1个小时向服务器自己的分支提交一次代码（很多人都有这个习惯。因为有时候自己对代码改来改去，最后又想还原到前一个小时的版本，或者看看前一个小时自己修改了哪些代码，就需要这样做了）。</li>
+<li>下班时间快到了，把自己的分支合并到服务器主分支上，一天的工作完成，并反映给服务器。<br>这就是经典的svn工作流程，从流程上看，有不少缺点，但也有优点。</li>
+</ol>
+<ul>
+<li><strong>缺点：</strong></li>
+</ul>
+<ol>
+<li>服务器压力太大，数据库容量暴增。</li>
+<li>如果不能连接到服务器上，基本上不可以工作，看上面第二步，如果服务器不能连接上，就不能提交，还原，对比等等。</li>
+<li>不适合开源开发（开发人数非常非常多，但是Google app engine就是用svn的）。但是一般集中式管理的有非常明确的权限管理机制（例如分支访问限制），可以实现分层管理，从而很好的解决开发人数众多的问题。</li>
+</ol>
+<ul>
+<li><strong>优点：</strong></li>
+</ul>
+<ol>
+<li>管理方便，逻辑明确，符合一般人思维习惯。</li>
+<li>易于管理，集中式服务器更能保证安全性。</li>
+<li>代码一致性非常高。</li>
+<li>适合开发人数不多的项目开发。</li>
+<li>大部分软件配置管理的大学教材都是使用svn 和vss。</li>
+</ol>
+</blockquote>
+<h3 id="分布式管理"><a href="#分布式管理" class="headerlink" title="分布式管理"></a>分布式管理</h3><blockquote>
+<ul>
+<li>分布式管理的工作流程图：<blockquote>
+<p><img src="/2017/08/31/git/2.png" alt="分布式管理的工作流程图"></p>
+</blockquote>
+</li>
+</ul>
+<p>&emsp;&emsp;分布式和集中式的最大区别在于开发者可以在本地提交。每个开发者机器上都有一个服务器的数据库。<br>&emsp;&emsp;上图就是经典的git开发过程。步骤如下：</p>
+<ul>
+<li><strong>一般开发者的角度：</strong></li>
+</ul>
+<ol>
+<li>从服务器上克隆数据库（包括代码和版本信息）到单机上。</li>
+<li>在自己的机器上创建分支，修改代码。</li>
+<li>在单机上自己创建的分支上提交代码。</li>
+<li>在单机上合并分支。</li>
+<li>新建一个分支，把服务器上最新版的代码fetch下来，然后跟自己的主分支合并。</li>
+<li>生成补丁（patch），把补丁发送给主开发者。</li>
+<li>看主开发者的反馈，如果主开发者发现两个一般开发者之间有冲突（他们之间可以合作解决的冲突），就会要求他们先解决冲突，然后再由其中一个人提交。如果主开发者可以自己解决，或者没有冲突，就通过。</li>
+<li>一般开发者之间解决冲突的方法，开发者之间可以使用pull命令解决冲突，解决完冲突之后再向主开发者提交补丁。</li>
+</ol>
+<ul>
+<li><strong>主开发者的角度（假设主开发者不用开发代码）：</strong></li>
+</ul>
+<ol>
+<li>查看邮件或者通过其它方式查看一般开发者的提交状态。</li>
+<li>打上补丁，解决冲突（可以自己解决，也可以要求开发者之间解决以后再重新提交，如果是开源项目，还要决定哪些补丁可用，哪些不用）。</li>
+<li>向公共服务器提交结果，然后通知所有开发人员。</li>
+</ol>
+<ul>
+<li><strong>优点：</strong></li>
+</ul>
+<ol>
+<li>适合分布式开发，强调个体。</li>
+<li>公共服务器压力和数据量都不会太大。</li>
+<li>速度快、灵活。</li>
+<li>任意两个开发者之间可以很容易的解决冲突。</li>
+</ol>
+<ul>
+<li><strong>缺点：</strong></li>
+</ul>
+<ol>
+<li>资料少（起码中文资料很少）。</li>
+<li>学习周期相对而言比较长。</li>
+<li>不符合常规思维。</li>
+<li>代码保密性差，一旦开发者把整个库克隆下来就可以完全公开所有代码和版本信息。</li>
+</ol>
+</blockquote>
+<h2 id="git常用命令介绍"><a href="#git常用命令介绍" class="headerlink" title="git常用命令介绍"></a>git常用命令介绍</h2><blockquote>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git init　</td>
+<td>创建一个数据库</td>
+</tr>
+<tr>
+<td>git clone</td>
+<td>复制一个数据到制定文件夹</td>
+</tr>
+<tr>
+<td>git add 和git commit</td>
+<td>把想提交的文件add上，然后commit这些文件到本地数据库。</td>
+</tr>
+<tr>
+<td>git pull</td>
+<td>从服务器下载数据库，并跟自己的数据库合并。</td>
+</tr>
+<tr>
+<td>git fetch</td>
+<td>从服务器下载数据库，并放到新分支，不跟自己的数据库合并。</td>
+</tr>
+<tr>
+<td>git whatchanged</td>
+<td>查看两个分支的变化</td>
+</tr>
+<tr>
+<td>git branch</td>
+<td>创建分支，查看分支，删除分支</td>
+</tr>
+<tr>
+<td>git checkout</td>
+<td>切换分支</td>
+</tr>
+<tr>
+<td>git merge</td>
+<td>合并分支，把目标分支合并到当前分支</td>
+</tr>
+<tr>
+<td>git config</td>
+<td>配置相关信息，例如email和name</td>
+</tr>
+<tr>
+<td>git log</td>
+<td>查看版本历史</td>
+</tr>
+<tr>
+<td>git show</td>
+<td>查看版本号对于版本的历史，如果参数是HEAD查看最新版本。</td>
+</tr>
+<tr>
+<td>git tag</td>
+<td>标定版本号</td>
+</tr>
+<tr>
+<td>git reset</td>
+<td>恢复到之前的版本 <br>–mixed是git-reset的默认选项，它的作用是重置索引内容，将其定位到指定的项目版本，而不改变你的工作树中的所有内容，只是提示你有哪些文件还未更新。<br>–soft选项既不触动索引的位置，也不改变工作树中的任何内容。该选项会保留你在工作树中的所有更新并使之处于待提交状态。相当于在<br>–mixed基础上加上git add。 –hard 把整个目录还原到一个版本，包括所有文件。</td>
+</tr>
+<tr>
+<td>git push</td>
+<td>向其他数据库推送自己的数据库</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>显示当前的状态</td>
+</tr>
+<tr>
+<td>git mv</td>
+<td>重命名文件或者文件夹</td>
+</tr>
+<tr>
+<td>git rm</td>
+<td>删除文件或者文件夹</td>
+</tr>
+<tr>
+<td>git help</td>
+<td>查看帮助，还有几个无关紧要的命令，请自己查看帮助。</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/09/01/restful/">
+                    RESTful API 设计指南[引用]
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/08/30/docker/">
+                    docker简介
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git和svn的差异"><span class="toc-number">2.</span> <span class="toc-text">git和svn的差异</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#集中式管理"><span class="toc-number">2.1.</span> <span class="toc-text">集中式管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式管理"><span class="toc-number">2.2.</span> <span class="toc-text">分布式管理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git常用命令介绍"><span class="toc-number">3.</span> <span class="toc-text">git常用命令介绍</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Git使用简介　| Donjote 博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/09/01/restful/" title="上一篇: RESTful API 设计指南[引用]">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/08/30/docker/" title="下一篇: docker简介">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/06/blockchain_1/">什么是区块链</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/01/restful/">RESTful API 设计指南[引用]</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/31/git/">Git使用简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/30/docker/">docker简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/30/transaction_tcc/">TCC柔性事务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/25/mongodb/">MongoDB 简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/25/nosql/">NoSQL 简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/25/cap/">CAP定理（CAP theorem）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/25/thymeleaf/">thymeleaf 使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/24/grpc_service/">gRPC服务方法的定义</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/23/grpc_introdution/">gRPC入门简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/14/tensorflow_2/">TensorFlow入门：安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/14/tensorflow_1/">TensorFlow入门：简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/13/golang_vendor/">Golang包管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/13/golang_install/">Golang简介与环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/12/deep_learning_phylogeny/">深度学习：神经网络发展史</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/11/docker_machine_mirror/">在 Docker Machine 中使用 Mirror 服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/11/etcd_1/">etcd概述和使用场景</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/11/etcd_2/">使用docker-machine搭建etcd集群</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/10/yarn/">Yarn介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/electron_install/">快速搭建Electron开发环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/electron_introdution/">Electron入门简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/08/transaction/">事务</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/07/idempotent/">幂等性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/06/agile_development/">敏捷开发</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/05/nodejs_install_config/">Nodejs安装并配置淘宝镜像</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/04/weex_react_native/">Weex、React Native 对比</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/04/micro_services_1/">微服务简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/04/harbor/">企业级 Docker Registry--harbor安装和简单使用</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017-2018 Donjote
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 3;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
