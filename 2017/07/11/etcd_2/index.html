@@ -21,18 +21,18 @@
     
     
     <meta name="keywords" content="微服务,etcd,服务发现">
-    <meta name="description" content="创建Etcd集群   $ curl -sSL https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh | sh -  集群验证  验证集群members。在集群中的每台机器上查看members，得出的结果应该是相同的     $ curl -L http://$(docker-machine ip etcd-node-">
+    <meta name="description" content="创建Etcd集群 命令$ curl -sSL https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh | sh -   集群验证 验证集群members。在集群中的每台机器上查看members，得出的结果应该是相同的    $ curl -L http://$(docker-machine ip etcd-node-0">
 <meta name="keywords" content="微服务,etcd,服务发现">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用docker-machine搭建etcd集群">
 <meta property="og:url" content="http://donjote.github.io/2017/07/11/etcd_2/index.html">
 <meta property="og:site_name" content="用技术的眼光看世界">
-<meta property="og:description" content="创建Etcd集群   $ curl -sSL https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh | sh -  集群验证  验证集群members。在集群中的每台机器上查看members，得出的结果应该是相同的     $ curl -L http://$(docker-machine ip etcd-node-">
+<meta property="og:description" content="创建Etcd集群 命令$ curl -sSL https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh | sh -   集群验证 验证集群members。在集群中的每台机器上查看members，得出的结果应该是相同的    $ curl -L http://$(docker-machine ip etcd-node-0">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-03T02:59:35.901Z">
+<meta property="og:updated_time" content="2018-08-09T06:18:28.342Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用docker-machine搭建etcd集群">
-<meta name="twitter:description" content="创建Etcd集群   $ curl -sSL https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh | sh -  集群验证  验证集群members。在集群中的每台机器上查看members，得出的结果应该是相同的     $ curl -L http://$(docker-machine ip etcd-node-">
+<meta name="twitter:description" content="创建Etcd集群 命令$ curl -sSL https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh | sh -   集群验证 验证集群members。在集群中的每台机器上查看members，得出的结果应该是相同的    $ curl -L http://$(docker-machine ip etcd-node-0">
     
         <link rel="alternate" type="application/atom+xml" title="用技术的眼光看世界" href="/atom.xml">
     
@@ -186,25 +186,23 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="创建Etcd集群"><a href="#创建Etcd集群" class="headerlink" title="创建Etcd集群"></a>创建Etcd集群</h2><blockquote>
-<p>  $ curl -sSL <a href="https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh" target="_blank" rel="external">https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh</a> | sh -</p>
-</blockquote>
-<h3 id="集群验证"><a href="#集群验证" class="headerlink" title="集群验证"></a>集群验证</h3><blockquote>
-<ol>
-<li>验证集群members。在集群中的每台机器上查看members，得出的结果应该是相同的   </li>
-</ol>
-<pre><code>$ curl -L http://$(docker-machine ip etcd-node-0):2379/v2/members
+            <h2 id="创建Etcd集群"><a href="#创建Etcd集群" class="headerlink" title="创建Etcd集群"></a>创建Etcd集群</h2><ul>
+<li>命令<pre><code>$ curl -sSL https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh | sh -
+</code></pre></li>
+</ul>
+<h3 id="集群验证"><a href="#集群验证" class="headerlink" title="集群验证"></a>集群验证</h3><ol>
+<li>验证集群members。在集群中的每台机器上查看members，得出的结果应该是相同的    <pre><code>$ curl -L http://$(docker-machine ip etcd-node-0):2379/v2/members
 $ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/members
 $ curl -L http://$(docker-machine ip etcd-node-2):2379/v2/members
 {&quot;members&quot;:[{&quot;id&quot;:&quot;305750b374006637&quot;,&quot;name&quot;:&quot;etcd-node-2&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.102:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.102:2379&quot;]},{&quot;id&quot;:&quot;c7177c3c5ff3b1b4&quot;,&quot;name&quot;:&quot;etcd-node-0&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.100:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.100:2379&quot;]},{&quot;id&quot;:&quot;d5673e1f00b32e05&quot;,&quot;name&quot;:&quot;etcd-node-1&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.101:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.101:2379&quot;]}]}
-</code></pre><p>2.某台机器上添加数据，其他机器上查看数据，得出的结果应该是相同的</p>
-<pre><code>$ curl -L http://$(docker-machine ip etcd-node-0):2379/v2/keys/message -XPUT -d value=&quot;Hello World&quot;
+</code></pre>2.某台机器上添加数据，其他机器上查看数据，得出的结果应该是相同的<pre><code>$ curl -L http://$(docker-machine ip etcd-node-0):2379/v2/keys/message -XPUT -d value=&quot;Hello World&quot;
 {&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}
 $ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/keys/message
 {&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}
 $ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/keys/message
 {&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}
-</code></pre></blockquote>
+</code></pre></li>
+</ol>
 
         </div>
 
@@ -213,7 +211,7 @@ $ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/keys/message
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-08-03T02:59:35.901Z" itemprop="dateUpdated">2018-08-03 10:59:35</time>
+    最后更新时间：<time datetime="2018-08-09T06:18:28.342Z" itemprop="dateUpdated">2018-08-09 14:18:28</time>
 </span><br>
 
 
@@ -297,18 +295,18 @@ $ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/keys/message
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/07/11/docker_machine_mirror/" id="post-prev" class="post-nav-link">
+      <a href="/2017/07/12/deep_learning_phylogeny/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">在 Docker Machine 中使用 Mirror 服务</h4>
+        <h4 class="title">深度学习：神经网络发展史</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2017/07/11/etcd_1/" id="post-next" class="post-nav-link">
+      <a href="/2017/07/11/docker_machine_mirror/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">etcd概述和使用场景</h4>
+        <h4 class="title">在 Docker Machine 中使用 Mirror 服务</h4>
       </a>
     </div>
   

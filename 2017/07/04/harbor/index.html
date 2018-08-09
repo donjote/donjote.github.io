@@ -21,18 +21,18 @@
     
     
     <meta name="keywords" content="docker">
-    <meta name="description" content="简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。  安装docker参考官方文档 安装docker-compose参考官方文档 搭建Harbor下载wget https://github.com/vmware/harbor/re">
+    <meta name="description" content="简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。 安装docker参考官方文档 安装docker-compose参考官方文档 搭建Harbor 下载:wget https://github.com/vmware/harbor/re">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="企业级 Docker Registry--harbor安装和简单使用">
 <meta property="og:url" content="http://donjote.github.io/2017/07/04/harbor/index.html">
 <meta property="og:site_name" content="用技术的眼光看世界">
-<meta property="og:description" content="简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。  安装docker参考官方文档 安装docker-compose参考官方文档 搭建Harbor下载wget https://github.com/vmware/harbor/re">
+<meta property="og:description" content="简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。 安装docker参考官方文档 安装docker-compose参考官方文档 搭建Harbor 下载:wget https://github.com/vmware/harbor/re">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-03T02:59:35.906Z">
+<meta property="og:updated_time" content="2018-08-09T06:10:34.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="企业级 Docker Registry--harbor安装和简单使用">
-<meta name="twitter:description" content="简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。  安装docker参考官方文档 安装docker-compose参考官方文档 搭建Harbor下载wget https://github.com/vmware/harbor/re">
+<meta name="twitter:description" content="简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。 安装docker参考官方文档 安装docker-compose参考官方文档 搭建Harbor 下载:wget https://github.com/vmware/harbor/re">
     
         <link rel="alternate" type="application/atom+xml" title="用技术的眼光看世界" href="/atom.xml">
     
@@ -160,7 +160,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装docker"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装docker</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装docker-compose"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装docker-compose</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搭建Harbor"><span class="post-toc-number">3.</span> <span class="post-toc-text">搭建Harbor</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下载"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">下载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解压"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">解压</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改配置"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">修改配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#启动"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">启动</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#登录"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">登录</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装docker"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装docker</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装docker-compose"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装docker-compose</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搭建Harbor"><span class="post-toc-number">3.</span> <span class="post-toc-text">搭建Harbor</span></a></li></ol>
         </nav>
     </aside>
 
@@ -186,14 +186,16 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <blockquote>
-<p>简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。</p>
-</blockquote>
+            <p>简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。</p>
 <h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><p>参考官方文档</p>
 <h2 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker-compose"></a>安装docker-compose</h2><p>参考官方文档</p>
-<h2 id="搭建Harbor"><a href="#搭建Harbor" class="headerlink" title="搭建Harbor"></a>搭建Harbor</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><pre><code>wget https://github.com/vmware/harbor/releases/download/v1.1.2/harbor-online-installer-v1.1.2.tgz
-</code></pre><h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><pre><code>tar zvxf harbor-online-installer-v1.1.2.tgz
-</code></pre><h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><pre><code>cd harbor
+<h2 id="搭建Harbor"><a href="#搭建Harbor" class="headerlink" title="搭建Harbor"></a>搭建Harbor</h2><ul>
+<li>下载:<pre><code>wget https://github.com/vmware/harbor/releases/download/v1.1.2/harbor-online-installer-v1.1.2.tgz
+</code></pre></li>
+<li>解压:<pre><code>tar zvxf harbor-online-installer-v1.1.2.tgz
+</code></pre></li>
+<li><p>修改配置:</p>
+<pre><code>cd harbor
 vim harbor.cfg
 </code></pre><p>配置样例如下：</p>
 <pre><code>## Configuration file of Harbor
@@ -256,9 +258,13 @@ crt_organizationalunit = mritd
 crt_commonname = mritd.me
 crt_email = reg.mritd.me
 #####
-</code></pre><h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><pre><code>sudo ./install
-</code></pre><h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><pre><code>Harbor 默认管理员用户为 admin ，密码在 harbor.cfg 中设置过，默认的是 Harbor12345 ，可直接登陆
-</code></pre>
+</code></pre></li>
+<li><p>启动</p>
+<pre><code>sudo ./install
+</code></pre></li>
+<li>登录<br>Harbor 默认管理员用户为 admin ，密码在 harbor.cfg 中设置过，默认的是 Harbor12345 ，可直接登陆</li>
+</ul>
+
         </div>
 
         <blockquote class="post-copyright">
@@ -266,7 +272,7 @@ crt_email = reg.mritd.me
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-08-03T02:59:35.906Z" itemprop="dateUpdated">2018-08-03 10:59:35</time>
+    最后更新时间：<time datetime="2018-08-09T06:10:34.199Z" itemprop="dateUpdated">2018-08-09 14:10:34</time>
 </span><br>
 
 
@@ -350,18 +356,18 @@ crt_email = reg.mritd.me
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/07/04/weex_react_native/" id="post-prev" class="post-nav-link">
+      <a href="/2017/07/05/nodejs_install_config/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Weex、React Native 对比</h4>
+        <h4 class="title">Nodejs安装并配置淘宝镜像</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2017/07/04/micro_services_1/" id="post-next" class="post-nav-link">
+      <a href="/2017/07/04/weex_react_native/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">微服务简介</h4>
+        <h4 class="title">Weex、React Native 对比</h4>
       </a>
     </div>
   

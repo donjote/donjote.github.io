@@ -21,18 +21,18 @@
     
     
     <meta name="keywords" content="gRPC,RPC">
-    <meta name="description" content="服务定义 向其它的RPC服务一样，GPRC的基础是服务的定义。服务定义远程调用方法的名称、传入参数和返回参数。GRPC默认使用 Protobuf描述服务  GRPC一共定义4种服务方法：1、一元RPC(Unary RPCs )：这是最简单的定义，客户端发送一个请求，服务端返回一个结果2、服务器流RPC（Server streaming RPCs）：客户端发送一个请求，服务端返回一个流给客户端，客户">
+    <meta name="description" content="服务定义向其它的RPC服务一样，GPRC的基础是服务的定义。服务定义远程调用方法的名称、传入参数和返回参数。GRPC默认使用 Protobuf描述服务  GRPC一共定义4种服务方法：1、一元RPC(Unary RPCs )：这是最简单的定义，客户端发送一个请求，服务端返回一个结果2、服务器流RPC（Server streaming RPCs）：客户端发送一个请求，服务端返回一个流给客户端，客户从">
 <meta name="keywords" content="gRPC,RPC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gRPC服务方法的定义">
 <meta property="og:url" content="http://donjote.github.io/2017/08/24/grpc_service/index.html">
 <meta property="og:site_name" content="用技术的眼光看世界">
-<meta property="og:description" content="服务定义 向其它的RPC服务一样，GPRC的基础是服务的定义。服务定义远程调用方法的名称、传入参数和返回参数。GRPC默认使用 Protobuf描述服务  GRPC一共定义4种服务方法：1、一元RPC(Unary RPCs )：这是最简单的定义，客户端发送一个请求，服务端返回一个结果2、服务器流RPC（Server streaming RPCs）：客户端发送一个请求，服务端返回一个流给客户端，客户">
+<meta property="og:description" content="服务定义向其它的RPC服务一样，GPRC的基础是服务的定义。服务定义远程调用方法的名称、传入参数和返回参数。GRPC默认使用 Protobuf描述服务  GRPC一共定义4种服务方法：1、一元RPC(Unary RPCs )：这是最简单的定义，客户端发送一个请求，服务端返回一个结果2、服务器流RPC（Server streaming RPCs）：客户端发送一个请求，服务端返回一个流给客户端，客户从">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-03T02:59:35.906Z">
+<meta property="og:updated_time" content="2018-08-09T05:54:19.646Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gRPC服务方法的定义">
-<meta name="twitter:description" content="服务定义 向其它的RPC服务一样，GPRC的基础是服务的定义。服务定义远程调用方法的名称、传入参数和返回参数。GRPC默认使用 Protobuf描述服务  GRPC一共定义4种服务方法：1、一元RPC(Unary RPCs )：这是最简单的定义，客户端发送一个请求，服务端返回一个结果2、服务器流RPC（Server streaming RPCs）：客户端发送一个请求，服务端返回一个流给客户端，客户">
+<meta name="twitter:description" content="服务定义向其它的RPC服务一样，GPRC的基础是服务的定义。服务定义远程调用方法的名称、传入参数和返回参数。GRPC默认使用 Protobuf描述服务  GRPC一共定义4种服务方法：1、一元RPC(Unary RPCs )：这是最简单的定义，客户端发送一个请求，服务端返回一个结果2、服务器流RPC（Server streaming RPCs）：客户端发送一个请求，服务端返回一个流给客户端，客户从">
     
         <link rel="alternate" type="application/atom+xml" title="用技术的眼光看世界" href="/atom.xml">
     
@@ -186,58 +186,12 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="服务定义"><a href="#服务定义" class="headerlink" title="服务定义"></a>服务定义</h2><blockquote>
-<p>向其它的RPC服务一样，GPRC的基础是服务的定义。服务定义远程调用方法的名称、传入参数和返回参数。GRPC默认使用 Protobuf描述服务</p>
+            <h2 id="服务定义"><a href="#服务定义" class="headerlink" title="服务定义"></a>服务定义</h2><p>向其它的RPC服务一样，GPRC的基础是服务的定义。服务定义远程调用方法的名称、传入参数和返回参数。GRPC默认使用 Protobuf描述服务</p>
 <hr>
 <p>GRPC一共定义4种服务方法：<br>1、一元RPC(Unary RPCs )：这是最简单的定义，客户端发送一个请求，服务端返回一个结果<br>2、服务器流RPC（Server streaming RPCs）：客户端发送一个请求，服务端返回一个流给客户端，客户从流中读取一系列消息，直到读取所有小心<br>3、客户端流RPC(Client streaming RPCs )：客户端通过流向服务端发送一系列消息，然后等待服务端读取完数据并返回处理结果<br>4、双向流RPC(Bidirectional streaming RPCs)：客户端和服务端都可以独立向对方发送或接受一系列的消息。客户端和服务端读写的顺序是任意。   </p>
 <hr>
-<p>以上的服务方法定义在proto文件，如下:   </p>
-<pre><code>  syntax = &quot;proto3&quot;;
-
-  option java_multiple_files = true;
-  option java_package = &quot;io.github.donjote.hello&quot;;
-  option java_outer_classname = &quot;HelloProto&quot;;
-
-  service Hello {
-  // A Unary RPC.
-  rpc simpleRpc(Simple) returns (SimpleFeature) {}
-
-  // A server-to-client streaming RPC.
-  rpc server2ClientRpc(SimpleList) returns (stream SimpleFeature) {}
-
-  // A client-to-server streaming RPC.
-  rpc client2ServerRpc(stream Simple) returns (SimpleSummary) {}
-
-  // A Bidirectional streaming RPC.
-  rpc bindirectionalStreamRpc(stream Simple) returns (stream Simple) {}
-}
-
-message Simple {
-  int32 num = 1;
-  string name = 2;
-}
-
-message SimpleList {
-  repeated Simple simpleList = 1;
-}
-
-message SimpleFeature {
-  string name = 1;
-  Simple location = 2;
-}
-
-message SimpleSummary {
-  int32 feature_count = 2;
-}
-
-// 测试类
-message SimpleFeatureDatabase {
-  repeated SimpleFeature feature = 1;
-}
-</code></pre></blockquote>
-<h2 id="同步RPC和异步RPC"><a href="#同步RPC和异步RPC" class="headerlink" title="同步RPC和异步RPC"></a>同步RPC和异步RPC</h2><blockquote>
-<p>GRPC 同时支持同步RPC和异步RPC。<br>同步RPC调用服务方法只支持流RPC（Server streaming RPCs）和一元RPC(Unary RPCs )。异步RPC调用服务方法支持4种方法。</p>
-</blockquote>
+<p>以上的服务方法定义在proto文件，如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">  syntax = &quot;proto3&quot;;</div><div class="line"></div><div class="line">  option java_multiple_files = true;</div><div class="line">  option java_package = &quot;io.github.donjote.hello&quot;;</div><div class="line">  option java_outer_classname = &quot;HelloProto&quot;;</div><div class="line"></div><div class="line">  service Hello &#123;</div><div class="line">  // A Unary RPC.</div><div class="line">  rpc simpleRpc(Simple) returns (SimpleFeature) &#123;&#125;</div><div class="line"></div><div class="line">  // A server-to-client streaming RPC.</div><div class="line">  rpc server2ClientRpc(SimpleList) returns (stream SimpleFeature) &#123;&#125;</div><div class="line"></div><div class="line">  // A client-to-server streaming RPC.</div><div class="line">  rpc client2ServerRpc(stream Simple) returns (SimpleSummary) &#123;&#125;</div><div class="line"></div><div class="line">  // A Bidirectional streaming RPC.</div><div class="line">  rpc bindirectionalStreamRpc(stream Simple) returns (stream Simple) &#123;&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">message Simple &#123;</div><div class="line">  int32 num = 1;</div><div class="line">  string name = 2;</div><div class="line">&#125;</div><div class="line"></div><div class="line">message SimpleList &#123;</div><div class="line">  repeated Simple simpleList = 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">message SimpleFeature &#123;</div><div class="line">  string name = 1;</div><div class="line">  Simple location = 2;</div><div class="line">&#125;</div><div class="line"></div><div class="line">message SimpleSummary &#123;</div><div class="line">  int32 feature_count = 2;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 测试类</div><div class="line">message SimpleFeatureDatabase &#123;</div><div class="line">  repeated SimpleFeature feature = 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="同步RPC和异步RPC"><a href="#同步RPC和异步RPC" class="headerlink" title="同步RPC和异步RPC"></a>同步RPC和异步RPC</h2><p>GRPC 同时支持同步RPC和异步RPC。<br>同步RPC调用服务方法只支持流RPC（Server streaming RPCs）和一元RPC(Unary RPCs )。异步RPC调用服务方法支持4种方法。</p>
 
         </div>
 
@@ -246,7 +200,7 @@ message SimpleFeatureDatabase {
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-08-03T02:59:35.906Z" itemprop="dateUpdated">2018-08-03 10:59:35</time>
+    最后更新时间：<time datetime="2018-08-09T05:54:19.646Z" itemprop="dateUpdated">2018-08-09 13:54:19</time>
 </span><br>
 
 
@@ -330,9 +284,9 @@ message SimpleFeatureDatabase {
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/08/25/cap/" id="post-prev" class="post-nav-link">
+      <a href="/2017/08/25/mongodb/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">CAP定理（CAP theorem）</h4>
+        <h4 class="title">MongoDB 简介</h4>
       </a>
     </div>
   

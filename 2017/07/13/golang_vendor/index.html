@@ -21,18 +21,18 @@
     
     
     <meta name="keywords" content="Golang">
-    <meta name="description" content="介绍 Golang并没有官方最佳管理方案，在Go的世界里存在大量的自制解决方案。go语言的包是没有中央库统一管理的，通过使用go get命令从远程代码库(github.com,goolge code 等)拉取，直接跳过中央版本库的约束，让代码的拉取直接基于源代码版本控制库，开发者间的协同直接依赖于源代码的版本控制。直接去除了库版本的概念。没有明显的包版本标识，感觉还是有点不适应，官方的建议是把外部">
+    <meta name="description" content="介绍Golang并没有官方最佳管理方案，在Go的世界里存在大量的自制解决方案。go语言的包是没有中央库统一管理的，通过使用go get命令从远程代码库(github.com,goolge code 等)拉取，直接跳过中央版本库的约束，让代码的拉取直接基于源代码版本控制库，开发者间的协同直接依赖于源代码的版本控制。直接去除了库版本的概念。没有明显的包版本标识，感觉还是有点不适应，官方的建议是把外部依">
 <meta name="keywords" content="Golang">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Golang包管理">
 <meta property="og:url" content="http://donjote.github.io/2017/07/13/golang_vendor/index.html">
 <meta property="og:site_name" content="用技术的眼光看世界">
-<meta property="og:description" content="介绍 Golang并没有官方最佳管理方案，在Go的世界里存在大量的自制解决方案。go语言的包是没有中央库统一管理的，通过使用go get命令从远程代码库(github.com,goolge code 等)拉取，直接跳过中央版本库的约束，让代码的拉取直接基于源代码版本控制库，开发者间的协同直接依赖于源代码的版本控制。直接去除了库版本的概念。没有明显的包版本标识，感觉还是有点不适应，官方的建议是把外部">
+<meta property="og:description" content="介绍Golang并没有官方最佳管理方案，在Go的世界里存在大量的自制解决方案。go语言的包是没有中央库统一管理的，通过使用go get命令从远程代码库(github.com,goolge code 等)拉取，直接跳过中央版本库的约束，让代码的拉取直接基于源代码版本控制库，开发者间的协同直接依赖于源代码的版本控制。直接去除了库版本的概念。没有明显的包版本标识，感觉还是有点不适应，官方的建议是把外部依">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-03T02:59:35.903Z">
+<meta property="og:updated_time" content="2018-08-09T05:56:45.915Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Golang包管理">
-<meta name="twitter:description" content="介绍 Golang并没有官方最佳管理方案，在Go的世界里存在大量的自制解决方案。go语言的包是没有中央库统一管理的，通过使用go get命令从远程代码库(github.com,goolge code 等)拉取，直接跳过中央版本库的约束，让代码的拉取直接基于源代码版本控制库，开发者间的协同直接依赖于源代码的版本控制。直接去除了库版本的概念。没有明显的包版本标识，感觉还是有点不适应，官方的建议是把外部">
+<meta name="twitter:description" content="介绍Golang并没有官方最佳管理方案，在Go的世界里存在大量的自制解决方案。go语言的包是没有中央库统一管理的，通过使用go get命令从远程代码库(github.com,goolge code 等)拉取，直接跳过中央版本库的约束，让代码的拉取直接基于源代码版本控制库，开发者间的协同直接依赖于源代码的版本控制。直接去除了库版本的概念。没有明显的包版本标识，感觉还是有点不适应，官方的建议是把外部依">
     
         <link rel="alternate" type="application/atom+xml" title="用技术的眼光看世界" href="/atom.xml">
     
@@ -186,21 +186,15 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><blockquote>
-<p>Golang并没有官方最佳管理方案，在Go的世界里存在大量的自制解决方案。go语言的包是没有中央库统一管理的，通过使用go get命令从远程代码库(github.com,goolge code 等)拉取，直接跳过中央版本库的约束，让代码的拉取直接基于源代码版本控制库，开发者间的协同直接依赖于源代码的版本控制。直接去除了库版本的概念。没有明显的包版本标识，感觉还是有点不适应，官方的建议是把外部依赖的代码全部复制到自己可控的源代码库中，进行同意管理。从而做到对依赖包的可控管理。</p>
+            <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Golang并没有官方最佳管理方案，在Go的世界里存在大量的自制解决方案。go语言的包是没有中央库统一管理的，通过使用go get命令从远程代码库(github.com,goolge code 等)拉取，直接跳过中央版本库的约束，让代码的拉取直接基于源代码版本控制库，开发者间的协同直接依赖于源代码的版本控制。直接去除了库版本的概念。没有明显的包版本标识，感觉还是有点不适应，官方的建议是把外部依赖的代码全部复制到自己可控的源代码库中，进行同意管理。从而做到对依赖包的可控管理。</p>
 <hr>
 <p>对于国内开发者来说，最好是能一个一个包来管理。遇到网络问题，可以通过国内镜像下载。在这样的情况之下gvt 就是一个不错的选择。它可以帮助我们把一个包以及依赖都彻底的拉到本地的代码库中，统一了团队协作过程中编译环境不一致的问题。</p>
-</blockquote>
-<h2 id="gvt安装方法"><a href="#gvt安装方法" class="headerlink" title="gvt安装方法"></a>gvt安装方法</h2><blockquote>
-<pre><code>$ go get -u github.com/FiloSottile/gvt
-</code></pre></blockquote>
-<h2 id="gvt使用"><a href="#gvt使用" class="headerlink" title="gvt使用"></a>gvt使用</h2><blockquote>
-<h3 id="安装包"><a href="#安装包" class="headerlink" title="安装包"></a>安装包</h3><pre><code>$ gvt fetch [package]
-</code></pre><h3 id="下载包"><a href="#下载包" class="headerlink" title="下载包"></a>下载包</h3><pre><code>$ gvt restore
-</code></pre><h3 id="包列表"><a href="#包列表" class="headerlink" title="包列表"></a>包列表</h3><pre><code>$ gvt list
-</code></pre><h3 id="更新指定包"><a href="#更新指定包" class="headerlink" title="更新指定包"></a>更新指定包</h3><pre><code>$ gvt update [package]
-</code></pre><h3 id="删除指定包"><a href="#删除指定包" class="headerlink" title="删除指定包"></a>删除指定包</h3><pre><code>$ gvt delete [package]
-</code></pre></blockquote>
+<h2 id="gvt安装方法"><a href="#gvt安装方法" class="headerlink" title="gvt安装方法"></a>gvt安装方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ go get -u github.com/FiloSottile/gvt</div></pre></td></tr></table></figure>
+<h2 id="gvt使用"><a href="#gvt使用" class="headerlink" title="gvt使用"></a>gvt使用</h2><h3 id="安装包"><a href="#安装包" class="headerlink" title="安装包"></a>安装包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gvt fetch [package]</div></pre></td></tr></table></figure>
+<h3 id="下载包"><a href="#下载包" class="headerlink" title="下载包"></a>下载包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gvt restore</div></pre></td></tr></table></figure>
+<h3 id="包列表"><a href="#包列表" class="headerlink" title="包列表"></a>包列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gvt list</div></pre></td></tr></table></figure>
+<h3 id="更新指定包"><a href="#更新指定包" class="headerlink" title="更新指定包"></a>更新指定包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gvt update [package]</div></pre></td></tr></table></figure>
+<h3 id="删除指定包"><a href="#删除指定包" class="headerlink" title="删除指定包"></a>删除指定包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gvt delete [package]</div></pre></td></tr></table></figure>
 
         </div>
 
@@ -209,7 +203,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-08-03T02:59:35.903Z" itemprop="dateUpdated">2018-08-03 10:59:35</time>
+    最后更新时间：<time datetime="2018-08-09T05:56:45.915Z" itemprop="dateUpdated">2018-08-09 13:56:45</time>
 </span><br>
 
 

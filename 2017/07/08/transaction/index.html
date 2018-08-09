@@ -21,18 +21,18 @@
     
     
     <meta name="keywords" content="架构,事务">
-    <meta name="description" content="什么是事务 事务(Transaction)是访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。事务通常由高级数据库操纵语言或编程语言（如SQL，C++或Java）书写的用户程序的执行所引起，并用形如begin transaction和end transaction语句（或函数调用）来界定。事务由事务开始(begin transaction)和事务结束(end transaction)">
+    <meta name="description" content="什么是事务事务(Transaction)是访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。事务通常由高级数据库操纵语言或编程语言（如SQL，C++或Java）书写的用户程序的执行所引起，并用形如begin transaction和end transaction语句（或函数调用）来界定。事务由事务开始(begin transaction)和事务结束(end transaction)之">
 <meta name="keywords" content="架构,事务">
 <meta property="og:type" content="article">
 <meta property="og:title" content="事务">
 <meta property="og:url" content="http://donjote.github.io/2017/07/08/transaction/index.html">
 <meta property="og:site_name" content="用技术的眼光看世界">
-<meta property="og:description" content="什么是事务 事务(Transaction)是访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。事务通常由高级数据库操纵语言或编程语言（如SQL，C++或Java）书写的用户程序的执行所引起，并用形如begin transaction和end transaction语句（或函数调用）来界定。事务由事务开始(begin transaction)和事务结束(end transaction)">
+<meta property="og:description" content="什么是事务事务(Transaction)是访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。事务通常由高级数据库操纵语言或编程语言（如SQL，C++或Java）书写的用户程序的执行所引起，并用形如begin transaction和end transaction语句（或函数调用）来界定。事务由事务开始(begin transaction)和事务结束(end transaction)之">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-03T02:59:35.916Z">
+<meta property="og:updated_time" content="2018-08-09T06:02:27.234Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="事务">
-<meta name="twitter:description" content="什么是事务 事务(Transaction)是访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。事务通常由高级数据库操纵语言或编程语言（如SQL，C++或Java）书写的用户程序的执行所引起，并用形如begin transaction和end transaction语句（或函数调用）来界定。事务由事务开始(begin transaction)和事务结束(end transaction)">
+<meta name="twitter:description" content="什么是事务事务(Transaction)是访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。事务通常由高级数据库操纵语言或编程语言（如SQL，C++或Java）书写的用户程序的执行所引起，并用形如begin transaction和end transaction语句（或函数调用）来界定。事务由事务开始(begin transaction)和事务结束(end transaction)之">
     
         <link rel="alternate" type="application/atom+xml" title="用技术的眼光看世界" href="/atom.xml">
     
@@ -186,11 +186,8 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="什么是事务"><a href="#什么是事务" class="headerlink" title="什么是事务"></a>什么是事务</h2><blockquote>
-<p>事务(Transaction)是访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。事务通常由高级数据库操纵语言或编程语言（如SQL，C++或Java）书写的用户程序的执行所引起，并用形如begin transaction和end transaction语句（或函数调用）来界定。事务由事务开始(begin transaction)和事务结束(end transaction)之间执行的全体操作组成。<br>事务是应用程序中一系列严密的操作，所有操作必须成功完成，否则在每个操作中所作的所有更改都会被撤消。也就是事务具有原子性，一个事务中的一系列的操作要么全部成功，要么一个都不做。<br>事务的结束有两种，当事务中的所以步骤全部成功执行时，事务提交。如果其中一个步骤失败，将发生回滚操作，撤消撤消之前到事务开始时的所以操作。</p>
-</blockquote>
-<h2 id="事务的-ACID"><a href="#事务的-ACID" class="headerlink" title="事务的 ACID"></a>事务的 ACID</h2><blockquote>
-<p>事务具有四个特征：原子性（ Atomicity ）、一致性（ Consistency ）、隔离性（ Isolation ）和持续性（ Durability ）。这四个特性简称为 ACID 特性。</p>
+            <h2 id="什么是事务"><a href="#什么是事务" class="headerlink" title="什么是事务"></a>什么是事务</h2><p>事务(Transaction)是访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。事务通常由高级数据库操纵语言或编程语言（如SQL，C++或Java）书写的用户程序的执行所引起，并用形如begin transaction和end transaction语句（或函数调用）来界定。事务由事务开始(begin transaction)和事务结束(end transaction)之间执行的全体操作组成。<br>事务是应用程序中一系列严密的操作，所有操作必须成功完成，否则在每个操作中所作的所有更改都会被撤消。也就是事务具有原子性，一个事务中的一系列的操作要么全部成功，要么一个都不做。<br>事务的结束有两种，当事务中的所以步骤全部成功执行时，事务提交。如果其中一个步骤失败，将发生回滚操作，撤消撤消之前到事务开始时的所以操作。</p>
+<h2 id="事务的-ACID"><a href="#事务的-ACID" class="headerlink" title="事务的 ACID"></a>事务的 ACID</h2><p>事务具有四个特征：原子性（ Atomicity ）、一致性（ Consistency ）、隔离性（ Isolation ）和持续性（ Durability ）。这四个特性简称为 ACID 特性。</p>
 <h3 id="原子性"><a href="#原子性" class="headerlink" title="原子性"></a>原子性</h3><p>事务的原子性指的是，事务中包含的程序作为数据库的逻辑工作单位，它所做的对数据修改操作要么全部执行，要么完全不执行。这种特性称为原子性。<br>事务的原子性要求，如果把一个事务可看作是一个程序，它要么完整的被执行，要么完全不执行。就是说事务的操纵序列或者完全应用到数据库或者完全不影响数据库。这种特性称为原子性。    </p>
 <hr>
 <p>假如用户在一个事务内完成了对数据库的更新，这时所有的更新对外部世界必须是可见的，或者完全没有更新。前者称事务已提交，后者称事务撤消（或流产）。DBMS必须确保由成功提交的事务完成的所有操纵在数据库内有完全的反映，而失败的事务对数据库完全没有影响。</p>
@@ -203,7 +200,6 @@
 <h3 id="持久性"><a href="#持久性" class="headerlink" title="持久性"></a>持久性</h3><p>持久性意味着当系统或介质发生故障时，确保已提交事务的更新不能丢失。即一旦一个事务提交，DBMS保证它对数据库中数据的改变应该是永久性的，耐得住任何系统故障。持久性通过数据库备份和恢复来保证。  </p>
 <hr>
 <p>持久性意味着当系统或介质发生故障时，确保已提交事务的更新不能丢失。即对已提交事务的更新能恢复。一旦一个事务被提交，DBMS必须保证提供适当的冗余，使其耐得住系统的故障。所以，持久性主要在于DBMS的恢复性能。</p>
-</blockquote>
 
         </div>
 
@@ -212,7 +208,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-08-03T02:59:35.916Z" itemprop="dateUpdated">2018-08-03 10:59:35</time>
+    最后更新时间：<time datetime="2018-08-09T06:02:27.234Z" itemprop="dateUpdated">2018-08-09 14:02:27</time>
 </span><br>
 
 
@@ -296,9 +292,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/07/09/electron_introdution/" id="post-prev" class="post-nav-link">
+      <a href="/2017/07/09/electron_install/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Electron入门简介</h4>
+        <h4 class="title">快速搭建Electron开发环境</h4>
       </a>
     </div>
   

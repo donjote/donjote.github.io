@@ -21,21 +21,21 @@
     
     
     <meta name="keywords" content="微服务,架构">
-    <meta name="description" content="Monolithic架构 Monolithic比较适合小项目 Monolithic架构优点 开发简单直接，集中式管理, 基本不会重复开发 功能都在本地，没有分布式的管理开销和调用开销。Monolithic架构缺点它的缺点也非常明显，特别对于互联网公司来说（不一一列举了）： 开发效率低：所有的开发在一个项目改代码，递交代码相互等待，代码冲突不断 代码维护难：代码功能耦合在一起，新人不知道何从下手 部">
+    <meta name="description" content="Monolithic架构                                                                                             Monolithic架构              Monolithic比较适合小项目 Monolithic架构优点 开发简单直接，集中式管理, 基本不会重复开发 功能都在本地，没有分布式的">
 <meta name="keywords" content="微服务,架构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微服务简介">
-<meta property="og:url" content="http://donjote.github.io/2017/07/04/micro_services_1/index.html">
+<meta property="og:url" content="http://donjote.github.io/2017/07/04/micro_services_introdution/index.html">
 <meta property="og:site_name" content="用技术的眼光看世界">
-<meta property="og:description" content="Monolithic架构 Monolithic比较适合小项目 Monolithic架构优点 开发简单直接，集中式管理, 基本不会重复开发 功能都在本地，没有分布式的管理开销和调用开销。Monolithic架构缺点它的缺点也非常明显，特别对于互联网公司来说（不一一列举了）： 开发效率低：所有的开发在一个项目改代码，递交代码相互等待，代码冲突不断 代码维护难：代码功能耦合在一起，新人不知道何从下手 部">
+<meta property="og:description" content="Monolithic架构                                                                                             Monolithic架构              Monolithic比较适合小项目 Monolithic架构优点 开发简单直接，集中式管理, 基本不会重复开发 功能都在本地，没有分布式的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://donjote.github.io/2017/07/04/micro_services_1/1.png">
-<meta property="og:image" content="http://donjote.github.io/2017/07/04/micro_services_1/2.png">
-<meta property="og:updated_time" content="2018-08-03T02:59:35.908Z">
+<meta property="og:image" content="http://donjote.github.io/2017/07/04/micro_services_introdution/1.png">
+<meta property="og:image" content="http://donjote.github.io/2017/07/04/micro_services_introdution/2.png">
+<meta property="og:updated_time" content="2018-08-09T06:11:38.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微服务简介">
-<meta name="twitter:description" content="Monolithic架构 Monolithic比较适合小项目 Monolithic架构优点 开发简单直接，集中式管理, 基本不会重复开发 功能都在本地，没有分布式的管理开销和调用开销。Monolithic架构缺点它的缺点也非常明显，特别对于互联网公司来说（不一一列举了）： 开发效率低：所有的开发在一个项目改代码，递交代码相互等待，代码冲突不断 代码维护难：代码功能耦合在一起，新人不知道何从下手 部">
-<meta name="twitter:image" content="http://donjote.github.io/2017/07/04/micro_services_1/1.png">
+<meta name="twitter:description" content="Monolithic架构                                                                                             Monolithic架构              Monolithic比较适合小项目 Monolithic架构优点 开发简单直接，集中式管理, 基本不会重复开发 功能都在本地，没有分布式的">
+<meta name="twitter:image" content="http://donjote.github.io/2017/07/04/micro_services_introdution/1.png">
     
         <link rel="alternate" type="application/atom+xml" title="用技术的眼光看世界" href="/atom.xml">
     
@@ -168,7 +168,7 @@
     </aside>
 
 
-<article id="post-micro_services_1"
+<article id="post-micro_services_introdution"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
@@ -189,8 +189,14 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="Monolithic架构"><a href="#Monolithic架构" class="headerlink" title="Monolithic架构"></a>Monolithic架构</h2><blockquote>
-<p><img src="/2017/07/04/micro_services_1/1.png" alt="Monolithic架构"><br>Monolithic比较适合小项目</p>
+            <h2 id="Monolithic架构"><a href="#Monolithic架构" class="headerlink" title="Monolithic架构"></a>Monolithic架构</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/07/04/micro_services_introdution/1.png" alt="Monolithic架构" title="">
+                </div>
+                <div class="image-caption">Monolithic架构</div>
+            </figure>
+<p>Monolithic比较适合小项目</p>
 <h3 id="Monolithic架构优点"><a href="#Monolithic架构优点" class="headerlink" title="Monolithic架构优点"></a>Monolithic架构优点</h3><ul>
 <li>开发简单直接，集中式管理, 基本不会重复开发</li>
 <li>功能都在本地，没有分布式的管理开销和调用开销。<h3 id="Monolithic架构缺点"><a href="#Monolithic架构缺点" class="headerlink" title="Monolithic架构缺点"></a>Monolithic架构缺点</h3>它的缺点也非常明显，特别对于互联网公司来说（不一一列举了）：</li>
@@ -200,18 +206,20 @@
 <li>稳定性不高：一个微不足道的小问题，可以导致整个应用挂掉</li>
 <li>扩展性不够：无法满足高并发情况下的业务需求</li>
 </ul>
-</blockquote>
-<h2 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h2><h3 id="什么是微服务"><a href="#什么是微服务" class="headerlink" title="什么是微服务"></a>什么是微服务</h3><blockquote>
-<p>相对于单体（Monolithic）应用而言，微服务是采用一组服务的方式来构建一个应用，服务独立部署在不同的进程中，不同服务通过一些轻量级交互机制来通信，例如 RPC、HTTP 等,服务可独立扩展伸缩，每个服务定义了明确的边界，不同的服务甚至可以采用不同的编程语言来实现，由独立的团队来维护。</p>
-</blockquote>
-<h3 id="微服务的价值"><a href="#微服务的价值" class="headerlink" title="微服务的价值"></a>微服务的价值</h3><blockquote>
-<ul>
+<h2 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h2><h3 id="什么是微服务"><a href="#什么是微服务" class="headerlink" title="什么是微服务"></a>什么是微服务</h3><p>相对于单体（Monolithic）应用而言，微服务是采用一组服务的方式来构建一个应用，服务独立部署在不同的进程中，不同服务通过一些轻量级交互机制来通信，例如 RPC、HTTP 等,服务可独立扩展伸缩，每个服务定义了明确的边界，不同的服务甚至可以采用不同的编程语言来实现，由独立的团队来维护。</p>
+<h3 id="微服务的价值"><a href="#微服务的价值" class="headerlink" title="微服务的价值"></a>微服务的价值</h3><ul>
 <li>首先，在功能不变的情况下，应用被分解为多个可管理的服务，每个服务开发、运维变得简单。</li>
 <li>其次，每个微服务独立部署，开发者不在需要协调其他服务部署对本服务的影响，这可以加快部署精度。</li>
 <li>最后，每个服务可以自行决定自己的容量。</li>
 </ul>
 <hr>
-<p>虽然对于一些简单的、规模有限的应用而言，单体架构仍然是有意义的。微服务是应用开发和部署的一个不同的方法。它非常适合许多现代的云应用对于敏捷性、扩展规模和可靠性的要求。一个微服务应用被分解成独立的部件，被称为“微服务”。“微服务”协同工作，以便提供应用的整体功能。“微服务”这一术语强调一个事实，那就是应用应该是由足够小的服务所组成，以便真正体现独立性，使得每个微服务实现单一的功能。此外，每个微服务都有明确的合同（API合同）——通常是RESTful 的——以便其他微服务能够与之进行交流和分享数据。微服务也必须能够彼此独立地进行版本更新。这种松耦合正是对一个应用实现快速而可靠地演化的支撑。下图显示了一个单体应用是如何被分解为不同的微服务的。<br><img src="/2017/07/04/micro_services_1/2.png" alt="微服务架构"></p>
+<p>虽然对于一些简单的、规模有限的应用而言，单体架构仍然是有意义的。微服务是应用开发和部署的一个不同的方法。它非常适合许多现代的云应用对于敏捷性、扩展规模和可靠性的要求。一个微服务应用被分解成独立的部件，被称为“微服务”。“微服务”协同工作，以便提供应用的整体功能。“微服务”这一术语强调一个事实，那就是应用应该是由足够小的服务所组成，以便真正体现独立性，使得每个微服务实现单一的功能。此外，每个微服务都有明确的合同（API合同）——通常是RESTful 的——以便其他微服务能够与之进行交流和分享数据。微服务也必须能够彼此独立地进行版本更新。这种松耦合正是对一个应用实现快速而可靠地演化的支撑。下图显示了一个单体应用是如何被分解为不同的微服务的。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/07/04/micro_services_introdution/2.png" alt="微服务架构" title="">
+                </div>
+                <div class="image-caption">微服务架构</div>
+            </figure></p>
 <h3 id="微服务的特点"><a href="#微服务的特点" class="headerlink" title="微服务的特点"></a>微服务的特点</h3><ul>
 <li>小, 且专注于做⼀件事情</li>
 <li>进程独立</li>
@@ -223,9 +231,7 @@
 <p><strong>领域驱动设计：</strong> 应用程序功能分解可以通过Eric Evans在<a href="http://www.jdon.com/ddd.html" target="_blank" rel="external">《领域驱动设计》</a>中明确定义的规则实现；每个团队负责与一个领域或业务功能相关的全部开发；团队拥有全系列的开发人员，具备用户界面、业务逻辑和持久化存储等方面的开发技能；<br><strong>单一职责原则：</strong> 每个服务应该负责该功能的一个单独的部分，这是<a href="http://www.cnblogs.com/shanyou/archive/2009/09/21/1570716.html" target="_blank" rel="external">面向对象设计的SOLID原则</a>原则之一；<br><strong>明确发布接口：</strong> 每个服务都会发布一个定义明确的接口，而且保持不变；服务消费者只关心接口，而对于被消费的服务没有任何运行依赖；<br><strong>独立部署、升级、扩展和替换：</strong> 每个服务都可以单独部署及重新部署而不影响整个系统。这使得服务很容易升级，每个服务都可以沿着<a href="https://pan.baidu.com/s/1qYpzBPE" target="_blank" rel="external">《架构即未来》</a>一书定义的<a href="http://www.jianshu.com/p/d08d0c14810f" target="_blank" rel="external">AKF扩展立方体</a>的X轴和Z轴进行扩展；<br><strong>可以异构/采用多种语言：</strong>　每个服务的实现细节都与其它服务无关，这使得服务之间能够解耦，团队可以针对每个服务选择最合适的开发语言、持久化存储、工具和方法；<br><strong>轻量级通信：</strong>　服务通信使用轻量级的通信协议，例如，同步的REST，异步的AMQP、STOMP、MQTT等。</p>
 <hr>
 <p>微服务架构的思想本质跟互联网的思想是一致的。它的组件对外发布的服务视同HTTP协议，采用HTTP Rest API的方式来进行。很多开放平台的API服务，基本都采用了Http API的方式进行服务的发布和管理。</p>
-</blockquote>
-<h3 id="微服务优点"><a href="#微服务优点" class="headerlink" title="微服务优点"></a>微服务优点</h3><blockquote>
-<ul>
+<h3 id="微服务优点"><a href="#微服务优点" class="headerlink" title="微服务优点"></a>微服务优点</h3><ul>
 <li>每个微服务都很小，这样能聚焦一个指定的业务功能或业务需求。</li>
 <li>微服务能够被小团队单独开发，这个小团队是2到5人的开发人员组成。</li>
 <li>微服务是松耦合的，是有功能意义的服务，无论是在开发阶段或部署阶段都是独立的。</li>
@@ -240,9 +246,7 @@
 <li>易于和第三方集成。</li>
 <li>每个微服务都有自己的存储能力，可以有自己的数据库。也可以有统一数据库。</li>
 </ul>
-</blockquote>
-<h3 id="微服务架构的缺点"><a href="#微服务架构的缺点" class="headerlink" title="微服务架构的缺点"></a>微服务架构的缺点</h3><blockquote>
-<ul>
+<h3 id="微服务架构的缺点"><a href="#微服务架构的缺点" class="headerlink" title="微服务架构的缺点"></a>微服务架构的缺点</h3><ul>
 <li>微服务架构可能带来过多的操作。</li>
 <li>需要DevOps技巧 (<a href="http://en.wikipedia.org/wiki/DevOps" target="_blank" rel="external">http://en.wikipedia.org/wiki/DevOps</a>).</li>
 <li>可能双倍的努力。</li>
@@ -250,9 +254,7 @@
 <li>因为分布部署跟踪问题难。</li>
 <li>服务数量增加，管理复杂性增加。</li>
 </ul>
-</blockquote>
-<h3 id="常见的微服务组件"><a href="#常见的微服务组件" class="headerlink" title="常见的微服务组件"></a>常见的微服务组件</h3><blockquote>
-<ul>
+<h3 id="常见的微服务组件"><a href="#常见的微服务组件" class="headerlink" title="常见的微服务组件"></a>常见的微服务组件</h3><ul>
 <li>服务注册:服务提供方将自己调用地址注册到服务注册中心，让服务调用方能够方便地找到自己。</li>
 <li>服务发现:服务调用方从服务注册中心找到自己需要调用的服务的地址。</li>
 <li>负载均衡:服务提供方一般以多实例的形式提供服务，负载均衡功能能够让服务调用方连接到合适的服务节点。并且，节点选择的工作对服务调用方来说是透明的。</li>
@@ -264,7 +266,6 @@
 <li>调用链:记录完成一个业务逻辑时调用到的微服务，并将这种串行或并行的调用关系展示出来。在系统出错时，可以方便地找到出错点。具有代表性的有pinpoint.</li>
 <li>支撑平台:系统微服务化后，系统变得更加碎片化，系统的部署、运维、监控等都比单体架构更加复杂，那么，就需要将大部分的工作自动化。现在，可以通过Docker等工具来中和这些微服务架构带来的弊端。 例如:持续集成、蓝绿发布、健康检查、性能健康等等。严重点，以我们两年的实践经验，可以这么说，如果没有合适的支撑平台或工具，就不要使用微服务架构。</li>
 </ul>
-</blockquote>
 
         </div>
 
@@ -273,7 +274,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-08-03T02:59:35.908Z" itemprop="dateUpdated">2018-08-03 10:59:35</time>
+    最后更新时间：<time datetime="2018-08-09T06:11:38.939Z" itemprop="dateUpdated">2018-08-09 14:11:38</time>
 </span><br>
 
 
@@ -309,7 +310,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://donjote.github.io/2017/07/04/micro_services_1/&title=《微服务简介》 — 用技术的眼光看世界&pic=http://donjote.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://donjote.github.io/2017/07/04/micro_services_introdution/&title=《微服务简介》 — 用技术的眼光看世界&pic=http://donjote.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -319,22 +320,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://donjote.github.io/2017/07/04/micro_services_1/&title=《微服务简介》 — 用技术的眼光看世界&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://donjote.github.io/2017/07/04/micro_services_introdution/&title=《微服务简介》 — 用技术的眼光看世界&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://donjote.github.io/2017/07/04/micro_services_1/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://donjote.github.io/2017/07/04/micro_services_introdution/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《微服务简介》 — 用技术的眼光看世界&url=http://donjote.github.io/2017/07/04/micro_services_1/&via=http://donjote.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《微服务简介》 — 用技术的眼光看世界&url=http://donjote.github.io/2017/07/04/micro_services_introdution/&via=http://donjote.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://donjote.github.io/2017/07/04/micro_services_1/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://donjote.github.io/2017/07/04/micro_services_introdution/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -357,9 +358,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/07/04/harbor/" id="post-prev" class="post-nav-link">
+      <a href="/2017/07/04/weex_react_native/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">企业级 Docker Registry--harbor安装和简单使用</h4>
+        <h4 class="title">Weex、React Native 对比</h4>
       </a>
     </div>
   
@@ -448,7 +449,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://donjote.github.io/2017/07/04/micro_services_1/&title=《微服务简介》 — 用技术的眼光看世界&pic=http://donjote.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://donjote.github.io/2017/07/04/micro_services_introdution/&title=《微服务简介》 — 用技术的眼光看世界&pic=http://donjote.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -458,22 +459,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://donjote.github.io/2017/07/04/micro_services_1/&title=《微服务简介》 — 用技术的眼光看世界&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://donjote.github.io/2017/07/04/micro_services_introdution/&title=《微服务简介》 — 用技术的眼光看世界&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://donjote.github.io/2017/07/04/micro_services_1/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://donjote.github.io/2017/07/04/micro_services_introdution/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《微服务简介》 — 用技术的眼光看世界&url=http://donjote.github.io/2017/07/04/micro_services_1/&via=http://donjote.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《微服务简介》 — 用技术的眼光看世界&url=http://donjote.github.io/2017/07/04/micro_services_introdution/&via=http://donjote.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://donjote.github.io/2017/07/04/micro_services_1/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://donjote.github.io/2017/07/04/micro_services_introdution/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -484,7 +485,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://donjote.github.io/2017/07/04/micro_services_1/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://donjote.github.io/2017/07/04/micro_services_introdution/" alt="微信分享二维码">
 </div>
 
 

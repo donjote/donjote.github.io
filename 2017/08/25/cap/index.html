@@ -21,20 +21,18 @@
     
     
     <meta name="keywords" content="NoSQL">
-    <meta name="description" content="简介 在计算机科学中, CAP定理（CAP theorem）, 又被称作 布鲁尔定理（Brewer’s theorem）, 它指出对于一个分布式计算系统来说，不可能同时满足以下三点:  一致性(Consistency) (所有节点在同一时间具有相同的数据) 可用性(Availability) (保证每个请求不管成功或者失败都有响应) 分隔容忍(Partition tolerance) (系统中任意">
+    <meta name="description" content="简介在计算机科学中, CAP定理（CAP theorem）, 又被称作 布鲁尔定理（Brewer’s theorem）, 它指出对于一个分布式计算系统来说，不可能同时满足以下三点:  一致性(Consistency) (所有节点在同一时间具有相同的数据) 可用性(Availability) (保证每个请求不管成功或者失败都有响应) 分隔容忍(Partition tolerance) (系统中任意信">
 <meta name="keywords" content="NoSQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CAP定理（CAP theorem）">
 <meta property="og:url" content="http://donjote.github.io/2017/08/25/cap/index.html">
 <meta property="og:site_name" content="用技术的眼光看世界">
-<meta property="og:description" content="简介 在计算机科学中, CAP定理（CAP theorem）, 又被称作 布鲁尔定理（Brewer’s theorem）, 它指出对于一个分布式计算系统来说，不可能同时满足以下三点:  一致性(Consistency) (所有节点在同一时间具有相同的数据) 可用性(Availability) (保证每个请求不管成功或者失败都有响应) 分隔容忍(Partition tolerance) (系统中任意">
+<meta property="og:description" content="简介在计算机科学中, CAP定理（CAP theorem）, 又被称作 布鲁尔定理（Brewer’s theorem）, 它指出对于一个分布式计算系统来说，不可能同时满足以下三点:  一致性(Consistency) (所有节点在同一时间具有相同的数据) 可用性(Availability) (保证每个请求不管成功或者失败都有响应) 分隔容忍(Partition tolerance) (系统中任意信">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://donjote.github.io/2017/08/25/cap/1.png">
-<meta property="og:updated_time" content="2018-08-03T02:59:35.874Z">
+<meta property="og:updated_time" content="2018-08-09T05:53:00.771Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CAP定理（CAP theorem）">
-<meta name="twitter:description" content="简介 在计算机科学中, CAP定理（CAP theorem）, 又被称作 布鲁尔定理（Brewer’s theorem）, 它指出对于一个分布式计算系统来说，不可能同时满足以下三点:  一致性(Consistency) (所有节点在同一时间具有相同的数据) 可用性(Availability) (保证每个请求不管成功或者失败都有响应) 分隔容忍(Partition tolerance) (系统中任意">
-<meta name="twitter:image" content="http://donjote.github.io/2017/08/25/cap/1.png">
+<meta name="twitter:description" content="简介在计算机科学中, CAP定理（CAP theorem）, 又被称作 布鲁尔定理（Brewer’s theorem）, 它指出对于一个分布式计算系统来说，不可能同时满足以下三点:  一致性(Consistency) (所有节点在同一时间具有相同的数据) 可用性(Availability) (保证每个请求不管成功或者失败都有响应) 分隔容忍(Partition tolerance) (系统中任意信">
     
         <link rel="alternate" type="application/atom+xml" title="用技术的眼光看世界" href="/atom.xml">
     
@@ -188,25 +186,21 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
-<p>在计算机科学中, CAP定理（CAP theorem）, 又被称作 布鲁尔定理（Brewer’s theorem）, 它指出对于一个分布式计算系统来说，不可能同时满足以下三点:</p>
+            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>在计算机科学中, CAP定理（CAP theorem）, 又被称作 布鲁尔定理（Brewer’s theorem）, 它指出对于一个分布式计算系统来说，不可能同时满足以下三点:</p>
 <ul>
 <li>一致性(Consistency) (所有节点在同一时间具有相同的数据)</li>
 <li>可用性(Availability) (保证每个请求不管成功或者失败都有响应)</li>
 <li>分隔容忍(Partition tolerance) (系统中任意信息的丢失或失败不会影响系统的继续运作)<br>CAP理论的核心是：一个分布式系统不可能同时很好的满足一致性，可用性和分区容错性这三个需求，最多只能同时较好的满足两个。<br>因此，根据 CAP 原理将 NoSQL 数据库分成了满足 CA 原则、满足 CP 原则和满足 AP 原则三 大类：</li>
 <li>CA:单点集群，满足一致性，可用性的系统，通常在可扩展性上不太强大。</li>
 <li>CP:满足一致性，分区容忍性的系统，通常性能不是特别高。</li>
-<li>AP:满足可用性，分区容忍性的系统，通常可能对一致性要求低一些。<br><img src="/2017/08/25/cap/1.png" alt="cap"></li>
+<li>AP:满足可用性，分区容忍性的系统，通常可能对一致性要求低一些。<br><a href="1.png">cap</a></li>
 </ul>
-</blockquote>
-<h2 id="BASE"><a href="#BASE" class="headerlink" title="BASE"></a>BASE</h2><blockquote>
-<p>BASE：Basically Available, Soft-state, Eventually Consistent。 由 Eric Brewer 定义。<br>CAP理论的核心是：一个分布式系统不可能同时很好的满足一致性，可用性和分区容错性这三个需求，最多只能同时较好的满足两个。<br>BASE是NoSQL数据库通常对可用性及一致性的弱要求原则:</p>
+<h2 id="BASE"><a href="#BASE" class="headerlink" title="BASE"></a>BASE</h2><p>BASE：Basically Available, Soft-state, Eventually Consistent。 由 Eric Brewer 定义。<br>CAP理论的核心是：一个分布式系统不可能同时很好的满足一致性，可用性和分区容错性这三个需求，最多只能同时较好的满足两个。<br>BASE是NoSQL数据库通常对可用性及一致性的弱要求原则:</p>
 <ul>
 <li>Basically Availble –基本可用</li>
 <li>Soft-state –软状态/柔性事务。 “Soft state” 可以理解为”无连接”的, 而 “Hard state” 是”面向连接”的</li>
 <li>Eventual Consistency –最终一致性 最终一致性， 也是是 ACID 的最终目的。</li>
 </ul>
-</blockquote>
 <h2 id="ACID-vs-BASE"><a href="#ACID-vs-BASE" class="headerlink" title="ACID vs BASE"></a>ACID vs BASE</h2><table>
 <thead>
 <tr>
@@ -241,7 +235,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-08-03T02:59:35.874Z" itemprop="dateUpdated">2018-08-03 10:59:35</time>
+    最后更新时间：<time datetime="2018-08-09T05:53:00.771Z" itemprop="dateUpdated">2018-08-09 13:53:00</time>
 </span><br>
 
 
@@ -325,18 +319,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/08/25/nosql/" id="post-prev" class="post-nav-link">
+      <a href="/2017/08/30/transaction_tcc/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">NoSQL 简介</h4>
+        <h4 class="title">TCC柔性事务</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2017/08/24/grpc_service/" id="post-next" class="post-nav-link">
+      <a href="/2017/08/25/nosql/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">gRPC服务方法的定义</h4>
+        <h4 class="title">NoSQL 简介</h4>
       </a>
     </div>
   
