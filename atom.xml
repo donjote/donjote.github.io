@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://donjote.github.io/"/>
-  <updated>2018-08-09T06:33:32.766Z</updated>
+  <updated>2018-08-09T06:50:25.366Z</updated>
   <id>http://donjote.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>区块链的历史起源</title>
-    <link href="http://donjote.github.io/2018/08/06/blockchain_history/"/>
-    <id>http://donjote.github.io/2018/08/06/blockchain_history/</id>
-    <published>2018-08-05T16:00:00.000Z</published>
-    <updated>2018-08-09T06:33:32.766Z</updated>
+    <link href="http://donjote.github.io/2018/08/09/blockchain_history/"/>
+    <id>http://donjote.github.io/2018/08/09/blockchain_history/</id>
+    <published>2018-08-08T16:00:00.000Z</published>
+    <updated>2018-08-09T06:50:25.366Z</updated>
     
     <content type="html"><![CDATA[<h2 id="比特币"><a href="#比特币" class="headerlink" title="比特币"></a>比特币</h2><p>比特币起源于2008年全球金融危机期间中本聪撰写的论文《比特币：一种点对点的电子现金货币》</p><p>在这篇论文中，重点讨论了比特币系统，区块链被描述为用于记录比特币交易的账目历史。事实上，中本聪关于比特别的白皮书虽然整体思想是开创性的，单其中使用的技术工具，如P2P、分布式存储、非对称加密等早已存在，他提速的是一个集成性的、系统性的、可供实践的解决方案。</p><p>实际上这篇文章并没有明确提出区块链的定义和概念，甚至还没有“区块链”（Blockchain）这个词,只有“区块”（Block）和“链”（Chain）。但在论文中涉及了几个对区块链技术影响深远的观点：</p><ul><li>点对点，去中心化的可靠交易</li><li>反欺诈</li><li>基于密码学原理的电子交易凭证管理</li><li>分布式的时间戳服务器</li><li>足够的安全能力支持系统</li></ul><h2 id="区块链演进趋势"><a href="#区块链演进趋势" class="headerlink" title="区块链演进趋势"></a>区块链演进趋势</h2><h3 id="区块链1-0阶段"><a href="#区块链1-0阶段" class="headerlink" title="区块链1.0阶段"></a>区块链1.0阶段</h3><p>我们可以把比特币理解为区块链技术的一个应用场景，也就是区块链1.0阶段。但是如果仅有比特币，区块链也只是一种数字货币，并不能达到今天的火爆程度，可以说比特币是当今区块链的“啥手级”应用，但是区块链可以做的事情远远超过比特币，很可能产生其它“杀手级”应用。</p><h3 id="区块链2-0阶段"><a href="#区块链2-0阶段" class="headerlink" title="区块链2.0阶段"></a>区块链2.0阶段</h3><p>区块链2.0的重要标志就是被金融领域说接受并得到广泛应用形成的金融互联网，让价值交换变得便捷、直接、节省时间、节省成本。目前区块链2.0的实际场景中的应用，有两个重要因素：资产数字化（上链过程）与智能合约。</p><h3 id="区块链3-0阶段"><a href="#区块链3-0阶段" class="headerlink" title="区块链3.0阶段"></a>区块链3.0阶段</h3><p>区块链3.0要把区块链的应用范围拓展到各行各业，支持广义的资产交互和登记，进入万物互联，设备民主的“区块链+”时代。</p>]]></content>
     
@@ -41,6 +41,31 @@
       <category term="区块链" scheme="http://donjote.github.io/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
       <category term="比特币" scheme="http://donjote.github.io/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>区块链概念</title>
+    <link href="http://donjote.github.io/2018/08/09/blockchain_%20concept/"/>
+    <id>http://donjote.github.io/2018/08/09/blockchain_ concept/</id>
+    <published>2018-08-08T16:00:00.000Z</published>
+    <updated>2018-08-09T07:19:23.567Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="区块链的本质"><a href="#区块链的本质" class="headerlink" title="区块链的本质"></a>区块链的本质</h2><p>区块链，实质是由多方参与共同维护的一个持续增长的分布式数据库，也称为分布式共享账本，其核心在于通过分布式网路、时序不可篡改的密码学账本及分布式共识机制建立彼此之间的信任关系，利用由自动化脚本组成的智能合约来编程和操作数据，最终实现由信息互联向价值互联的进化。</p><p>区块链是一种与传统集中记账方式不同的记录技术。参与到区块链系统的节点，可能不属于同一组织、彼此无须信任；区块链数据由所有节点公共维护，每个参与维护的节点都能获得一份完整记录到拷贝。与传统的记账技术相比，其特点包括：维护一条不断增长的链，只可能添加记录，而发生过的记录不可篡改；无须集中控制而能达成共识，实现上尽量采用分布式；通过密码学的机制来确保交易无法抵赖和破坏，并尽量保护用户信息和记录的隐私性。</p><h2 id="区块链的工作原理"><a href="#区块链的工作原理" class="headerlink" title="区块链的工作原理"></a>区块链的工作原理</h2><p>所谓区块链，是由多个区块组成的链状数据结构及储存方式。每个区块分为区块头和区块体，区块头主要用来实现区块链接的前一去区块哈希值，而区块体主要包括交易账本。</p><p>以交易场景为例，区块链的工作原理如下：<br>1）客户端将发起一笔交易，经数字签名后广播给网络上的其他节点并等待确认；<br>2）网络中的节点对收到的数据记录信息进行校验，通过校验后，数据记录被记录到一个区块中；<br>3）全网所有的接收节点对区块进行共识算法，区块通过共识算法过程后正式纳入区块链中存储，全网节点均表示接受该区块。表示接受的方法，是将区块的随机哈希值视为最新的区块哈希值，新区块将提供永久和透明的交易记录并以该区块链为基础进行延长，实现资金转移。</p><h2 id="区块链的技术特点"><a href="#区块链的技术特点" class="headerlink" title="区块链的技术特点"></a>区块链的技术特点</h2><ul><li>分布式结构<br>区块链构建在分布式网络基础之上，账本并不是集中存放在某个服务器或数据中心，也不是由第三方权威机构来负责记录和管理，而是分散在网络中的每一个节点上，每一个节点都有一个该账本的副本，所有副本同步更新。</li><li>信任机制<br>区块链技术通过数字原理和程序算法，使系统运作规则公开透明，实现交易双方在不需要借助第三方权威机构信用背书下通过达成共识，建立信任关系。</li><li>公开透明<br>区块链对其三的节点可以做到开放、透明。任何人都可以加入区块链，也能查询区块链三的区块记录；同时所有用户看到的是同一个账本，能看到这个账本所发生和记录的每一笔交易。</li><li>时序不可篡改<br>区块链采用带有时间戳的链式区块结构存储数据，具有极强的课追溯性和可验证性；同时由密钥学算法和共识机制保证了区块链的不可篡改性。</li></ul><h2 id="区块链层次模型"><a href="#区块链层次模型" class="headerlink" title="区块链层次模型"></a>区块链层次模型</h2><p>区块链技术的模型包括由自下而上的数据层、网络层、共识层、激励层、合约层和应用层，共有6层。<br>数据层、网络层、共识层是区块链的必要元素。</p><ul><li>数据层<br>最下层是”数据层“，它封装了底层数据区块的链式结构，以及相关的非对称公私钥数据加密技术和时间戳等技术，这是整个区块链技术中最底层的数据结构</li><li>网络层<br>中间是网络层，包括P2P组网机制、数据传播机制和数据验证机制等。</li><li>共识层<br>第三层是共识层，封装了网络节点的各类共识机制算法。</li><li>激励层<br>第四层是激励层，它将经济因素集成到区块链技术体系中来，包括经济激励的发行机制和分配机制等，主要出现在公有链当中。</li><li>合约层<br>第五层是合约层，它封装各类脚本、算法和智能合约</li><li>应用层<br>第六层是应用层，它封装了区块链的各种应用场景和案例，未来的可编程金融和可编程社会也将搭建在应用层中。</li></ul><h2 id="区块链共识算法"><a href="#区块链共识算法" class="headerlink" title="区块链共识算法"></a>区块链共识算法</h2><p>区块链并不是某种特定技术，而是一种类似于NoSQL（非关系型数据库）这样的技术解决方案的统称。共识机制算法是区块链的核心技术，因为这决定了到底由谁来记账，而记账方式将会影响整个系统的安全性和可靠性。目前已经出现了十余种共识机制算法，其中比较知名的有PoW(Proof of Work,工作量证明)，PoS(Proof of Stake,权益证明)，DPoS(Delegate Proof of Stake ,股份授权证明)机制已经拜占庭将军容错共识等。当然，没有一种共识机制是完美无缺的，同时这也意味着没有共识机制是适合所有场景的。</p><ul><li>PoW(Proof of Work,工作量证明)<br>就是挖矿，主要应用包括比特币和以太坊前三个阶段等。依赖机器进行数学运算来获取记账权，即通过与或运算，计算出一个满足规则的随机数，获得本次记账权，发出本轮需要记录的数据，全网其他节点验证后一起存储。优点是完全去中心化，节点自由进出；缺点是资源消耗相比其他共识机制高、可监管性弱，同时每次达成共识需要全网共同参与运算，性能效率比较低，达成共识的周期较长，因此不适合商业应用。</li><li>PoS(Proof of Stake,权益证明)<br>根据每个节点说占代币的比例和时间，等比例地降低难度，从而加快寻找随机数的速度，因此节点记账权的获得难度与节点持有的权益成反比，但它依然是基于哈希运算竞争获取记账权的方式。其优点是相对于PoW在一定程度减少了数学运算带来的资源消耗，性能也得到了相应的提升；缺点是还需要挖矿，本质上没有解决商业应用的痛点，可监管性也比较弱。</li><li>DPoS(Delegate Proof of Stake ,股份授权证明)<br>与PoW和PoS不同，DPoS不需要再挖矿了，而是类似余额董事会投票，持币者透出一定数量的节点，代理他们进行验证和记账，持股人拥有所持股份对应的表决权。优点是大幅缩小参与验证的记账节点的数量，可以达到秒级的共识验证，降低运行网络的成本和维护网络安全的费用，增强网络效能；缺点是整个共识机制还依赖于代币的，然而很多商业应用是不需要代币存在的。</li></ul><h2 id="区块链不一定是去中心化的"><a href="#区块链不一定是去中心化的" class="headerlink" title="区块链不一定是去中心化的"></a>区块链不一定是去中心化的</h2><p>理想化的区块链系统，是由许许多多节点组成的点对点的网络结构，似乎即不需要中心化的硬件设备，也不需要任何管理它的机构。在很多文献中都提出区块链是去中心化的（Decentralized).即整个网络没有中心化的硬件或者管理机构，任意节点之间的权利和义务都是均等的，且任一节点的损坏或者失去不会影响整个系统的运作。</p><p>需要指出的是，区块链并不一定是去中心化的。实际上，软件系统的网络架构一般有3种模式：单中心、多中心、分布式，Decentralized只表明不是单中心模式的，它可能是多中心或弱中心的。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;区块链的本质&quot;&gt;&lt;a href=&quot;#区块链的本质&quot; class=&quot;headerlink&quot; title=&quot;区块链的本质&quot;&gt;&lt;/a&gt;区块链的本质&lt;/h2&gt;&lt;p&gt;区块链，实质是由多方参与共同维护的一个持续增长的分布式数据库，也称为分布式共享账本，其核心在于通过分布式网路
+      
+    
+    </summary>
+    
+      <category term="区块链" scheme="http://donjote.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="区块链" scheme="http://donjote.github.io/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
   </entry>
   
@@ -124,6 +149,31 @@
   </entry>
   
   <entry>
+    <title>docker简介</title>
+    <link href="http://donjote.github.io/2017/08/30/docker/"/>
+    <id>http://donjote.github.io/2017/08/30/docker/</id>
+    <published>2017-08-29T16:00:00.000Z</published>
+    <updated>2018-08-09T05:30:07.265Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker"></a>什么是Docker</h2><p>Docker 是一个开源项目，诞生于 2013 年初，最初是 dotCloud 公司内部的一个业余项目。它基于 Google 公司推出的 Go 语言实现。 它基于Linux容器技术（LXC），Namespace(命名空间)，Cgroup(控制组)，UnionFS（联合文件系统）等技术。项目后来加入了 Linux 基金会，遵从了 Apache 2.0 协议，项目代码在 GitHub 上进行维护。   </p><p><strong><font color="red"> namespace（命名空间）：</font></strong> 命名空间是 Linux 内核一个强大的特性。每个容器都有自己单独的名字空间，运行在其中的应用都像是在独立的操作系统中运行一样。名字空间保证了容器之间彼此互不影响。docker实际上一个进程容器，它通过namespace实现了进程和进程所使用的资源的隔离。使不同的进程之间彼此不可见。我们可以把Docker容器想像成进程＋操作系统除内核之外的一套软件。</p><p><strong><font color="red"> cgroup（控制组）：</font></strong> 是 Linux 内核的一个特性，主要用来对共享资源进行隔离、限制、审计等。只有能控制分配到容器的资源，才能避免当多个容器同时运行时的对系统资源的竞争。控制组技术最早是由 Google 的程序员 2006 年起提出，Linux 内核自 2.6.24 开始支持。控制组可以提供对容器的内存、CPU、磁盘 IO 等资源的限制和审计管理。</p><p><strong><font color="red"> UnionFS（联合文件系统）：</font></strong> Union文件系统（UnionFS）是一种分层、轻量级并且高性能的文件系统，它支持对 文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下(unite several directories into a single virtual filesystem)。Union 文件系统是 Docker 镜像的基础。镜像可以通过分层来进行继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像。另外，不同 Docker 容器就可以共享一些基础的文件系统层，同时再加上自己独有的改动层，大大提高了存储的效率。Docker 中使用的 AUFS（AnotherUnionFS）就是一种 Union FS。 AUFS 支持为每一个成员目录（类似 Git 的分支）设定只读（readonly）、读写（readwrite）和写出（whiteout-able）权限, 同时 AUFS 里有一个类似分层的概念, 对只读权限的分支可以逻辑上进行增量地修改(不影响只读部分的)。</p><h2 id="快速理解Docker"><a href="#快速理解Docker" class="headerlink" title="快速理解Docker"></a>快速理解Docker</h2><p>拿现实世界中货物的运输作类比, 为了解决各种型号规格尺寸的货物在各种运输工具上进行运输的问题,我们发明了集装箱<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/30/docker/1.jpg" alt="集装箱" title="">                </div>                <div class="image-caption">集装箱</div>            </figure><br>docker的初衷也就是将各种应用程序和他们所依赖的运行环境打包成标准的Container/image,进而发布到不同的平台上运行<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/30/docker/2.jpg" alt="docker" title="">                </div>                <div class="image-caption">docker</div>            </figure><br>从理论上说这一概念并不新鲜, 各种虚拟机Image也起着类似的作用<br>Docker container和普通的虚拟机Image相比, 最大的区别是它并不包含操作系统内核.<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/30/docker/3.jpg" alt="docker" title="">                </div>                <div class="image-caption">docker</div>            </figure><br>普通虚拟机将整个操作系统运行在虚拟的硬件平台上, 进而提供完整的运行环境供应用程序运行, 而Docker则直接在宿主平台上加载运行应用程序. 本质上他在底层使用LXC启动一个Linux Container,通过cgroup等机制对不同的container内运行的应用程序进行隔离,权限管理和quota分配等</p><p>每个container拥有自己独立的各种命名空间(亦即资源)包括:PID 进程, MNT 文件系统, NET 网络, IPC , UTS 主机名 等</p><h2 id="为什么要使用Docker"><a href="#为什么要使用Docker" class="headerlink" title="为什么要使用Docker"></a>为什么要使用Docker</h2><p>作为一种新兴的虚拟化方式，Docker 跟传统的虚拟化方式相比具有众多的优势。</p><p>首先，Docker 容器的启动可以在秒级实现，这相比传统的虚拟机方式要快得多。 其次，Docker 对系统资源的利用率很高，一台主机上可以同时运行数千个 Docker 容器。</p><p>容器除了运行其中应用外，基本不消耗额外的系统资源，使得应用的性能很高，同时系统的开销尽量小。传统虚拟机方式运行 10 个不同的应用就要起 10 个虚拟机，而Docker 只需要启动 10 个隔离的应用即可。</p><p>具体说来，Docker 在如下几个方面具有较大的优势。</p><ul><li>更快速的交付和部署<br>对开发和运维（devop）人员来说，最希望的就是一次创建或配置，可以在任意地方正常运行。<br>开发者可以使用一个标准的镜像来构建一套开发容器，开发完成之后，运维人员可以直接使用这个容器来部署代码。 Docker 可以快速创建容器，快速迭代应用程序，并让整个过程全程可见，使团队中的其他成员更容易理解应用程序是如何创建和工作的。 Docker 容器很轻很快！容器的启动时间是秒级的，大量地节约开发、测试、部署的时间。</li><li>更高效的虚拟化<br>Docker 容器的运行不需要额外的 hypervisor 支持，它是内核级的虚拟化，因此可以实现更高的性能和效率。</li><li>更轻松的迁移和扩展<br>Docker 容器几乎可以在任意的平台上运行，包括物理机、虚拟机、公有云、私有云、个人电脑、服务器等。 这种兼容性可以让用户把一个应用程序从一个平台直接迁移到另外一个。</li><li>更简单的管理<br>使用 Docker，只需要小小的修改，就可以替代以往大量的更新工作。所有的修改都以增量的方式被分发和更新，从而实现自动化并且高效的管理。</li></ul><h2 id="Docker基本概念"><a href="#Docker基本概念" class="headerlink" title="Docker基本概念"></a>Docker基本概念</h2><ul><li>镜像（Image）<br>Docker的镜像概念类似于虚拟机里的镜像，是一个只读的模板，一个独立的文件系统，包括运行容器所需的数据，可以用来创建新的容器。镜像可以基于Dockerfile构建，Dockerfile是一个描述文件，里面包含若干条命令，每条命令都会对基础文件系统创建新的层次结构。用户可以通过编写Dockerfile创建新的镜像，也可以直接从类似github的Docker Hub上下载镜像使用。</li><li>容器（Container）<br>Docker容器是由Docker镜像创建的运行实例。Docker容器类似虚拟机，可以支持的操作包括启动，停止，删除等。每个容器间是相互隔离的，但隔离的效果比不上虚拟机。容器中会运行特定的应用，包含特定应用的代码及所需的依赖文件。</li></ul><p>在Docker容器中，每个容器之间的隔离使用Linux的 CGroups 和 Namespaces技术实现的。其中 CGroups 对CPU，内存，磁盘等资源的访问限制，Namespaces 提供了环境的隔离。</p><ul><li>仓库（Repository）<br>Docker仓库相当于一个 github 上的代码库。</li></ul><p>Docker 仓库是用来包含镜像的位置，Docker提供一个注册服务器（Registry）来保存多个仓库，每个仓库又可以包含多个具备不同tag的镜像。Docker运行中使用的默认仓库是 Docker Hub 公共仓库。</p><p>仓库支持的操作类似 git，创建了新的镜像后，我们可以 push 提交到仓库，也可以从指定仓库 pull 拉取镜像到本地。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;什么是Docker&quot;&gt;&lt;a href=&quot;#什么是Docker&quot; class=&quot;headerlink&quot; title=&quot;什么是Docker&quot;&gt;&lt;/a&gt;什么是Docker&lt;/h2&gt;&lt;p&gt;Docker 是一个开源项目，诞生于 2013 年初，最初是 dotCloud 公司
+      
+    
+    </summary>
+    
+      <category term="容器" scheme="http://donjote.github.io/categories/%E5%AE%B9%E5%99%A8/"/>
+    
+    
+      <category term="docker" scheme="http://donjote.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>TCC柔性事务</title>
     <link href="http://donjote.github.io/2017/08/30/transaction_tcc/"/>
     <id>http://donjote.github.io/2017/08/30/transaction_tcc/</id>
@@ -152,27 +202,27 @@
   </entry>
   
   <entry>
-    <title>docker简介</title>
-    <link href="http://donjote.github.io/2017/08/30/docker/"/>
-    <id>http://donjote.github.io/2017/08/30/docker/</id>
-    <published>2017-08-29T16:00:00.000Z</published>
-    <updated>2018-08-09T05:30:07.265Z</updated>
+    <title>MongoDB 简介</title>
+    <link href="http://donjote.github.io/2017/08/25/mongodb/"/>
+    <id>http://donjote.github.io/2017/08/25/mongodb/</id>
+    <published>2017-08-24T16:00:00.000Z</published>
+    <updated>2018-08-09T05:46:55.307Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker"></a>什么是Docker</h2><p>Docker 是一个开源项目，诞生于 2013 年初，最初是 dotCloud 公司内部的一个业余项目。它基于 Google 公司推出的 Go 语言实现。 它基于Linux容器技术（LXC），Namespace(命名空间)，Cgroup(控制组)，UnionFS（联合文件系统）等技术。项目后来加入了 Linux 基金会，遵从了 Apache 2.0 协议，项目代码在 GitHub 上进行维护。   </p><p><strong><font color="red"> namespace（命名空间）：</font></strong> 命名空间是 Linux 内核一个强大的特性。每个容器都有自己单独的名字空间，运行在其中的应用都像是在独立的操作系统中运行一样。名字空间保证了容器之间彼此互不影响。docker实际上一个进程容器，它通过namespace实现了进程和进程所使用的资源的隔离。使不同的进程之间彼此不可见。我们可以把Docker容器想像成进程＋操作系统除内核之外的一套软件。</p><p><strong><font color="red"> cgroup（控制组）：</font></strong> 是 Linux 内核的一个特性，主要用来对共享资源进行隔离、限制、审计等。只有能控制分配到容器的资源，才能避免当多个容器同时运行时的对系统资源的竞争。控制组技术最早是由 Google 的程序员 2006 年起提出，Linux 内核自 2.6.24 开始支持。控制组可以提供对容器的内存、CPU、磁盘 IO 等资源的限制和审计管理。</p><p><strong><font color="red"> UnionFS（联合文件系统）：</font></strong> Union文件系统（UnionFS）是一种分层、轻量级并且高性能的文件系统，它支持对 文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下(unite several directories into a single virtual filesystem)。Union 文件系统是 Docker 镜像的基础。镜像可以通过分层来进行继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像。另外，不同 Docker 容器就可以共享一些基础的文件系统层，同时再加上自己独有的改动层，大大提高了存储的效率。Docker 中使用的 AUFS（AnotherUnionFS）就是一种 Union FS。 AUFS 支持为每一个成员目录（类似 Git 的分支）设定只读（readonly）、读写（readwrite）和写出（whiteout-able）权限, 同时 AUFS 里有一个类似分层的概念, 对只读权限的分支可以逻辑上进行增量地修改(不影响只读部分的)。</p><h2 id="快速理解Docker"><a href="#快速理解Docker" class="headerlink" title="快速理解Docker"></a>快速理解Docker</h2><p>拿现实世界中货物的运输作类比, 为了解决各种型号规格尺寸的货物在各种运输工具上进行运输的问题,我们发明了集装箱<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/30/docker/1.jpg" alt="集装箱" title="">                </div>                <div class="image-caption">集装箱</div>            </figure><br>docker的初衷也就是将各种应用程序和他们所依赖的运行环境打包成标准的Container/image,进而发布到不同的平台上运行<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/30/docker/2.jpg" alt="docker" title="">                </div>                <div class="image-caption">docker</div>            </figure><br>从理论上说这一概念并不新鲜, 各种虚拟机Image也起着类似的作用<br>Docker container和普通的虚拟机Image相比, 最大的区别是它并不包含操作系统内核.<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/30/docker/3.jpg" alt="docker" title="">                </div>                <div class="image-caption">docker</div>            </figure><br>普通虚拟机将整个操作系统运行在虚拟的硬件平台上, 进而提供完整的运行环境供应用程序运行, 而Docker则直接在宿主平台上加载运行应用程序. 本质上他在底层使用LXC启动一个Linux Container,通过cgroup等机制对不同的container内运行的应用程序进行隔离,权限管理和quota分配等</p><p>每个container拥有自己独立的各种命名空间(亦即资源)包括:PID 进程, MNT 文件系统, NET 网络, IPC , UTS 主机名 等</p><h2 id="为什么要使用Docker"><a href="#为什么要使用Docker" class="headerlink" title="为什么要使用Docker"></a>为什么要使用Docker</h2><p>作为一种新兴的虚拟化方式，Docker 跟传统的虚拟化方式相比具有众多的优势。</p><p>首先，Docker 容器的启动可以在秒级实现，这相比传统的虚拟机方式要快得多。 其次，Docker 对系统资源的利用率很高，一台主机上可以同时运行数千个 Docker 容器。</p><p>容器除了运行其中应用外，基本不消耗额外的系统资源，使得应用的性能很高，同时系统的开销尽量小。传统虚拟机方式运行 10 个不同的应用就要起 10 个虚拟机，而Docker 只需要启动 10 个隔离的应用即可。</p><p>具体说来，Docker 在如下几个方面具有较大的优势。</p><ul><li>更快速的交付和部署<br>对开发和运维（devop）人员来说，最希望的就是一次创建或配置，可以在任意地方正常运行。<br>开发者可以使用一个标准的镜像来构建一套开发容器，开发完成之后，运维人员可以直接使用这个容器来部署代码。 Docker 可以快速创建容器，快速迭代应用程序，并让整个过程全程可见，使团队中的其他成员更容易理解应用程序是如何创建和工作的。 Docker 容器很轻很快！容器的启动时间是秒级的，大量地节约开发、测试、部署的时间。</li><li>更高效的虚拟化<br>Docker 容器的运行不需要额外的 hypervisor 支持，它是内核级的虚拟化，因此可以实现更高的性能和效率。</li><li>更轻松的迁移和扩展<br>Docker 容器几乎可以在任意的平台上运行，包括物理机、虚拟机、公有云、私有云、个人电脑、服务器等。 这种兼容性可以让用户把一个应用程序从一个平台直接迁移到另外一个。</li><li>更简单的管理<br>使用 Docker，只需要小小的修改，就可以替代以往大量的更新工作。所有的修改都以增量的方式被分发和更新，从而实现自动化并且高效的管理。</li></ul><h2 id="Docker基本概念"><a href="#Docker基本概念" class="headerlink" title="Docker基本概念"></a>Docker基本概念</h2><ul><li>镜像（Image）<br>Docker的镜像概念类似于虚拟机里的镜像，是一个只读的模板，一个独立的文件系统，包括运行容器所需的数据，可以用来创建新的容器。镜像可以基于Dockerfile构建，Dockerfile是一个描述文件，里面包含若干条命令，每条命令都会对基础文件系统创建新的层次结构。用户可以通过编写Dockerfile创建新的镜像，也可以直接从类似github的Docker Hub上下载镜像使用。</li><li>容器（Container）<br>Docker容器是由Docker镜像创建的运行实例。Docker容器类似虚拟机，可以支持的操作包括启动，停止，删除等。每个容器间是相互隔离的，但隔离的效果比不上虚拟机。容器中会运行特定的应用，包含特定应用的代码及所需的依赖文件。</li></ul><p>在Docker容器中，每个容器之间的隔离使用Linux的 CGroups 和 Namespaces技术实现的。其中 CGroups 对CPU，内存，磁盘等资源的访问限制，Namespaces 提供了环境的隔离。</p><ul><li>仓库（Repository）<br>Docker仓库相当于一个 github 上的代码库。</li></ul><p>Docker 仓库是用来包含镜像的位置，Docker提供一个注册服务器（Registry）来保存多个仓库，每个仓库又可以包含多个具备不同tag的镜像。Docker运行中使用的默认仓库是 Docker Hub 公共仓库。</p><p>仓库支持的操作类似 git，创建了新的镜像后，我们可以 push 提交到仓库，也可以从指定仓库 pull 拉取镜像到本地。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="什么是MongoDB"><a href="#什么是MongoDB" class="headerlink" title="什么是MongoDB ?"></a>什么是MongoDB ?</h2><p>MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。<br>在高负载的情况下，添加更多的节点，可以保证服务器性能。<br>MongoDB 旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>MongoDB 将数据存储为一个文档，数据结构由键值(key=&gt;value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/25/mongodb/1.png" alt="" title="">                </div>                <div class="image-caption"></div>            </figure></p><h2 id="MongoDB特点"><a href="#MongoDB特点" class="headerlink" title="MongoDB特点"></a>MongoDB特点</h2><ol><li>支持特别查询<br>在MongoDB中，可以通过字段，范围查询进行搜索，并且还支持正则表达式搜索。</li><li>索引<br>可以索引文档中的任何字段。</li><li>复制<br>MongoDB支持主从复制。主机可以执行读写操作，从机从主机复制数据，只能用于读取或备份(不写入)</li><li>复制数据<br>MongoDB可以在多台服务器上运行。 复制数据以保持系统正常运行，并在硬件故障的情况下保持其运行状态。</li><li>负载均衡<br>由于数据放在碎片中，因此具有自动负载平衡配置。</li><li>支持映射缩减和聚合工具</li><li>使用JavaScript而不是Procedure</li><li>它是一个用C++编写的无模式数据库</li><li>提供高性能</li><li>轻松存储任何大小的文件，而不会使您的堆栈复杂化</li><li>在故障的情况下易于管理</li><li>它还支持：</li></ol><ul><li>具有动态模式的JSON数据模型</li><li>自动分片用于水平可扩展性</li><li>内置复制高可用性</li></ul><h2 id="MongoDB优点"><a href="#MongoDB优点" class="headerlink" title="MongoDB优点"></a>MongoDB优点</h2><ul><li>MongoDB 的架构较少。它是一个文档数据库，它的一个集合持有不同的文档。</li><li>从一个到另一个的文档的数量，内容和大小可能有差异。</li><li>MongoDB 中单个对象的结构很清淅。</li><li>MongoDB 中没有复杂的连接。</li><li>MongoDB 提供深度查询的功能，因为它支持对文档的强大的动态查询。</li><li>MongoDB 很容易扩展。</li><li>它使用内部存储器来存储工作集，这是其快速访问的原因。</li></ul><h2 id="MongoDB的独特功能"><a href="#MongoDB的独特功能" class="headerlink" title="MongoDB的独特功能"></a>MongoDB的独特功能</h2><ul><li>使用方便</li><li>重量轻/轻量级</li><li>比RDBMS快得多</li></ul><h2 id="应该使用MongoDB在哪些场景"><a href="#应该使用MongoDB在哪些场景" class="headerlink" title="应该使用MongoDB在哪些场景"></a>应该使用MongoDB在哪些场景</h2><ul><li>大而复杂的数据</li><li>移动和社会基础设施数据</li><li>内容管理和交付</li><li>用户数据管理</li><li>数据中心</li></ul><h2 id="MongoDB和RDBMS的性能分析"><a href="#MongoDB和RDBMS的性能分析" class="headerlink" title="MongoDB和RDBMS的性能分析"></a>MongoDB和RDBMS的性能分析</h2><ul><li>在关系数据库(RDBMS)中，表用作存储元素，而在 MongoDB 中使用的是集合。</li><li>在RDBMS中有多个模式，在每个模式中，可创建用于存储数据的表，而 MongoDB 是面向文档的数据库，数据是以类似JSON格式的BSON格式编写的存储的。</li><li>MongoDB几乎比传统数据库系统快100倍。</li></ul><h2 id="MongoDB-应用案例"><a href="#MongoDB-应用案例" class="headerlink" title="MongoDB 应用案例"></a>MongoDB 应用案例</h2><p>下面列举一些公司MongoDB的实际应用：</p><ul><li>Craiglist上使用MongoDB的存档数十亿条记录。</li><li>FourSquare，基于位置的社交网站，在Amazon EC2的服务器上使用MongoDB分享数据。</li><li>Shutterfly，以互联网为基础的社会和个人出版服务，使用MongoDB的各种持久性数据存储的要求。</li><li>bit.ly, 一个基于Web的网址缩短服务，使用MongoDB的存储自己的数据。</li><li>spike.com，一个MTV网络的联营公司， spike.com使用MongoDB的。</li><li>Intuit公司，一个为小企业和个人的软件和服务提供商，为小型企业使用MongoDB的跟踪用户的数据。</li><li>sourceforge.net，资源网站查找，创建和发布开源软件免费，使用MongoDB的后端存储。</li><li>etsy.com ，一个购买和出售手工制作物品网站，使用MongoDB。</li><li>纽约时报，领先的在线新闻门户网站之一，使用MongoDB。</li><li>CERN，著名的粒子物理研究所，欧洲核子研究中心大型强子对撞机的数据使用MongoDB。</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;什么是Docker&quot;&gt;&lt;a href=&quot;#什么是Docker&quot; class=&quot;headerlink&quot; title=&quot;什么是Docker&quot;&gt;&lt;/a&gt;什么是Docker&lt;/h2&gt;&lt;p&gt;Docker 是一个开源项目，诞生于 2013 年初，最初是 dotCloud 公司
+        &lt;h2 id=&quot;什么是MongoDB&quot;&gt;&lt;a href=&quot;#什么是MongoDB&quot; class=&quot;headerlink&quot; title=&quot;什么是MongoDB ?&quot;&gt;&lt;/a&gt;什么是MongoDB ?&lt;/h2&gt;&lt;p&gt;MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源
       
     
     </summary>
     
-      <category term="容器" scheme="http://donjote.github.io/categories/%E5%AE%B9%E5%99%A8/"/>
+      <category term="数据库" scheme="http://donjote.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-      <category term="docker" scheme="http://donjote.github.io/tags/docker/"/>
+      <category term="NoSQL" scheme="http://donjote.github.io/tags/NoSQL/"/>
     
   </entry>
   
@@ -190,31 +240,6 @@
       
       
         &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;在计算机科学中, CAP定理（CAP theorem）, 又被称作 布鲁尔定理（Brewer’s theorem）, 它指出对于一个分布式计
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://donjote.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="NoSQL" scheme="http://donjote.github.io/tags/NoSQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MongoDB 简介</title>
-    <link href="http://donjote.github.io/2017/08/25/mongodb/"/>
-    <id>http://donjote.github.io/2017/08/25/mongodb/</id>
-    <published>2017-08-24T16:00:00.000Z</published>
-    <updated>2018-08-09T05:46:55.307Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="什么是MongoDB"><a href="#什么是MongoDB" class="headerlink" title="什么是MongoDB ?"></a>什么是MongoDB ?</h2><p>MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。<br>在高负载的情况下，添加更多的节点，可以保证服务器性能。<br>MongoDB 旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>MongoDB 将数据存储为一个文档，数据结构由键值(key=&gt;value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/25/mongodb/1.png" alt="" title="">                </div>                <div class="image-caption"></div>            </figure></p><h2 id="MongoDB特点"><a href="#MongoDB特点" class="headerlink" title="MongoDB特点"></a>MongoDB特点</h2><ol><li>支持特别查询<br>在MongoDB中，可以通过字段，范围查询进行搜索，并且还支持正则表达式搜索。</li><li>索引<br>可以索引文档中的任何字段。</li><li>复制<br>MongoDB支持主从复制。主机可以执行读写操作，从机从主机复制数据，只能用于读取或备份(不写入)</li><li>复制数据<br>MongoDB可以在多台服务器上运行。 复制数据以保持系统正常运行，并在硬件故障的情况下保持其运行状态。</li><li>负载均衡<br>由于数据放在碎片中，因此具有自动负载平衡配置。</li><li>支持映射缩减和聚合工具</li><li>使用JavaScript而不是Procedure</li><li>它是一个用C++编写的无模式数据库</li><li>提供高性能</li><li>轻松存储任何大小的文件，而不会使您的堆栈复杂化</li><li>在故障的情况下易于管理</li><li>它还支持：</li></ol><ul><li>具有动态模式的JSON数据模型</li><li>自动分片用于水平可扩展性</li><li>内置复制高可用性</li></ul><h2 id="MongoDB优点"><a href="#MongoDB优点" class="headerlink" title="MongoDB优点"></a>MongoDB优点</h2><ul><li>MongoDB 的架构较少。它是一个文档数据库，它的一个集合持有不同的文档。</li><li>从一个到另一个的文档的数量，内容和大小可能有差异。</li><li>MongoDB 中单个对象的结构很清淅。</li><li>MongoDB 中没有复杂的连接。</li><li>MongoDB 提供深度查询的功能，因为它支持对文档的强大的动态查询。</li><li>MongoDB 很容易扩展。</li><li>它使用内部存储器来存储工作集，这是其快速访问的原因。</li></ul><h2 id="MongoDB的独特功能"><a href="#MongoDB的独特功能" class="headerlink" title="MongoDB的独特功能"></a>MongoDB的独特功能</h2><ul><li>使用方便</li><li>重量轻/轻量级</li><li>比RDBMS快得多</li></ul><h2 id="应该使用MongoDB在哪些场景"><a href="#应该使用MongoDB在哪些场景" class="headerlink" title="应该使用MongoDB在哪些场景"></a>应该使用MongoDB在哪些场景</h2><ul><li>大而复杂的数据</li><li>移动和社会基础设施数据</li><li>内容管理和交付</li><li>用户数据管理</li><li>数据中心</li></ul><h2 id="MongoDB和RDBMS的性能分析"><a href="#MongoDB和RDBMS的性能分析" class="headerlink" title="MongoDB和RDBMS的性能分析"></a>MongoDB和RDBMS的性能分析</h2><ul><li>在关系数据库(RDBMS)中，表用作存储元素，而在 MongoDB 中使用的是集合。</li><li>在RDBMS中有多个模式，在每个模式中，可创建用于存储数据的表，而 MongoDB 是面向文档的数据库，数据是以类似JSON格式的BSON格式编写的存储的。</li><li>MongoDB几乎比传统数据库系统快100倍。</li></ul><h2 id="MongoDB-应用案例"><a href="#MongoDB-应用案例" class="headerlink" title="MongoDB 应用案例"></a>MongoDB 应用案例</h2><p>下面列举一些公司MongoDB的实际应用：</p><ul><li>Craiglist上使用MongoDB的存档数十亿条记录。</li><li>FourSquare，基于位置的社交网站，在Amazon EC2的服务器上使用MongoDB分享数据。</li><li>Shutterfly，以互联网为基础的社会和个人出版服务，使用MongoDB的各种持久性数据存储的要求。</li><li>bit.ly, 一个基于Web的网址缩短服务，使用MongoDB的存储自己的数据。</li><li>spike.com，一个MTV网络的联营公司， spike.com使用MongoDB的。</li><li>Intuit公司，一个为小企业和个人的软件和服务提供商，为小型企业使用MongoDB的跟踪用户的数据。</li><li>sourceforge.net，资源网站查找，创建和发布开源软件免费，使用MongoDB的后端存储。</li><li>etsy.com ，一个购买和出售手工制作物品网站，使用MongoDB。</li><li>纽约时报，领先的在线新闻门户网站之一，使用MongoDB。</li><li>CERN，著名的粒子物理研究所，欧洲核子研究中心大型强子对撞机的数据使用MongoDB。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;什么是MongoDB&quot;&gt;&lt;a href=&quot;#什么是MongoDB&quot; class=&quot;headerlink&quot; title=&quot;什么是MongoDB ?&quot;&gt;&lt;/a&gt;什么是MongoDB ?&lt;/h2&gt;&lt;p&gt;MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源
       
     
     </summary>
@@ -306,19 +331,20 @@
   </entry>
   
   <entry>
-    <title>TensorFlow入门：安装</title>
-    <link href="http://donjote.github.io/2017/07/14/tensorflow_2/"/>
-    <id>http://donjote.github.io/2017/07/14/tensorflow_2/</id>
+    <title>TensorFlow入门：简介</title>
+    <link href="http://donjote.github.io/2017/07/14/tensorflow_1/"/>
+    <id>http://donjote.github.io/2017/07/14/tensorflow_1/</id>
     <published>2017-07-13T16:00:00.000Z</published>
-    <updated>2018-08-09T05:55:26.991Z</updated>
+    <updated>2018-08-09T05:55:42.448Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="基于-Docker-的安装"><a href="#基于-Docker-的安装" class="headerlink" title="基于 Docker 的安装"></a>基于 Docker 的安装</h2><p>首先, <a href="https://docs.docker.com/engine/installation/" target="_blank" rel="external">安装 Docker</a>. 一旦 Docker 已经启动运行, 可以通过命令启动一个容器:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ docker run -it --name tensorflow -p 8888:8888 tensorflow/tensorflow</div></pre></td></tr></table></figure><p>##才云TensorFlow镜像<br>在官方镜像的基础上，才云科技提供的镜像进一步整合了其他机器学习工具包以及TensorFlow可视化工具TensorBoard，使用起来可以更加方便。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ docker run -it  --name tensorflow -p 8888:8888 -p 6006:6006 \</div><div class="line">cargo.caicloud.io/caicloud/tensorflow</div></pre></td></tr></table></figure></p><p>在这个命令中，-p 8888:8888 将容器内运行的Jupyter服务映射到本地机器，这样在浏览器中打开localhost:8888就能看到Jupyter界面。在此镜像中运行的Jupyter是一个网页版的代码编辑器，它支持创建、上传、修改和运行Python程序。</p><hr><p>-p 6006:6006将容器内运行的TensorFlow可视化工具TensorBoard映射到本地机器，通过在浏览器中打开localhost:6006就可以将TensorFlow在训练时的状态、图片数据以及神经网络结构等信息全部展示出来。此镜像会将所有输出到/log目录底下的日志全部可视化。</p>]]></content>
+    <content type="html"><![CDATA[<p>TensorFlow 是一个用于人工智能的开源神器</p><h2 id="TensorFlow是什么？"><a href="#TensorFlow是什么？" class="headerlink" title="TensorFlow是什么？"></a>TensorFlow是什么？</h2><p>TensorFlow™ 是一个采用数据流图（data flow graphs），用于数值计算的开源软件库。节点（Nodes）在图中表示数学操作，图中的线（edges）则表示在节点间相互联系的多维数据数组，即张量（tensor）。它灵活的架构让你可以在多种平台上展开计算，例如台式计算机中的一个或多个CPU（或GPU），服务器，移动设备等等。TensorFlow 最初由Google大脑小组（隶属于Google机器智能研究机构）的研究员和工程师们开发出来，用于机器学习和深度神经网络方面的研究，但这个系统的通用性使其也可广泛用于其他计算领域。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/14/tensorflow_1/1.gif" alt="TensorFlow" title="">                </div>                <div class="image-caption">TensorFlow</div>            </figure></p><h2 id="什么是数据流图（Data-Flow-Graph）"><a href="#什么是数据流图（Data-Flow-Graph）" class="headerlink" title="什么是数据流图（Data Flow Graph）?"></a>什么是数据流图（Data Flow Graph）?</h2><p>数据流图用“结点”（nodes）和“线”(edges)的有向图来描述数学计算。“节点” 一般用来表示施加的数学操作，但也可以表示数据输入（feed in）的起点/输出（push out）的终点，或者是读取/写入持久变量（persistent variable）的终点。“线”表示“节点”之间的输入/输出关系。这些数据“线”可以输运“size可动态调整”的多维数据数组，即“张量”（tensor）。张量从图中流过的直观图像是这个工具取名为“Tensorflow”的原因。一旦输入端的所有张量准备好，节点将被分配到各种计算设备完成异步并行地执行运算。</p><h2 id="TensorFlow的特征"><a href="#TensorFlow的特征" class="headerlink" title="TensorFlow的特征"></a>TensorFlow的特征</h2><ul><li>高度的灵活性</li><li>真正的可移植性（Portability）</li><li>将科研和产品联系在一起</li><li>自动求微分</li><li>多语言支持</li><li>性能最优化</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;基于-Docker-的安装&quot;&gt;&lt;a href=&quot;#基于-Docker-的安装&quot; class=&quot;headerlink&quot; title=&quot;基于 Docker 的安装&quot;&gt;&lt;/a&gt;基于 Docker 的安装&lt;/h2&gt;&lt;p&gt;首先, &lt;a href=&quot;https://docs.
+        &lt;p&gt;TensorFlow 是一个用于人工智能的开源神器&lt;/p&gt;
+&lt;h2 id=&quot;TensorFlow是什么？&quot;&gt;&lt;a href=&quot;#TensorFlow是什么？&quot; class=&quot;headerlink&quot; title=&quot;TensorFlow是什么？&quot;&gt;&lt;/a&gt;TensorFlow是
       
     
     </summary>
@@ -335,20 +361,19 @@
   </entry>
   
   <entry>
-    <title>TensorFlow入门：简介</title>
-    <link href="http://donjote.github.io/2017/07/14/tensorflow_1/"/>
-    <id>http://donjote.github.io/2017/07/14/tensorflow_1/</id>
+    <title>TensorFlow入门：安装</title>
+    <link href="http://donjote.github.io/2017/07/14/tensorflow_2/"/>
+    <id>http://donjote.github.io/2017/07/14/tensorflow_2/</id>
     <published>2017-07-13T16:00:00.000Z</published>
-    <updated>2018-08-09T05:55:42.448Z</updated>
+    <updated>2018-08-09T05:55:26.991Z</updated>
     
-    <content type="html"><![CDATA[<p>TensorFlow 是一个用于人工智能的开源神器</p><h2 id="TensorFlow是什么？"><a href="#TensorFlow是什么？" class="headerlink" title="TensorFlow是什么？"></a>TensorFlow是什么？</h2><p>TensorFlow™ 是一个采用数据流图（data flow graphs），用于数值计算的开源软件库。节点（Nodes）在图中表示数学操作，图中的线（edges）则表示在节点间相互联系的多维数据数组，即张量（tensor）。它灵活的架构让你可以在多种平台上展开计算，例如台式计算机中的一个或多个CPU（或GPU），服务器，移动设备等等。TensorFlow 最初由Google大脑小组（隶属于Google机器智能研究机构）的研究员和工程师们开发出来，用于机器学习和深度神经网络方面的研究，但这个系统的通用性使其也可广泛用于其他计算领域。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/14/tensorflow_1/1.gif" alt="TensorFlow" title="">                </div>                <div class="image-caption">TensorFlow</div>            </figure></p><h2 id="什么是数据流图（Data-Flow-Graph）"><a href="#什么是数据流图（Data-Flow-Graph）" class="headerlink" title="什么是数据流图（Data Flow Graph）?"></a>什么是数据流图（Data Flow Graph）?</h2><p>数据流图用“结点”（nodes）和“线”(edges)的有向图来描述数学计算。“节点” 一般用来表示施加的数学操作，但也可以表示数据输入（feed in）的起点/输出（push out）的终点，或者是读取/写入持久变量（persistent variable）的终点。“线”表示“节点”之间的输入/输出关系。这些数据“线”可以输运“size可动态调整”的多维数据数组，即“张量”（tensor）。张量从图中流过的直观图像是这个工具取名为“Tensorflow”的原因。一旦输入端的所有张量准备好，节点将被分配到各种计算设备完成异步并行地执行运算。</p><h2 id="TensorFlow的特征"><a href="#TensorFlow的特征" class="headerlink" title="TensorFlow的特征"></a>TensorFlow的特征</h2><ul><li>高度的灵活性</li><li>真正的可移植性（Portability）</li><li>将科研和产品联系在一起</li><li>自动求微分</li><li>多语言支持</li><li>性能最优化</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="基于-Docker-的安装"><a href="#基于-Docker-的安装" class="headerlink" title="基于 Docker 的安装"></a>基于 Docker 的安装</h2><p>首先, <a href="https://docs.docker.com/engine/installation/" target="_blank" rel="external">安装 Docker</a>. 一旦 Docker 已经启动运行, 可以通过命令启动一个容器:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ docker run -it --name tensorflow -p 8888:8888 tensorflow/tensorflow</div></pre></td></tr></table></figure><p>##才云TensorFlow镜像<br>在官方镜像的基础上，才云科技提供的镜像进一步整合了其他机器学习工具包以及TensorFlow可视化工具TensorBoard，使用起来可以更加方便。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ docker run -it  --name tensorflow -p 8888:8888 -p 6006:6006 \</div><div class="line">cargo.caicloud.io/caicloud/tensorflow</div></pre></td></tr></table></figure></p><p>在这个命令中，-p 8888:8888 将容器内运行的Jupyter服务映射到本地机器，这样在浏览器中打开localhost:8888就能看到Jupyter界面。在此镜像中运行的Jupyter是一个网页版的代码编辑器，它支持创建、上传、修改和运行Python程序。</p><hr><p>-p 6006:6006将容器内运行的TensorFlow可视化工具TensorBoard映射到本地机器，通过在浏览器中打开localhost:6006就可以将TensorFlow在训练时的状态、图片数据以及神经网络结构等信息全部展示出来。此镜像会将所有输出到/log目录底下的日志全部可视化。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;TensorFlow 是一个用于人工智能的开源神器&lt;/p&gt;
-&lt;h2 id=&quot;TensorFlow是什么？&quot;&gt;&lt;a href=&quot;#TensorFlow是什么？&quot; class=&quot;headerlink&quot; title=&quot;TensorFlow是什么？&quot;&gt;&lt;/a&gt;TensorFlow是
+        &lt;h2 id=&quot;基于-Docker-的安装&quot;&gt;&lt;a href=&quot;#基于-Docker-的安装&quot; class=&quot;headerlink&quot; title=&quot;基于 Docker 的安装&quot;&gt;&lt;/a&gt;基于 Docker 的安装&lt;/h2&gt;&lt;p&gt;首先, &lt;a href=&quot;https://docs.
       
     
     </summary>
@@ -469,20 +494,19 @@ $ docker-machine create -d virtualbox --engine-registry-mi
   </entry>
   
   <entry>
-    <title>使用docker-machine搭建etcd集群</title>
-    <link href="http://donjote.github.io/2017/07/11/etcd_2/"/>
-    <id>http://donjote.github.io/2017/07/11/etcd_2/</id>
+    <title>etcd概述和使用场景</title>
+    <link href="http://donjote.github.io/2017/07/11/etcd_1/"/>
+    <id>http://donjote.github.io/2017/07/11/etcd_1/</id>
     <published>2017-07-10T16:00:00.000Z</published>
-    <updated>2018-08-09T06:18:28.342Z</updated>
+    <updated>2018-08-09T05:58:59.874Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="创建Etcd集群"><a href="#创建Etcd集群" class="headerlink" title="创建Etcd集群"></a>创建Etcd集群</h2><ul><li>命令<pre><code>$ curl -sSL https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh | sh -</code></pre></li></ul><h3 id="集群验证"><a href="#集群验证" class="headerlink" title="集群验证"></a>集群验证</h3><ol><li>验证集群members。在集群中的每台机器上查看members，得出的结果应该是相同的    <pre><code>$ curl -L http://$(docker-machine ip etcd-node-0):2379/v2/members$ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/members$ curl -L http://$(docker-machine ip etcd-node-2):2379/v2/members{&quot;members&quot;:[{&quot;id&quot;:&quot;305750b374006637&quot;,&quot;name&quot;:&quot;etcd-node-2&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.102:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.102:2379&quot;]},{&quot;id&quot;:&quot;c7177c3c5ff3b1b4&quot;,&quot;name&quot;:&quot;etcd-node-0&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.100:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.100:2379&quot;]},{&quot;id&quot;:&quot;d5673e1f00b32e05&quot;,&quot;name&quot;:&quot;etcd-node-1&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.101:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.101:2379&quot;]}]}</code></pre>2.某台机器上添加数据，其他机器上查看数据，得出的结果应该是相同的<pre><code>$ curl -L http://$(docker-machine ip etcd-node-0):2379/v2/keys/message -XPUT -d value=&quot;Hello World&quot;{&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}$ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/keys/message{&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}$ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/keys/message{&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}</code></pre></li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>etcd是一个高可用的键值存储系统，主要用于共享配置和服务发现。etcd是由CoreOS开发并维护的，灵感来自于 ZooKeeper 和 Doozer，它使用Go语言编写，并通过Raft一致性算法处理日志复制以保证强一致性。Raft是一个新的一致性算法，适用于分布式系统的日志复制，Raft通过选举的方式来实现一致性。Google的容器集群管理系统Kubernetes、开源PaaS平台Cloud Foundry和CoreOS的Fleet都广泛使用了etcd。在分布式系统中，如何管理节点间的状态一直是一个难题，etcd像是专门为集群环境的服务发现和注册而设计，它提供了数据TTL失效、数据改变监视、多值、目录监听、分布式锁原子操作等功能，可以方便的跟踪并管理集群节点的状态。</p><hr><p>etcd的特性如下：</p><ul><li>简单: 支持curl方式的用户API（HTTP+JSON）</li><li>安全: 可选的SSL客户端证书认证</li><li>快速: 单实例每秒 1000 次写操作</li><li>可靠: 使用Raft保证一致性</li></ul><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><h3 id="场景一：服务发现（Service-Discovery）"><a href="#场景一：服务发现（Service-Discovery）" class="headerlink" title="场景一：服务发现（Service Discovery）"></a>场景一：服务发现（Service Discovery）</h3><p>服务发现要解决的也是分布式系统中最常见的问题之一，即在同一个分布式集群中的进程或服务，要如何才能找到对方并建立连接。本质上来说，服务发现就是想要了解集群中是否有进程在监听udp或tcp端口，并且通过名字就可以查找和连接。要解决服务发现的问题，需要有下面三大支柱，缺一不可。</p><hr><p>一个强一致性、高可用的服务存储目录。基于Raft算法的etcd天生就是这样一个强一致性高可用的服务存储目录。</p><hr><p>一种注册服务和监控服务健康状态的机制。用户可以在etcd中注册服务，并且对注册的服务设置key TTL，定时保持服务的心跳以达到监控健康状态的效果。</p><hr><p>一种查找和连接服务的机制。通过在etcd指定的主题下注册的服务也能在对应的主题下查找到。为了确保连接，我们可以在每个服务机器上都部署一个Proxy模式的etcd，这样就可以确保能访问etcd集群的服务都能互相连接。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/1.jpg" alt="服务发现示意图" title="">                </div>                <div class="image-caption">服务发现示意图</div>            </figure><br>图一 服务发现示意图</p><hr><p>下面我们来看服务发现对应的具体场景。</p><hr><p>微服务协同工作架构中，服务动态添加。随着Docker容器的流行，多种微服务共同协作，构成一个相对功能强大的架构的案例越来越多。透明化的动态添加这些服务的需求也日益强烈。通过服务发现机制，在etcd中注册某个服务名字的目录，在该目录下存储可用的服务节点的IP。在使用服务的过程中，只要从服务目录下查找可用的服务节点去使用即可。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/2.jpg" alt="服务协同工作" title="">                </div>                <div class="image-caption">服务协同工作</div>            </figure><br>图二 微服务协同工作</p><hr><p>PaaS平台中应用多实例与实例故障重启透明化。PaaS平台中的应用一般都有多个实例，通过域名，不仅可以透明的对这多个实例进行访问，而且还可以做到负载均衡。但是应用的某个实例随时都有可能故障重启，这时就需要动态的配置域名解析（路由）中的信息。通过etcd的服务发现功能就可以轻松解决这个动态配置的问题。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/3.jpg" alt="多平台多实例透明化" title="">                </div>                <div class="image-caption">多平台多实例透明化</div>            </figure><br>图三 多平台多实例透明化</p><h3 id="场景二：消息发布与订阅"><a href="#场景二：消息发布与订阅" class="headerlink" title="场景二：消息发布与订阅"></a>场景二：消息发布与订阅</h3><p>在分布式系统中，最适用的一种组件间通信方式就是消息发布与订阅。即构建一个配置共享中心，数据提供者在这个配置中心发布消息，而消息使用者则订阅他们关心的主题，一旦主题有消息发布，就会实时通知订阅者。通过这种方式可以做到分布式系统配置的集中式管理与动态更新。</p><hr><p>应用中用到的一些配置信息放到etcd上进行集中管理。这类场景的使用方式通常是这样：应用在启动的时候主动从etcd获取一次配置信息，同时，在etcd节点上注册一个Watcher并等待，以后每次配置有更新的时候，etcd都会实时通知订阅者，以此达到获取最新配置信息的目的。</p><hr><p>分布式搜索服务中，索引的元信息和服务器集群机器的节点状态存放在etcd中，供各个客户端订阅使用。使用etcd的key TTL功能可以确保机器状态是实时更新的。</p><hr><p>分布式日志收集系统。这个系统的核心工作是收集分布在不同机器的日志。收集器通常是按照应用（或主题）来分配收集任务单元，因此可以在etcd上创建一个以应用（主题）命名的目录P，并将这个应用（主题相关）的所有机器ip，以子目录的形式存储到目录P上，然后设置一个etcd递归的Watcher，递归式的监控应用（主题）目录下所有信息的变动。这样就实现了机器IP（消息）变动的时候，能够实时通知到收集器调整任务分配。</p><hr><p>系统中信息需要动态自动获取与人工干预修改信息请求内容的情况。通常是暴露出接口，例如JMX接口，来获取一些运行时的信息。引入etcd之后，就不用自己实现一套方案了，只要将这些信息存放到指定的etcd目录中即可，etcd的这些目录就可以通过HTTP的接口在外部访问。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/4.jpg" alt="消息发布和订阅" title="">                </div>                <div class="image-caption">消息发布和订阅</div>            </figure><br>图四 消息发布和订阅</p><h3 id="场景三：负载均衡"><a href="#场景三：负载均衡" class="headerlink" title="场景三：负载均衡"></a>场景三：负载均衡</h3><p>在场景一中也提到了负载均衡，本文所指的负载均衡均为软负载均衡。分布式系统中，为了保证服务的高可用以及数据的一致性，通常都会把数据和服务部署多份，以此达到对等服务，即使其中的某一个服务失效了，也不影响使用。由此带来的坏处是数据写入性能下降，而好处则是数据访问时的负载均衡。因为每个对等服务节点上都存有完整的数据，所以用户的访问流量就可以分流到不同的机器上。</p><hr><p>etcd本身分布式架构存储的信息访问支持负载均衡。etcd集群化以后，每个etcd的核心节点都可以处理用户的请求。所以，把数据量小但是访问频繁的消息数据直接存储到etcd中也是个不错的选择，如业务系统中常用的二级代码表（在表中存储代码，在etcd中存储代码所代表的具体含义，业务系统调用查表的过程，就需要查找表中代码的含义）。</p><hr><p>利用etcd维护一个负载均衡节点表。etcd可以监控一个集群中多个节点的状态，当有一个请求发过来后，可以轮询式的把请求转发给存活着的多个状态。类似KafkaMQ，通过ZooKeeper来维护生产者和消费者的负载均衡。同样也可以用etcd来做ZooKeeper的工作。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/5.jpg" alt="负载均衡" title="">                </div>                <div class="image-caption">负载均衡</div>            </figure><br>图五 负载均衡</p><h3 id="场景四：分布式通知与协调"><a href="#场景四：分布式通知与协调" class="headerlink" title="场景四：分布式通知与协调"></a>场景四：分布式通知与协调</h3><p>这里说到的分布式通知与协调，与消息发布和订阅有些相似。都用到了etcd中的Watcher机制，通过注册与异步通知机制，实现分布式环境下不同系统之间的通知与协调，从而对数据变更做到实时处理。实现方式通常是这样：不同系统都在etcd上对同一个目录进行注册，同时设置Watcher观测该目录的变化（如果对子目录的变化也有需要，可以设置递归模式），当某个系统更新了etcd的目录，那么设置了Watcher的系统就会收到通知，并作出相应处理。</p><hr><p>通过etcd进行低耦合的心跳检测。检测系统和被检测系统通过etcd上某个目录关联而非直接关联起来，这样可以大大减少系统的耦合性。</p><hr><p>通过etcd完成系统调度。某系统有控制台和推送系统两部分组成，控制台的职责是控制推送系统进行相应的推送工作。管理人员在控制台作的一些操作，实际上是修改了etcd上某些目录节点的状态，而etcd就把这些变化通知给注册了Watcher的推送系统客户端，推送系统再作出相应的推送任务。</p><hr><p>通过etcd完成工作汇报。大部分类似的任务分发系统，子任务启动后，到etcd来注册一个临时工作目录，并且定时将自己的进度进行汇报（将进度写入到这个临时目录），这样任务管理者就能够实时知道任务进度。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/6.jpg" alt="分布式协同工作" title="">                </div>                <div class="image-caption">分布式协同工作</div>            </figure><br>图六 分布式协同工作</p><h3 id="场景五：分布式锁"><a href="#场景五：分布式锁" class="headerlink" title="场景五：分布式锁"></a>场景五：分布式锁</h3><p>因为etcd使用Raft算法保持了数据的强一致性，某次操作存储到集群中的值必然是全局一致的，所以很容易实现分布式锁。锁服务有两种使用方式，一是保持独占，二是控制时序。</p><hr><p>保持独占即所有获取锁的用户最终只有一个可以得到。etcd为此提供了一套实现分布式锁原子操作CAS（CompareAndSwap）的API。通过设置prevExist值，可以保证在多个节点同时去创建某个目录时，只有一个成功。而创建成功的用户就可以认为是获得了锁。</p><hr><p>控制时序，即所有想要获得锁的用户都会被安排执行，但是获得锁的顺序也是全局唯一的，同时决定了执行顺序。etcd为此也提供了一套API（自动创建有序键），对一个目录建值时指定为POST动作，这样etcd会自动在目录下生成一个当前最大的值为键，存储这个新的值（客户端编号）。同时还可以使用API按顺序列出所有当前目录下的键值。此时这些键的值就是客户端的时序，而这些键中存储的值可以是代表客户端的编号。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/7.jpg" alt="分布式锁" title="">                </div>                <div class="image-caption">分布式锁</div>            </figure><br>图七 分布式锁</p><h3 id="场景六：分布式队列"><a href="#场景六：分布式队列" class="headerlink" title="场景六：分布式队列"></a>场景六：分布式队列</h3><p>分布式队列的常规用法与场景五中所描述的分布式锁的控制时序用法类似，即创建一个先进先出的队列，保证顺序。</p><hr><p>另一种比较有意思的实现是在保证队列达到某个条件时再统一按顺序执行。这种方法的实现可以在/queue这个目录中另外建立一个/queue/condition节点。</p><hr><p>condition可以表示队列大小。比如一个大的任务需要很多小任务就绪的情况下才能执行，每次有一个小任务就绪，就给这个condition数字加1，直到达到大任务规定的数字，再开始执行队列里的一系列小任务，最终执行大任务。<br>condition可以表示某个任务在不在队列。这个任务可以是所有排序任务的首个执行程序，也可以是拓扑结构中没有依赖的点。通常，必须执行这些任务后才能执行队列中的其他任务。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/8.jpg" alt="分布式队列" title="">                </div>                <div class="image-caption">分布式队列</div>            </figure><br>图八 分布式队列</p><h3 id="场景七：集群监控与Leader竞选"><a href="#场景七：集群监控与Leader竞选" class="headerlink" title="场景七：集群监控与Leader竞选"></a>场景七：集群监控与Leader竞选</h3><p>通过etcd来进行监控实现起来非常简单并且实时性强。</p><hr><p>前面几个场景已经提到Watcher机制，当某个节点消失或有变动时，Watcher会第一时间发现并告知用户。<br>节点可以设置TTL key，比如每隔30s发送一次心跳使代表该机器存活的节点继续存在，否则节点消失。<br>这样就可以第一时间检测到各节点的健康状态，以完成集群的监控要求。</p><hr><p>另外，使用分布式锁，可以完成Leader竞选。这种场景通常是一些长时间CPU计算或者使用IO操作的机器，只需要竞选出的Leader计算或处理一次，就可以把结果复制给其他的Follower。从而避免重复劳动，节省计算资源。</p><hr><p>这个的经典场景是搜索系统中建立全量索引。如果每个机器都进行一遍索引的建立，不但耗时而且建立索引的一致性不能保证。通过在etcd的CAS机制同时创建一个节点，创建成功的机器作为Leader，进行索引计算，然后把计算结果分发到其它节点。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/9.jpg" alt="Leader竞选" title="">                </div>                <div class="image-caption">Leader竞选</div>            </figure><br>图九 Leader竞选</p><h2 id="为什么用etcd而不用ZooKeeper？"><a href="#为什么用etcd而不用ZooKeeper？" class="headerlink" title="为什么用etcd而不用ZooKeeper？"></a>为什么用etcd而不用ZooKeeper？</h2><p>etcd实现的这些功能，ZooKeeper都能实现。那么为什么要用etcd而非直接使用ZooKeeper呢？</p><hr><p>相较之下，ZooKeeper有如下缺点：</p><ol><li>复杂。ZooKeeper的部署维护复杂，管理员需要掌握一系列的知识和技能；而Paxos强一致性算法也是素来以复杂难懂而闻名于世；另外，ZooKeeper的使用也比较复杂，需要安装客户端，官方只提供了Java和C两种语言的接口。</li><li>Java编写。这里不是对Java有偏见，而是Java本身就偏向于重型应用，它会引入大量的依赖。而运维人员则普遍希望保持强一致、高可用的机器集群尽可能简单，维护起来也不易出错。]</li><li>发展缓慢。Apache基金会项目特有的“Apache Way”在开源界饱受争议，其中一大原因就是由于基金会庞大的结构以及松散的管理导致项目发展缓慢。</li></ol><hr><p>而etcd作为一个后起之秀，其优点也很明显。</p><ol><li>简单。使用Go语言编写部署简单；使用HTTP作为接口使用简单；使用Raft算法保证强一致性让用户易于理解。</li><li>数据持久化。etcd默认数据一更新就进行持久化。</li><li>安全。etcd支持SSL客户端安全认证。</li></ol><hr><p>最后，etcd作为一个年轻的项目，真正告诉迭代和开发中，这既是一个优点，也是一个缺点。优点是它的未来具有无限的可能性，缺点是无法得到大项目长时间使用的检验。然而，目前CoreOS、Kubernetes和CloudFoundry等知名项目均在生产环境中使用了etcd，所以总的来说，etcd值得你去尝试。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;创建Etcd集群&quot;&gt;&lt;a href=&quot;#创建Etcd集群&quot; class=&quot;headerlink&quot; title=&quot;创建Etcd集群&quot;&gt;&lt;/a&gt;创建Etcd集群&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;命令&lt;pre&gt;&lt;code&gt;$ curl -sSL https://raw.git
+        &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;etcd是一个高可用的键值存储系统，主要用于共享配置和服务发现。etcd是由CoreOS开发并维护的，灵感来自于 ZooKeeper 和 D
       
     
     </summary>
@@ -499,19 +523,20 @@ $ docker-machine create -d virtualbox --engine-registry-mi
   </entry>
   
   <entry>
-    <title>etcd概述和使用场景</title>
-    <link href="http://donjote.github.io/2017/07/11/etcd_1/"/>
-    <id>http://donjote.github.io/2017/07/11/etcd_1/</id>
+    <title>使用docker-machine搭建etcd集群</title>
+    <link href="http://donjote.github.io/2017/07/11/etcd_2/"/>
+    <id>http://donjote.github.io/2017/07/11/etcd_2/</id>
     <published>2017-07-10T16:00:00.000Z</published>
-    <updated>2018-08-09T05:58:59.874Z</updated>
+    <updated>2018-08-09T06:18:28.342Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>etcd是一个高可用的键值存储系统，主要用于共享配置和服务发现。etcd是由CoreOS开发并维护的，灵感来自于 ZooKeeper 和 Doozer，它使用Go语言编写，并通过Raft一致性算法处理日志复制以保证强一致性。Raft是一个新的一致性算法，适用于分布式系统的日志复制，Raft通过选举的方式来实现一致性。Google的容器集群管理系统Kubernetes、开源PaaS平台Cloud Foundry和CoreOS的Fleet都广泛使用了etcd。在分布式系统中，如何管理节点间的状态一直是一个难题，etcd像是专门为集群环境的服务发现和注册而设计，它提供了数据TTL失效、数据改变监视、多值、目录监听、分布式锁原子操作等功能，可以方便的跟踪并管理集群节点的状态。</p><hr><p>etcd的特性如下：</p><ul><li>简单: 支持curl方式的用户API（HTTP+JSON）</li><li>安全: 可选的SSL客户端证书认证</li><li>快速: 单实例每秒 1000 次写操作</li><li>可靠: 使用Raft保证一致性</li></ul><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><h3 id="场景一：服务发现（Service-Discovery）"><a href="#场景一：服务发现（Service-Discovery）" class="headerlink" title="场景一：服务发现（Service Discovery）"></a>场景一：服务发现（Service Discovery）</h3><p>服务发现要解决的也是分布式系统中最常见的问题之一，即在同一个分布式集群中的进程或服务，要如何才能找到对方并建立连接。本质上来说，服务发现就是想要了解集群中是否有进程在监听udp或tcp端口，并且通过名字就可以查找和连接。要解决服务发现的问题，需要有下面三大支柱，缺一不可。</p><hr><p>一个强一致性、高可用的服务存储目录。基于Raft算法的etcd天生就是这样一个强一致性高可用的服务存储目录。</p><hr><p>一种注册服务和监控服务健康状态的机制。用户可以在etcd中注册服务，并且对注册的服务设置key TTL，定时保持服务的心跳以达到监控健康状态的效果。</p><hr><p>一种查找和连接服务的机制。通过在etcd指定的主题下注册的服务也能在对应的主题下查找到。为了确保连接，我们可以在每个服务机器上都部署一个Proxy模式的etcd，这样就可以确保能访问etcd集群的服务都能互相连接。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/1.jpg" alt="服务发现示意图" title="">                </div>                <div class="image-caption">服务发现示意图</div>            </figure><br>图一 服务发现示意图</p><hr><p>下面我们来看服务发现对应的具体场景。</p><hr><p>微服务协同工作架构中，服务动态添加。随着Docker容器的流行，多种微服务共同协作，构成一个相对功能强大的架构的案例越来越多。透明化的动态添加这些服务的需求也日益强烈。通过服务发现机制，在etcd中注册某个服务名字的目录，在该目录下存储可用的服务节点的IP。在使用服务的过程中，只要从服务目录下查找可用的服务节点去使用即可。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/2.jpg" alt="服务协同工作" title="">                </div>                <div class="image-caption">服务协同工作</div>            </figure><br>图二 微服务协同工作</p><hr><p>PaaS平台中应用多实例与实例故障重启透明化。PaaS平台中的应用一般都有多个实例，通过域名，不仅可以透明的对这多个实例进行访问，而且还可以做到负载均衡。但是应用的某个实例随时都有可能故障重启，这时就需要动态的配置域名解析（路由）中的信息。通过etcd的服务发现功能就可以轻松解决这个动态配置的问题。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/3.jpg" alt="多平台多实例透明化" title="">                </div>                <div class="image-caption">多平台多实例透明化</div>            </figure><br>图三 多平台多实例透明化</p><h3 id="场景二：消息发布与订阅"><a href="#场景二：消息发布与订阅" class="headerlink" title="场景二：消息发布与订阅"></a>场景二：消息发布与订阅</h3><p>在分布式系统中，最适用的一种组件间通信方式就是消息发布与订阅。即构建一个配置共享中心，数据提供者在这个配置中心发布消息，而消息使用者则订阅他们关心的主题，一旦主题有消息发布，就会实时通知订阅者。通过这种方式可以做到分布式系统配置的集中式管理与动态更新。</p><hr><p>应用中用到的一些配置信息放到etcd上进行集中管理。这类场景的使用方式通常是这样：应用在启动的时候主动从etcd获取一次配置信息，同时，在etcd节点上注册一个Watcher并等待，以后每次配置有更新的时候，etcd都会实时通知订阅者，以此达到获取最新配置信息的目的。</p><hr><p>分布式搜索服务中，索引的元信息和服务器集群机器的节点状态存放在etcd中，供各个客户端订阅使用。使用etcd的key TTL功能可以确保机器状态是实时更新的。</p><hr><p>分布式日志收集系统。这个系统的核心工作是收集分布在不同机器的日志。收集器通常是按照应用（或主题）来分配收集任务单元，因此可以在etcd上创建一个以应用（主题）命名的目录P，并将这个应用（主题相关）的所有机器ip，以子目录的形式存储到目录P上，然后设置一个etcd递归的Watcher，递归式的监控应用（主题）目录下所有信息的变动。这样就实现了机器IP（消息）变动的时候，能够实时通知到收集器调整任务分配。</p><hr><p>系统中信息需要动态自动获取与人工干预修改信息请求内容的情况。通常是暴露出接口，例如JMX接口，来获取一些运行时的信息。引入etcd之后，就不用自己实现一套方案了，只要将这些信息存放到指定的etcd目录中即可，etcd的这些目录就可以通过HTTP的接口在外部访问。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/4.jpg" alt="消息发布和订阅" title="">                </div>                <div class="image-caption">消息发布和订阅</div>            </figure><br>图四 消息发布和订阅</p><h3 id="场景三：负载均衡"><a href="#场景三：负载均衡" class="headerlink" title="场景三：负载均衡"></a>场景三：负载均衡</h3><p>在场景一中也提到了负载均衡，本文所指的负载均衡均为软负载均衡。分布式系统中，为了保证服务的高可用以及数据的一致性，通常都会把数据和服务部署多份，以此达到对等服务，即使其中的某一个服务失效了，也不影响使用。由此带来的坏处是数据写入性能下降，而好处则是数据访问时的负载均衡。因为每个对等服务节点上都存有完整的数据，所以用户的访问流量就可以分流到不同的机器上。</p><hr><p>etcd本身分布式架构存储的信息访问支持负载均衡。etcd集群化以后，每个etcd的核心节点都可以处理用户的请求。所以，把数据量小但是访问频繁的消息数据直接存储到etcd中也是个不错的选择，如业务系统中常用的二级代码表（在表中存储代码，在etcd中存储代码所代表的具体含义，业务系统调用查表的过程，就需要查找表中代码的含义）。</p><hr><p>利用etcd维护一个负载均衡节点表。etcd可以监控一个集群中多个节点的状态，当有一个请求发过来后，可以轮询式的把请求转发给存活着的多个状态。类似KafkaMQ，通过ZooKeeper来维护生产者和消费者的负载均衡。同样也可以用etcd来做ZooKeeper的工作。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/5.jpg" alt="负载均衡" title="">                </div>                <div class="image-caption">负载均衡</div>            </figure><br>图五 负载均衡</p><h3 id="场景四：分布式通知与协调"><a href="#场景四：分布式通知与协调" class="headerlink" title="场景四：分布式通知与协调"></a>场景四：分布式通知与协调</h3><p>这里说到的分布式通知与协调，与消息发布和订阅有些相似。都用到了etcd中的Watcher机制，通过注册与异步通知机制，实现分布式环境下不同系统之间的通知与协调，从而对数据变更做到实时处理。实现方式通常是这样：不同系统都在etcd上对同一个目录进行注册，同时设置Watcher观测该目录的变化（如果对子目录的变化也有需要，可以设置递归模式），当某个系统更新了etcd的目录，那么设置了Watcher的系统就会收到通知，并作出相应处理。</p><hr><p>通过etcd进行低耦合的心跳检测。检测系统和被检测系统通过etcd上某个目录关联而非直接关联起来，这样可以大大减少系统的耦合性。</p><hr><p>通过etcd完成系统调度。某系统有控制台和推送系统两部分组成，控制台的职责是控制推送系统进行相应的推送工作。管理人员在控制台作的一些操作，实际上是修改了etcd上某些目录节点的状态，而etcd就把这些变化通知给注册了Watcher的推送系统客户端，推送系统再作出相应的推送任务。</p><hr><p>通过etcd完成工作汇报。大部分类似的任务分发系统，子任务启动后，到etcd来注册一个临时工作目录，并且定时将自己的进度进行汇报（将进度写入到这个临时目录），这样任务管理者就能够实时知道任务进度。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/6.jpg" alt="分布式协同工作" title="">                </div>                <div class="image-caption">分布式协同工作</div>            </figure><br>图六 分布式协同工作</p><h3 id="场景五：分布式锁"><a href="#场景五：分布式锁" class="headerlink" title="场景五：分布式锁"></a>场景五：分布式锁</h3><p>因为etcd使用Raft算法保持了数据的强一致性，某次操作存储到集群中的值必然是全局一致的，所以很容易实现分布式锁。锁服务有两种使用方式，一是保持独占，二是控制时序。</p><hr><p>保持独占即所有获取锁的用户最终只有一个可以得到。etcd为此提供了一套实现分布式锁原子操作CAS（CompareAndSwap）的API。通过设置prevExist值，可以保证在多个节点同时去创建某个目录时，只有一个成功。而创建成功的用户就可以认为是获得了锁。</p><hr><p>控制时序，即所有想要获得锁的用户都会被安排执行，但是获得锁的顺序也是全局唯一的，同时决定了执行顺序。etcd为此也提供了一套API（自动创建有序键），对一个目录建值时指定为POST动作，这样etcd会自动在目录下生成一个当前最大的值为键，存储这个新的值（客户端编号）。同时还可以使用API按顺序列出所有当前目录下的键值。此时这些键的值就是客户端的时序，而这些键中存储的值可以是代表客户端的编号。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/7.jpg" alt="分布式锁" title="">                </div>                <div class="image-caption">分布式锁</div>            </figure><br>图七 分布式锁</p><h3 id="场景六：分布式队列"><a href="#场景六：分布式队列" class="headerlink" title="场景六：分布式队列"></a>场景六：分布式队列</h3><p>分布式队列的常规用法与场景五中所描述的分布式锁的控制时序用法类似，即创建一个先进先出的队列，保证顺序。</p><hr><p>另一种比较有意思的实现是在保证队列达到某个条件时再统一按顺序执行。这种方法的实现可以在/queue这个目录中另外建立一个/queue/condition节点。</p><hr><p>condition可以表示队列大小。比如一个大的任务需要很多小任务就绪的情况下才能执行，每次有一个小任务就绪，就给这个condition数字加1，直到达到大任务规定的数字，再开始执行队列里的一系列小任务，最终执行大任务。<br>condition可以表示某个任务在不在队列。这个任务可以是所有排序任务的首个执行程序，也可以是拓扑结构中没有依赖的点。通常，必须执行这些任务后才能执行队列中的其他任务。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/8.jpg" alt="分布式队列" title="">                </div>                <div class="image-caption">分布式队列</div>            </figure><br>图八 分布式队列</p><h3 id="场景七：集群监控与Leader竞选"><a href="#场景七：集群监控与Leader竞选" class="headerlink" title="场景七：集群监控与Leader竞选"></a>场景七：集群监控与Leader竞选</h3><p>通过etcd来进行监控实现起来非常简单并且实时性强。</p><hr><p>前面几个场景已经提到Watcher机制，当某个节点消失或有变动时，Watcher会第一时间发现并告知用户。<br>节点可以设置TTL key，比如每隔30s发送一次心跳使代表该机器存活的节点继续存在，否则节点消失。<br>这样就可以第一时间检测到各节点的健康状态，以完成集群的监控要求。</p><hr><p>另外，使用分布式锁，可以完成Leader竞选。这种场景通常是一些长时间CPU计算或者使用IO操作的机器，只需要竞选出的Leader计算或处理一次，就可以把结果复制给其他的Follower。从而避免重复劳动，节省计算资源。</p><hr><p>这个的经典场景是搜索系统中建立全量索引。如果每个机器都进行一遍索引的建立，不但耗时而且建立索引的一致性不能保证。通过在etcd的CAS机制同时创建一个节点，创建成功的机器作为Leader，进行索引计算，然后把计算结果分发到其它节点。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/11/etcd_1/9.jpg" alt="Leader竞选" title="">                </div>                <div class="image-caption">Leader竞选</div>            </figure><br>图九 Leader竞选</p><h2 id="为什么用etcd而不用ZooKeeper？"><a href="#为什么用etcd而不用ZooKeeper？" class="headerlink" title="为什么用etcd而不用ZooKeeper？"></a>为什么用etcd而不用ZooKeeper？</h2><p>etcd实现的这些功能，ZooKeeper都能实现。那么为什么要用etcd而非直接使用ZooKeeper呢？</p><hr><p>相较之下，ZooKeeper有如下缺点：</p><ol><li>复杂。ZooKeeper的部署维护复杂，管理员需要掌握一系列的知识和技能；而Paxos强一致性算法也是素来以复杂难懂而闻名于世；另外，ZooKeeper的使用也比较复杂，需要安装客户端，官方只提供了Java和C两种语言的接口。</li><li>Java编写。这里不是对Java有偏见，而是Java本身就偏向于重型应用，它会引入大量的依赖。而运维人员则普遍希望保持强一致、高可用的机器集群尽可能简单，维护起来也不易出错。]</li><li>发展缓慢。Apache基金会项目特有的“Apache Way”在开源界饱受争议，其中一大原因就是由于基金会庞大的结构以及松散的管理导致项目发展缓慢。</li></ol><hr><p>而etcd作为一个后起之秀，其优点也很明显。</p><ol><li>简单。使用Go语言编写部署简单；使用HTTP作为接口使用简单；使用Raft算法保证强一致性让用户易于理解。</li><li>数据持久化。etcd默认数据一更新就进行持久化。</li><li>安全。etcd支持SSL客户端安全认证。</li></ol><hr><p>最后，etcd作为一个年轻的项目，真正告诉迭代和开发中，这既是一个优点，也是一个缺点。优点是它的未来具有无限的可能性，缺点是无法得到大项目长时间使用的检验。然而，目前CoreOS、Kubernetes和CloudFoundry等知名项目均在生产环境中使用了etcd，所以总的来说，etcd值得你去尝试。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="创建Etcd集群"><a href="#创建Etcd集群" class="headerlink" title="创建Etcd集群"></a>创建Etcd集群</h2><ul><li>命令<pre><code>$ curl -sSL https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh | sh -</code></pre></li></ul><h3 id="集群验证"><a href="#集群验证" class="headerlink" title="集群验证"></a>集群验证</h3><ol><li>验证集群members。在集群中的每台机器上查看members，得出的结果应该是相同的    <pre><code>$ curl -L http://$(docker-machine ip etcd-node-0):2379/v2/members$ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/members$ curl -L http://$(docker-machine ip etcd-node-2):2379/v2/members{&quot;members&quot;:[{&quot;id&quot;:&quot;305750b374006637&quot;,&quot;name&quot;:&quot;etcd-node-2&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.102:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.102:2379&quot;]},{&quot;id&quot;:&quot;c7177c3c5ff3b1b4&quot;,&quot;name&quot;:&quot;etcd-node-0&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.100:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.100:2379&quot;]},{&quot;id&quot;:&quot;d5673e1f00b32e05&quot;,&quot;name&quot;:&quot;etcd-node-1&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.101:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.101:2379&quot;]}]}</code></pre>2.某台机器上添加数据，其他机器上查看数据，得出的结果应该是相同的<pre><code>$ curl -L http://$(docker-machine ip etcd-node-0):2379/v2/keys/message -XPUT -d value=&quot;Hello World&quot;{&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}$ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/keys/message{&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}$ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/keys/message{&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}</code></pre></li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;etcd是一个高可用的键值存储系统，主要用于共享配置和服务发现。etcd是由CoreOS开发并维护的，灵感来自于 ZooKeeper 和 D
+        &lt;h2 id=&quot;创建Etcd集群&quot;&gt;&lt;a href=&quot;#创建Etcd集群&quot; class=&quot;headerlink&quot; title=&quot;创建Etcd集群&quot;&gt;&lt;/a&gt;创建Etcd集群&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;命令&lt;pre&gt;&lt;code&gt;$ curl -sSL https://raw.git
       
     
     </summary>
@@ -716,6 +741,32 @@ $ docker-machine create -d virtualbox --engine-registry-mi
   </entry>
   
   <entry>
+    <title>企业级 Docker Registry--harbor安装和简单使用</title>
+    <link href="http://donjote.github.io/2017/07/04/harbor/"/>
+    <id>http://donjote.github.io/2017/07/04/harbor/</id>
+    <published>2017-07-03T16:00:00.000Z</published>
+    <updated>2018-08-09T06:10:34.199Z</updated>
+    
+    <content type="html"><![CDATA[<p>简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。</p><h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><p>参考官方文档</p><h2 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker-compose"></a>安装docker-compose</h2><p>参考官方文档</p><h2 id="搭建Harbor"><a href="#搭建Harbor" class="headerlink" title="搭建Harbor"></a>搭建Harbor</h2><ul><li>下载:<pre><code>wget https://github.com/vmware/harbor/releases/download/v1.1.2/harbor-online-installer-v1.1.2.tgz</code></pre></li><li>解压:<pre><code>tar zvxf harbor-online-installer-v1.1.2.tgz</code></pre></li><li><p>修改配置:</p><pre><code>cd harborvim harbor.cfg</code></pre><p>配置样例如下：</p><pre><code>## Configuration file of Harbor#The IP address or hostname to access admin UI and registry service.#DO NOT use localhost or 127.0.0.1, because Harbor needs to be accessed by external clients.# 指定 hostname，一般为IP，或者域名，用于登录 Web UI 界面hostname = 120.12.34.45#The protocol for accessing the UI and token/notification service, by default it is http.#It can be set to https if ssl is enabled on nginx.# URL 访问方式，SSL 需要配置 nginxui_url_protocol = http#Email account settings for sending out password resetting emails.# 邮件相关信息配置，如忘记密码发送邮件email_server = smtp.xxxxxx.comemail_server_port = 465email_username = reg@mritd.meemail_password = xxxxxxemail_from = docker &lt;reg@mritd.me&gt;email_ssl = true##The password of Harbor admin, change this before any production use.# 默认的 Harbor 的管理员密码，管理员用户名默认 adminharbor_admin_password = Harbor12345##By default the auth mode is db_auth, i.e. the credentials are stored in a local database.#Set it to ldap_auth if you want to verify a user&apos;s credentials against an LDAP server.# 指定 Harbor 的权限验证方式，Harbor 支持本地的 mysql 数据存储密码，同时也支持 LDAPauth_mode = db_auth#The url for an ldap endpoint.# 如果采用了 LDAP，此处填写 LDAP 地址ldap_url = ldaps://ldap.mydomain.com#The basedn template to look up a user in LDAP and verify the user&apos;s password.# LADP 验证密码的方式(我特么没用过这么高级的玩意)ldap_basedn = uid=%s,ou=people,dc=mydomain,dc=com#The password for the root user of mysql db, change this before any production use.# mysql 数据库 root 账户密码db_password = root123#Turn on or off the self-registration feature# 是否允许开放注册self_registration = on#Turn on or off the customize your certicate# 允许自签名证书customize_crt = on#fill in your certicate message# 自签名证书信息crt_country = CNcrt_state = Statecrt_location = CNcrt_organization = mritdcrt_organizationalunit = mritdcrt_commonname = mritd.mecrt_email = reg.mritd.me#####</code></pre></li><li><p>启动</p><pre><code>sudo ./install</code></pre></li><li>登录<br>Harbor 默认管理员用户为 admin ，密码在 harbor.cfg 中设置过，默认的是 Harbor12345 ，可直接登陆</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。&lt;/p&gt;
+&lt;h2 id=&quot;安装docker&quot;&gt;&lt;a hr
+      
+    
+    </summary>
+    
+      <category term="容器" scheme="http://donjote.github.io/categories/%E5%AE%B9%E5%99%A8/"/>
+    
+    
+      <category term="docker" scheme="http://donjote.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Weex、React Native 对比</title>
     <link href="http://donjote.github.io/2017/07/04/weex_react_native/"/>
     <id>http://donjote.github.io/2017/07/04/weex_react_native/</id>
@@ -767,32 +818,6 @@ $ docker-machine create -d virtualbox --engine-registry-mi
       <category term="微服务" scheme="http://donjote.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
       <category term="架构" scheme="http://donjote.github.io/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>企业级 Docker Registry--harbor安装和简单使用</title>
-    <link href="http://donjote.github.io/2017/07/04/harbor/"/>
-    <id>http://donjote.github.io/2017/07/04/harbor/</id>
-    <published>2017-07-03T16:00:00.000Z</published>
-    <updated>2018-08-09T06:10:34.199Z</updated>
-    
-    <content type="html"><![CDATA[<p>简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。</p><h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><p>参考官方文档</p><h2 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker-compose"></a>安装docker-compose</h2><p>参考官方文档</p><h2 id="搭建Harbor"><a href="#搭建Harbor" class="headerlink" title="搭建Harbor"></a>搭建Harbor</h2><ul><li>下载:<pre><code>wget https://github.com/vmware/harbor/releases/download/v1.1.2/harbor-online-installer-v1.1.2.tgz</code></pre></li><li>解压:<pre><code>tar zvxf harbor-online-installer-v1.1.2.tgz</code></pre></li><li><p>修改配置:</p><pre><code>cd harborvim harbor.cfg</code></pre><p>配置样例如下：</p><pre><code>## Configuration file of Harbor#The IP address or hostname to access admin UI and registry service.#DO NOT use localhost or 127.0.0.1, because Harbor needs to be accessed by external clients.# 指定 hostname，一般为IP，或者域名，用于登录 Web UI 界面hostname = 120.12.34.45#The protocol for accessing the UI and token/notification service, by default it is http.#It can be set to https if ssl is enabled on nginx.# URL 访问方式，SSL 需要配置 nginxui_url_protocol = http#Email account settings for sending out password resetting emails.# 邮件相关信息配置，如忘记密码发送邮件email_server = smtp.xxxxxx.comemail_server_port = 465email_username = reg@mritd.meemail_password = xxxxxxemail_from = docker &lt;reg@mritd.me&gt;email_ssl = true##The password of Harbor admin, change this before any production use.# 默认的 Harbor 的管理员密码，管理员用户名默认 adminharbor_admin_password = Harbor12345##By default the auth mode is db_auth, i.e. the credentials are stored in a local database.#Set it to ldap_auth if you want to verify a user&apos;s credentials against an LDAP server.# 指定 Harbor 的权限验证方式，Harbor 支持本地的 mysql 数据存储密码，同时也支持 LDAPauth_mode = db_auth#The url for an ldap endpoint.# 如果采用了 LDAP，此处填写 LDAP 地址ldap_url = ldaps://ldap.mydomain.com#The basedn template to look up a user in LDAP and verify the user&apos;s password.# LADP 验证密码的方式(我特么没用过这么高级的玩意)ldap_basedn = uid=%s,ou=people,dc=mydomain,dc=com#The password for the root user of mysql db, change this before any production use.# mysql 数据库 root 账户密码db_password = root123#Turn on or off the self-registration feature# 是否允许开放注册self_registration = on#Turn on or off the customize your certicate# 允许自签名证书customize_crt = on#fill in your certicate message# 自签名证书信息crt_country = CNcrt_state = Statecrt_location = CNcrt_organization = mritdcrt_organizationalunit = mritdcrt_commonname = mritd.mecrt_email = reg.mritd.me#####</code></pre></li><li><p>启动</p><pre><code>sudo ./install</code></pre></li><li>登录<br>Harbor 默认管理员用户为 admin ，密码在 harbor.cfg 中设置过，默认的是 Harbor12345 ，可直接登陆</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。&lt;/p&gt;
-&lt;h2 id=&quot;安装docker&quot;&gt;&lt;a hr
-      
-    
-    </summary>
-    
-      <category term="容器" scheme="http://donjote.github.io/categories/%E5%AE%B9%E5%99%A8/"/>
-    
-    
-      <category term="docker" scheme="http://donjote.github.io/tags/docker/"/>
     
   </entry>
   
