@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Donjote 博客</title>
   
-  <link href="/donjote-blog/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
   <link href="http://donjote.github.io/"/>
   <updated>2018-08-06T06:30:31.568Z</updated>
