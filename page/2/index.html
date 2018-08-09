@@ -189,53 +189,6 @@
     <header class="article-header">
         
         <h1 itemprop="name">
-            <a href="/2017/07/14/tensorflow_2/">TensorFlow入门：安装</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="/2017/07/14/tensorflow_2/">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2017-07-13T16:00:00.000Z" itemprop="datePublished">2017-07-14</time>
-</a>
-
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/TensorFlow/">TensorFlow</a>, <a class="article-tag-link" href="/tags/深度学习/">深度学习</a>, <a class="article-tag-link" href="/tags/神经网络/">神经网络</a>
-</div>
-
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <h2 id="基于-Docker-的安装"><a href="#基于-Docker-的安装" class="headerlink" title="基于 Docker 的安装"></a>基于 Docker 的安装</h2><blockquote>
-<p>首先, <a href="https://docs.docker.com/engine/installation/" target="_blank" rel="external">安装 Docker</a>. 一旦 Docker 已经启动运行, 可以通过命令启动一个容器:</p>
-<pre><code>$ docker run -it --name tensorflow -p 8888:8888 tensorflow/tensorflow
-</code></pre></blockquote>
-<p>##才云TensorFlow镜像</p>
-<blockquote>
-<p>在官方镜像的基础上，才云科技提供的镜像进一步整合了其他机器学习工具包以及TensorFlow可视化工具TensorBoard，使用起来可以更加方便。</p>
-<pre><code>$ docker run -it  --name tensorflow -p 8888:8888 -p 6006:6006 \
-cargo.caicloud.io/caicloud/tensorflow
-</code></pre><p>在这个命令中，-p 8888:8888 将容器内运行的Jupyter服务映射到本地机器，这样在浏览器中打开localhost:8888就能看到Jupyter界面。在此镜像中运行的Jupyter是一个网页版的代码编辑器，它支持创建、上传、修改和运行Python程序。</p>
-<hr>
-<p>-p 6006:6006将容器内运行的TensorFlow可视化工具TensorBoard映射到本地机器，通过在浏览器中打开localhost:6006就可以将TensorFlow在训练时的状态、图片数据以及神经网络结构等信息全部展示出来。此镜像会将所有输出到/log目录底下的日志全部可视化。</p>
-</blockquote>
-
-        
-    </section>
-</article>
-
-
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
             <a href="/2017/07/14/tensorflow_1/">TensorFlow入门：简介</a>
         </h1>
         
@@ -277,6 +230,53 @@ cargo.caicloud.io/caicloud/tensorflow
 <li>多语言支持</li>
 <li>性能最优化</li>
 </ul>
+</blockquote>
+
+        
+    </section>
+</article>
+
+
+    <article class="article" itemscope itemprop="blogPost">
+    
+    <header class="article-header">
+        
+        <h1 itemprop="name">
+            <a href="/2017/07/14/tensorflow_2/">TensorFlow入门：安装</a>
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="/2017/07/14/tensorflow_2/">
+    
+    <i class="icon-calendar"></i>
+    
+    <time datetime="2017-07-13T16:00:00.000Z" itemprop="datePublished">2017-07-14</time>
+</a>
+
+            
+<div class="article-tag-list">
+    <i class="icon-tag"></i>
+    <a class="article-tag-link" href="/tags/TensorFlow/">TensorFlow</a>, <a class="article-tag-link" href="/tags/深度学习/">深度学习</a>, <a class="article-tag-link" href="/tags/神经网络/">神经网络</a>
+</div>
+
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
+        <h2 id="基于-Docker-的安装"><a href="#基于-Docker-的安装" class="headerlink" title="基于 Docker 的安装"></a>基于 Docker 的安装</h2><blockquote>
+<p>首先, <a href="https://docs.docker.com/engine/installation/" target="_blank" rel="external">安装 Docker</a>. 一旦 Docker 已经启动运行, 可以通过命令启动一个容器:</p>
+<pre><code>$ docker run -it --name tensorflow -p 8888:8888 tensorflow/tensorflow
+</code></pre></blockquote>
+<p>##才云TensorFlow镜像</p>
+<blockquote>
+<p>在官方镜像的基础上，才云科技提供的镜像进一步整合了其他机器学习工具包以及TensorFlow可视化工具TensorBoard，使用起来可以更加方便。</p>
+<pre><code>$ docker run -it  --name tensorflow -p 8888:8888 -p 6006:6006 \
+cargo.caicloud.io/caicloud/tensorflow
+</code></pre><p>在这个命令中，-p 8888:8888 将容器内运行的Jupyter服务映射到本地机器，这样在浏览器中打开localhost:8888就能看到Jupyter界面。在此镜像中运行的Jupyter是一个网页版的代码编辑器，它支持创建、上传、修改和运行Python程序。</p>
+<hr>
+<p>-p 6006:6006将容器内运行的TensorFlow可视化工具TensorBoard映射到本地机器，通过在浏览器中打开localhost:6006就可以将TensorFlow在训练时的状态、图片数据以及神经网络结构等信息全部展示出来。此镜像会将所有输出到/log目录底下的日志全部可视化。</p>
 </blockquote>
 
         
@@ -499,11 +499,11 @@ CGO_LDFLAGS=&quot;-g -O2&quot;
     <header class="article-header">
         
         <h1 itemprop="name">
-            <a href="/2017/07/11/docker_machine_mirror/">在 Docker Machine 中使用 Mirror 服务</a>
+            <a href="/2017/07/11/etcd_2/">使用docker-machine搭建etcd集群</a>
         </h1>
         
         <div class="article-meta clearfix">
-            <a class="article-date" href="/2017/07/11/docker_machine_mirror/">
+            <a class="article-date" href="/2017/07/11/etcd_2/">
     
     <i class="icon-calendar"></i>
     
@@ -513,7 +513,7 @@ CGO_LDFLAGS=&quot;-g -O2&quot;
             
 <div class="article-tag-list">
     <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/docker/">docker</a>
+    <a class="article-tag-link" href="/tags/etcd/">etcd</a>, <a class="article-tag-link" href="/tags/微服务/">微服务</a>, <a class="article-tag-link" href="/tags/服务发现/">服务发现</a>
 </div>
 
 
@@ -522,9 +522,24 @@ CGO_LDFLAGS=&quot;-g -O2&quot;
     
     <section class="article-body markdown-body">
         
-        <blockquote>
-<pre><code>$ export REGISTRY_MIRROR=https://***.mirror.aliyuncs.com
-$ docker-machine create -d virtualbox --engine-registry-mirror $REGISTRY_MIRROR dev
+        <h2 id="创建Etcd集群"><a href="#创建Etcd集群" class="headerlink" title="创建Etcd集群"></a>创建Etcd集群</h2><blockquote>
+<p>  $ curl -sSL <a href="https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh" target="_blank" rel="external">https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh</a> | sh -</p>
+</blockquote>
+<h3 id="集群验证"><a href="#集群验证" class="headerlink" title="集群验证"></a>集群验证</h3><blockquote>
+<ol>
+<li>验证集群members。在集群中的每台机器上查看members，得出的结果应该是相同的   </li>
+</ol>
+<pre><code>$ curl -L http://$(docker-machine ip etcd-node-0):2379/v2/members
+$ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/members
+$ curl -L http://$(docker-machine ip etcd-node-2):2379/v2/members
+{&quot;members&quot;:[{&quot;id&quot;:&quot;305750b374006637&quot;,&quot;name&quot;:&quot;etcd-node-2&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.102:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.102:2379&quot;]},{&quot;id&quot;:&quot;c7177c3c5ff3b1b4&quot;,&quot;name&quot;:&quot;etcd-node-0&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.100:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.100:2379&quot;]},{&quot;id&quot;:&quot;d5673e1f00b32e05&quot;,&quot;name&quot;:&quot;etcd-node-1&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.101:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.101:2379&quot;]}]}
+</code></pre><p>2.某台机器上添加数据，其他机器上查看数据，得出的结果应该是相同的</p>
+<pre><code>$ curl -L http://$(docker-machine ip etcd-node-0):2379/v2/keys/message -XPUT -d value=&quot;Hello World&quot;
+{&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}
+$ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/keys/message
+{&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}
+$ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/keys/message
+{&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}
 </code></pre></blockquote>
 
         
@@ -666,11 +681,11 @@ $ docker-machine create -d virtualbox --engine-registry-mirror $REGISTRY_MIRROR 
     <header class="article-header">
         
         <h1 itemprop="name">
-            <a href="/2017/07/11/etcd_2/">使用docker-machine搭建etcd集群</a>
+            <a href="/2017/07/11/docker_machine_mirror/">在 Docker Machine 中使用 Mirror 服务</a>
         </h1>
         
         <div class="article-meta clearfix">
-            <a class="article-date" href="/2017/07/11/etcd_2/">
+            <a class="article-date" href="/2017/07/11/docker_machine_mirror/">
     
     <i class="icon-calendar"></i>
     
@@ -680,7 +695,7 @@ $ docker-machine create -d virtualbox --engine-registry-mirror $REGISTRY_MIRROR 
             
 <div class="article-tag-list">
     <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/etcd/">etcd</a>, <a class="article-tag-link" href="/tags/微服务/">微服务</a>, <a class="article-tag-link" href="/tags/服务发现/">服务发现</a>
+    <a class="article-tag-link" href="/tags/docker/">docker</a>
 </div>
 
 
@@ -689,24 +704,9 @@ $ docker-machine create -d virtualbox --engine-registry-mirror $REGISTRY_MIRROR 
     
     <section class="article-body markdown-body">
         
-        <h2 id="创建Etcd集群"><a href="#创建Etcd集群" class="headerlink" title="创建Etcd集群"></a>创建Etcd集群</h2><blockquote>
-<p>  $ curl -sSL <a href="https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh" target="_blank" rel="external">https://raw.githubusercontent.com/donjote/shell-etcd/master/etcd.sh</a> | sh -</p>
-</blockquote>
-<h3 id="集群验证"><a href="#集群验证" class="headerlink" title="集群验证"></a>集群验证</h3><blockquote>
-<ol>
-<li>验证集群members。在集群中的每台机器上查看members，得出的结果应该是相同的   </li>
-</ol>
-<pre><code>$ curl -L http://$(docker-machine ip etcd-node-0):2379/v2/members
-$ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/members
-$ curl -L http://$(docker-machine ip etcd-node-2):2379/v2/members
-{&quot;members&quot;:[{&quot;id&quot;:&quot;305750b374006637&quot;,&quot;name&quot;:&quot;etcd-node-2&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.102:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.102:2379&quot;]},{&quot;id&quot;:&quot;c7177c3c5ff3b1b4&quot;,&quot;name&quot;:&quot;etcd-node-0&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.100:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.100:2379&quot;]},{&quot;id&quot;:&quot;d5673e1f00b32e05&quot;,&quot;name&quot;:&quot;etcd-node-1&quot;,&quot;peerURLs&quot;:[&quot;http://192.168.99.101:2380&quot;],&quot;clientURLs&quot;:[&quot;http://192.168.99.101:2379&quot;]}]}
-</code></pre><p>2.某台机器上添加数据，其他机器上查看数据，得出的结果应该是相同的</p>
-<pre><code>$ curl -L http://$(docker-machine ip etcd-node-0):2379/v2/keys/message -XPUT -d value=&quot;Hello World&quot;
-{&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}
-$ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/keys/message
-{&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}
-$ curl -L http://$(docker-machine ip etcd-node-1):2379/v2/keys/message
-{&quot;action&quot;:&quot;set&quot;,&quot;node&quot;:{&quot;key&quot;:&quot;/message&quot;,&quot;value&quot;:&quot;Hello World&quot;,&quot;modifiedIndex&quot;:9,&quot;createdIndex&quot;:9}}
+        <blockquote>
+<pre><code>$ export REGISTRY_MIRROR=https://***.mirror.aliyuncs.com
+$ docker-machine create -d virtualbox --engine-registry-mirror $REGISTRY_MIRROR dev
 </code></pre></blockquote>
 
         

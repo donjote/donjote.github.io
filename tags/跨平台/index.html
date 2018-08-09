@@ -124,6 +124,53 @@
     <header class="article-header">
         
         <h1 itemprop="name">
+            <a href="/2017/07/09/electron_install/">快速搭建Electron开发环境</a>
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="/2017/07/09/electron_install/">
+    
+    <i class="icon-calendar"></i>
+    
+    <time datetime="2017-07-08T16:00:00.000Z" itemprop="datePublished">2017-07-09</time>
+</a>
+
+            
+<div class="article-tag-list">
+    <i class="icon-tag"></i>
+    <a class="article-tag-link" href="/tags/Electron/">Electron</a>, <a class="article-tag-link" href="/tags/跨平台/">跨平台</a>
+</div>
+
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
+        <h2 id="Nodejs安装"><a href="#Nodejs安装" class="headerlink" title="Nodejs安装"></a>Nodejs安装</h2><blockquote>
+<p>查看 <a href="https://donjote.github.io/2017/07/07/nodejs_install_config/">Nodejs安装并配置淘宝镜像</a></p>
+</blockquote>
+<h2 id="Electron的安装"><a href="#Electron的安装" class="headerlink" title="Electron的安装"></a>Electron的安装</h2><blockquote>
+<p>在~/.npmrc里做如下设置</p>
+<pre><code>electron_mirror=&quot;https://npm.taobao.org/mirrors/electron/&quot;
+</code></pre><p>用下面的命令安装</p>
+<pre><code>$ sudo npm install -g electron  
+</code></pre></blockquote>
+<h2 id="打包输出工具"><a href="#打包输出工具" class="headerlink" title="打包输出工具"></a>打包输出工具</h2><blockquote>
+<p>为了方便最终成果输出，建议安装electron-packager工具，安装也很简单，建议以下面的命令全局安装。</p>
+<pre><code>$ sudo npm install -g electron-packager
+</code></pre></blockquote>
+
+        
+    </section>
+</article>
+
+
+    <article class="article" itemscope itemprop="blogPost">
+    
+    <header class="article-header">
+        
+        <h1 itemprop="name">
             <a href="/2017/07/09/electron_introdution/">Electron入门简介</a>
         </h1>
         
@@ -169,53 +216,6 @@
 <hr>
 <p>在 Electron，提供几种方法用于主进程和渲染进程之间的通讯。像 ipcRenderer 和 ipcMain 模块用于发送消息， remote 模块用于 RPC 方式通讯。这些内容都可以在一个 FAQ 中查看 how to share data between web pages。</p>
 </blockquote>
-
-        
-    </section>
-</article>
-
-
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2017/07/09/electron_install/">快速搭建Electron开发环境</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="/2017/07/09/electron_install/">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2017-07-08T16:00:00.000Z" itemprop="datePublished">2017-07-09</time>
-</a>
-
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/Electron/">Electron</a>, <a class="article-tag-link" href="/tags/跨平台/">跨平台</a>
-</div>
-
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <h2 id="Nodejs安装"><a href="#Nodejs安装" class="headerlink" title="Nodejs安装"></a>Nodejs安装</h2><blockquote>
-<p>查看 <a href="https://donjote.github.io/2017/07/07/nodejs_install_config/">Nodejs安装并配置淘宝镜像</a></p>
-</blockquote>
-<h2 id="Electron的安装"><a href="#Electron的安装" class="headerlink" title="Electron的安装"></a>Electron的安装</h2><blockquote>
-<p>在~/.npmrc里做如下设置</p>
-<pre><code>electron_mirror=&quot;https://npm.taobao.org/mirrors/electron/&quot;
-</code></pre><p>用下面的命令安装</p>
-<pre><code>$ sudo npm install -g electron  
-</code></pre></blockquote>
-<h2 id="打包输出工具"><a href="#打包输出工具" class="headerlink" title="打包输出工具"></a>打包输出工具</h2><blockquote>
-<p>为了方便最终成果输出，建议安装electron-packager工具，安装也很简单，建议以下面的命令全局安装。</p>
-<pre><code>$ sudo npm install -g electron-packager
-</code></pre></blockquote>
 
         
     </section>
