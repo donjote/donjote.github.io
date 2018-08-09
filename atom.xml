@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://donjote.github.io/"/>
-  <updated>2018-08-09T02:03:37.965Z</updated>
+  <updated>2018-08-09T06:33:32.766Z</updated>
   <id>http://donjote.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>什么是区块链</title>
-    <link href="http://donjote.github.io/2018/08/06/blockchain_1/"/>
-    <id>http://donjote.github.io/2018/08/06/blockchain_1/</id>
+    <title>区块链的历史起源</title>
+    <link href="http://donjote.github.io/2018/08/06/blockchain_history/"/>
+    <id>http://donjote.github.io/2018/08/06/blockchain_history/</id>
     <published>2018-08-05T16:00:00.000Z</published>
-    <updated>2018-08-09T02:03:37.965Z</updated>
+    <updated>2018-08-09T06:33:32.766Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="比特币"><a href="#比特币" class="headerlink" title="比特币"></a>比特币</h2><p>比特币起源于2008年全球金融危机期间中本聪撰写的论文《比特币：一种点对点的电子现金货币》</p><p>在这篇论文中，重点讨论了比特币系统，区块链被描述为用于记录比特币交易的账目历史。事实上，中本聪关于比特别的白皮书虽然整体思想是开创性的，单其中使用的技术工具，如P2P、分布式存储、非对称加密等早已存在，他提速的是一个集成性的、系统性的、可供实践的解决方案。</p><p>实际上这篇文章并没有明确提出区块链的定义和概念，甚至还没有“区块链”（Blockchain）这个词,只有“区块”（Block）和“链”（Chain）。但在论文中涉及了几个对区块链技术影响深远的观点：</p><ul><li>点对点，去中心化的可靠交易</li><li>反欺诈</li><li>基于密码学原理的电子交易凭证管理</li><li>分布式的时间戳服务器</li><li>足够的安全能力支持系统</li></ul><h2 id="区块链演进趋势"><a href="#区块链演进趋势" class="headerlink" title="区块链演进趋势"></a>区块链演进趋势</h2><h3 id="区块链1-0阶段"><a href="#区块链1-0阶段" class="headerlink" title="区块链1.0阶段"></a>区块链1.0阶段</h3><p>我们可以把比特币理解为区块链技术的一个应用场景，也就是区块链1.0阶段。但是如果仅有比特币，区块链也只是一种数字货币，并不能达到今天的火爆程度，可以说比特币是当今区块链的“啥手级”应用，但是区块链可以做的事情远远超过比特币，很可能产生其它“杀手级”应用。</p><h3 id="区块链2-0阶段"><a href="#区块链2-0阶段" class="headerlink" title="区块链2.0阶段"></a>区块链2.0阶段</h3><p>区块链2.0的重要标志就是被金融领域说接受并得到广泛应用形成的金融互联网，让价值交换变得便捷、直接、节省时间、节省成本。目前区块链2.0的实际场景中的应用，有两个重要因素：资产数字化（上链过程）与智能合约。</p><h3 id="区块链3-0阶段"><a href="#区块链3-0阶段" class="headerlink" title="区块链3.0阶段"></a>区块链3.0阶段</h3><p>区块链3.0要把区块链的应用范围拓展到各行各业，支持广义的资产交互和登记，进入万物互联，设备民主的“区块链+”时代。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;比特币&quot;&gt;&lt;a href=&quot;#比特币&quot; class=&quot;headerlink&quot; title=&quot;比特币&quot;&gt;&lt;/a&gt;比特币&lt;/h2&gt;&lt;p&gt;比特币起源于2008年全球金融危机期间中本聪撰写的论文《比特币：一种点对点的电子现金货币》&lt;/p&gt;
+&lt;p&gt;在这篇论文中，重点讨论了比
+      
+    
+    </summary>
+    
+      <category term="区块链" scheme="http://donjote.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="区块链" scheme="http://donjote.github.io/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+      <category term="比特币" scheme="http://donjote.github.io/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是区块链</title>
+    <link href="http://donjote.github.io/2018/08/06/blockchain_introdution/"/>
+    <id>http://donjote.github.io/2018/08/06/blockchain_introdution/</id>
+    <published>2018-08-05T16:00:00.000Z</published>
+    <updated>2018-08-09T06:25:36.532Z</updated>
     
     <content type="html"><![CDATA[<p>互联网的贸易，几乎都需要借助可资信赖的<font color="red"><strong>第三方信用机构</strong></font>来处理电子支付信息。这类系统仍然内生性地受制于“基于信用的模式”。<br>区块链技术是构建比特币区块链网络与交易信息和加密传输的基础技术。它基于密码学原理而不基于信用，使得任何达成一致的<font color="red"><strong>双方直接支付</strong></font>，从而不需要第三方中介的参与。</p><h2 id="区块链起源"><a href="#区块链起源" class="headerlink" title="区块链起源"></a>区块链起源</h2><p>区块链技术起源于2008年中本聪《比特币：一种点对点电子现金系统》，区块链诞生自中本聪的比特币。</p><h2 id="拜占庭将军问题"><a href="#拜占庭将军问题" class="headerlink" title="拜占庭将军问题"></a>拜占庭将军问题</h2><p>拜占庭帝国派10支军队进攻一敌人，这个敌人可抵御5支军队同时攻击，这10支军队不能集合单点突破，须分开同时攻击。问题是多个将军相互并不信任(存在叛徒)时，这种状态下要保证进攻一致，需要某种分布式协议来进行远程协调。如果每个将军向其他九个将军派出一名信使，总计90次传输，每个将军会收到9条信息，可能每一封都附着不同的进攻时间。此外，部分叛徒会故意答应超过一个的攻击时间，所以他们将重新广播超过一条的信息链。这个系统变成不可靠信息和攻击时间矛盾的混合体。</p><ul><li>解决思路<br>拜占庭将军故事的最后，数学家设计了一套算法，让将军们在接到上一位将军的信息之后，加上自己的签名再转给自己之外的其他将军，这样的信息模块就形成了<font color="blue"><strong>区块链</strong></font>。</li></ul><h2 id="区块链引言"><a href="#区块链引言" class="headerlink" title="区块链引言"></a>区块链引言</h2><ul><li>拜占庭将军问题延伸至互联网生活，即：在互联网大背景下，当需要与不熟悉的对手进行价值交换活动时，人们如何才能防止不会被其中的恶意破坏欺骗、迷惑从而错误决策。</li><li>再把该问题抽象化，理解为：在缺少可信任中央节点和可信任通道情况下，分布在网络中的各节点应如何达成共识。</li><li>这一对拜占庭将军问题的解决方案，可以推广到任何核心问题是在分布式网络上缺乏信任的领域。</li></ul><h2 id="区块链的目的：用于验证其信息的有效性（防伪）"><a href="#区块链的目的：用于验证其信息的有效性（防伪）" class="headerlink" title="区块链的目的：用于验证其信息的有效性（防伪）"></a><font color="red"><strong>区块链的目的：用于验证其信息的有效性（防伪）</strong></font></h2><h2 id="什么是区块链"><a href="#什么是区块链" class="headerlink" title="什么是区块链"></a>什么是区块链</h2><p>区块链是比特币的底层技术，像一个数据库账本，记载所有的交易记录。</p><hr><p>在一个40人以上的微信群里组局聚餐，如何统计人数？一种方式是大家纷纷发言，有个人来统计；另一种方式是大家接龙，每个人在上一个人的发言后面累加一个号并加上自己的名字，最后就能记录全部的报名人员和人数–》区块链。</p><table><thead><tr><th>微信组局</th><th>在区块链里的概念</th></tr></thead><tbody><tr><td>接龙发帖</td><td>链式数据结构（1）</td></tr><tr><td>规则：每个人发帖 = 上一个帖子内容 + 下一个编号 + 自己的名字</td><td>共识机制，根据严格的规则和公开的协议形成</td></tr><tr><td>规则定下来后，大家自发登记</td><td>去中心化，没有任何单一用户能够控制它</td></tr><tr><td>在微信群里记录登记情况</td><td>点对点对等网络</td></tr><tr><td>只要联网就能得知最新进展</td><td>博弈机制（2）</td></tr><tr><td>为了形成40个人的报名记录，至少要有40人发40篇帖子才够，群友手机里都存档</td><td>分布式（多点备份）、高冗余</td></tr><tr><td>每篇帖子大家都看得见，更新的记录是否数字错了，人重复了，每个人都可以检查</td><td>共享账薄</td></tr><tr><td>群里的人大家都认识，各有各的名字/代号</td><td>通过非对称加密技术保证陌生人可信（3）</td></tr></tbody></table><p><strong>区块链中的“区块”指的是信息块，这个信息块内包含有一个特殊的信息就是时间戳。含有时间戳的信息块彼此互联，形成的信息块链条被称为“区块链”。</strong></p><ul><li>一是数据结构，接龙发帖只记录“上一贴加1”这个简单计算，而区块链里记账的信息会复杂的多，每一个区块记录了上一个区块、时间戳、从上一个区块到这个区块之间发生的所有交易记录。</li><li>二是博弈机制，用来解决链式结构万一遇到分叉了怎么办？在微信组局的情景里，如果有两人同时发帖、或者有人因为网络延迟导致没有在最新的帖子后面跟帖导致重号怎么办？很自然的办法就是，哪个跟帖跟的多，以哪个为准；出现重复的人乖乖到较多的哪个跟帖后面写上自己的跟帖。区块链里也基本一样，以一定时间为限，哪条分叉较长就以哪个为准进行记录，较短的分叉上记录的交易作废，推迟到下一个时间段里记的账里。</li><li>三是非对称加密技术，用来解决陌生人之间的信任问题。这是跟微信组局最大的不同，微信的认证帮助用户做了过滤，群里的都是熟人/可信的人。在区块链里利用哈希、PKI公钥体系为每个人制作了一个唯一密码生成的唯一地址，功能类似于国内网银用的“U盾”，凡是用这个”U盾”接入区块链的，就可以进行交易，别人能识别你的身份，但是无法伪装成你。这样解决了信任体系的问题。<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2>区块链是一个<font color="red">分布式账本</font>，一种通过<font color="red">去中心化、去信任</font>的方式集体维护一个可靠数据库的技术方案。<h3 id="从数据的角度来看"><a href="#从数据的角度来看" class="headerlink" title="从数据的角度来看"></a>从数据的角度来看</h3>区块链是一种几乎不可能被更改的分布式数据库。这里的“分布式”不仅体现为数据的<font color="red">分布式存储</font>，也体现为数据的<font color="red">分布式记录</font>（即由系统参与者共同维护）。<h3 id="从技术的角度来看"><a href="#从技术的角度来看" class="headerlink" title="从技术的角度来看"></a>从技术的角度来看</h3>区块链并不是一种单一的技术，而是<font color="red">多种技术整合</font>的结果。这些技术以新的结构组合在一起，形成了一种新的数据记录、存储和表达的方式。<h2 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h2><h3 id="开放，共识"><a href="#开放，共识" class="headerlink" title="开放，共识"></a>开放，共识</h3>任何人都可以参与到区块链网络，每一台设备都能作为一个节点，每个节点都允许后的一份完整的数据库拷贝。节点间基于一同共识机制，通过竞争计算共同维护整个区块链。任一节点失效，其他节点仍能正常工作。<h3 id="去中心，去信任"><a href="#去中心，去信任" class="headerlink" title="去中心，去信任"></a>去中心，去信任</h3>区块链由众多节点共同组成一个端到端的网络，不存在中心化的设备和管理机构。节点之间数据交换通过数字签名技术进行验证，无需互相信任，只要按照系统既定的规则进行，节点之间不能也无法欺骗其它节点。<h3 id="交易透明，双方匿名"><a href="#交易透明，双方匿名" class="headerlink" title="交易透明，双方匿名"></a>交易透明，双方匿名</h3>区块链的运行规则是公开透明的，所有的数据信息也是公开的，因此每一笔交易都对所有节点可见。由于节点与节点之间是去信任的，因此节点之间无需公开身份，每个参与的节点都是匿名的。<h3 id="不可篡改，可追溯"><a href="#不可篡改，可追溯" class="headerlink" title="不可篡改，可追溯"></a>不可篡改，可追溯</h3>单个甚至多个节点对数据库的修改无法影响其他节点的数据库，除非能控制整个网络中超过51%的节点同时修改，这几乎不可能发生。区块链中的每一笔交易都通过密码学方法与相邻两个区块串联，因此可以追溯到任何一笔交易的前世今生。<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="公有链"><a href="#公有链" class="headerlink" title="公有链"></a>公有链</h3>无官方组织及管理机构，无中心服务器，参与的节点按照系统规则自由接入网络、不受控制，节点间基于共识机制开展工作。<h3 id="私有链"><a href="#私有链" class="headerlink" title="私有链"></a>私有链</h3>建立在某个企业内部，系统的运作规则根据企业要求进行设定，修改甚至是读取权限仅限于少数节点，同时仍然保留着区块链的真实性和部分去中心化的特性。<h3 id="联盟链"><a href="#联盟链" class="headerlink" title="联盟链"></a>联盟链</h3>由若干机构联合发起，介于公有链和私有链之间，兼具部分去中心化的特性。</li></ul>]]></content>
     
@@ -174,31 +202,6 @@
   </entry>
   
   <entry>
-    <title>NoSQL 简介</title>
-    <link href="http://donjote.github.io/2017/08/25/nosql/"/>
-    <id>http://donjote.github.io/2017/08/25/nosql/</id>
-    <published>2017-08-24T16:00:00.000Z</published>
-    <updated>2018-08-09T05:53:31.963Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="什么是NoSQL"><a href="#什么是NoSQL" class="headerlink" title="什么是NoSQL?"></a>什么是NoSQL?</h2><p>NoSQL，指的是非关系型的数据库。NoSQL有时也称作Not Only SQL的缩写，是对不同于传统的关系型数据库的数据库管理系统的统称。<br>NoSQL用于超大规模数据的存储。（例如谷歌或Facebook每天为他们的用户收集万亿比特的数据）。这些类型的数据存储不需要固定的模式，无需多余操作就可以横向扩展。</p><h2 id="为什么使用NoSQL"><a href="#为什么使用NoSQL" class="headerlink" title="为什么使用NoSQL ?"></a>为什么使用NoSQL ?</h2><p>今天我们可以通过第三方平台（如：Google,Facebook等）可以很容易的访问和抓取数据。用户的个人信息，社交网络，地理位置，用户生成的数据和用户操作日志已经成倍的增加。我们如果要对这些用户数据进行挖掘，那SQL数据库已经不适合这些应用了, NoSQL数据库的发展也却能很好的处理这些大的数据。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/25/nosql/1.png" alt="NoSQL" title="">                </div>                <div class="image-caption">NoSQL</div>            </figure></p><h2 id="RDBMS-vs-NoSQL"><a href="#RDBMS-vs-NoSQL" class="headerlink" title="RDBMS vs NoSQL"></a>RDBMS vs NoSQL</h2><h3 id="RDBMS"><a href="#RDBMS" class="headerlink" title="RDBMS"></a>RDBMS</h3><ul><li>高度组织化结构化数据</li><li>结构化查询语言（SQL） (SQL)</li><li>数据和关系都存储在单独的表中。</li><li>数据操纵语言，数据定义语言</li><li>严格的一致性</li><li>基础事务<h3 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h3></li><li>代表着不仅仅是SQL</li><li>没有声明性查询语言</li><li>没有预定义的模式</li><li>键值对存储，列存储，文档存储，图形数据库</li><li>最终一致性，而非ACID属性</li><li>非结构化和不可预知的数据</li><li>CAP定理</li><li>高性能，高可用性和可伸缩性</li></ul><h2 id="NoSQL的优点-缺点"><a href="#NoSQL的优点-缺点" class="headerlink" title="NoSQL的优点/缺点"></a>NoSQL的优点/缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点:"></a>优点:</h3><ul><li>高可扩展性</li><li>分布式计算</li><li>低成本</li><li>架构的灵活性，半结构化数据</li><li>没有复杂的关系<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点:"></a>缺点:</h3></li><li>没有标准化</li><li>有限的查询功能（到目前为止）</li><li>最终一致是不直观的程序</li></ul><h2 id="NoSQL-数据库分类"><a href="#NoSQL-数据库分类" class="headerlink" title="NoSQL 数据库分类"></a>NoSQL 数据库分类</h2><table><thead><tr><th>类型</th><th>部分代表</th><th>特点</th></tr></thead><tbody><tr><td>列存储</td><td>Hbase Cassandra Hypertable</td><td>顾名思义，是按列存储数据的。最大的特点是方便存储结构化和半结构化数据，方便做数据压缩，对针对某一列或者某几列的查询有非常大的IO优势。</td></tr><tr><td>文档存储</td><td>MongoDB CouchDB</td><td>文档存储一般用类似json的格式存储，存储的内容是文档型的。这样也就有有机会对某些字段建立索引，实现关系数据库的某些功能。</td></tr><tr><td>key-value存储</td><td>Tokyo Cabinet / Tyrant Berkeley DB MemcacheDB Redis</td><td>可以通过key快速查询到其value。一般来说，存储不管value的格式，照单全收。（Redis包含了其他功能）</td></tr><tr><td>图存储</td><td>Neo4J FlockDB</td><td>图形关系的最佳存储。使用传统关系数据库来解决的话性能低下，而且设计使用不方便。</td></tr><tr><td>对象存储</td><td>db4o Versant</td><td>通过类似面向对象语言的语法操作数据库，通过对象的方式存取数据。</td></tr><tr><td>xml数据库</td><td>Berkeley DB XML BaseX</td><td>高效的存储XML数据，并支持XML的内部查询语法，比如XQuery,Xpath。</td></tr></tbody></table>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;什么是NoSQL&quot;&gt;&lt;a href=&quot;#什么是NoSQL&quot; class=&quot;headerlink&quot; title=&quot;什么是NoSQL?&quot;&gt;&lt;/a&gt;什么是NoSQL?&lt;/h2&gt;&lt;p&gt;NoSQL，指的是非关系型的数据库。NoSQL有时也称作Not Only SQL的缩写，
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://donjote.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="NoSQL" scheme="http://donjote.github.io/tags/NoSQL/"/>
-    
-  </entry>
-  
-  <entry>
     <title>MongoDB 简介</title>
     <link href="http://donjote.github.io/2017/08/25/mongodb/"/>
     <id>http://donjote.github.io/2017/08/25/mongodb/</id>
@@ -212,6 +215,31 @@
       
       
         &lt;h2 id=&quot;什么是MongoDB&quot;&gt;&lt;a href=&quot;#什么是MongoDB&quot; class=&quot;headerlink&quot; title=&quot;什么是MongoDB ?&quot;&gt;&lt;/a&gt;什么是MongoDB ?&lt;/h2&gt;&lt;p&gt;MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://donjote.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="NoSQL" scheme="http://donjote.github.io/tags/NoSQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NoSQL 简介</title>
+    <link href="http://donjote.github.io/2017/08/25/nosql/"/>
+    <id>http://donjote.github.io/2017/08/25/nosql/</id>
+    <published>2017-08-24T16:00:00.000Z</published>
+    <updated>2018-08-09T05:53:31.963Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是NoSQL"><a href="#什么是NoSQL" class="headerlink" title="什么是NoSQL?"></a>什么是NoSQL?</h2><p>NoSQL，指的是非关系型的数据库。NoSQL有时也称作Not Only SQL的缩写，是对不同于传统的关系型数据库的数据库管理系统的统称。<br>NoSQL用于超大规模数据的存储。（例如谷歌或Facebook每天为他们的用户收集万亿比特的数据）。这些类型的数据存储不需要固定的模式，无需多余操作就可以横向扩展。</p><h2 id="为什么使用NoSQL"><a href="#为什么使用NoSQL" class="headerlink" title="为什么使用NoSQL ?"></a>为什么使用NoSQL ?</h2><p>今天我们可以通过第三方平台（如：Google,Facebook等）可以很容易的访问和抓取数据。用户的个人信息，社交网络，地理位置，用户生成的数据和用户操作日志已经成倍的增加。我们如果要对这些用户数据进行挖掘，那SQL数据库已经不适合这些应用了, NoSQL数据库的发展也却能很好的处理这些大的数据。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/25/nosql/1.png" alt="NoSQL" title="">                </div>                <div class="image-caption">NoSQL</div>            </figure></p><h2 id="RDBMS-vs-NoSQL"><a href="#RDBMS-vs-NoSQL" class="headerlink" title="RDBMS vs NoSQL"></a>RDBMS vs NoSQL</h2><h3 id="RDBMS"><a href="#RDBMS" class="headerlink" title="RDBMS"></a>RDBMS</h3><ul><li>高度组织化结构化数据</li><li>结构化查询语言（SQL） (SQL)</li><li>数据和关系都存储在单独的表中。</li><li>数据操纵语言，数据定义语言</li><li>严格的一致性</li><li>基础事务<h3 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h3></li><li>代表着不仅仅是SQL</li><li>没有声明性查询语言</li><li>没有预定义的模式</li><li>键值对存储，列存储，文档存储，图形数据库</li><li>最终一致性，而非ACID属性</li><li>非结构化和不可预知的数据</li><li>CAP定理</li><li>高性能，高可用性和可伸缩性</li></ul><h2 id="NoSQL的优点-缺点"><a href="#NoSQL的优点-缺点" class="headerlink" title="NoSQL的优点/缺点"></a>NoSQL的优点/缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点:"></a>优点:</h3><ul><li>高可扩展性</li><li>分布式计算</li><li>低成本</li><li>架构的灵活性，半结构化数据</li><li>没有复杂的关系<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点:"></a>缺点:</h3></li><li>没有标准化</li><li>有限的查询功能（到目前为止）</li><li>最终一致是不直观的程序</li></ul><h2 id="NoSQL-数据库分类"><a href="#NoSQL-数据库分类" class="headerlink" title="NoSQL 数据库分类"></a>NoSQL 数据库分类</h2><table><thead><tr><th>类型</th><th>部分代表</th><th>特点</th></tr></thead><tbody><tr><td>列存储</td><td>Hbase Cassandra Hypertable</td><td>顾名思义，是按列存储数据的。最大的特点是方便存储结构化和半结构化数据，方便做数据压缩，对针对某一列或者某几列的查询有非常大的IO优势。</td></tr><tr><td>文档存储</td><td>MongoDB CouchDB</td><td>文档存储一般用类似json的格式存储，存储的内容是文档型的。这样也就有有机会对某些字段建立索引，实现关系数据库的某些功能。</td></tr><tr><td>key-value存储</td><td>Tokyo Cabinet / Tyrant Berkeley DB MemcacheDB Redis</td><td>可以通过key快速查询到其value。一般来说，存储不管value的格式，照单全收。（Redis包含了其他功能）</td></tr><tr><td>图存储</td><td>Neo4J FlockDB</td><td>图形关系的最佳存储。使用传统关系数据库来解决的话性能低下，而且设计使用不方便。</td></tr><tr><td>对象存储</td><td>db4o Versant</td><td>通过类似面向对象语言的语法操作数据库，通过对象的方式存取数据。</td></tr><tr><td>xml数据库</td><td>Berkeley DB XML BaseX</td><td>高效的存储XML数据，并支持XML的内部查询语法，比如XQuery,Xpath。</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;什么是NoSQL&quot;&gt;&lt;a href=&quot;#什么是NoSQL&quot; class=&quot;headerlink&quot; title=&quot;什么是NoSQL?&quot;&gt;&lt;/a&gt;什么是NoSQL?&lt;/h2&gt;&lt;p&gt;NoSQL，指的是非关系型的数据库。NoSQL有时也称作Not Only SQL的缩写，
       
     
     </summary>
@@ -278,19 +306,20 @@
   </entry>
   
   <entry>
-    <title>TensorFlow入门：安装</title>
-    <link href="http://donjote.github.io/2017/07/14/tensorflow_2/"/>
-    <id>http://donjote.github.io/2017/07/14/tensorflow_2/</id>
+    <title>TensorFlow入门：简介</title>
+    <link href="http://donjote.github.io/2017/07/14/tensorflow_1/"/>
+    <id>http://donjote.github.io/2017/07/14/tensorflow_1/</id>
     <published>2017-07-13T16:00:00.000Z</published>
-    <updated>2018-08-09T05:55:26.991Z</updated>
+    <updated>2018-08-09T05:55:42.448Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="基于-Docker-的安装"><a href="#基于-Docker-的安装" class="headerlink" title="基于 Docker 的安装"></a>基于 Docker 的安装</h2><p>首先, <a href="https://docs.docker.com/engine/installation/" target="_blank" rel="external">安装 Docker</a>. 一旦 Docker 已经启动运行, 可以通过命令启动一个容器:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ docker run -it --name tensorflow -p 8888:8888 tensorflow/tensorflow</div></pre></td></tr></table></figure><p>##才云TensorFlow镜像<br>在官方镜像的基础上，才云科技提供的镜像进一步整合了其他机器学习工具包以及TensorFlow可视化工具TensorBoard，使用起来可以更加方便。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ docker run -it  --name tensorflow -p 8888:8888 -p 6006:6006 \</div><div class="line">cargo.caicloud.io/caicloud/tensorflow</div></pre></td></tr></table></figure></p><p>在这个命令中，-p 8888:8888 将容器内运行的Jupyter服务映射到本地机器，这样在浏览器中打开localhost:8888就能看到Jupyter界面。在此镜像中运行的Jupyter是一个网页版的代码编辑器，它支持创建、上传、修改和运行Python程序。</p><hr><p>-p 6006:6006将容器内运行的TensorFlow可视化工具TensorBoard映射到本地机器，通过在浏览器中打开localhost:6006就可以将TensorFlow在训练时的状态、图片数据以及神经网络结构等信息全部展示出来。此镜像会将所有输出到/log目录底下的日志全部可视化。</p>]]></content>
+    <content type="html"><![CDATA[<p>TensorFlow 是一个用于人工智能的开源神器</p><h2 id="TensorFlow是什么？"><a href="#TensorFlow是什么？" class="headerlink" title="TensorFlow是什么？"></a>TensorFlow是什么？</h2><p>TensorFlow™ 是一个采用数据流图（data flow graphs），用于数值计算的开源软件库。节点（Nodes）在图中表示数学操作，图中的线（edges）则表示在节点间相互联系的多维数据数组，即张量（tensor）。它灵活的架构让你可以在多种平台上展开计算，例如台式计算机中的一个或多个CPU（或GPU），服务器，移动设备等等。TensorFlow 最初由Google大脑小组（隶属于Google机器智能研究机构）的研究员和工程师们开发出来，用于机器学习和深度神经网络方面的研究，但这个系统的通用性使其也可广泛用于其他计算领域。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/14/tensorflow_1/1.gif" alt="TensorFlow" title="">                </div>                <div class="image-caption">TensorFlow</div>            </figure></p><h2 id="什么是数据流图（Data-Flow-Graph）"><a href="#什么是数据流图（Data-Flow-Graph）" class="headerlink" title="什么是数据流图（Data Flow Graph）?"></a>什么是数据流图（Data Flow Graph）?</h2><p>数据流图用“结点”（nodes）和“线”(edges)的有向图来描述数学计算。“节点” 一般用来表示施加的数学操作，但也可以表示数据输入（feed in）的起点/输出（push out）的终点，或者是读取/写入持久变量（persistent variable）的终点。“线”表示“节点”之间的输入/输出关系。这些数据“线”可以输运“size可动态调整”的多维数据数组，即“张量”（tensor）。张量从图中流过的直观图像是这个工具取名为“Tensorflow”的原因。一旦输入端的所有张量准备好，节点将被分配到各种计算设备完成异步并行地执行运算。</p><h2 id="TensorFlow的特征"><a href="#TensorFlow的特征" class="headerlink" title="TensorFlow的特征"></a>TensorFlow的特征</h2><ul><li>高度的灵活性</li><li>真正的可移植性（Portability）</li><li>将科研和产品联系在一起</li><li>自动求微分</li><li>多语言支持</li><li>性能最优化</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;基于-Docker-的安装&quot;&gt;&lt;a href=&quot;#基于-Docker-的安装&quot; class=&quot;headerlink&quot; title=&quot;基于 Docker 的安装&quot;&gt;&lt;/a&gt;基于 Docker 的安装&lt;/h2&gt;&lt;p&gt;首先, &lt;a href=&quot;https://docs.
+        &lt;p&gt;TensorFlow 是一个用于人工智能的开源神器&lt;/p&gt;
+&lt;h2 id=&quot;TensorFlow是什么？&quot;&gt;&lt;a href=&quot;#TensorFlow是什么？&quot; class=&quot;headerlink&quot; title=&quot;TensorFlow是什么？&quot;&gt;&lt;/a&gt;TensorFlow是
       
     
     </summary>
@@ -307,20 +336,19 @@
   </entry>
   
   <entry>
-    <title>TensorFlow入门：简介</title>
-    <link href="http://donjote.github.io/2017/07/14/tensorflow_1/"/>
-    <id>http://donjote.github.io/2017/07/14/tensorflow_1/</id>
+    <title>TensorFlow入门：安装</title>
+    <link href="http://donjote.github.io/2017/07/14/tensorflow_2/"/>
+    <id>http://donjote.github.io/2017/07/14/tensorflow_2/</id>
     <published>2017-07-13T16:00:00.000Z</published>
-    <updated>2018-08-09T05:55:42.448Z</updated>
+    <updated>2018-08-09T05:55:26.991Z</updated>
     
-    <content type="html"><![CDATA[<p>TensorFlow 是一个用于人工智能的开源神器</p><h2 id="TensorFlow是什么？"><a href="#TensorFlow是什么？" class="headerlink" title="TensorFlow是什么？"></a>TensorFlow是什么？</h2><p>TensorFlow™ 是一个采用数据流图（data flow graphs），用于数值计算的开源软件库。节点（Nodes）在图中表示数学操作，图中的线（edges）则表示在节点间相互联系的多维数据数组，即张量（tensor）。它灵活的架构让你可以在多种平台上展开计算，例如台式计算机中的一个或多个CPU（或GPU），服务器，移动设备等等。TensorFlow 最初由Google大脑小组（隶属于Google机器智能研究机构）的研究员和工程师们开发出来，用于机器学习和深度神经网络方面的研究，但这个系统的通用性使其也可广泛用于其他计算领域。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/14/tensorflow_1/1.gif" alt="TensorFlow" title="">                </div>                <div class="image-caption">TensorFlow</div>            </figure></p><h2 id="什么是数据流图（Data-Flow-Graph）"><a href="#什么是数据流图（Data-Flow-Graph）" class="headerlink" title="什么是数据流图（Data Flow Graph）?"></a>什么是数据流图（Data Flow Graph）?</h2><p>数据流图用“结点”（nodes）和“线”(edges)的有向图来描述数学计算。“节点” 一般用来表示施加的数学操作，但也可以表示数据输入（feed in）的起点/输出（push out）的终点，或者是读取/写入持久变量（persistent variable）的终点。“线”表示“节点”之间的输入/输出关系。这些数据“线”可以输运“size可动态调整”的多维数据数组，即“张量”（tensor）。张量从图中流过的直观图像是这个工具取名为“Tensorflow”的原因。一旦输入端的所有张量准备好，节点将被分配到各种计算设备完成异步并行地执行运算。</p><h2 id="TensorFlow的特征"><a href="#TensorFlow的特征" class="headerlink" title="TensorFlow的特征"></a>TensorFlow的特征</h2><ul><li>高度的灵活性</li><li>真正的可移植性（Portability）</li><li>将科研和产品联系在一起</li><li>自动求微分</li><li>多语言支持</li><li>性能最优化</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="基于-Docker-的安装"><a href="#基于-Docker-的安装" class="headerlink" title="基于 Docker 的安装"></a>基于 Docker 的安装</h2><p>首先, <a href="https://docs.docker.com/engine/installation/" target="_blank" rel="external">安装 Docker</a>. 一旦 Docker 已经启动运行, 可以通过命令启动一个容器:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ docker run -it --name tensorflow -p 8888:8888 tensorflow/tensorflow</div></pre></td></tr></table></figure><p>##才云TensorFlow镜像<br>在官方镜像的基础上，才云科技提供的镜像进一步整合了其他机器学习工具包以及TensorFlow可视化工具TensorBoard，使用起来可以更加方便。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ docker run -it  --name tensorflow -p 8888:8888 -p 6006:6006 \</div><div class="line">cargo.caicloud.io/caicloud/tensorflow</div></pre></td></tr></table></figure></p><p>在这个命令中，-p 8888:8888 将容器内运行的Jupyter服务映射到本地机器，这样在浏览器中打开localhost:8888就能看到Jupyter界面。在此镜像中运行的Jupyter是一个网页版的代码编辑器，它支持创建、上传、修改和运行Python程序。</p><hr><p>-p 6006:6006将容器内运行的TensorFlow可视化工具TensorBoard映射到本地机器，通过在浏览器中打开localhost:6006就可以将TensorFlow在训练时的状态、图片数据以及神经网络结构等信息全部展示出来。此镜像会将所有输出到/log目录底下的日志全部可视化。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;TensorFlow 是一个用于人工智能的开源神器&lt;/p&gt;
-&lt;h2 id=&quot;TensorFlow是什么？&quot;&gt;&lt;a href=&quot;#TensorFlow是什么？&quot; class=&quot;headerlink&quot; title=&quot;TensorFlow是什么？&quot;&gt;&lt;/a&gt;TensorFlow是
+        &lt;h2 id=&quot;基于-Docker-的安装&quot;&gt;&lt;a href=&quot;#基于-Docker-的安装&quot; class=&quot;headerlink&quot; title=&quot;基于 Docker 的安装&quot;&gt;&lt;/a&gt;基于 Docker 的安装&lt;/h2&gt;&lt;p&gt;首先, &lt;a href=&quot;https://docs.
       
     
     </summary>
@@ -414,6 +442,33 @@
   </entry>
   
   <entry>
+    <title>在 Docker Machine 中使用 Mirror 服务</title>
+    <link href="http://donjote.github.io/2017/07/11/docker_machine_mirror/"/>
+    <id>http://donjote.github.io/2017/07/11/docker_machine_mirror/</id>
+    <published>2017-07-10T16:00:00.000Z</published>
+    <updated>2018-08-09T06:13:55.090Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>安装命令：<pre><code>$ export REGISTRY_MIRROR=https://***.mirror.aliyuncs.com$ docker-machine create -d virtualbox --engine-registry-mirror $REGISTRY_MIRROR dev</code></pre></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;安装命令：&lt;pre&gt;&lt;code&gt;$ export REGISTRY_MIRROR=https://***.mirror.aliyuncs.com
+$ docker-machine create -d virtualbox --engine-registry-mi
+      
+    
+    </summary>
+    
+      <category term="容器" scheme="http://donjote.github.io/categories/%E5%AE%B9%E5%99%A8/"/>
+    
+    
+      <category term="docker" scheme="http://donjote.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用docker-machine搭建etcd集群</title>
     <link href="http://donjote.github.io/2017/07/11/etcd_2/"/>
     <id>http://donjote.github.io/2017/07/11/etcd_2/</id>
@@ -440,33 +495,6 @@
       <category term="etcd" scheme="http://donjote.github.io/tags/etcd/"/>
     
       <category term="服务发现" scheme="http://donjote.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在 Docker Machine 中使用 Mirror 服务</title>
-    <link href="http://donjote.github.io/2017/07/11/docker_machine_mirror/"/>
-    <id>http://donjote.github.io/2017/07/11/docker_machine_mirror/</id>
-    <published>2017-07-10T16:00:00.000Z</published>
-    <updated>2018-08-09T06:13:55.090Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>安装命令：<pre><code>$ export REGISTRY_MIRROR=https://***.mirror.aliyuncs.com$ docker-machine create -d virtualbox --engine-registry-mirror $REGISTRY_MIRROR dev</code></pre></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;安装命令：&lt;pre&gt;&lt;code&gt;$ export REGISTRY_MIRROR=https://***.mirror.aliyuncs.com
-$ docker-machine create -d virtualbox --engine-registry-mi
-      
-    
-    </summary>
-    
-      <category term="容器" scheme="http://donjote.github.io/categories/%E5%AE%B9%E5%99%A8/"/>
-    
-    
-      <category term="docker" scheme="http://donjote.github.io/tags/docker/"/>
     
   </entry>
   
@@ -688,28 +716,30 @@ $ docker-machine create -d virtualbox --engine-registry-mi
   </entry>
   
   <entry>
-    <title>企业级 Docker Registry--harbor安装和简单使用</title>
-    <link href="http://donjote.github.io/2017/07/04/harbor/"/>
-    <id>http://donjote.github.io/2017/07/04/harbor/</id>
+    <title>微服务简介</title>
+    <link href="http://donjote.github.io/2017/07/04/micro_services_introdution/"/>
+    <id>http://donjote.github.io/2017/07/04/micro_services_introdution/</id>
     <published>2017-07-03T16:00:00.000Z</published>
-    <updated>2018-08-09T06:10:34.199Z</updated>
+    <updated>2018-08-09T06:11:38.939Z</updated>
     
-    <content type="html"><![CDATA[<p>简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。</p><h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><p>参考官方文档</p><h2 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker-compose"></a>安装docker-compose</h2><p>参考官方文档</p><h2 id="搭建Harbor"><a href="#搭建Harbor" class="headerlink" title="搭建Harbor"></a>搭建Harbor</h2><ul><li>下载:<pre><code>wget https://github.com/vmware/harbor/releases/download/v1.1.2/harbor-online-installer-v1.1.2.tgz</code></pre></li><li>解压:<pre><code>tar zvxf harbor-online-installer-v1.1.2.tgz</code></pre></li><li><p>修改配置:</p><pre><code>cd harborvim harbor.cfg</code></pre><p>配置样例如下：</p><pre><code>## Configuration file of Harbor#The IP address or hostname to access admin UI and registry service.#DO NOT use localhost or 127.0.0.1, because Harbor needs to be accessed by external clients.# 指定 hostname，一般为IP，或者域名，用于登录 Web UI 界面hostname = 120.12.34.45#The protocol for accessing the UI and token/notification service, by default it is http.#It can be set to https if ssl is enabled on nginx.# URL 访问方式，SSL 需要配置 nginxui_url_protocol = http#Email account settings for sending out password resetting emails.# 邮件相关信息配置，如忘记密码发送邮件email_server = smtp.xxxxxx.comemail_server_port = 465email_username = reg@mritd.meemail_password = xxxxxxemail_from = docker &lt;reg@mritd.me&gt;email_ssl = true##The password of Harbor admin, change this before any production use.# 默认的 Harbor 的管理员密码，管理员用户名默认 adminharbor_admin_password = Harbor12345##By default the auth mode is db_auth, i.e. the credentials are stored in a local database.#Set it to ldap_auth if you want to verify a user&apos;s credentials against an LDAP server.# 指定 Harbor 的权限验证方式，Harbor 支持本地的 mysql 数据存储密码，同时也支持 LDAPauth_mode = db_auth#The url for an ldap endpoint.# 如果采用了 LDAP，此处填写 LDAP 地址ldap_url = ldaps://ldap.mydomain.com#The basedn template to look up a user in LDAP and verify the user&apos;s password.# LADP 验证密码的方式(我特么没用过这么高级的玩意)ldap_basedn = uid=%s,ou=people,dc=mydomain,dc=com#The password for the root user of mysql db, change this before any production use.# mysql 数据库 root 账户密码db_password = root123#Turn on or off the self-registration feature# 是否允许开放注册self_registration = on#Turn on or off the customize your certicate# 允许自签名证书customize_crt = on#fill in your certicate message# 自签名证书信息crt_country = CNcrt_state = Statecrt_location = CNcrt_organization = mritdcrt_organizationalunit = mritdcrt_commonname = mritd.mecrt_email = reg.mritd.me#####</code></pre></li><li><p>启动</p><pre><code>sudo ./install</code></pre></li><li>登录<br>Harbor 默认管理员用户为 admin ，密码在 harbor.cfg 中设置过，默认的是 Harbor12345 ，可直接登陆</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="Monolithic架构"><a href="#Monolithic架构" class="headerlink" title="Monolithic架构"></a>Monolithic架构</h2><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/04/micro_services_introdution/1.png" alt="Monolithic架构" title="">                </div>                <div class="image-caption">Monolithic架构</div>            </figure><p>Monolithic比较适合小项目</p><h3 id="Monolithic架构优点"><a href="#Monolithic架构优点" class="headerlink" title="Monolithic架构优点"></a>Monolithic架构优点</h3><ul><li>开发简单直接，集中式管理, 基本不会重复开发</li><li>功能都在本地，没有分布式的管理开销和调用开销。<h3 id="Monolithic架构缺点"><a href="#Monolithic架构缺点" class="headerlink" title="Monolithic架构缺点"></a>Monolithic架构缺点</h3>它的缺点也非常明显，特别对于互联网公司来说（不一一列举了）：</li><li>开发效率低：所有的开发在一个项目改代码，递交代码相互等待，代码冲突不断</li><li>代码维护难：代码功能耦合在一起，新人不知道何从下手</li><li>部署不灵活：构建时间长，任何小修改必须重新构建整个项目，这个过程往往很长</li><li>稳定性不高：一个微不足道的小问题，可以导致整个应用挂掉</li><li>扩展性不够：无法满足高并发情况下的业务需求</li></ul><h2 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h2><h3 id="什么是微服务"><a href="#什么是微服务" class="headerlink" title="什么是微服务"></a>什么是微服务</h3><p>相对于单体（Monolithic）应用而言，微服务是采用一组服务的方式来构建一个应用，服务独立部署在不同的进程中，不同服务通过一些轻量级交互机制来通信，例如 RPC、HTTP 等,服务可独立扩展伸缩，每个服务定义了明确的边界，不同的服务甚至可以采用不同的编程语言来实现，由独立的团队来维护。</p><h3 id="微服务的价值"><a href="#微服务的价值" class="headerlink" title="微服务的价值"></a>微服务的价值</h3><ul><li>首先，在功能不变的情况下，应用被分解为多个可管理的服务，每个服务开发、运维变得简单。</li><li>其次，每个微服务独立部署，开发者不在需要协调其他服务部署对本服务的影响，这可以加快部署精度。</li><li>最后，每个服务可以自行决定自己的容量。</li></ul><hr><p>虽然对于一些简单的、规模有限的应用而言，单体架构仍然是有意义的。微服务是应用开发和部署的一个不同的方法。它非常适合许多现代的云应用对于敏捷性、扩展规模和可靠性的要求。一个微服务应用被分解成独立的部件，被称为“微服务”。“微服务”协同工作，以便提供应用的整体功能。“微服务”这一术语强调一个事实，那就是应用应该是由足够小的服务所组成，以便真正体现独立性，使得每个微服务实现单一的功能。此外，每个微服务都有明确的合同（API合同）——通常是RESTful 的——以便其他微服务能够与之进行交流和分享数据。微服务也必须能够彼此独立地进行版本更新。这种松耦合正是对一个应用实现快速而可靠地演化的支撑。下图显示了一个单体应用是如何被分解为不同的微服务的。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/04/micro_services_introdution/2.png" alt="微服务架构" title="">                </div>                <div class="image-caption">微服务架构</div>            </figure></p><h3 id="微服务的特点"><a href="#微服务的特点" class="headerlink" title="微服务的特点"></a>微服务的特点</h3><ul><li>小, 且专注于做⼀件事情</li><li>进程独立</li><li>轻量级的通信机制</li><li>松耦合</li><li>独立部署</li></ul><hr><p><strong>领域驱动设计：</strong> 应用程序功能分解可以通过Eric Evans在<a href="http://www.jdon.com/ddd.html" target="_blank" rel="external">《领域驱动设计》</a>中明确定义的规则实现；每个团队负责与一个领域或业务功能相关的全部开发；团队拥有全系列的开发人员，具备用户界面、业务逻辑和持久化存储等方面的开发技能；<br><strong>单一职责原则：</strong> 每个服务应该负责该功能的一个单独的部分，这是<a href="http://www.cnblogs.com/shanyou/archive/2009/09/21/1570716.html" target="_blank" rel="external">面向对象设计的SOLID原则</a>原则之一；<br><strong>明确发布接口：</strong> 每个服务都会发布一个定义明确的接口，而且保持不变；服务消费者只关心接口，而对于被消费的服务没有任何运行依赖；<br><strong>独立部署、升级、扩展和替换：</strong> 每个服务都可以单独部署及重新部署而不影响整个系统。这使得服务很容易升级，每个服务都可以沿着<a href="https://pan.baidu.com/s/1qYpzBPE" target="_blank" rel="external">《架构即未来》</a>一书定义的<a href="http://www.jianshu.com/p/d08d0c14810f" target="_blank" rel="external">AKF扩展立方体</a>的X轴和Z轴进行扩展；<br><strong>可以异构/采用多种语言：</strong>　每个服务的实现细节都与其它服务无关，这使得服务之间能够解耦，团队可以针对每个服务选择最合适的开发语言、持久化存储、工具和方法；<br><strong>轻量级通信：</strong>　服务通信使用轻量级的通信协议，例如，同步的REST，异步的AMQP、STOMP、MQTT等。</p><hr><p>微服务架构的思想本质跟互联网的思想是一致的。它的组件对外发布的服务视同HTTP协议，采用HTTP Rest API的方式来进行。很多开放平台的API服务，基本都采用了Http API的方式进行服务的发布和管理。</p><h3 id="微服务优点"><a href="#微服务优点" class="headerlink" title="微服务优点"></a>微服务优点</h3><ul><li>每个微服务都很小，这样能聚焦一个指定的业务功能或业务需求。</li><li>微服务能够被小团队单独开发，这个小团队是2到5人的开发人员组成。</li><li>微服务是松耦合的，是有功能意义的服务，无论是在开发阶段或部署阶段都是独立的。</li><li>微服务能使用不同的语言开发。</li><li>微服务允许容易且灵活的方式集成自动部署，通过持续集成工具，如Jenkins, bamboo 。</li><li>一个团队的新成员能够更快投入生产。</li><li>微服务易于被一个开发人员理解，修改和维护，这样小团队能够更关注自己的工作成果。无需通过合作才能体现价值。</li><li>微服务允许你利用融合最新技术。</li><li>微服务只是业务逻辑的代码，不会和HTML,CSS 或其他界面组件混合。</li><li>微服务能够即时被要求扩展。</li><li>微服务能部署中低端配置的服务器上。</li><li>易于和第三方集成。</li><li>每个微服务都有自己的存储能力，可以有自己的数据库。也可以有统一数据库。</li></ul><h3 id="微服务架构的缺点"><a href="#微服务架构的缺点" class="headerlink" title="微服务架构的缺点"></a>微服务架构的缺点</h3><ul><li>微服务架构可能带来过多的操作。</li><li>需要DevOps技巧 (<a href="http://en.wikipedia.org/wiki/DevOps" target="_blank" rel="external">http://en.wikipedia.org/wiki/DevOps</a>).</li><li>可能双倍的努力。</li><li>分布式系统可能复杂难以管理。</li><li>因为分布部署跟踪问题难。</li><li>服务数量增加，管理复杂性增加。</li></ul><h3 id="常见的微服务组件"><a href="#常见的微服务组件" class="headerlink" title="常见的微服务组件"></a>常见的微服务组件</h3><ul><li>服务注册:服务提供方将自己调用地址注册到服务注册中心，让服务调用方能够方便地找到自己。</li><li>服务发现:服务调用方从服务注册中心找到自己需要调用的服务的地址。</li><li>负载均衡:服务提供方一般以多实例的形式提供服务，负载均衡功能能够让服务调用方连接到合适的服务节点。并且，节点选择的工作对服务调用方来说是透明的。</li><li>服务网关:服务网关是服务调用的唯一入口，可以在这个组件是实现用户鉴权、动态路由、灰度发布、A/B测试、负载限流等功能。</li><li>配置中心:将本地化的配置信息（properties,<br>xml, yaml等）注册到配置中心，实现程序包在开发、测试、生产环境的无差别性，方便程序包的迁移。</li><li>API管理:以方便的形式编写及更新API文档，并以方便的形式供调用者查看和测试。</li><li>集成框架:微服务组件都以职责单一的程序包对外提供服务，集成框架以配置的形式将所有微服务组件（特别是管理端组件）集成到统一的界面框架下，让用户能够在统一的界面中使用系统。</li><li>分布式事务:对于重要的业务，需要通过分布式事务技术（TCC、高可用消息服务、最大努力通知）保证数据的一致性。具有代表性的有spring transaction</li><li>调用链:记录完成一个业务逻辑时调用到的微服务，并将这种串行或并行的调用关系展示出来。在系统出错时，可以方便地找到出错点。具有代表性的有pinpoint.</li><li>支撑平台:系统微服务化后，系统变得更加碎片化，系统的部署、运维、监控等都比单体架构更加复杂，那么，就需要将大部分的工作自动化。现在，可以通过Docker等工具来中和这些微服务架构带来的弊端。 例如:持续集成、蓝绿发布、健康检查、性能健康等等。严重点，以我们两年的实践经验，可以这么说，如果没有合适的支撑平台或工具，就不要使用微服务架构。</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。&lt;/p&gt;
-&lt;h2 id=&quot;安装docker&quot;&gt;&lt;a hr
+        &lt;h2 id=&quot;Monolithic架构&quot;&gt;&lt;a href=&quot;#Monolithic架构&quot; class=&quot;headerlink&quot; title=&quot;Monolithic架构&quot;&gt;&lt;/a&gt;Monolithic架构&lt;/h2&gt;&lt;figure class=&quot;image-bubble&quot;&gt;
+   
       
     
     </summary>
     
-      <category term="容器" scheme="http://donjote.github.io/categories/%E5%AE%B9%E5%99%A8/"/>
+      <category term="架构" scheme="http://donjote.github.io/categories/%E6%9E%B6%E6%9E%84/"/>
     
     
-      <category term="docker" scheme="http://donjote.github.io/tags/docker/"/>
+      <category term="微服务" scheme="http://donjote.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+      <category term="架构" scheme="http://donjote.github.io/tags/%E6%9E%B6%E6%9E%84/"/>
     
   </entry>
   
@@ -741,30 +771,28 @@ $ docker-machine create -d virtualbox --engine-registry-mi
   </entry>
   
   <entry>
-    <title>微服务简介</title>
-    <link href="http://donjote.github.io/2017/07/04/micro_services_introdution/"/>
-    <id>http://donjote.github.io/2017/07/04/micro_services_introdution/</id>
+    <title>企业级 Docker Registry--harbor安装和简单使用</title>
+    <link href="http://donjote.github.io/2017/07/04/harbor/"/>
+    <id>http://donjote.github.io/2017/07/04/harbor/</id>
     <published>2017-07-03T16:00:00.000Z</published>
-    <updated>2018-08-09T06:11:38.939Z</updated>
+    <updated>2018-08-09T06:10:34.199Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Monolithic架构"><a href="#Monolithic架构" class="headerlink" title="Monolithic架构"></a>Monolithic架构</h2><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/04/micro_services_introdution/1.png" alt="Monolithic架构" title="">                </div>                <div class="image-caption">Monolithic架构</div>            </figure><p>Monolithic比较适合小项目</p><h3 id="Monolithic架构优点"><a href="#Monolithic架构优点" class="headerlink" title="Monolithic架构优点"></a>Monolithic架构优点</h3><ul><li>开发简单直接，集中式管理, 基本不会重复开发</li><li>功能都在本地，没有分布式的管理开销和调用开销。<h3 id="Monolithic架构缺点"><a href="#Monolithic架构缺点" class="headerlink" title="Monolithic架构缺点"></a>Monolithic架构缺点</h3>它的缺点也非常明显，特别对于互联网公司来说（不一一列举了）：</li><li>开发效率低：所有的开发在一个项目改代码，递交代码相互等待，代码冲突不断</li><li>代码维护难：代码功能耦合在一起，新人不知道何从下手</li><li>部署不灵活：构建时间长，任何小修改必须重新构建整个项目，这个过程往往很长</li><li>稳定性不高：一个微不足道的小问题，可以导致整个应用挂掉</li><li>扩展性不够：无法满足高并发情况下的业务需求</li></ul><h2 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h2><h3 id="什么是微服务"><a href="#什么是微服务" class="headerlink" title="什么是微服务"></a>什么是微服务</h3><p>相对于单体（Monolithic）应用而言，微服务是采用一组服务的方式来构建一个应用，服务独立部署在不同的进程中，不同服务通过一些轻量级交互机制来通信，例如 RPC、HTTP 等,服务可独立扩展伸缩，每个服务定义了明确的边界，不同的服务甚至可以采用不同的编程语言来实现，由独立的团队来维护。</p><h3 id="微服务的价值"><a href="#微服务的价值" class="headerlink" title="微服务的价值"></a>微服务的价值</h3><ul><li>首先，在功能不变的情况下，应用被分解为多个可管理的服务，每个服务开发、运维变得简单。</li><li>其次，每个微服务独立部署，开发者不在需要协调其他服务部署对本服务的影响，这可以加快部署精度。</li><li>最后，每个服务可以自行决定自己的容量。</li></ul><hr><p>虽然对于一些简单的、规模有限的应用而言，单体架构仍然是有意义的。微服务是应用开发和部署的一个不同的方法。它非常适合许多现代的云应用对于敏捷性、扩展规模和可靠性的要求。一个微服务应用被分解成独立的部件，被称为“微服务”。“微服务”协同工作，以便提供应用的整体功能。“微服务”这一术语强调一个事实，那就是应用应该是由足够小的服务所组成，以便真正体现独立性，使得每个微服务实现单一的功能。此外，每个微服务都有明确的合同（API合同）——通常是RESTful 的——以便其他微服务能够与之进行交流和分享数据。微服务也必须能够彼此独立地进行版本更新。这种松耦合正是对一个应用实现快速而可靠地演化的支撑。下图显示了一个单体应用是如何被分解为不同的微服务的。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/04/micro_services_introdution/2.png" alt="微服务架构" title="">                </div>                <div class="image-caption">微服务架构</div>            </figure></p><h3 id="微服务的特点"><a href="#微服务的特点" class="headerlink" title="微服务的特点"></a>微服务的特点</h3><ul><li>小, 且专注于做⼀件事情</li><li>进程独立</li><li>轻量级的通信机制</li><li>松耦合</li><li>独立部署</li></ul><hr><p><strong>领域驱动设计：</strong> 应用程序功能分解可以通过Eric Evans在<a href="http://www.jdon.com/ddd.html" target="_blank" rel="external">《领域驱动设计》</a>中明确定义的规则实现；每个团队负责与一个领域或业务功能相关的全部开发；团队拥有全系列的开发人员，具备用户界面、业务逻辑和持久化存储等方面的开发技能；<br><strong>单一职责原则：</strong> 每个服务应该负责该功能的一个单独的部分，这是<a href="http://www.cnblogs.com/shanyou/archive/2009/09/21/1570716.html" target="_blank" rel="external">面向对象设计的SOLID原则</a>原则之一；<br><strong>明确发布接口：</strong> 每个服务都会发布一个定义明确的接口，而且保持不变；服务消费者只关心接口，而对于被消费的服务没有任何运行依赖；<br><strong>独立部署、升级、扩展和替换：</strong> 每个服务都可以单独部署及重新部署而不影响整个系统。这使得服务很容易升级，每个服务都可以沿着<a href="https://pan.baidu.com/s/1qYpzBPE" target="_blank" rel="external">《架构即未来》</a>一书定义的<a href="http://www.jianshu.com/p/d08d0c14810f" target="_blank" rel="external">AKF扩展立方体</a>的X轴和Z轴进行扩展；<br><strong>可以异构/采用多种语言：</strong>　每个服务的实现细节都与其它服务无关，这使得服务之间能够解耦，团队可以针对每个服务选择最合适的开发语言、持久化存储、工具和方法；<br><strong>轻量级通信：</strong>　服务通信使用轻量级的通信协议，例如，同步的REST，异步的AMQP、STOMP、MQTT等。</p><hr><p>微服务架构的思想本质跟互联网的思想是一致的。它的组件对外发布的服务视同HTTP协议，采用HTTP Rest API的方式来进行。很多开放平台的API服务，基本都采用了Http API的方式进行服务的发布和管理。</p><h3 id="微服务优点"><a href="#微服务优点" class="headerlink" title="微服务优点"></a>微服务优点</h3><ul><li>每个微服务都很小，这样能聚焦一个指定的业务功能或业务需求。</li><li>微服务能够被小团队单独开发，这个小团队是2到5人的开发人员组成。</li><li>微服务是松耦合的，是有功能意义的服务，无论是在开发阶段或部署阶段都是独立的。</li><li>微服务能使用不同的语言开发。</li><li>微服务允许容易且灵活的方式集成自动部署，通过持续集成工具，如Jenkins, bamboo 。</li><li>一个团队的新成员能够更快投入生产。</li><li>微服务易于被一个开发人员理解，修改和维护，这样小团队能够更关注自己的工作成果。无需通过合作才能体现价值。</li><li>微服务允许你利用融合最新技术。</li><li>微服务只是业务逻辑的代码，不会和HTML,CSS 或其他界面组件混合。</li><li>微服务能够即时被要求扩展。</li><li>微服务能部署中低端配置的服务器上。</li><li>易于和第三方集成。</li><li>每个微服务都有自己的存储能力，可以有自己的数据库。也可以有统一数据库。</li></ul><h3 id="微服务架构的缺点"><a href="#微服务架构的缺点" class="headerlink" title="微服务架构的缺点"></a>微服务架构的缺点</h3><ul><li>微服务架构可能带来过多的操作。</li><li>需要DevOps技巧 (<a href="http://en.wikipedia.org/wiki/DevOps" target="_blank" rel="external">http://en.wikipedia.org/wiki/DevOps</a>).</li><li>可能双倍的努力。</li><li>分布式系统可能复杂难以管理。</li><li>因为分布部署跟踪问题难。</li><li>服务数量增加，管理复杂性增加。</li></ul><h3 id="常见的微服务组件"><a href="#常见的微服务组件" class="headerlink" title="常见的微服务组件"></a>常见的微服务组件</h3><ul><li>服务注册:服务提供方将自己调用地址注册到服务注册中心，让服务调用方能够方便地找到自己。</li><li>服务发现:服务调用方从服务注册中心找到自己需要调用的服务的地址。</li><li>负载均衡:服务提供方一般以多实例的形式提供服务，负载均衡功能能够让服务调用方连接到合适的服务节点。并且，节点选择的工作对服务调用方来说是透明的。</li><li>服务网关:服务网关是服务调用的唯一入口，可以在这个组件是实现用户鉴权、动态路由、灰度发布、A/B测试、负载限流等功能。</li><li>配置中心:将本地化的配置信息（properties,<br>xml, yaml等）注册到配置中心，实现程序包在开发、测试、生产环境的无差别性，方便程序包的迁移。</li><li>API管理:以方便的形式编写及更新API文档，并以方便的形式供调用者查看和测试。</li><li>集成框架:微服务组件都以职责单一的程序包对外提供服务，集成框架以配置的形式将所有微服务组件（特别是管理端组件）集成到统一的界面框架下，让用户能够在统一的界面中使用系统。</li><li>分布式事务:对于重要的业务，需要通过分布式事务技术（TCC、高可用消息服务、最大努力通知）保证数据的一致性。具有代表性的有spring transaction</li><li>调用链:记录完成一个业务逻辑时调用到的微服务，并将这种串行或并行的调用关系展示出来。在系统出错时，可以方便地找到出错点。具有代表性的有pinpoint.</li><li>支撑平台:系统微服务化后，系统变得更加碎片化，系统的部署、运维、监控等都比单体架构更加复杂，那么，就需要将大部分的工作自动化。现在，可以通过Docker等工具来中和这些微服务架构带来的弊端。 例如:持续集成、蓝绿发布、健康检查、性能健康等等。严重点，以我们两年的实践经验，可以这么说，如果没有合适的支撑平台或工具，就不要使用微服务架构。</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。</p><h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><p>参考官方文档</p><h2 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker-compose"></a>安装docker-compose</h2><p>参考官方文档</p><h2 id="搭建Harbor"><a href="#搭建Harbor" class="headerlink" title="搭建Harbor"></a>搭建Harbor</h2><ul><li>下载:<pre><code>wget https://github.com/vmware/harbor/releases/download/v1.1.2/harbor-online-installer-v1.1.2.tgz</code></pre></li><li>解压:<pre><code>tar zvxf harbor-online-installer-v1.1.2.tgz</code></pre></li><li><p>修改配置:</p><pre><code>cd harborvim harbor.cfg</code></pre><p>配置样例如下：</p><pre><code>## Configuration file of Harbor#The IP address or hostname to access admin UI and registry service.#DO NOT use localhost or 127.0.0.1, because Harbor needs to be accessed by external clients.# 指定 hostname，一般为IP，或者域名，用于登录 Web UI 界面hostname = 120.12.34.45#The protocol for accessing the UI and token/notification service, by default it is http.#It can be set to https if ssl is enabled on nginx.# URL 访问方式，SSL 需要配置 nginxui_url_protocol = http#Email account settings for sending out password resetting emails.# 邮件相关信息配置，如忘记密码发送邮件email_server = smtp.xxxxxx.comemail_server_port = 465email_username = reg@mritd.meemail_password = xxxxxxemail_from = docker &lt;reg@mritd.me&gt;email_ssl = true##The password of Harbor admin, change this before any production use.# 默认的 Harbor 的管理员密码，管理员用户名默认 adminharbor_admin_password = Harbor12345##By default the auth mode is db_auth, i.e. the credentials are stored in a local database.#Set it to ldap_auth if you want to verify a user&apos;s credentials against an LDAP server.# 指定 Harbor 的权限验证方式，Harbor 支持本地的 mysql 数据存储密码，同时也支持 LDAPauth_mode = db_auth#The url for an ldap endpoint.# 如果采用了 LDAP，此处填写 LDAP 地址ldap_url = ldaps://ldap.mydomain.com#The basedn template to look up a user in LDAP and verify the user&apos;s password.# LADP 验证密码的方式(我特么没用过这么高级的玩意)ldap_basedn = uid=%s,ou=people,dc=mydomain,dc=com#The password for the root user of mysql db, change this before any production use.# mysql 数据库 root 账户密码db_password = root123#Turn on or off the self-registration feature# 是否允许开放注册self_registration = on#Turn on or off the customize your certicate# 允许自签名证书customize_crt = on#fill in your certicate message# 自签名证书信息crt_country = CNcrt_state = Statecrt_location = CNcrt_organization = mritdcrt_organizationalunit = mritdcrt_commonname = mritd.mecrt_email = reg.mritd.me#####</code></pre></li><li><p>启动</p><pre><code>sudo ./install</code></pre></li><li>登录<br>Harbor 默认管理员用户为 admin ，密码在 harbor.cfg 中设置过，默认的是 Harbor12345 ，可直接登陆</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;Monolithic架构&quot;&gt;&lt;a href=&quot;#Monolithic架构&quot; class=&quot;headerlink&quot; title=&quot;Monolithic架构&quot;&gt;&lt;/a&gt;Monolithic架构&lt;/h2&gt;&lt;figure class=&quot;image-bubble&quot;&gt;
-   
+        &lt;p&gt;简单的说，Harbor 是一个企业级的 Docker Registry，可以实现 images 的私有存储和日志统计权限控制等功能，并支持创建多项目(Harbor 提出的概念)，基于官方 Registry V2 实现。&lt;/p&gt;
+&lt;h2 id=&quot;安装docker&quot;&gt;&lt;a hr
       
     
     </summary>
     
-      <category term="架构" scheme="http://donjote.github.io/categories/%E6%9E%B6%E6%9E%84/"/>
+      <category term="容器" scheme="http://donjote.github.io/categories/%E5%AE%B9%E5%99%A8/"/>
     
     
-      <category term="微服务" scheme="http://donjote.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-      <category term="架构" scheme="http://donjote.github.io/tags/%E6%9E%B6%E6%9E%84/"/>
+      <category term="docker" scheme="http://donjote.github.io/tags/docker/"/>
     
   </entry>
   
