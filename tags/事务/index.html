@@ -1,275 +1,460 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="UTF-8" />
-
     
 
     
 
-    <title>Tag: 事务 | Donjote 博客</title>
-    <meta name="author" content="Donjote" />
-    <meta name="version" content="1.0.0" />
-    <meta name="keywords" content="undefined" />
-    <meta name="description" content="null" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-    <meta name="baidu-site-verification" content="F0CXvmUgA9" />
-
-    
-    
-    <link rel="icon" href="/favicon.png">
     
 
-    <link rel="stylesheet" href="/css/style.css">
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Tags: 事务 | Donjote 博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="undefined">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Donjote 博客">
+<meta property="og:url" content="http://donjote.github.io/tags/事务/index.html">
+<meta property="og:site_name" content="Donjote 博客">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Donjote 博客">
+    
+        <link rel="alternate" type="application/atom+xml" title="Donjote 博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
+
 <body>
+    <div id="loading" class="active"></div>
 
-    <div class="app">
-        <header class="header clearfix">
-    <div id="nav" class="nav">
-    <button id="open-panel" class="open-panel"><i class="icon-library"></i></button>
-
-    <nav class="nav-inner">
-
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Donjote</h5>
+          <a href="mailto:donjote@icloud.com" title="donjote@icloud.com" class="mail">donjote@icloud.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
         
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
         
-        <li class="nav-item">
-            <a class="nav-link" href="/">首页</a>
-        </li>
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
         
+            <li class="waves-block waves-effect active">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
         
-        <li class="nav-item nav-item-tag">
-            <a id="nav-tag" class="nav-link" href="#">标签</a>
-            <div id="nav-tags" class="nav-tag-wrap">
-                <i class="nav-tag-arrow"></i>
-                
-  <div class="widget-wrap">
-    <h3 class="widget-title">
-        <i class="icon-tag vm"></i>
-        <span class="vm">Tags</span>
-    </h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Electron/">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NoSQL/">NoSQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPC/">RPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React-Native/">React Native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Restful/">Restful</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weex/">Weex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yarn/">Yarn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etcd/">etcd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gRPC/">gRPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm镜像/">npm镜像</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/事务/">事务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布式架构/">分布式架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链/">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微服务/">微服务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/敏捷开发/">敏捷开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务发现/">服务发现</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深度学习/">深度学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/神经网络/">神经网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/跨平台/">跨平台</a></li></ul>
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/donjote" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
     </div>
   </div>
+</aside>
 
-
-            </div>
-        </li>
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Tags: 事务</div>
         
-        
-        
-        <li class="nav-item">
-            <a class="nav-link" href="/archives">归档</a>
-        </li>
-        
-        
-        
-        <li class="nav-item">
-            <a class="nav-link" href="/about">关于</a>
-        </li>
-        
-        
-        
-
-    </nav>
-</div>
-
-    <aside id="aside" class="aside">
-    <div id="aside-mask" class="aside-mask"></div>
-    <div id="aside-inner" class="aside-inner">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="http://donjote.github.io"></form>
-
-        
-        
-
-        
-        <div class="author-meta">
-            
-            <div class="author-avatar">
-                <a href="/">
-                    <img src="/images/avatar.jpg" title="Sanonz">
-                </a>
-            </div>
-            
-            <div class="author-name">Donjote</div>
-            <div class="author-work"></div>
-            <div class="author-location">
-                <i class="icon-location vm"></i>
-                <span class="vm">Shenzhen, China</span>
-            </div>
-            
-            <div class="author-thread-wrap">
-                <div class="author-threads clearfix">
-                    
-                    <a class="thread-item" href="https://github.com/donjote" target="_blank" rel="noopener"><i class="icon-github"></i></a>
-                    
-                    
-                    
-                </div>
-            </div>
-            
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
         </div>
         
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
     </div>
-</aside>
+</header>
+<header class="content-header tags-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Tags: 事务</h1>
+        <h5 class="subtitle">
+            
+        </h5>
+    </div>
+
+    
+<div class="tabs-bar container">
+    <nav class="tags-list">
+        <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
+            ">全部</a>
+        
+
+            <a href="/tags/区块链/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">区块链</a>
+
+        
+
+            <a href="/tags/NoSQL/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">NoSQL</a>
+
+        
+
+            <a href="/tags/深度学习/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">深度学习</a>
+
+        
+
+            <a href="/tags/神经网络/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">神经网络</a>
+
+        
+
+            <a href="/tags/docker/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">docker</a>
+
+        
+
+            <a href="/tags/跨平台/" style="-webkit-order:12;order:12" class="tags-list-item waves-effect waves-button waves-light">跨平台</a>
+
+        
+
+            <a href="/tags/Electron/" style="-webkit-order:13;order:13" class="tags-list-item waves-effect waves-button waves-light">Electron</a>
+
+        
+
+            <a href="/tags/微服务/" style="-webkit-order:14;order:14" class="tags-list-item waves-effect waves-button waves-light">微服务</a>
+
+        
+
+            <a href="/tags/etcd/" style="-webkit-order:15;order:15" class="tags-list-item waves-effect waves-button waves-light">etcd</a>
+
+        
+
+            <a href="/tags/服务发现/" style="-webkit-order:16;order:16" class="tags-list-item waves-effect waves-button waves-light">服务发现</a>
+
+        
+
+            <a href="/tags/Git/" style="-webkit-order:17;order:17" class="tags-list-item waves-effect waves-button waves-light">Git</a>
+
+        
+
+            <a href="/tags/Golang/" style="-webkit-order:18;order:18" class="tags-list-item waves-effect waves-button waves-light">Golang</a>
+
+        
+
+            <a href="/tags/gRPC/" style="-webkit-order:19;order:19" class="tags-list-item waves-effect waves-button waves-light">gRPC</a>
+
+        
+
+            <a href="/tags/RPC/" style="-webkit-order:20;order:20" class="tags-list-item waves-effect waves-button waves-light">RPC</a>
+
+        
+
+            <a href="/tags/架构/" style="-webkit-order:21;order:21" class="tags-list-item waves-effect waves-button waves-light">架构</a>
+
+        
+
+            <a href="/tags/Nodejs/" style="-webkit-order:22;order:22" class="tags-list-item waves-effect waves-button waves-light">Nodejs</a>
+
+        
+
+            <a href="/tags/npm镜像/" style="-webkit-order:23;order:23" class="tags-list-item waves-effect waves-button waves-light">npm镜像</a>
+
+        
+
+            <a href="/tags/Restful/" style="-webkit-order:24;order:24" class="tags-list-item waves-effect waves-button waves-light">Restful</a>
+
+        
+
+            <a href="/tags/TensorFlow/" style="-webkit-order:25;order:25" class="tags-list-item waves-effect waves-button waves-light">TensorFlow</a>
+
+        
+
+            <a href="/tags/spring-boot/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">spring boot</a>
+
+        
+
+            <a href="/tags/事务/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light active">事务</a>
+
+        
+
+            <a href="/tags/Weex/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">Weex</a>
+
+        
+
+            <a href="/tags/React-Native/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">React Native</a>
+
+        
+
+            <a href="/tags/Yarn/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">Yarn</a>
+
+        
+
+            <a href="/tags/敏捷开发/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">敏捷开发</a>
+
+        
+
+            <a href="/tags/分布式架构/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">分布式架构</a>
+
+        
+    </nav>
+    <!-- PC show more-->
+    <div class="tags-list-more">
+        <a href="javascript:;" onclick="BLOG.tabBar(this)" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
+    </div>
+</div>
+
+
 
 </header>
 
-        <div id="content" class="content">
-    <article class="article" itemscope itemprop="blogPost">
+<div class="container body-wrap fade">
     
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2017/08/30/transaction_tcc/">TCC柔性事务</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="/2017/08/30/transaction_tcc/">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2017-08-29T16:00:00.000Z" itemprop="datePublished">2017-08-30</time>
-</a>
+            <div class="waterfall">
+          
 
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/事务/">事务</a>, <a class="article-tag-link" href="/tags/架构/">架构</a>
-</div>
+            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2017-08-30 00:00:00" datetime="2017-08-29T16:00:00.000Z"  itemprop="datePublished">2017-08-30</time>
 
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/架构/">架构</a></li></ul>
 
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <blockquote>
-<p>&emsp;&emsp;分布式事务是一个绕不过去的挑战！微服务架构本质上就是分布式服务化架构，微服务架构的流行，让分布式事务问题日益突出！尤其是在订单业务、资金业务等系统核心业务流程中，一定要有可靠的分布式事务解决方案来保证业务数据的可靠性和准确性。</p>
-<h2 id="TCC事务机制简介"><a href="#TCC事务机制简介" class="headerlink" title="TCC事务机制简介"></a>TCC事务机制简介</h2><p>&emsp;&emsp;关于TCC（Try-Confirm-Cancel）的概念，最早是由Pat Helland于2007年发表的一篇名为《Life beyond Distributed Transactions:an Apostate’s Opinion》的论文提出。在该论文中，TCC还是以Tentative-Confirmation-Cancellation作为名称；正式以Try-Confirm-Cancel作为名称的，可能是Atomikos（Gregor Hohpe所著书籍《Enterprise Integration Patterns》中收录了关于TCC的介绍，提到了Atomikos的Try-Confirm-Cancel，并认为二者是相似的概念）。</p>
-<p>&emsp;&emsp;国内最早关于TCC的报道，应该是InfoQ上对阿里程立博士的一篇采访。经过程博士的这一次传道之后，TCC在国内逐渐被大家广为了解并接受。相应的实现方案和开源框架也先后被发布出来。</p>
-<p>&emsp;&emsp;TCC事务机制相对于传统事务机制（X/Open XA），其特征在于它不依赖资源管理器(RM)对XA的支持，而是通过对（由业务系统提供的）业务逻辑的调度来实现分布式事务。对于业务系统中一个特定的业务逻辑S，其对外提供服务时，必须接受一些不确定性，即对业务逻辑执行的一次调用仅是一个临时性操作，调用它的消费方服务M保留了后续的取消权。如果M认为全局事务应该rollback，它会要求取消之前的临时性操作，这就对应S的一个取消操作。而当M认为全局事务应该commit时，它会放弃之前临时性操作的取消权，这对应S的一个确认操作。 每一个初步操作，最终都会被确认或取消。因此，针对一个具体的业务服务，TCC事务机制需要业务系统提供三段业务逻辑：初步操作Try、确认操作Confirm、取消操作Cancel。</p>
-<hr>
-<p><font color="red">1. 初步操作（Try）</font><br>&emsp;&emsp;TCC事务机制中的业务逻辑（Try），从执行阶段来看，与传统事务机制中业务逻辑相同。但从业务角度来看，是不一样的。TCC机制中的Try仅是一个初步操作，它和后续的次确认一起才能真正构成一个完整的业务逻辑。因此，可以认为[传统事务机制]的业务逻辑 = [TCC事务机制]的初步操作（Try） + [TCC事务机制]的确认逻辑（Confirm）。TCC机制将传统事务机制中的业务逻辑一分为二，拆分后保留的部分即为初步操作（Try）；而分离出的部分即为确认操作（Confirm），被延迟到事务提交阶段执行。<br>TCC事务机制以初步操作（Try）为中心，确认操作（Confirm）和取消操作（Cancel）都是围绕初步操作（Try）而展开。因此，Try阶段中的操作，其保障性是最好的，即使失败，仍然有取消操作（Cancel）可以将其不良影响进行回撤。</p>
-<p><font color="red">2. 确认操作（Confirm）</font><br>&emsp;&emsp;确认操作（Confirm）是对初步操作（Try）的一个补充。当TCC事务管理器认为全局事务可以正确提交时，就会逐个执行初步操作（Try）指定的确认操作（Confirm），将初步操作（Try）未完成的事项最终完成。</p>
-<p><font color="red">3. 取消操作（Cancel）</font><br>&emsp;&emsp;取消操作（Cancel）是对初步操作（Try）的一个回撤。当TCC事务管理器认为全局事务不能正确提交时，就会逐个执行初步操作（Try）指定的取消操作（Cancel），将初步操作（Try）已完成的事项全部撤回。</p>
-</blockquote>
-<h2 id="支付宝运营架构中柔性事务"><a href="#支付宝运营架构中柔性事务" class="headerlink" title="支付宝运营架构中柔性事务"></a>支付宝运营架构中柔性事务</h2><blockquote>
-<ul>
-<li><font color="red">柔性事务：业务活动</font><blockquote>
-<p><img src="/donjote-blog/2017/08/30/transaction_tcc/1.jpg" alt="柔性事务：业务活动"></p>
-</blockquote>
-</li>
-<li><font color="red">柔性事务：业务活动举例</font><br><img src="/donjote-blog/2017/08/30/transaction_tcc/2.jpg" alt="柔性事务：业务活动举例"></li>
-<li><font color="red">柔性事务：TCC型业务服务</font><blockquote>
-<p><img src="/donjote-blog/2017/08/30/transaction_tcc/3.jpg" alt="柔性事务：TCC型业务服务"></p>
-</blockquote>
-</li>
-<li><font color="red">柔性事务：TCC服务事务协调模式</font><blockquote>
-<p><img src="/donjote-blog/2017/08/30/transaction_tcc/4.jpg" alt="柔性事务：TCC服务事务协调模式"><br>&emsp;&emsp;可以看出，柔性事务（<a href="http://localhost:4000/2017/08/25/cap/#BASE" target="_blank" rel="external">遵循BASE理论</a>）是指相对于<a href="http://localhost:4000/2017/07/08/transaction/#事务的-ACID" target="_blank" rel="external">ACID刚性事务</a>而言的。</p>
-</blockquote>
-</li>
-</ul>
-<p>&emsp;&emsp;支付宝所说的柔性事务分为：两阶段型、补偿型、异步确保型、最大努力通知型几种。由于支付宝整个架构是SOA架构，因此传统单机环境下数据库的ACID事务满足了分布式环境下的业务需要，以上几种事务类似就是针对分布式环境下业务需要设定的。其中：<br>1、两阶段型：就是分布式事务两阶段提交，对应技术上的XA、JTA/JTS。这是分布式环境下事务处理的典型模式。<br>2、补偿型：TCC型事务（Try/Confirm/Cancel）可以归为补偿型。补偿型的例子，在一个长事务（long-running）中，一个由两台服务器一起参与的事务，服务器A发起事务，服务器B参与事务，B的事务需要人工参与，所以处理时间可能很长。如果按照ACID的原则，要保持事务的隔离性、一致性，服务器A中发起的事务中使用到的事务资源将会被锁定，不允许其他应用访问到事务过程中的中间结果，直到整个事务被提交或者回滚。这就造成事务A中的资源被长时间锁定，系统的可用性将不可接受。WS-BusinessActivity提供了一种基于补偿的long-running的事务处理模型。还是上面的例子，服务器A的事务如果执行顺利，那么事务A就先行提交，如果事务B也执行顺利，则事务B也提交，整个事务就算完成。但是如果事务B执行失败，事务B本身回滚，这时事务A已经被提交，所以需要执行一个补偿操作，将已经提交的事务A执行的操作作反操作，恢复到未执行前事务A的状态。这样的SAGA事务模型，是牺牲了一定的隔离性和一致性的，但是提高了long-running事务的可用性。例子来源：OASIS的WS-BusinessActivity文档<br>3、异步确保型将一些同步阻塞的事务操作变为异步的操作，避免对数据库事务的争用，典型例子是热点账户异步记账、批量记账的处理。<br>4、最大努力型PPT中提到的例子交易的消息通知（例如商户交易结果通知重试、补单重试）</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p> <a href="https://wenku.baidu.com/view/be946bec0975f46527d3e104.html" target="_blank" rel="external">大规模SOA系统中的分布事务处事</a><br> <a href="https://wenku.baidu.com/view/d1bbd25877232f60ddcca1d9.html" target="_blank" rel="external">支付宝架构与技术</a></p>
-</blockquote>
-
-        
-    </section>
-</article>
-
-
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2017/07/08/transaction/">事务</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="/2017/07/08/transaction/">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2017-07-07T16:00:00.000Z" itemprop="datePublished">2017-07-08</time>
-</a>
-
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/事务/">事务</a>, <a class="article-tag-link" href="/tags/架构/">架构</a>
-</div>
-
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <h2 id="什么是事务"><a href="#什么是事务" class="headerlink" title="什么是事务"></a>什么是事务</h2><blockquote>
-<p>事务(Transaction)是访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。事务通常由高级数据库操纵语言或编程语言（如SQL，C++或Java）书写的用户程序的执行所引起，并用形如begin transaction和end transaction语句（或函数调用）来界定。事务由事务开始(begin transaction)和事务结束(end transaction)之间执行的全体操作组成。<br>事务是应用程序中一系列严密的操作，所有操作必须成功完成，否则在每个操作中所作的所有更改都会被撤消。也就是事务具有原子性，一个事务中的一系列的操作要么全部成功，要么一个都不做。<br>事务的结束有两种，当事务中的所以步骤全部成功执行时，事务提交。如果其中一个步骤失败，将发生回滚操作，撤消撤消之前到事务开始时的所以操作。</p>
-</blockquote>
-<h2 id="事务的-ACID"><a href="#事务的-ACID" class="headerlink" title="事务的 ACID"></a>事务的 ACID</h2><blockquote>
-<p>事务具有四个特征：原子性（ Atomicity ）、一致性（ Consistency ）、隔离性（ Isolation ）和持续性（ Durability ）。这四个特性简称为 ACID 特性。</p>
-<h3 id="原子性"><a href="#原子性" class="headerlink" title="原子性"></a>原子性</h3><p>事务的原子性指的是，事务中包含的程序作为数据库的逻辑工作单位，它所做的对数据修改操作要么全部执行，要么完全不执行。这种特性称为原子性。<br>事务的原子性要求，如果把一个事务可看作是一个程序，它要么完整的被执行，要么完全不执行。就是说事务的操纵序列或者完全应用到数据库或者完全不影响数据库。这种特性称为原子性。    </p>
-<hr>
-<p>假如用户在一个事务内完成了对数据库的更新，这时所有的更新对外部世界必须是可见的，或者完全没有更新。前者称事务已提交，后者称事务撤消（或流产）。DBMS必须确保由成功提交的事务完成的所有操纵在数据库内有完全的反映，而失败的事务对数据库完全没有影响。</p>
-<h3 id="一致性"><a href="#一致性" class="headerlink" title="一致性"></a>一致性</h3><p>事务的一致性指的是在一个事务执行之前和执行之后数据库都必须处于一致性状态。这种特性称为事务的一致性。假如数据库的状态满足所有的完整性约束，就说该数据库是一致的。</p>
-<hr>
-<p>一致性处理数据库中对所有语义约束的保护。假如数据库的状态满足所有的完整性约束，就说该数据库是一致的。例如，当数据库处于一致性状态S1时，对数据库执行一个事务，在事务执行期间假定数据库的状态是不一致的，当事务执行结束时，数据库处在一致性状态S2。</p>
-<h3 id="分离性"><a href="#分离性" class="headerlink" title="分离性"></a>分离性</h3><p>分离性指并发的事务是相互隔离的。即一个事务内部的操作及正在操作的数据必须封锁起来，不被其它企图进行修改的事务看到。    分离性是DBMS针对并发事务间的冲突提供的安全保证。DBMS可以通过加锁在并发执行的事务间提供不同级别的分离。假如并发交叉执行的事务没有任何控制，操纵相同的共享对象的多个并发事务的执行可能引起异常情况。</p>
-<hr>
-<p>DBMS可以在并发执行的事务间提供不同级别的分离。分离的级别和并发事务的吞吐量之间存在反比关系。较多事务的可分离性可能会带来较高的冲突和较多的事务流产。流产的事务要消耗资源，这些资源必须要重新被访问。因此，确保高分离级别的DBMS需要更多的开销。</p>
-<h3 id="持久性"><a href="#持久性" class="headerlink" title="持久性"></a>持久性</h3><p>持久性意味着当系统或介质发生故障时，确保已提交事务的更新不能丢失。即一旦一个事务提交，DBMS保证它对数据库中数据的改变应该是永久性的，耐得住任何系统故障。持久性通过数据库备份和恢复来保证。  </p>
-<hr>
-<p>持久性意味着当系统或介质发生故障时，确保已提交事务的更新不能丢失。即对已提交事务的更新能恢复。一旦一个事务被提交，DBMS必须保证提供适当的冗余，使其耐得住系统的故障。所以，持久性主要在于DBMS的恢复性能。</p>
-</blockquote>
-
-        
-    </section>
-</article>
-
-
-
-
-
-</div>
-        <footer class="footer">
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
-</footer>
 
 
     </div>
-
-    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
     
-    <script type="text/javascript">
-        $(function() {
-            var nodes = {
-                nav: $('#nav'),
-                aside: $('#aside'),
-                navTags: $('#nav-tags')
-            };
 
-            $('#open-panel, #aside-mask').on('click', function() {
-                nodes.aside.toggleClass('panel-show');
-            });
-            $('#nav-tag').on('click', function(event) {
-                event.preventDefault();console.log(nodes.navTags.attr('class'))
-                nodes.navTags.toggleClass('tag-show');console.log(nodes.navTags.attr('class'))
-            })/*.hover(function() {
-                nodes.navTags.addClass('tag-show');
-            }, function() {
-                nodes.navTags.removeClass('tag-show');
-            });*/
 
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/08/30/transaction_tcc/">TCC柔性事务</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/事务/">事务</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+        
+
+            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2017-07-08 00:00:00" datetime="2017-07-07T16:00:00.000Z"  itemprop="datePublished">2017-07-08</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/架构/">架构</a></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/07/08/transaction/">事务</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/事务/">事务</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+        
+            </div>
+        
+    
+</div>
+
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
             
-        });
-    </script>
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Donjote &copy; 2017 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://donjote.github.io/tags/事务/&title=Donjote 博客&pic=http://donjote.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://donjote.github.io/tags/事务/&title=Donjote 博客&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://donjote.github.io/tags/事务/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=Donjote 博客&url=http://donjote.github.io/tags/事务/&via=http://donjote.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://donjote.github.io/tags/事务/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://donjote.github.io/tags/事务/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
 
 </body>
 </html>

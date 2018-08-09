@@ -1,263 +1,460 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="UTF-8" />
-
     
 
     
 
-    <title>Tag: Electron | Donjote 博客</title>
-    <meta name="author" content="Donjote" />
-    <meta name="version" content="1.0.0" />
-    <meta name="keywords" content="undefined" />
-    <meta name="description" content="null" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-    <meta name="baidu-site-verification" content="F0CXvmUgA9" />
-
-    
-    
-    <link rel="icon" href="/favicon.png">
     
 
-    <link rel="stylesheet" href="/css/style.css">
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Tags: Electron | Donjote 博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="undefined">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Donjote 博客">
+<meta property="og:url" content="http://donjote.github.io/tags/Electron/index.html">
+<meta property="og:site_name" content="Donjote 博客">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Donjote 博客">
+    
+        <link rel="alternate" type="application/atom+xml" title="Donjote 博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
+
 <body>
+    <div id="loading" class="active"></div>
 
-    <div class="app">
-        <header class="header clearfix">
-    <div id="nav" class="nav">
-    <button id="open-panel" class="open-panel"><i class="icon-library"></i></button>
-
-    <nav class="nav-inner">
-
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Donjote</h5>
+          <a href="mailto:donjote@icloud.com" title="donjote@icloud.com" class="mail">donjote@icloud.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
         
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
         
-        <li class="nav-item">
-            <a class="nav-link" href="/">首页</a>
-        </li>
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
         
+            <li class="waves-block waves-effect active">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
         
-        <li class="nav-item nav-item-tag">
-            <a id="nav-tag" class="nav-link" href="#">标签</a>
-            <div id="nav-tags" class="nav-tag-wrap">
-                <i class="nav-tag-arrow"></i>
-                
-  <div class="widget-wrap">
-    <h3 class="widget-title">
-        <i class="icon-tag vm"></i>
-        <span class="vm">Tags</span>
-    </h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Electron/">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NoSQL/">NoSQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPC/">RPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React-Native/">React Native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Restful/">Restful</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weex/">Weex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yarn/">Yarn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etcd/">etcd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gRPC/">gRPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm镜像/">npm镜像</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/事务/">事务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布式架构/">分布式架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链/">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微服务/">微服务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/敏捷开发/">敏捷开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务发现/">服务发现</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深度学习/">深度学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/神经网络/">神经网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/跨平台/">跨平台</a></li></ul>
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/donjote" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
     </div>
   </div>
+</aside>
 
-
-            </div>
-        </li>
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Tags: Electron</div>
         
-        
-        
-        <li class="nav-item">
-            <a class="nav-link" href="/archives">归档</a>
-        </li>
-        
-        
-        
-        <li class="nav-item">
-            <a class="nav-link" href="/about">关于</a>
-        </li>
-        
-        
-        
-
-    </nav>
-</div>
-
-    <aside id="aside" class="aside">
-    <div id="aside-mask" class="aside-mask"></div>
-    <div id="aside-inner" class="aside-inner">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="http://donjote.github.io"></form>
-
-        
-        
-
-        
-        <div class="author-meta">
-            
-            <div class="author-avatar">
-                <a href="/">
-                    <img src="/images/avatar.jpg" title="Sanonz">
-                </a>
-            </div>
-            
-            <div class="author-name">Donjote</div>
-            <div class="author-work"></div>
-            <div class="author-location">
-                <i class="icon-location vm"></i>
-                <span class="vm">Shenzhen, China</span>
-            </div>
-            
-            <div class="author-thread-wrap">
-                <div class="author-threads clearfix">
-                    
-                    <a class="thread-item" href="https://github.com/donjote" target="_blank" rel="noopener"><i class="icon-github"></i></a>
-                    
-                    
-                    
-                </div>
-            </div>
-            
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
         </div>
         
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
     </div>
-</aside>
+</header>
+<header class="content-header tags-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Tags: Electron</h1>
+        <h5 class="subtitle">
+            
+        </h5>
+    </div>
+
+    
+<div class="tabs-bar container">
+    <nav class="tags-list">
+        <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
+            ">全部</a>
+        
+
+            <a href="/tags/区块链/" style="-webkit-order:21;order:21" class="tags-list-item waves-effect waves-button waves-light">区块链</a>
+
+        
+
+            <a href="/tags/NoSQL/" style="-webkit-order:22;order:22" class="tags-list-item waves-effect waves-button waves-light">NoSQL</a>
+
+        
+
+            <a href="/tags/深度学习/" style="-webkit-order:23;order:23" class="tags-list-item waves-effect waves-button waves-light">深度学习</a>
+
+        
+
+            <a href="/tags/神经网络/" style="-webkit-order:24;order:24" class="tags-list-item waves-effect waves-button waves-light">神经网络</a>
+
+        
+
+            <a href="/tags/docker/" style="-webkit-order:25;order:25" class="tags-list-item waves-effect waves-button waves-light">docker</a>
+
+        
+
+            <a href="/tags/跨平台/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">跨平台</a>
+
+        
+
+            <a href="/tags/Electron/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light active">Electron</a>
+
+        
+
+            <a href="/tags/微服务/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">微服务</a>
+
+        
+
+            <a href="/tags/etcd/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">etcd</a>
+
+        
+
+            <a href="/tags/服务发现/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">服务发现</a>
+
+        
+
+            <a href="/tags/Git/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">Git</a>
+
+        
+
+            <a href="/tags/Golang/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">Golang</a>
+
+        
+
+            <a href="/tags/gRPC/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">gRPC</a>
+
+        
+
+            <a href="/tags/RPC/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">RPC</a>
+
+        
+
+            <a href="/tags/架构/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">架构</a>
+
+        
+
+            <a href="/tags/Nodejs/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">Nodejs</a>
+
+        
+
+            <a href="/tags/npm镜像/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">npm镜像</a>
+
+        
+
+            <a href="/tags/Restful/" style="-webkit-order:12;order:12" class="tags-list-item waves-effect waves-button waves-light">Restful</a>
+
+        
+
+            <a href="/tags/TensorFlow/" style="-webkit-order:13;order:13" class="tags-list-item waves-effect waves-button waves-light">TensorFlow</a>
+
+        
+
+            <a href="/tags/spring-boot/" style="-webkit-order:14;order:14" class="tags-list-item waves-effect waves-button waves-light">spring boot</a>
+
+        
+
+            <a href="/tags/事务/" style="-webkit-order:15;order:15" class="tags-list-item waves-effect waves-button waves-light">事务</a>
+
+        
+
+            <a href="/tags/Weex/" style="-webkit-order:16;order:16" class="tags-list-item waves-effect waves-button waves-light">Weex</a>
+
+        
+
+            <a href="/tags/React-Native/" style="-webkit-order:17;order:17" class="tags-list-item waves-effect waves-button waves-light">React Native</a>
+
+        
+
+            <a href="/tags/Yarn/" style="-webkit-order:18;order:18" class="tags-list-item waves-effect waves-button waves-light">Yarn</a>
+
+        
+
+            <a href="/tags/敏捷开发/" style="-webkit-order:19;order:19" class="tags-list-item waves-effect waves-button waves-light">敏捷开发</a>
+
+        
+
+            <a href="/tags/分布式架构/" style="-webkit-order:20;order:20" class="tags-list-item waves-effect waves-button waves-light">分布式架构</a>
+
+        
+    </nav>
+    <!-- PC show more-->
+    <div class="tags-list-more">
+        <a href="javascript:;" onclick="BLOG.tabBar(this)" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
+    </div>
+</div>
+
+
 
 </header>
 
-        <div id="content" class="content">
-    <article class="article" itemscope itemprop="blogPost">
+<div class="container body-wrap fade">
     
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2017/07/09/electron_install/">快速搭建Electron开发环境</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="/2017/07/09/electron_install/">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2017-07-08T16:00:00.000Z" itemprop="datePublished">2017-07-09</time>
-</a>
+            <div class="waterfall">
+          
 
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/Electron/">Electron</a>, <a class="article-tag-link" href="/tags/跨平台/">跨平台</a>
-</div>
+            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2017-07-09 00:00:00" datetime="2017-07-08T16:00:00.000Z"  itemprop="datePublished">2017-07-09</time>
 
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/跨平台/">跨平台</a></li></ul>
 
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <h2 id="Nodejs安装"><a href="#Nodejs安装" class="headerlink" title="Nodejs安装"></a>Nodejs安装</h2><blockquote>
-<p>查看 <a href="https://donjote.github.io/2017/07/07/nodejs_install_config/">Nodejs安装并配置淘宝镜像</a></p>
-</blockquote>
-<h2 id="Electron的安装"><a href="#Electron的安装" class="headerlink" title="Electron的安装"></a>Electron的安装</h2><blockquote>
-<p>在~/.npmrc里做如下设置</p>
-<pre><code>electron_mirror=&quot;https://npm.taobao.org/mirrors/electron/&quot;
-</code></pre><p>用下面的命令安装</p>
-<pre><code>$ sudo npm install -g electron  
-</code></pre></blockquote>
-<h2 id="打包输出工具"><a href="#打包输出工具" class="headerlink" title="打包输出工具"></a>打包输出工具</h2><blockquote>
-<p>为了方便最终成果输出，建议安装electron-packager工具，安装也很简单，建议以下面的命令全局安装。</p>
-<pre><code>$ sudo npm install -g electron-packager
-</code></pre></blockquote>
-
-        
-    </section>
-</article>
-
-
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2017/07/09/electron_introdution/">Electron入门简介</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="/2017/07/09/electron_introdution/">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2017-07-08T16:00:00.000Z" itemprop="datePublished">2017-07-09</time>
-</a>
-
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/Electron/">Electron</a>, <a class="article-tag-link" href="/tags/跨平台/">跨平台</a>
-</div>
-
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
-<p>Electron 可以让你使用纯 JavaScript 调用丰富的原生 APIs 来创造桌面应用。你可以把它看作一个专注于桌面应用的 Node.js 的变体，而不是 Web 服务器。    </p>
-<hr>
-<p>这不意味着 Electron 是绑定了 GUI 库的 JavaScript。相反，Electron 使用 web 页面作为它的 GUI，所以你能把它看作成一个被 JavaScript 控制的，精简版的 Chromium 浏览器。</p>
-</blockquote>
-<h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><h3 id="主进程"><a href="#主进程" class="headerlink" title="主进程"></a>主进程</h3><blockquote>
-<p>在 Electron 里，运行 package.json 里 main 脚本的进程被称为主进程。在主进程运行的脚本可以以创建 web 页面的形式展示 GUI。</p>
-</blockquote>
-<h3 id="渲染进程"><a href="#渲染进程" class="headerlink" title="渲染进程"></a>渲染进程</h3><blockquote>
-<p>由于 Electron 使用 Chromium 来展示页面，所以 Chromium 的多进程结构也被充分利用。每个 Electron 的页面都在运行着自己的进程，这样的进程我们称之为渲染进程。</p>
-<hr>
-<p>在一般浏览器中，网页通常会在沙盒环境下运行，并且不允许访问原生资源。然而，Electron 用户拥有在网页中调用 Node.js 的 APIs 的能力，可以与底层操作系统直接交互。</p>
-</blockquote>
-<h3 id="主进程与渲染进程的区别"><a href="#主进程与渲染进程的区别" class="headerlink" title="主进程与渲染进程的区别"></a>主进程与渲染进程的区别</h3><blockquote>
-<p>主进程使用 BrowserWindow 实例创建页面。每个 BrowserWindow 实例都在自己的渲染进程里运行页面。当一个 BrowserWindow 实例被销毁后，相应的渲染进程也会被终止。</p>
-<hr>
-<p>主进程管理所有页面和与之对应的渲染进程。每个渲染进程都是相互独立的，并且只关心他们自己的页面。</p>
-<hr>
-<p>由于在页面里管理原生 GUI 资源是非常危险而且容易造成资源泄露，所以在页面调用 GUI 相关的 APIs 是不被允许的。如果你想在网页里使用 GUI 操作，其对应的渲染进程必须与主进程进行通讯，请求主进程进行相关的 GUI 操作。</p>
-<hr>
-<p>在 Electron，提供几种方法用于主进程和渲染进程之间的通讯。像 ipcRenderer 和 ipcMain 模块用于发送消息， remote 模块用于 RPC 方式通讯。这些内容都可以在一个 FAQ 中查看 how to share data between web pages。</p>
-</blockquote>
-
-        
-    </section>
-</article>
-
-
-
-
-
-</div>
-        <footer class="footer">
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
-</footer>
 
 
     </div>
-
-    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
     
-    <script type="text/javascript">
-        $(function() {
-            var nodes = {
-                nav: $('#nav'),
-                aside: $('#aside'),
-                navTags: $('#nav-tags')
-            };
 
-            $('#open-panel, #aside-mask').on('click', function() {
-                nodes.aside.toggleClass('panel-show');
-            });
-            $('#nav-tag').on('click', function(event) {
-                event.preventDefault();console.log(nodes.navTags.attr('class'))
-                nodes.navTags.toggleClass('tag-show');console.log(nodes.navTags.attr('class'))
-            })/*.hover(function() {
-                nodes.navTags.addClass('tag-show');
-            }, function() {
-                nodes.navTags.removeClass('tag-show');
-            });*/
 
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/07/09/electron_install/">快速搭建Electron开发环境</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Electron/">Electron</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/跨平台/">跨平台</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+        
+
+            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2017-07-09 00:00:00" datetime="2017-07-08T16:00:00.000Z"  itemprop="datePublished">2017-07-09</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/跨平台/">跨平台</a></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/07/09/electron_introdution/">Electron入门简介</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Electron/">Electron</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/跨平台/">跨平台</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+        
+            </div>
+        
+    
+</div>
+
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
             
-        });
-    </script>
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Donjote &copy; 2017 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://donjote.github.io/tags/Electron/&title=Donjote 博客&pic=http://donjote.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://donjote.github.io/tags/Electron/&title=Donjote 博客&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://donjote.github.io/tags/Electron/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=Donjote 博客&url=http://donjote.github.io/tags/Electron/&via=http://donjote.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://donjote.github.io/tags/Electron/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://donjote.github.io/tags/Electron/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
 
 </body>
 </html>

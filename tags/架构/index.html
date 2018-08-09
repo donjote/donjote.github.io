@@ -1,669 +1,562 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="UTF-8" />
-
     
 
     
 
-    <title>Tag: 架构 | Donjote 博客</title>
-    <meta name="author" content="Donjote" />
-    <meta name="version" content="1.0.0" />
-    <meta name="keywords" content="undefined" />
-    <meta name="description" content="null" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-    <meta name="baidu-site-verification" content="F0CXvmUgA9" />
-
-    
-    
-    <link rel="icon" href="/favicon.png">
     
 
-    <link rel="stylesheet" href="/css/style.css">
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Tags: 架构 | Donjote 博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="undefined">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Donjote 博客">
+<meta property="og:url" content="http://donjote.github.io/tags/架构/index.html">
+<meta property="og:site_name" content="Donjote 博客">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Donjote 博客">
+    
+        <link rel="alternate" type="application/atom+xml" title="Donjote 博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
+
 <body>
+    <div id="loading" class="active"></div>
 
-    <div class="app">
-        <header class="header clearfix">
-    <div id="nav" class="nav">
-    <button id="open-panel" class="open-panel"><i class="icon-library"></i></button>
-
-    <nav class="nav-inner">
-
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Donjote</h5>
+          <a href="mailto:donjote@icloud.com" title="donjote@icloud.com" class="mail">donjote@icloud.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
         
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
         
-        <li class="nav-item">
-            <a class="nav-link" href="/">首页</a>
-        </li>
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
         
+            <li class="waves-block waves-effect active">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
         
-        <li class="nav-item nav-item-tag">
-            <a id="nav-tag" class="nav-link" href="#">标签</a>
-            <div id="nav-tags" class="nav-tag-wrap">
-                <i class="nav-tag-arrow"></i>
-                
-  <div class="widget-wrap">
-    <h3 class="widget-title">
-        <i class="icon-tag vm"></i>
-        <span class="vm">Tags</span>
-    </h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Electron/">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NoSQL/">NoSQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPC/">RPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React-Native/">React Native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Restful/">Restful</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weex/">Weex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yarn/">Yarn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etcd/">etcd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gRPC/">gRPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm镜像/">npm镜像</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/事务/">事务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布式架构/">分布式架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链/">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微服务/">微服务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/敏捷开发/">敏捷开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务发现/">服务发现</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深度学习/">深度学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/神经网络/">神经网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/跨平台/">跨平台</a></li></ul>
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/donjote" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
     </div>
   </div>
+</aside>
 
-
-            </div>
-        </li>
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Tags: 架构</div>
         
-        
-        
-        <li class="nav-item">
-            <a class="nav-link" href="/archives">归档</a>
-        </li>
-        
-        
-        
-        <li class="nav-item">
-            <a class="nav-link" href="/about">关于</a>
-        </li>
-        
-        
-        
-
-    </nav>
-</div>
-
-    <aside id="aside" class="aside">
-    <div id="aside-mask" class="aside-mask"></div>
-    <div id="aside-inner" class="aside-inner">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="http://donjote.github.io"></form>
-
-        
-        
-
-        
-        <div class="author-meta">
-            
-            <div class="author-avatar">
-                <a href="/">
-                    <img src="/images/avatar.jpg" title="Sanonz">
-                </a>
-            </div>
-            
-            <div class="author-name">Donjote</div>
-            <div class="author-work"></div>
-            <div class="author-location">
-                <i class="icon-location vm"></i>
-                <span class="vm">Shenzhen, China</span>
-            </div>
-            
-            <div class="author-thread-wrap">
-                <div class="author-threads clearfix">
-                    
-                    <a class="thread-item" href="https://github.com/donjote" target="_blank" rel="noopener"><i class="icon-github"></i></a>
-                    
-                    
-                    
-                </div>
-            </div>
-            
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
         </div>
         
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
     </div>
-</aside>
+</header>
+<header class="content-header tags-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Tags: 架构</h1>
+        <h5 class="subtitle">
+            
+        </h5>
+    </div>
+
+    
+<div class="tabs-bar container">
+    <nav class="tags-list">
+        <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
+            ">全部</a>
+        
+
+            <a href="/tags/区块链/" style="-webkit-order:13;order:13" class="tags-list-item waves-effect waves-button waves-light">区块链</a>
+
+        
+
+            <a href="/tags/NoSQL/" style="-webkit-order:14;order:14" class="tags-list-item waves-effect waves-button waves-light">NoSQL</a>
+
+        
+
+            <a href="/tags/深度学习/" style="-webkit-order:15;order:15" class="tags-list-item waves-effect waves-button waves-light">深度学习</a>
+
+        
+
+            <a href="/tags/神经网络/" style="-webkit-order:16;order:16" class="tags-list-item waves-effect waves-button waves-light">神经网络</a>
+
+        
+
+            <a href="/tags/docker/" style="-webkit-order:17;order:17" class="tags-list-item waves-effect waves-button waves-light">docker</a>
+
+        
+
+            <a href="/tags/跨平台/" style="-webkit-order:18;order:18" class="tags-list-item waves-effect waves-button waves-light">跨平台</a>
+
+        
+
+            <a href="/tags/Electron/" style="-webkit-order:19;order:19" class="tags-list-item waves-effect waves-button waves-light">Electron</a>
+
+        
+
+            <a href="/tags/微服务/" style="-webkit-order:20;order:20" class="tags-list-item waves-effect waves-button waves-light">微服务</a>
+
+        
+
+            <a href="/tags/etcd/" style="-webkit-order:21;order:21" class="tags-list-item waves-effect waves-button waves-light">etcd</a>
+
+        
+
+            <a href="/tags/服务发现/" style="-webkit-order:22;order:22" class="tags-list-item waves-effect waves-button waves-light">服务发现</a>
+
+        
+
+            <a href="/tags/Git/" style="-webkit-order:23;order:23" class="tags-list-item waves-effect waves-button waves-light">Git</a>
+
+        
+
+            <a href="/tags/Golang/" style="-webkit-order:24;order:24" class="tags-list-item waves-effect waves-button waves-light">Golang</a>
+
+        
+
+            <a href="/tags/gRPC/" style="-webkit-order:25;order:25" class="tags-list-item waves-effect waves-button waves-light">gRPC</a>
+
+        
+
+            <a href="/tags/RPC/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">RPC</a>
+
+        
+
+            <a href="/tags/架构/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light active">架构</a>
+
+        
+
+            <a href="/tags/Nodejs/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">Nodejs</a>
+
+        
+
+            <a href="/tags/npm镜像/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">npm镜像</a>
+
+        
+
+            <a href="/tags/Restful/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">Restful</a>
+
+        
+
+            <a href="/tags/TensorFlow/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">TensorFlow</a>
+
+        
+
+            <a href="/tags/spring-boot/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">spring boot</a>
+
+        
+
+            <a href="/tags/事务/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">事务</a>
+
+        
+
+            <a href="/tags/Weex/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">Weex</a>
+
+        
+
+            <a href="/tags/React-Native/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">React Native</a>
+
+        
+
+            <a href="/tags/Yarn/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">Yarn</a>
+
+        
+
+            <a href="/tags/敏捷开发/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">敏捷开发</a>
+
+        
+
+            <a href="/tags/分布式架构/" style="-webkit-order:12;order:12" class="tags-list-item waves-effect waves-button waves-light">分布式架构</a>
+
+        
+    </nav>
+    <!-- PC show more-->
+    <div class="tags-list-more">
+        <a href="javascript:;" onclick="BLOG.tabBar(this)" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
+    </div>
+</div>
+
+
 
 </header>
 
-        <div id="content" class="content">
-    <article class="article" itemscope itemprop="blogPost">
+<div class="container body-wrap fade">
     
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2017/09/01/restful/">RESTful API 设计指南[引用]</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="/2017/09/01/restful/">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2017-08-31T16:00:00.000Z" itemprop="datePublished">2017-09-01</time>
-</a>
+            <div class="waterfall">
+          
 
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/Restful/">Restful</a>, <a class="article-tag-link" href="/tags/架构/">架构</a>
-</div>
+            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2017-09-01 00:00:00" datetime="2017-08-31T16:00:00.000Z"  itemprop="datePublished">2017-09-01</time>
 
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/架构/">架构</a></li></ul>
 
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <h2 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h2><blockquote>
-<p>API与用户的通信协议，总是使用HTTPs协议。</p>
-</blockquote>
-<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><blockquote>
-<p>应该尽量将API部署在专用域名之下。</p>
-<blockquote>
-<p><a href="https://api.example.com" target="_blank" rel="external">https://api.example.com</a></p>
-</blockquote>
-<p>如果确定API很简单，不会有进一步扩展，可以考虑放在主域名下。</p>
-<blockquote>
-<p><a href="https://example.com/api/" target="_blank" rel="external">https://example.com/api/</a></p>
-</blockquote>
-</blockquote>
-<h2 id="版本（Versioning）"><a href="#版本（Versioning）" class="headerlink" title="版本（Versioning）"></a>版本（Versioning）</h2><blockquote>
-<p>应该将API的版本号放入URL。</p>
-<blockquote>
-<p><a href="https://api.example.com/v1/" target="_blank" rel="external">https://api.example.com/v1/</a></p>
-</blockquote>
-<p>另一种做法是，将版本号放在HTTP头信息中，但不如放入URL方便和直观。<a href="https://developer.github.com/v3/media/#request-specific-version" target="_blank" rel="external">Github</a>采用这种做法。</p>
-</blockquote>
-<h2 id="路径（Endpoint）"><a href="#路径（Endpoint）" class="headerlink" title="路径（Endpoint）"></a>路径（Endpoint）</h2><blockquote>
-<p>路径又称”终结点”（endpoint），表示API的具体网址。<br>在RESTful架构中，每个网址代表一种资源（resource），所以网址中不能有动词，只能有名词，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的”集合”（collection），所以API中的名词也应该使用复数。<br>举例来说，有一个API提供用户（user）的信息，则它的路径应该设计成下面这样。</p>
-<blockquote>
-<p><a href="https://api.example.com/v1/users" target="_blank" rel="external">https://api.example.com/v1/users</a></p>
-</blockquote>
-</blockquote>
-<h2 id="HTTP方法"><a href="#HTTP方法" class="headerlink" title="HTTP方法"></a>HTTP方法</h2><blockquote>
-<p>对于资源的具体操作类型，由HTTP方法表示。<br>常用的HTTP方法有下面五个（括号里是对应的SQL命令）。</p>
-<blockquote>
-<ul>
-<li>GET（SELECT）：从服务器取出资源（一项或多项）。</li>
-<li>POST（CREATE）：在服务器新建一个资源。</li>
-<li>PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整资源）。</li>
-<li>PATCH（UPDATE）：在服务器更新资源（客户端提供改变的属性）。</li>
-<li>DELETE（DELETE）：从服务器删除资源。</li>
-</ul>
-<hr>
-<p>还有两个不常用的HTTP方法。</p>
-<ul>
-<li>HEAD：获取资源的元数据。</li>
-<li>OPTIONS：获取信息，关于资源的哪些属性是客户端可以改变的。</li>
-</ul>
-</blockquote>
-<p>下面是一些例子。</p>
-<blockquote>
-<ul>
-<li>GET /users：列出所有用户</li>
-<li>POST /users：新建一个用户</li>
-<li>GET /users/ID：获取某个指定用户的信息</li>
-<li>PUT /users/ID：更新某个指定用户的信息（提供该用户的全部信息）</li>
-<li>PATCH /users/ID：更新某个指定用户的信息（提供该用户的部分信息）</li>
-<li>DELETE /users/ID：删除某个用户</li>
-<li>GET /users/ID/address：列出某个指定用户的所有地址</li>
-<li>DELETE /users/ID/address/ID：删除某个指定用户的指定地址</li>
-</ul>
-</blockquote>
-</blockquote>
-<h2 id="过滤信息（Filtering）"><a href="#过滤信息（Filtering）" class="headerlink" title="过滤信息（Filtering）"></a>过滤信息（Filtering）</h2><blockquote>
-<p>如果记录数量很多，服务器不可能都将它们返回给用户。API应该提供参数，过滤返回结果。<br>下面是一些常见的参数。</p>
-<blockquote>
-<ul>
-<li>?limit=10：指定返回记录的数量</li>
-<li>?offset=10：指定返回记录的开始位置。</li>
-<li>?page=2&amp;per_page=100：指定第几页，以及每页的记录数。</li>
-<li>?sortby=name&amp;order=asc：指定返回结果按照哪个属性排序，以及排序顺序。</li>
-<li>?animal_type_id=1：指定筛选条件</li>
-</ul>
-</blockquote>
-<p>参数的设计允许存在冗余，即允许API路径和URL参数偶尔有重复。比如，GET /users/ID/address 与 GET /address?user_id=ID 的含义是相同的。</p>
-</blockquote>
-<h2 id="状态码（Status-Codes）"><a href="#状态码（Status-Codes）" class="headerlink" title="状态码（Status Codes）"></a>状态码（Status Codes）</h2><blockquote>
-<p>服务器向用户返回的状态码和提示信息，常见的有以下一些（方括号中是该状态码对应的HTTP动词）。</p>
-<blockquote>
-<ul>
-<li>200 OK - [GET]：服务器成功返回用户请求的数据，该操作是幂等的（Idempotent）。</li>
-<li>201 CREATED - [POST/PUT]：用户新建或修改数据成功。</li>
-<li>202 Accepted - [* ]：表示一个请求已经进入后台排队（异步任务）</li>
-<li>204 NO CONTENT - [DELETE/PATCH]：服务器成功处理了请求,但不需要返回任何实体内容。</li>
-<li>400 INVALID REQUEST - [POST/PUT/PATCH]：用户发出的请求有错误，服务器没有进行新建或修改数据的操作，该操作是幂等的。</li>
-<li>401 Unauthorized - [* ]：表示用户没有权限（令牌、用户名、密码错误）。</li>
-<li>403 Forbidden - [* ] 表示用户得到授权（与401错误相对），但是访问是被禁止的。</li>
-<li>404 NOT FOUND - [* ]：用户发出的请求针对的是不存在的记录，服务器没有进行操作，该操作是幂等的。</li>
-<li>406 Not Acceptable - [GET]：用户请求的格式不可得（比如用户请求JSON格式，但是只有XML格式）。</li>
-<li>410 Gone -[GET]：用户请求的资源被永久删除，且不会再得到的。</li>
-<li>422 Unprocesable entity - [POST/PUT/PATCH] 当创建一个对象时，发生一个验证错误。</li>
-<li>500 INTERNAL SERVER ERROR - [* ]：服务器发生错误，用户将无法判断发出的请求是否成功。</li>
-</ul>
-</blockquote>
-<p>状态码的完全列表参见<a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" target="_blank" rel="external">这里</a>。</p>
-</blockquote>
-<h2 id="错误处理（Error-handling）"><a href="#错误处理（Error-handling）" class="headerlink" title="错误处理（Error handling）"></a>错误处理（Error handling）</h2><blockquote>
-<p>如果状态码是4xx，就应该向用户返回出错信息。一般来说，返回的信息中将error作为键名，出错信息作为键值即可。</p>
-<pre><code>{
-  error: &quot;Invalid API key&quot;
-}
-</code></pre></blockquote>
-<h2 id="返回结果"><a href="#返回结果" class="headerlink" title="返回结果"></a>返回结果</h2><blockquote>
-<p>针对不同操作，服务器向用户返回的结果应该符合以下规范。</p>
-<blockquote>
-<ul>
-<li>GET /collection：返回资源对象的列表（数组）</li>
-<li>GET /collection/resource：返回单个资源对象</li>
-<li>POST /collection：返回新生成的资源对象</li>
-<li>PUT /collection/resource：返回完整的资源对象</li>
-<li>PATCH /collection/resource：返回一个空文档</li>
-<li>DELETE /collection/resource：返回一个空文档</li>
-</ul>
-</blockquote>
-</blockquote>
-<h2 id="Hypermedia-API"><a href="#Hypermedia-API" class="headerlink" title="Hypermedia API"></a>Hypermedia API</h2><blockquote>
-<p>RESTful API最好做到Hypermedia，即返回结果中提供链接，连向其他API方法，使得用户不查文档，也知道下一步应该做什么。<br>比如，当用户向api.example.com的根目录发出请求，会得到这样一个文档。</p>
-<pre><code>{
-  &quot;link&quot;: {
-    &quot;rel&quot;:   &quot;collection https://www.example.com/users&quot;,
-    &quot;href&quot;:  &quot;https://api.example.com/users&quot;,
-    &quot;title&quot;: &quot;List of users&quot;,
-    &quot;type&quot;:  &quot;application/vnd.yourformat+json&quot;
-  }
-}
-</code></pre><p>上面代码表示，文档中有一个link属性，用户读取这个属性就知道下一步该调用什么API了。rel表示这个API与当前网址的关系（collection关系，并给出该collection的网址），href表示API的路径，title表示API的标题，type表示返回类型。<br>Hypermedia API的设计被称为<a href="https://en.wikipedia.org/wiki/HATEOAS" target="_blank" rel="external">HATEOAS</a>。Github的API就是这种设计，访问api.github.com会得到一个所有可用API的网址列表。</p>
-<pre><code>{
-  &quot;current_user_url&quot;: &quot;https://api.github.com/user&quot;,
-  &quot;authorizations_url&quot;: &quot;https://api.github.com/authorizations&quot;,
-  // ...
-}
-</code></pre><p>从上面可以看到，如果想获取当前用户的信息，应该去访问api.github.com/user，然后就得到了下面结果。</p>
-<pre><code>{
-  &quot;message&quot;: &quot;Requires authentication&quot;,
-  &quot;documentation_url&quot;: &quot;https://developer.github.com/v3&quot;
-}
-</code></pre><p>上面代码表示，服务器给出了提示信息，以及文档的网址。</p>
-</blockquote>
-
-        
-    </section>
-</article>
-
-
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2017/08/30/transaction_tcc/">TCC柔性事务</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="/2017/08/30/transaction_tcc/">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2017-08-29T16:00:00.000Z" itemprop="datePublished">2017-08-30</time>
-</a>
-
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/事务/">事务</a>, <a class="article-tag-link" href="/tags/架构/">架构</a>
-</div>
-
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <blockquote>
-<p>&emsp;&emsp;分布式事务是一个绕不过去的挑战！微服务架构本质上就是分布式服务化架构，微服务架构的流行，让分布式事务问题日益突出！尤其是在订单业务、资金业务等系统核心业务流程中，一定要有可靠的分布式事务解决方案来保证业务数据的可靠性和准确性。</p>
-<h2 id="TCC事务机制简介"><a href="#TCC事务机制简介" class="headerlink" title="TCC事务机制简介"></a>TCC事务机制简介</h2><p>&emsp;&emsp;关于TCC（Try-Confirm-Cancel）的概念，最早是由Pat Helland于2007年发表的一篇名为《Life beyond Distributed Transactions:an Apostate’s Opinion》的论文提出。在该论文中，TCC还是以Tentative-Confirmation-Cancellation作为名称；正式以Try-Confirm-Cancel作为名称的，可能是Atomikos（Gregor Hohpe所著书籍《Enterprise Integration Patterns》中收录了关于TCC的介绍，提到了Atomikos的Try-Confirm-Cancel，并认为二者是相似的概念）。</p>
-<p>&emsp;&emsp;国内最早关于TCC的报道，应该是InfoQ上对阿里程立博士的一篇采访。经过程博士的这一次传道之后，TCC在国内逐渐被大家广为了解并接受。相应的实现方案和开源框架也先后被发布出来。</p>
-<p>&emsp;&emsp;TCC事务机制相对于传统事务机制（X/Open XA），其特征在于它不依赖资源管理器(RM)对XA的支持，而是通过对（由业务系统提供的）业务逻辑的调度来实现分布式事务。对于业务系统中一个特定的业务逻辑S，其对外提供服务时，必须接受一些不确定性，即对业务逻辑执行的一次调用仅是一个临时性操作，调用它的消费方服务M保留了后续的取消权。如果M认为全局事务应该rollback，它会要求取消之前的临时性操作，这就对应S的一个取消操作。而当M认为全局事务应该commit时，它会放弃之前临时性操作的取消权，这对应S的一个确认操作。 每一个初步操作，最终都会被确认或取消。因此，针对一个具体的业务服务，TCC事务机制需要业务系统提供三段业务逻辑：初步操作Try、确认操作Confirm、取消操作Cancel。</p>
-<hr>
-<p><font color="red">1. 初步操作（Try）</font><br>&emsp;&emsp;TCC事务机制中的业务逻辑（Try），从执行阶段来看，与传统事务机制中业务逻辑相同。但从业务角度来看，是不一样的。TCC机制中的Try仅是一个初步操作，它和后续的次确认一起才能真正构成一个完整的业务逻辑。因此，可以认为[传统事务机制]的业务逻辑 = [TCC事务机制]的初步操作（Try） + [TCC事务机制]的确认逻辑（Confirm）。TCC机制将传统事务机制中的业务逻辑一分为二，拆分后保留的部分即为初步操作（Try）；而分离出的部分即为确认操作（Confirm），被延迟到事务提交阶段执行。<br>TCC事务机制以初步操作（Try）为中心，确认操作（Confirm）和取消操作（Cancel）都是围绕初步操作（Try）而展开。因此，Try阶段中的操作，其保障性是最好的，即使失败，仍然有取消操作（Cancel）可以将其不良影响进行回撤。</p>
-<p><font color="red">2. 确认操作（Confirm）</font><br>&emsp;&emsp;确认操作（Confirm）是对初步操作（Try）的一个补充。当TCC事务管理器认为全局事务可以正确提交时，就会逐个执行初步操作（Try）指定的确认操作（Confirm），将初步操作（Try）未完成的事项最终完成。</p>
-<p><font color="red">3. 取消操作（Cancel）</font><br>&emsp;&emsp;取消操作（Cancel）是对初步操作（Try）的一个回撤。当TCC事务管理器认为全局事务不能正确提交时，就会逐个执行初步操作（Try）指定的取消操作（Cancel），将初步操作（Try）已完成的事项全部撤回。</p>
-</blockquote>
-<h2 id="支付宝运营架构中柔性事务"><a href="#支付宝运营架构中柔性事务" class="headerlink" title="支付宝运营架构中柔性事务"></a>支付宝运营架构中柔性事务</h2><blockquote>
-<ul>
-<li><font color="red">柔性事务：业务活动</font><blockquote>
-<p><img src="/donjote-blog/2017/08/30/transaction_tcc/1.jpg" alt="柔性事务：业务活动"></p>
-</blockquote>
-</li>
-<li><font color="red">柔性事务：业务活动举例</font><br><img src="/donjote-blog/2017/08/30/transaction_tcc/2.jpg" alt="柔性事务：业务活动举例"></li>
-<li><font color="red">柔性事务：TCC型业务服务</font><blockquote>
-<p><img src="/donjote-blog/2017/08/30/transaction_tcc/3.jpg" alt="柔性事务：TCC型业务服务"></p>
-</blockquote>
-</li>
-<li><font color="red">柔性事务：TCC服务事务协调模式</font><blockquote>
-<p><img src="/donjote-blog/2017/08/30/transaction_tcc/4.jpg" alt="柔性事务：TCC服务事务协调模式"><br>&emsp;&emsp;可以看出，柔性事务（<a href="http://localhost:4000/2017/08/25/cap/#BASE" target="_blank" rel="external">遵循BASE理论</a>）是指相对于<a href="http://localhost:4000/2017/07/08/transaction/#事务的-ACID" target="_blank" rel="external">ACID刚性事务</a>而言的。</p>
-</blockquote>
-</li>
-</ul>
-<p>&emsp;&emsp;支付宝所说的柔性事务分为：两阶段型、补偿型、异步确保型、最大努力通知型几种。由于支付宝整个架构是SOA架构，因此传统单机环境下数据库的ACID事务满足了分布式环境下的业务需要，以上几种事务类似就是针对分布式环境下业务需要设定的。其中：<br>1、两阶段型：就是分布式事务两阶段提交，对应技术上的XA、JTA/JTS。这是分布式环境下事务处理的典型模式。<br>2、补偿型：TCC型事务（Try/Confirm/Cancel）可以归为补偿型。补偿型的例子，在一个长事务（long-running）中，一个由两台服务器一起参与的事务，服务器A发起事务，服务器B参与事务，B的事务需要人工参与，所以处理时间可能很长。如果按照ACID的原则，要保持事务的隔离性、一致性，服务器A中发起的事务中使用到的事务资源将会被锁定，不允许其他应用访问到事务过程中的中间结果，直到整个事务被提交或者回滚。这就造成事务A中的资源被长时间锁定，系统的可用性将不可接受。WS-BusinessActivity提供了一种基于补偿的long-running的事务处理模型。还是上面的例子，服务器A的事务如果执行顺利，那么事务A就先行提交，如果事务B也执行顺利，则事务B也提交，整个事务就算完成。但是如果事务B执行失败，事务B本身回滚，这时事务A已经被提交，所以需要执行一个补偿操作，将已经提交的事务A执行的操作作反操作，恢复到未执行前事务A的状态。这样的SAGA事务模型，是牺牲了一定的隔离性和一致性的，但是提高了long-running事务的可用性。例子来源：OASIS的WS-BusinessActivity文档<br>3、异步确保型将一些同步阻塞的事务操作变为异步的操作，避免对数据库事务的争用，典型例子是热点账户异步记账、批量记账的处理。<br>4、最大努力型PPT中提到的例子交易的消息通知（例如商户交易结果通知重试、补单重试）</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p> <a href="https://wenku.baidu.com/view/be946bec0975f46527d3e104.html" target="_blank" rel="external">大规模SOA系统中的分布事务处事</a><br> <a href="https://wenku.baidu.com/view/d1bbd25877232f60ddcca1d9.html" target="_blank" rel="external">支付宝架构与技术</a></p>
-</blockquote>
-
-        
-    </section>
-</article>
-
-
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2017/07/08/transaction/">事务</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="/2017/07/08/transaction/">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2017-07-07T16:00:00.000Z" itemprop="datePublished">2017-07-08</time>
-</a>
-
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/事务/">事务</a>, <a class="article-tag-link" href="/tags/架构/">架构</a>
-</div>
-
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <h2 id="什么是事务"><a href="#什么是事务" class="headerlink" title="什么是事务"></a>什么是事务</h2><blockquote>
-<p>事务(Transaction)是访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。事务通常由高级数据库操纵语言或编程语言（如SQL，C++或Java）书写的用户程序的执行所引起，并用形如begin transaction和end transaction语句（或函数调用）来界定。事务由事务开始(begin transaction)和事务结束(end transaction)之间执行的全体操作组成。<br>事务是应用程序中一系列严密的操作，所有操作必须成功完成，否则在每个操作中所作的所有更改都会被撤消。也就是事务具有原子性，一个事务中的一系列的操作要么全部成功，要么一个都不做。<br>事务的结束有两种，当事务中的所以步骤全部成功执行时，事务提交。如果其中一个步骤失败，将发生回滚操作，撤消撤消之前到事务开始时的所以操作。</p>
-</blockquote>
-<h2 id="事务的-ACID"><a href="#事务的-ACID" class="headerlink" title="事务的 ACID"></a>事务的 ACID</h2><blockquote>
-<p>事务具有四个特征：原子性（ Atomicity ）、一致性（ Consistency ）、隔离性（ Isolation ）和持续性（ Durability ）。这四个特性简称为 ACID 特性。</p>
-<h3 id="原子性"><a href="#原子性" class="headerlink" title="原子性"></a>原子性</h3><p>事务的原子性指的是，事务中包含的程序作为数据库的逻辑工作单位，它所做的对数据修改操作要么全部执行，要么完全不执行。这种特性称为原子性。<br>事务的原子性要求，如果把一个事务可看作是一个程序，它要么完整的被执行，要么完全不执行。就是说事务的操纵序列或者完全应用到数据库或者完全不影响数据库。这种特性称为原子性。    </p>
-<hr>
-<p>假如用户在一个事务内完成了对数据库的更新，这时所有的更新对外部世界必须是可见的，或者完全没有更新。前者称事务已提交，后者称事务撤消（或流产）。DBMS必须确保由成功提交的事务完成的所有操纵在数据库内有完全的反映，而失败的事务对数据库完全没有影响。</p>
-<h3 id="一致性"><a href="#一致性" class="headerlink" title="一致性"></a>一致性</h3><p>事务的一致性指的是在一个事务执行之前和执行之后数据库都必须处于一致性状态。这种特性称为事务的一致性。假如数据库的状态满足所有的完整性约束，就说该数据库是一致的。</p>
-<hr>
-<p>一致性处理数据库中对所有语义约束的保护。假如数据库的状态满足所有的完整性约束，就说该数据库是一致的。例如，当数据库处于一致性状态S1时，对数据库执行一个事务，在事务执行期间假定数据库的状态是不一致的，当事务执行结束时，数据库处在一致性状态S2。</p>
-<h3 id="分离性"><a href="#分离性" class="headerlink" title="分离性"></a>分离性</h3><p>分离性指并发的事务是相互隔离的。即一个事务内部的操作及正在操作的数据必须封锁起来，不被其它企图进行修改的事务看到。    分离性是DBMS针对并发事务间的冲突提供的安全保证。DBMS可以通过加锁在并发执行的事务间提供不同级别的分离。假如并发交叉执行的事务没有任何控制，操纵相同的共享对象的多个并发事务的执行可能引起异常情况。</p>
-<hr>
-<p>DBMS可以在并发执行的事务间提供不同级别的分离。分离的级别和并发事务的吞吐量之间存在反比关系。较多事务的可分离性可能会带来较高的冲突和较多的事务流产。流产的事务要消耗资源，这些资源必须要重新被访问。因此，确保高分离级别的DBMS需要更多的开销。</p>
-<h3 id="持久性"><a href="#持久性" class="headerlink" title="持久性"></a>持久性</h3><p>持久性意味着当系统或介质发生故障时，确保已提交事务的更新不能丢失。即一旦一个事务提交，DBMS保证它对数据库中数据的改变应该是永久性的，耐得住任何系统故障。持久性通过数据库备份和恢复来保证。  </p>
-<hr>
-<p>持久性意味着当系统或介质发生故障时，确保已提交事务的更新不能丢失。即对已提交事务的更新能恢复。一旦一个事务被提交，DBMS必须保证提供适当的冗余，使其耐得住系统的故障。所以，持久性主要在于DBMS的恢复性能。</p>
-</blockquote>
-
-        
-    </section>
-</article>
-
-
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2017/07/07/idempotent/">幂等性</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="/2017/07/07/idempotent/">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2017-07-06T16:00:00.000Z" itemprop="datePublished">2017-07-07</time>
-</a>
-
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/分布式架构/">分布式架构</a>, <a class="article-tag-link" href="/tags/架构/">架构</a>
-</div>
-
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <h2 id="幂等性定义"><a href="#幂等性定义" class="headerlink" title="幂等性定义"></a>幂等性定义</h2><h3 id="数学定义"><a href="#数学定义" class="headerlink" title="数学定义"></a>数学定义</h3><blockquote>
-<p>在数学里，幂等有两种主要的定义：</p>
-<ul>
-<li>在某二元运算下，幂等元素是指被自己重复运算(或对于函数是为复合)的结果等于它自己的元素。例如，乘法下唯一两个幂等实数为0和1。 即 s * s = s</li>
-<li>某一元运算为幂等的时，其作用在任一元素两次后会和其作用一次的结果相同。例如，高斯符号便是幂等的，即f(f(x)) = f(x)。</li>
-</ul>
-</blockquote>
-<h3 id="HTTP规范的定义"><a href="#HTTP规范的定义" class="headerlink" title="HTTP规范的定义"></a>HTTP规范的定义</h3><blockquote>
-<p>在HTTP/1.1规范中幂等性的定义是：</p>
-<hr>
-<p>Methods can also have the property of “idempotence” in that (aside from error or expiration issues) the side-effects of N &gt; 0 identical requests is the same as for a single request.</p>
-<hr>
-<p>从定义上看，HTTP方法的幂等性是指一次和多次请求某一个资源应该具有同样的副作用。幂等性属于语义范畴，正如编译器只能帮助检查语法错误一样，HTTP规范也没有办法通过消息格式等语法手段来定义它，这可能是它不太受到重视的原因之一。但实际上，幂等性是分布式系统设计中十分重要的概念，而HTTP的分布式本质也决定了它在HTTP中具有重要地位。</p>
-</blockquote>
-<h2 id="HTTP的幂等性"><a href="#HTTP的幂等性" class="headerlink" title="HTTP的幂等性"></a>HTTP的幂等性</h2><blockquote>
-<p>HTTP协议本身是一种面向资源的应用层协议，但对HTTP协议的使用实际上存在着两种不同的方式：一种是RESTful的，它把HTTP当成应用层协议，比较忠实地遵守了HTTP协议的各种规定；另一种是SOA的，它并没有完全把HTTP当成应用层协议，而是把HTTP协议作为了传输层协议，然后在HTTP之上建立了自己的应用层协议。本文所讨论的HTTP幂等性主要针对RESTful风格的，不过正如上一节所看到的那样，幂等性并不属于特定的协议，它是分布式系统的一种特性；所以，不论是SOA还是RESTful的Web API设计都应该考虑幂等性。下面将介绍HTTP GET、DELETE、PUT、POST四种主要方法的语义和幂等性。</p>
-<hr>
-<p>HTTP GET方法用于获取资源，不应有副作用，所以是幂等的。</p>
-<hr>
-<p>HTTP DELETE方法用于删除资源，有副作用，但它应该满足幂等性。</p>
-<hr>
-<p>比较容易混淆的是HTTP POST和PUT。POST和PUT的区别容易被简单地误认为“POST表示创建资源，PUT表示更新资源”；而实际上，二者均可用于创建资源，更为本质的差别是在幂等性方面。在HTTP规范中对POST和PUT是这样定义的：</p>
-<hr>
-<p>The POST method is used to request that the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI in the Request-Line …… If a resource has been created on the origin server, the response SHOULD be 201 (Created) and contain an entity which describes the status of the request and refers to the new resource, and a Location header.</p>
-<hr>
-<p>The PUT method requests that the enclosed entity be stored under the supplied Request-URI. If the Request-URI refers to an already existing resource, the enclosed entity SHOULD be considered as a modified version of the one residing on the origin server. If the Request-URI does not point to an existing resource, and that URI is capable of being defined as a new resource by the requesting user agent, the origin server can create the resource with that URI.</p>
-<hr>
-<p>POST所对应的URI并非创建的资源本身，而是资源的接收者。两次相同的POST请求会在服务器端创建两份资源，它们具有不同的URI；所以，POST方法不具备幂等性。而PUT所对应的URI是要创建或更新的资源本身。对同一URI进行多次PUT的副作用和一次PUT是相同的；因此，PUT方法具有幂等性。</p>
-</blockquote>
-<h2 id="幂等的实现方案"><a href="#幂等的实现方案" class="headerlink" title="幂等的实现方案"></a>幂等的实现方案</h2><h3 id="查询操作"><a href="#查询操作" class="headerlink" title="查询操作"></a>查询操作</h3><blockquote>
-<p>查询一次和查询多次，在数据不变的情况下，查询结果是一样的。select是天然的幂等操作</p>
-</blockquote>
-<h3 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作"></a>删除操作</h3><blockquote>
-<p>删除操作也是幂等的，删除一次和多次删除都是把数据删除。(注意可能返回结果不一样，删除的数据不存在，返回0，删除的数据多条，返回结果多个)</p>
-</blockquote>
-<h3 id="唯一索引，防止新增脏数据"><a href="#唯一索引，防止新增脏数据" class="headerlink" title="唯一索引，防止新增脏数据"></a>唯一索引，防止新增脏数据</h3><blockquote>
-<p>比如：支付宝的资金账户，支付宝也有用户账户，每个用户只能有一个资金账户，怎么防止给用户创建资金账户多个，那么给资金账户表中的用户ID加唯一索引，所以一个用户新增成功一个资金账户记录</p>
-<hr>
-<p><strong>要点：<br>唯一索引或唯一组合索引来防止新增数据存在脏数据（当表存在唯一索引，并发时新增报错时，再查询一次就可以了，数据应该已经存在了，返回结果即可）</strong></p>
-</blockquote>
-<h3 id="token机制，防止页面重复提交"><a href="#token机制，防止页面重复提交" class="headerlink" title="token机制，防止页面重复提交"></a>token机制，防止页面重复提交</h3><blockquote>
-<h4 id="业务要求："><a href="#业务要求：" class="headerlink" title="业务要求："></a>业务要求：</h4><p>页面的数据只能被点击提交一次</p>
-<h4 id="发生原因："><a href="#发生原因：" class="headerlink" title="发生原因："></a>发生原因：</h4><p>由于重复点击或者网络重发，或者nginx重发等情况会导致数据被重复提交</p>
-<h4 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h4><p>集群环境：采用token加redis（redis单线程的，处理需要排队）<br>单JVM环境：采用token加redis或token加jvm内存</p>
-<h4 id="处理流程："><a href="#处理流程：" class="headerlink" title="处理流程："></a>处理流程：</h4><ol>
-<li>数据提交前要向服务的申请token，token放到redis或jvm内存，token有效时间</li>
-<li>提交后后台校验token，同时删除token，生成新的token返回<h4 id="token特点："><a href="#token特点：" class="headerlink" title="token特点："></a>token特点：</h4>要申请，一次有效性，可以限流</li>
-</ol>
-<hr>
-<p><strong>注意：<br>redis要用删除操作来判断token，删除成功代表token校验通过，如果用select+delete来校验token，存在并发问题，不建议使用</strong></p>
-</blockquote>
-<h3 id="悲观锁"><a href="#悲观锁" class="headerlink" title="悲观锁"></a>悲观锁</h3><blockquote>
-<p>获取数据的时候加锁获取<br>select * from table_xxx where id=’xxx’ for update;<br>注意：id字段一定是主键或者唯一索引，不然是锁表，会死人的<br>悲观锁使用时一般伴随事务一起使用，数据锁定时间可能会很长，根据实际情况选用</p>
-</blockquote>
-<h3 id="乐观锁"><a href="#乐观锁" class="headerlink" title="乐观锁"></a>乐观锁</h3><blockquote>
-<p>乐观锁只是在更新数据那一刻锁表，其他时间不锁表，所以相对于悲观锁，效率更高。<br>乐观锁的实现方式多种多样可以通过version或者其他状态条件：</p>
-<ol>
-<li>通过版本号实现<br>update table_xxx set name=#name#,version=version+1 where version=#version#<br>如下图(来自网上)：<br><img src="/donjote-blog/2017/07/07/idempotent/1.png" alt="乐观锁"></li>
-<li>通过条件限制<br>update table_xxx set avai_amount=avai_amount-#subAmount# where avai_amount-#subAmount# &gt;= 0<br>要求：quality-#subQuality# &gt;= ，这个情景适合不用版本号，只更新是做数据安全校验，适合库存模型，扣份额和回滚份额，性能更高</li>
-</ol>
-<hr>
-<p><strong>注意：乐观锁的更新操作，最好用主键或者唯一索引来更新,这样是行锁，否则更新时会锁表，上面两个sql改成下面的两个更好<br>update table_xxx set name=#name#,version=version+1 where id=#id# and version=#version#<br>update table_xxx set avai_amount=avai_amount-#subAmount# where id=#id# and avai_amount-#subAmount# &gt;= 0</strong></p>
-</blockquote>
-<h3 id="分布式锁"><a href="#分布式锁" class="headerlink" title="分布式锁"></a>分布式锁</h3><blockquote>
-<p>还是拿插入数据的例子，如果是分布是系统，构建全局唯一索引比较困难，例如唯一性的字段没法确定，这时候可以引入分布式锁，通过第三方的系统(redis或zookeeper)，在业务系统插入数据或者更新数据，获取分布式锁，然后做操作，之后释放锁，这样其实是把多线程并发的锁的思路，引入多多个系统，也就是分布式系统中得解决思路。</p>
-<hr>
-<p><strong>要点：某个长流程处理过程要求不能并发执行，可以在流程执行之前根据某个标志(用户ID+后缀等)获取分布式锁，其他流程执行时获取锁就会失败，也就是同一时间该流程只能有一个能执行成功，执行完成后，释放分布式锁(分布式锁要第三方系统提供)</strong></p>
-</blockquote>
-<h3 id="select-insert"><a href="#select-insert" class="headerlink" title="select + insert"></a>select + insert</h3><blockquote>
-<p>并发不高的后台系统，或者一些任务JOB，为了支持幂等，支持重复执行，简单的处理方法是，先查询下一些关键数据，判断是否已经执行过，在进行业务处理，就可以了</p>
-<hr>
-<p><strong>注意：核心高并发流程不要用这种方法</strong></p>
-</blockquote>
-<h3 id="状态机幂等"><a href="#状态机幂等" class="headerlink" title="状态机幂等"></a>状态机幂等</h3><blockquote>
-<p>在设计单据相关的业务，或者是任务相关的业务，肯定会涉及到状态机(状态变更图)，就是业务单据上面有个状态，状态在不同的情况下会发生变更，一般情况下存在有限状态机，这时候，如果状态机已经处于下一个状态，这时候来了一个上一个状态的变更，理论上是不能够变更的，这样的话，保证了有限状态机的幂等。</p>
-</blockquote>
-<h3 id="对外提供接口的api如何保证幂等"><a href="#对外提供接口的api如何保证幂等" class="headerlink" title="对外提供接口的api如何保证幂等"></a>对外提供接口的api如何保证幂等</h3><blockquote>
-<p>如银联提供的付款接口：需要接入商户提交付款请求时附带：source来源，seq序列号<br>source+seq在数据库里面做唯一索引，防止多次付款，(并发时，只能处理一个请求)</p>
-<hr>
-<p><strong>重点：<br>对外提供接口为了支持幂等调用，接口有两个字段必须传，一个是来源source，一个是来源方序列号seq，这个两个字段在提供方系统里面做联合唯一索引，这样当第三方调用时，先在本方系统里面查询一下，是否已经处理过，返回相应处理结果；没有处理过，进行相应处理，返回结果。注意，为了幂等友好，一定要先查询一下，是否处理过该笔业务，不查询直接插入业务系统，会报错，但实际已经处理了。</strong></p>
-</blockquote>
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><blockquote>
-<p>幂等性应该是合格程序员的一个基因，在设计系统时，是首要考虑的问题，尤其是在像支付宝，银行，互联网金融公司等涉及的都是钱的系统，既要高效，数据也要准确，所以不能出现多扣款，多打款等问题，这样会很难处理，用户体验也不好</p>
-</blockquote>
-
-        
-    </section>
-</article>
-
-
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2017/07/04/micro_services_1/">微服务简介</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="/2017/07/04/micro_services_1/">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2017-07-03T16:00:00.000Z" itemprop="datePublished">2017-07-04</time>
-</a>
-
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/微服务/">微服务</a>, <a class="article-tag-link" href="/tags/架构/">架构</a>
-</div>
-
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <h2 id="Monolithic架构"><a href="#Monolithic架构" class="headerlink" title="Monolithic架构"></a>Monolithic架构</h2><blockquote>
-<p><img src="/donjote-blog/2017/07/04/micro_services_1/1.png" alt="Monolithic架构"><br>Monolithic比较适合小项目</p>
-<h3 id="Monolithic架构优点"><a href="#Monolithic架构优点" class="headerlink" title="Monolithic架构优点"></a>Monolithic架构优点</h3><ul>
-<li>开发简单直接，集中式管理, 基本不会重复开发</li>
-<li>功能都在本地，没有分布式的管理开销和调用开销。<h3 id="Monolithic架构缺点"><a href="#Monolithic架构缺点" class="headerlink" title="Monolithic架构缺点"></a>Monolithic架构缺点</h3>它的缺点也非常明显，特别对于互联网公司来说（不一一列举了）：</li>
-<li>开发效率低：所有的开发在一个项目改代码，递交代码相互等待，代码冲突不断</li>
-<li>代码维护难：代码功能耦合在一起，新人不知道何从下手</li>
-<li>部署不灵活：构建时间长，任何小修改必须重新构建整个项目，这个过程往往很长</li>
-<li>稳定性不高：一个微不足道的小问题，可以导致整个应用挂掉</li>
-<li>扩展性不够：无法满足高并发情况下的业务需求</li>
-</ul>
-</blockquote>
-<h2 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h2><h3 id="什么是微服务"><a href="#什么是微服务" class="headerlink" title="什么是微服务"></a>什么是微服务</h3><blockquote>
-<p>相对于单体（Monolithic）应用而言，微服务是采用一组服务的方式来构建一个应用，服务独立部署在不同的进程中，不同服务通过一些轻量级交互机制来通信，例如 RPC、HTTP 等,服务可独立扩展伸缩，每个服务定义了明确的边界，不同的服务甚至可以采用不同的编程语言来实现，由独立的团队来维护。</p>
-</blockquote>
-<h3 id="微服务的价值"><a href="#微服务的价值" class="headerlink" title="微服务的价值"></a>微服务的价值</h3><blockquote>
-<ul>
-<li>首先，在功能不变的情况下，应用被分解为多个可管理的服务，每个服务开发、运维变得简单。</li>
-<li>其次，每个微服务独立部署，开发者不在需要协调其他服务部署对本服务的影响，这可以加快部署精度。</li>
-<li>最后，每个服务可以自行决定自己的容量。</li>
-</ul>
-<hr>
-<p>虽然对于一些简单的、规模有限的应用而言，单体架构仍然是有意义的。微服务是应用开发和部署的一个不同的方法。它非常适合许多现代的云应用对于敏捷性、扩展规模和可靠性的要求。一个微服务应用被分解成独立的部件，被称为“微服务”。“微服务”协同工作，以便提供应用的整体功能。“微服务”这一术语强调一个事实，那就是应用应该是由足够小的服务所组成，以便真正体现独立性，使得每个微服务实现单一的功能。此外，每个微服务都有明确的合同（API合同）——通常是RESTful 的——以便其他微服务能够与之进行交流和分享数据。微服务也必须能够彼此独立地进行版本更新。这种松耦合正是对一个应用实现快速而可靠地演化的支撑。下图显示了一个单体应用是如何被分解为不同的微服务的。<br><img src="/donjote-blog/2017/07/04/micro_services_1/2.png" alt="微服务架构"></p>
-<h3 id="微服务的特点"><a href="#微服务的特点" class="headerlink" title="微服务的特点"></a>微服务的特点</h3><ul>
-<li>小, 且专注于做⼀件事情</li>
-<li>进程独立</li>
-<li>轻量级的通信机制</li>
-<li>松耦合</li>
-<li>独立部署</li>
-</ul>
-<hr>
-<p><strong>领域驱动设计：</strong> 应用程序功能分解可以通过Eric Evans在<a href="http://www.jdon.com/ddd.html" target="_blank" rel="external">《领域驱动设计》</a>中明确定义的规则实现；每个团队负责与一个领域或业务功能相关的全部开发；团队拥有全系列的开发人员，具备用户界面、业务逻辑和持久化存储等方面的开发技能；<br><strong>单一职责原则：</strong> 每个服务应该负责该功能的一个单独的部分，这是<a href="http://www.cnblogs.com/shanyou/archive/2009/09/21/1570716.html" target="_blank" rel="external">面向对象设计的SOLID原则</a>原则之一；<br><strong>明确发布接口：</strong> 每个服务都会发布一个定义明确的接口，而且保持不变；服务消费者只关心接口，而对于被消费的服务没有任何运行依赖；<br><strong>独立部署、升级、扩展和替换：</strong> 每个服务都可以单独部署及重新部署而不影响整个系统。这使得服务很容易升级，每个服务都可以沿着<a href="https://pan.baidu.com/s/1qYpzBPE" target="_blank" rel="external">《架构即未来》</a>一书定义的<a href="http://www.jianshu.com/p/d08d0c14810f" target="_blank" rel="external">AKF扩展立方体</a>的X轴和Z轴进行扩展；<br><strong>可以异构/采用多种语言：</strong>　每个服务的实现细节都与其它服务无关，这使得服务之间能够解耦，团队可以针对每个服务选择最合适的开发语言、持久化存储、工具和方法；<br><strong>轻量级通信：</strong>　服务通信使用轻量级的通信协议，例如，同步的REST，异步的AMQP、STOMP、MQTT等。</p>
-<hr>
-<p>微服务架构的思想本质跟互联网的思想是一致的。它的组件对外发布的服务视同HTTP协议，采用HTTP Rest API的方式来进行。很多开放平台的API服务，基本都采用了Http API的方式进行服务的发布和管理。</p>
-</blockquote>
-<h3 id="微服务优点"><a href="#微服务优点" class="headerlink" title="微服务优点"></a>微服务优点</h3><blockquote>
-<ul>
-<li>每个微服务都很小，这样能聚焦一个指定的业务功能或业务需求。</li>
-<li>微服务能够被小团队单独开发，这个小团队是2到5人的开发人员组成。</li>
-<li>微服务是松耦合的，是有功能意义的服务，无论是在开发阶段或部署阶段都是独立的。</li>
-<li>微服务能使用不同的语言开发。</li>
-<li>微服务允许容易且灵活的方式集成自动部署，通过持续集成工具，如Jenkins, bamboo 。</li>
-<li>一个团队的新成员能够更快投入生产。</li>
-<li>微服务易于被一个开发人员理解，修改和维护，这样小团队能够更关注自己的工作成果。无需通过合作才能体现价值。</li>
-<li>微服务允许你利用融合最新技术。</li>
-<li>微服务只是业务逻辑的代码，不会和HTML,CSS 或其他界面组件混合。</li>
-<li>微服务能够即时被要求扩展。</li>
-<li>微服务能部署中低端配置的服务器上。</li>
-<li>易于和第三方集成。</li>
-<li>每个微服务都有自己的存储能力，可以有自己的数据库。也可以有统一数据库。</li>
-</ul>
-</blockquote>
-<h3 id="微服务架构的缺点"><a href="#微服务架构的缺点" class="headerlink" title="微服务架构的缺点"></a>微服务架构的缺点</h3><blockquote>
-<ul>
-<li>微服务架构可能带来过多的操作。</li>
-<li>需要DevOps技巧 (<a href="http://en.wikipedia.org/wiki/DevOps" target="_blank" rel="external">http://en.wikipedia.org/wiki/DevOps</a>).</li>
-<li>可能双倍的努力。</li>
-<li>分布式系统可能复杂难以管理。</li>
-<li>因为分布部署跟踪问题难。</li>
-<li>服务数量增加，管理复杂性增加。</li>
-</ul>
-</blockquote>
-<h3 id="常见的微服务组件"><a href="#常见的微服务组件" class="headerlink" title="常见的微服务组件"></a>常见的微服务组件</h3><blockquote>
-<ul>
-<li>服务注册:服务提供方将自己调用地址注册到服务注册中心，让服务调用方能够方便地找到自己。</li>
-<li>服务发现:服务调用方从服务注册中心找到自己需要调用的服务的地址。</li>
-<li>负载均衡:服务提供方一般以多实例的形式提供服务，负载均衡功能能够让服务调用方连接到合适的服务节点。并且，节点选择的工作对服务调用方来说是透明的。</li>
-<li>服务网关:服务网关是服务调用的唯一入口，可以在这个组件是实现用户鉴权、动态路由、灰度发布、A/B测试、负载限流等功能。</li>
-<li>配置中心:将本地化的配置信息（properties,<br>xml, yaml等）注册到配置中心，实现程序包在开发、测试、生产环境的无差别性，方便程序包的迁移。</li>
-<li>API管理:以方便的形式编写及更新API文档，并以方便的形式供调用者查看和测试。</li>
-<li>集成框架:微服务组件都以职责单一的程序包对外提供服务，集成框架以配置的形式将所有微服务组件（特别是管理端组件）集成到统一的界面框架下，让用户能够在统一的界面中使用系统。</li>
-<li>分布式事务:对于重要的业务，需要通过分布式事务技术（TCC、高可用消息服务、最大努力通知）保证数据的一致性。具有代表性的有spring transaction</li>
-<li>调用链:记录完成一个业务逻辑时调用到的微服务，并将这种串行或并行的调用关系展示出来。在系统出错时，可以方便地找到出错点。具有代表性的有pinpoint.</li>
-<li>支撑平台:系统微服务化后，系统变得更加碎片化，系统的部署、运维、监控等都比单体架构更加复杂，那么，就需要将大部分的工作自动化。现在，可以通过Docker等工具来中和这些微服务架构带来的弊端。 例如:持续集成、蓝绿发布、健康检查、性能健康等等。严重点，以我们两年的实践经验，可以这么说，如果没有合适的支撑平台或工具，就不要使用微服务架构。</li>
-</ul>
-</blockquote>
-
-        
-    </section>
-</article>
-
-
-
-
-
-</div>
-        <footer class="footer">
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
-</footer>
 
 
     </div>
-
-    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
     
-    <script type="text/javascript">
-        $(function() {
-            var nodes = {
-                nav: $('#nav'),
-                aside: $('#aside'),
-                navTags: $('#nav-tags')
-            };
 
-            $('#open-panel, #aside-mask').on('click', function() {
-                nodes.aside.toggleClass('panel-show');
-            });
-            $('#nav-tag').on('click', function(event) {
-                event.preventDefault();console.log(nodes.navTags.attr('class'))
-                nodes.navTags.toggleClass('tag-show');console.log(nodes.navTags.attr('class'))
-            })/*.hover(function() {
-                nodes.navTags.addClass('tag-show');
-            }, function() {
-                nodes.navTags.removeClass('tag-show');
-            });*/
 
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/09/01/restful/">RESTful API 设计指南[引用]</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Restful/">Restful</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+        
+
+            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2017-08-30 00:00:00" datetime="2017-08-29T16:00:00.000Z"  itemprop="datePublished">2017-08-30</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/架构/">架构</a></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/08/30/transaction_tcc/">TCC柔性事务</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/事务/">事务</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+        
+
+            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2017-07-08 00:00:00" datetime="2017-07-07T16:00:00.000Z"  itemprop="datePublished">2017-07-08</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/架构/">架构</a></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/07/08/transaction/">事务</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/事务/">事务</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+        
+
+            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2017-07-07 00:00:00" datetime="2017-07-06T16:00:00.000Z"  itemprop="datePublished">2017-07-07</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/架构/">架构</a></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/07/07/idempotent/">幂等性</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分布式架构/">分布式架构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+        
+
+            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2017-07-04 00:00:00" datetime="2017-07-03T16:00:00.000Z"  itemprop="datePublished">2017-07-04</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/架构/">架构</a></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/07/04/micro_services_1/">微服务简介</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微服务/">微服务</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+        
+            </div>
+        
+    
+</div>
+
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
             
-        });
-    </script>
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Donjote &copy; 2017 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://donjote.github.io/tags/架构/&title=Donjote 博客&pic=http://donjote.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://donjote.github.io/tags/架构/&title=Donjote 博客&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://donjote.github.io/tags/架构/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=Donjote 博客&url=http://donjote.github.io/tags/架构/&via=http://donjote.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://donjote.github.io/tags/架构/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://donjote.github.io/tags/架构/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
 
 </body>
 </html>
