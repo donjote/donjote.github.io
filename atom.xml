@@ -124,31 +124,6 @@
   </entry>
   
   <entry>
-    <title>docker简介</title>
-    <link href="http://donjote.github.io/2017/08/30/docker/"/>
-    <id>http://donjote.github.io/2017/08/30/docker/</id>
-    <published>2017-08-29T16:00:00.000Z</published>
-    <updated>2018-08-09T05:30:07.265Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker"></a>什么是Docker</h2><p>Docker 是一个开源项目，诞生于 2013 年初，最初是 dotCloud 公司内部的一个业余项目。它基于 Google 公司推出的 Go 语言实现。 它基于Linux容器技术（LXC），Namespace(命名空间)，Cgroup(控制组)，UnionFS（联合文件系统）等技术。项目后来加入了 Linux 基金会，遵从了 Apache 2.0 协议，项目代码在 GitHub 上进行维护。   </p><p><strong><font color="red"> namespace（命名空间）：</font></strong> 命名空间是 Linux 内核一个强大的特性。每个容器都有自己单独的名字空间，运行在其中的应用都像是在独立的操作系统中运行一样。名字空间保证了容器之间彼此互不影响。docker实际上一个进程容器，它通过namespace实现了进程和进程所使用的资源的隔离。使不同的进程之间彼此不可见。我们可以把Docker容器想像成进程＋操作系统除内核之外的一套软件。</p><p><strong><font color="red"> cgroup（控制组）：</font></strong> 是 Linux 内核的一个特性，主要用来对共享资源进行隔离、限制、审计等。只有能控制分配到容器的资源，才能避免当多个容器同时运行时的对系统资源的竞争。控制组技术最早是由 Google 的程序员 2006 年起提出，Linux 内核自 2.6.24 开始支持。控制组可以提供对容器的内存、CPU、磁盘 IO 等资源的限制和审计管理。</p><p><strong><font color="red"> UnionFS（联合文件系统）：</font></strong> Union文件系统（UnionFS）是一种分层、轻量级并且高性能的文件系统，它支持对 文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下(unite several directories into a single virtual filesystem)。Union 文件系统是 Docker 镜像的基础。镜像可以通过分层来进行继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像。另外，不同 Docker 容器就可以共享一些基础的文件系统层，同时再加上自己独有的改动层，大大提高了存储的效率。Docker 中使用的 AUFS（AnotherUnionFS）就是一种 Union FS。 AUFS 支持为每一个成员目录（类似 Git 的分支）设定只读（readonly）、读写（readwrite）和写出（whiteout-able）权限, 同时 AUFS 里有一个类似分层的概念, 对只读权限的分支可以逻辑上进行增量地修改(不影响只读部分的)。</p><h2 id="快速理解Docker"><a href="#快速理解Docker" class="headerlink" title="快速理解Docker"></a>快速理解Docker</h2><p>拿现实世界中货物的运输作类比, 为了解决各种型号规格尺寸的货物在各种运输工具上进行运输的问题,我们发明了集装箱<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/30/docker/1.jpg" alt="集装箱" title="">                </div>                <div class="image-caption">集装箱</div>            </figure><br>docker的初衷也就是将各种应用程序和他们所依赖的运行环境打包成标准的Container/image,进而发布到不同的平台上运行<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/30/docker/2.jpg" alt="docker" title="">                </div>                <div class="image-caption">docker</div>            </figure><br>从理论上说这一概念并不新鲜, 各种虚拟机Image也起着类似的作用<br>Docker container和普通的虚拟机Image相比, 最大的区别是它并不包含操作系统内核.<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/30/docker/3.jpg" alt="docker" title="">                </div>                <div class="image-caption">docker</div>            </figure><br>普通虚拟机将整个操作系统运行在虚拟的硬件平台上, 进而提供完整的运行环境供应用程序运行, 而Docker则直接在宿主平台上加载运行应用程序. 本质上他在底层使用LXC启动一个Linux Container,通过cgroup等机制对不同的container内运行的应用程序进行隔离,权限管理和quota分配等</p><p>每个container拥有自己独立的各种命名空间(亦即资源)包括:PID 进程, MNT 文件系统, NET 网络, IPC , UTS 主机名 等</p><h2 id="为什么要使用Docker"><a href="#为什么要使用Docker" class="headerlink" title="为什么要使用Docker"></a>为什么要使用Docker</h2><p>作为一种新兴的虚拟化方式，Docker 跟传统的虚拟化方式相比具有众多的优势。</p><p>首先，Docker 容器的启动可以在秒级实现，这相比传统的虚拟机方式要快得多。 其次，Docker 对系统资源的利用率很高，一台主机上可以同时运行数千个 Docker 容器。</p><p>容器除了运行其中应用外，基本不消耗额外的系统资源，使得应用的性能很高，同时系统的开销尽量小。传统虚拟机方式运行 10 个不同的应用就要起 10 个虚拟机，而Docker 只需要启动 10 个隔离的应用即可。</p><p>具体说来，Docker 在如下几个方面具有较大的优势。</p><ul><li>更快速的交付和部署<br>对开发和运维（devop）人员来说，最希望的就是一次创建或配置，可以在任意地方正常运行。<br>开发者可以使用一个标准的镜像来构建一套开发容器，开发完成之后，运维人员可以直接使用这个容器来部署代码。 Docker 可以快速创建容器，快速迭代应用程序，并让整个过程全程可见，使团队中的其他成员更容易理解应用程序是如何创建和工作的。 Docker 容器很轻很快！容器的启动时间是秒级的，大量地节约开发、测试、部署的时间。</li><li>更高效的虚拟化<br>Docker 容器的运行不需要额外的 hypervisor 支持，它是内核级的虚拟化，因此可以实现更高的性能和效率。</li><li>更轻松的迁移和扩展<br>Docker 容器几乎可以在任意的平台上运行，包括物理机、虚拟机、公有云、私有云、个人电脑、服务器等。 这种兼容性可以让用户把一个应用程序从一个平台直接迁移到另外一个。</li><li>更简单的管理<br>使用 Docker，只需要小小的修改，就可以替代以往大量的更新工作。所有的修改都以增量的方式被分发和更新，从而实现自动化并且高效的管理。</li></ul><h2 id="Docker基本概念"><a href="#Docker基本概念" class="headerlink" title="Docker基本概念"></a>Docker基本概念</h2><ul><li>镜像（Image）<br>Docker的镜像概念类似于虚拟机里的镜像，是一个只读的模板，一个独立的文件系统，包括运行容器所需的数据，可以用来创建新的容器。镜像可以基于Dockerfile构建，Dockerfile是一个描述文件，里面包含若干条命令，每条命令都会对基础文件系统创建新的层次结构。用户可以通过编写Dockerfile创建新的镜像，也可以直接从类似github的Docker Hub上下载镜像使用。</li><li>容器（Container）<br>Docker容器是由Docker镜像创建的运行实例。Docker容器类似虚拟机，可以支持的操作包括启动，停止，删除等。每个容器间是相互隔离的，但隔离的效果比不上虚拟机。容器中会运行特定的应用，包含特定应用的代码及所需的依赖文件。</li></ul><p>在Docker容器中，每个容器之间的隔离使用Linux的 CGroups 和 Namespaces技术实现的。其中 CGroups 对CPU，内存，磁盘等资源的访问限制，Namespaces 提供了环境的隔离。</p><ul><li>仓库（Repository）<br>Docker仓库相当于一个 github 上的代码库。</li></ul><p>Docker 仓库是用来包含镜像的位置，Docker提供一个注册服务器（Registry）来保存多个仓库，每个仓库又可以包含多个具备不同tag的镜像。Docker运行中使用的默认仓库是 Docker Hub 公共仓库。</p><p>仓库支持的操作类似 git，创建了新的镜像后，我们可以 push 提交到仓库，也可以从指定仓库 pull 拉取镜像到本地。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;什么是Docker&quot;&gt;&lt;a href=&quot;#什么是Docker&quot; class=&quot;headerlink&quot; title=&quot;什么是Docker&quot;&gt;&lt;/a&gt;什么是Docker&lt;/h2&gt;&lt;p&gt;Docker 是一个开源项目，诞生于 2013 年初，最初是 dotCloud 公司
-      
-    
-    </summary>
-    
-      <category term="容器" scheme="http://donjote.github.io/categories/%E5%AE%B9%E5%99%A8/"/>
-    
-    
-      <category term="docker" scheme="http://donjote.github.io/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
     <title>TCC柔性事务</title>
     <link href="http://donjote.github.io/2017/08/30/transaction_tcc/"/>
     <id>http://donjote.github.io/2017/08/30/transaction_tcc/</id>
@@ -173,6 +148,31 @@
       <category term="架构" scheme="http://donjote.github.io/tags/%E6%9E%B6%E6%9E%84/"/>
     
       <category term="事务" scheme="http://donjote.github.io/tags/%E4%BA%8B%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker简介</title>
+    <link href="http://donjote.github.io/2017/08/30/docker/"/>
+    <id>http://donjote.github.io/2017/08/30/docker/</id>
+    <published>2017-08-29T16:00:00.000Z</published>
+    <updated>2018-08-09T05:30:07.265Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker"></a>什么是Docker</h2><p>Docker 是一个开源项目，诞生于 2013 年初，最初是 dotCloud 公司内部的一个业余项目。它基于 Google 公司推出的 Go 语言实现。 它基于Linux容器技术（LXC），Namespace(命名空间)，Cgroup(控制组)，UnionFS（联合文件系统）等技术。项目后来加入了 Linux 基金会，遵从了 Apache 2.0 协议，项目代码在 GitHub 上进行维护。   </p><p><strong><font color="red"> namespace（命名空间）：</font></strong> 命名空间是 Linux 内核一个强大的特性。每个容器都有自己单独的名字空间，运行在其中的应用都像是在独立的操作系统中运行一样。名字空间保证了容器之间彼此互不影响。docker实际上一个进程容器，它通过namespace实现了进程和进程所使用的资源的隔离。使不同的进程之间彼此不可见。我们可以把Docker容器想像成进程＋操作系统除内核之外的一套软件。</p><p><strong><font color="red"> cgroup（控制组）：</font></strong> 是 Linux 内核的一个特性，主要用来对共享资源进行隔离、限制、审计等。只有能控制分配到容器的资源，才能避免当多个容器同时运行时的对系统资源的竞争。控制组技术最早是由 Google 的程序员 2006 年起提出，Linux 内核自 2.6.24 开始支持。控制组可以提供对容器的内存、CPU、磁盘 IO 等资源的限制和审计管理。</p><p><strong><font color="red"> UnionFS（联合文件系统）：</font></strong> Union文件系统（UnionFS）是一种分层、轻量级并且高性能的文件系统，它支持对 文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下(unite several directories into a single virtual filesystem)。Union 文件系统是 Docker 镜像的基础。镜像可以通过分层来进行继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像。另外，不同 Docker 容器就可以共享一些基础的文件系统层，同时再加上自己独有的改动层，大大提高了存储的效率。Docker 中使用的 AUFS（AnotherUnionFS）就是一种 Union FS。 AUFS 支持为每一个成员目录（类似 Git 的分支）设定只读（readonly）、读写（readwrite）和写出（whiteout-able）权限, 同时 AUFS 里有一个类似分层的概念, 对只读权限的分支可以逻辑上进行增量地修改(不影响只读部分的)。</p><h2 id="快速理解Docker"><a href="#快速理解Docker" class="headerlink" title="快速理解Docker"></a>快速理解Docker</h2><p>拿现实世界中货物的运输作类比, 为了解决各种型号规格尺寸的货物在各种运输工具上进行运输的问题,我们发明了集装箱<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/30/docker/1.jpg" alt="集装箱" title="">                </div>                <div class="image-caption">集装箱</div>            </figure><br>docker的初衷也就是将各种应用程序和他们所依赖的运行环境打包成标准的Container/image,进而发布到不同的平台上运行<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/30/docker/2.jpg" alt="docker" title="">                </div>                <div class="image-caption">docker</div>            </figure><br>从理论上说这一概念并不新鲜, 各种虚拟机Image也起着类似的作用<br>Docker container和普通的虚拟机Image相比, 最大的区别是它并不包含操作系统内核.<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/08/30/docker/3.jpg" alt="docker" title="">                </div>                <div class="image-caption">docker</div>            </figure><br>普通虚拟机将整个操作系统运行在虚拟的硬件平台上, 进而提供完整的运行环境供应用程序运行, 而Docker则直接在宿主平台上加载运行应用程序. 本质上他在底层使用LXC启动一个Linux Container,通过cgroup等机制对不同的container内运行的应用程序进行隔离,权限管理和quota分配等</p><p>每个container拥有自己独立的各种命名空间(亦即资源)包括:PID 进程, MNT 文件系统, NET 网络, IPC , UTS 主机名 等</p><h2 id="为什么要使用Docker"><a href="#为什么要使用Docker" class="headerlink" title="为什么要使用Docker"></a>为什么要使用Docker</h2><p>作为一种新兴的虚拟化方式，Docker 跟传统的虚拟化方式相比具有众多的优势。</p><p>首先，Docker 容器的启动可以在秒级实现，这相比传统的虚拟机方式要快得多。 其次，Docker 对系统资源的利用率很高，一台主机上可以同时运行数千个 Docker 容器。</p><p>容器除了运行其中应用外，基本不消耗额外的系统资源，使得应用的性能很高，同时系统的开销尽量小。传统虚拟机方式运行 10 个不同的应用就要起 10 个虚拟机，而Docker 只需要启动 10 个隔离的应用即可。</p><p>具体说来，Docker 在如下几个方面具有较大的优势。</p><ul><li>更快速的交付和部署<br>对开发和运维（devop）人员来说，最希望的就是一次创建或配置，可以在任意地方正常运行。<br>开发者可以使用一个标准的镜像来构建一套开发容器，开发完成之后，运维人员可以直接使用这个容器来部署代码。 Docker 可以快速创建容器，快速迭代应用程序，并让整个过程全程可见，使团队中的其他成员更容易理解应用程序是如何创建和工作的。 Docker 容器很轻很快！容器的启动时间是秒级的，大量地节约开发、测试、部署的时间。</li><li>更高效的虚拟化<br>Docker 容器的运行不需要额外的 hypervisor 支持，它是内核级的虚拟化，因此可以实现更高的性能和效率。</li><li>更轻松的迁移和扩展<br>Docker 容器几乎可以在任意的平台上运行，包括物理机、虚拟机、公有云、私有云、个人电脑、服务器等。 这种兼容性可以让用户把一个应用程序从一个平台直接迁移到另外一个。</li><li>更简单的管理<br>使用 Docker，只需要小小的修改，就可以替代以往大量的更新工作。所有的修改都以增量的方式被分发和更新，从而实现自动化并且高效的管理。</li></ul><h2 id="Docker基本概念"><a href="#Docker基本概念" class="headerlink" title="Docker基本概念"></a>Docker基本概念</h2><ul><li>镜像（Image）<br>Docker的镜像概念类似于虚拟机里的镜像，是一个只读的模板，一个独立的文件系统，包括运行容器所需的数据，可以用来创建新的容器。镜像可以基于Dockerfile构建，Dockerfile是一个描述文件，里面包含若干条命令，每条命令都会对基础文件系统创建新的层次结构。用户可以通过编写Dockerfile创建新的镜像，也可以直接从类似github的Docker Hub上下载镜像使用。</li><li>容器（Container）<br>Docker容器是由Docker镜像创建的运行实例。Docker容器类似虚拟机，可以支持的操作包括启动，停止，删除等。每个容器间是相互隔离的，但隔离的效果比不上虚拟机。容器中会运行特定的应用，包含特定应用的代码及所需的依赖文件。</li></ul><p>在Docker容器中，每个容器之间的隔离使用Linux的 CGroups 和 Namespaces技术实现的。其中 CGroups 对CPU，内存，磁盘等资源的访问限制，Namespaces 提供了环境的隔离。</p><ul><li>仓库（Repository）<br>Docker仓库相当于一个 github 上的代码库。</li></ul><p>Docker 仓库是用来包含镜像的位置，Docker提供一个注册服务器（Registry）来保存多个仓库，每个仓库又可以包含多个具备不同tag的镜像。Docker运行中使用的默认仓库是 Docker Hub 公共仓库。</p><p>仓库支持的操作类似 git，创建了新的镜像后，我们可以 push 提交到仓库，也可以从指定仓库 pull 拉取镜像到本地。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;什么是Docker&quot;&gt;&lt;a href=&quot;#什么是Docker&quot; class=&quot;headerlink&quot; title=&quot;什么是Docker&quot;&gt;&lt;/a&gt;什么是Docker&lt;/h2&gt;&lt;p&gt;Docker 是一个开源项目，诞生于 2013 年初，最初是 dotCloud 公司
+      
+    
+    </summary>
+    
+      <category term="容器" scheme="http://donjote.github.io/categories/%E5%AE%B9%E5%99%A8/"/>
+    
+    
+      <category term="docker" scheme="http://donjote.github.io/tags/docker/"/>
     
   </entry>
   
@@ -306,6 +306,35 @@
   </entry>
   
   <entry>
+    <title>TensorFlow入门：安装</title>
+    <link href="http://donjote.github.io/2017/07/14/tensorflow_2/"/>
+    <id>http://donjote.github.io/2017/07/14/tensorflow_2/</id>
+    <published>2017-07-13T16:00:00.000Z</published>
+    <updated>2018-08-09T05:55:26.991Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="基于-Docker-的安装"><a href="#基于-Docker-的安装" class="headerlink" title="基于 Docker 的安装"></a>基于 Docker 的安装</h2><p>首先, <a href="https://docs.docker.com/engine/installation/" target="_blank" rel="external">安装 Docker</a>. 一旦 Docker 已经启动运行, 可以通过命令启动一个容器:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ docker run -it --name tensorflow -p 8888:8888 tensorflow/tensorflow</div></pre></td></tr></table></figure><p>##才云TensorFlow镜像<br>在官方镜像的基础上，才云科技提供的镜像进一步整合了其他机器学习工具包以及TensorFlow可视化工具TensorBoard，使用起来可以更加方便。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ docker run -it  --name tensorflow -p 8888:8888 -p 6006:6006 \</div><div class="line">cargo.caicloud.io/caicloud/tensorflow</div></pre></td></tr></table></figure></p><p>在这个命令中，-p 8888:8888 将容器内运行的Jupyter服务映射到本地机器，这样在浏览器中打开localhost:8888就能看到Jupyter界面。在此镜像中运行的Jupyter是一个网页版的代码编辑器，它支持创建、上传、修改和运行Python程序。</p><hr><p>-p 6006:6006将容器内运行的TensorFlow可视化工具TensorBoard映射到本地机器，通过在浏览器中打开localhost:6006就可以将TensorFlow在训练时的状态、图片数据以及神经网络结构等信息全部展示出来。此镜像会将所有输出到/log目录底下的日志全部可视化。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;基于-Docker-的安装&quot;&gt;&lt;a href=&quot;#基于-Docker-的安装&quot; class=&quot;headerlink&quot; title=&quot;基于 Docker 的安装&quot;&gt;&lt;/a&gt;基于 Docker 的安装&lt;/h2&gt;&lt;p&gt;首先, &lt;a href=&quot;https://docs.
+      
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://donjote.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="深度学习" scheme="http://donjote.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="神经网络" scheme="http://donjote.github.io/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="TensorFlow" scheme="http://donjote.github.io/tags/TensorFlow/"/>
+    
+  </entry>
+  
+  <entry>
     <title>TensorFlow入门：简介</title>
     <link href="http://donjote.github.io/2017/07/14/tensorflow_1/"/>
     <id>http://donjote.github.io/2017/07/14/tensorflow_1/</id>
@@ -336,31 +365,27 @@
   </entry>
   
   <entry>
-    <title>TensorFlow入门：安装</title>
-    <link href="http://donjote.github.io/2017/07/14/tensorflow_2/"/>
-    <id>http://donjote.github.io/2017/07/14/tensorflow_2/</id>
-    <published>2017-07-13T16:00:00.000Z</published>
-    <updated>2018-08-09T05:55:26.991Z</updated>
+    <title>Golang简介与环境搭建</title>
+    <link href="http://donjote.github.io/2017/07/13/golang_install/"/>
+    <id>http://donjote.github.io/2017/07/13/golang_install/</id>
+    <published>2017-07-12T16:00:00.000Z</published>
+    <updated>2018-08-09T05:57:32.933Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="基于-Docker-的安装"><a href="#基于-Docker-的安装" class="headerlink" title="基于 Docker 的安装"></a>基于 Docker 的安装</h2><p>首先, <a href="https://docs.docker.com/engine/installation/" target="_blank" rel="external">安装 Docker</a>. 一旦 Docker 已经启动运行, 可以通过命令启动一个容器:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ docker run -it --name tensorflow -p 8888:8888 tensorflow/tensorflow</div></pre></td></tr></table></figure><p>##才云TensorFlow镜像<br>在官方镜像的基础上，才云科技提供的镜像进一步整合了其他机器学习工具包以及TensorFlow可视化工具TensorBoard，使用起来可以更加方便。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ docker run -it  --name tensorflow -p 8888:8888 -p 6006:6006 \</div><div class="line">cargo.caicloud.io/caicloud/tensorflow</div></pre></td></tr></table></figure></p><p>在这个命令中，-p 8888:8888 将容器内运行的Jupyter服务映射到本地机器，这样在浏览器中打开localhost:8888就能看到Jupyter界面。在此镜像中运行的Jupyter是一个网页版的代码编辑器，它支持创建、上传、修改和运行Python程序。</p><hr><p>-p 6006:6006将容器内运行的TensorFlow可视化工具TensorBoard映射到本地机器，通过在浏览器中打开localhost:6006就可以将TensorFlow在训练时的状态、图片数据以及神经网络结构等信息全部展示出来。此镜像会将所有输出到/log目录底下的日志全部可视化。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Golang简介"><a href="#Golang简介" class="headerlink" title="Golang简介"></a>Golang简介</h2><p>Go 是 2009 年发布的一种简单的并行开发，且跨平台的类 C 语言。由于其强大的并行性，很适合用于网络开发中</p><h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><ul><li>Less can be more</li><li>大道至简,小而蕴真</li><li>让事情变得复杂很容易，让事情变得简单才难</li><li>深刻的工程文化<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3></li></ul><ol><li>自带gc。</li><li>静态编译，编译好后，扔服务器直接运行。</li><li>简单的思想，没有继承，多态，类等。</li><li>丰富的库和详细的开发文档。</li><li>语法层支持并发，和拥有同步并发的channel类型，使并发开发变得非常方便。</li><li>简洁的语法，提高开发效率，同时提高代码的阅读性和可维护性。</li><li>超级简单的交叉编译，仅需更改环境变量。（花了我两天时间编译一个imagemagick到arm平台）</li><li>内含完善、全面的软件工程工具。Go语言自带的命令和工具相当地强大。通过它们，我们可以很轻松地完成Go语言程序的获取、编译、测试、安装、运行、运行分析等一系列工作，这几乎涉及了开发和维护一个软件的所有环节。<h3 id="主要特性"><a href="#主要特性" class="headerlink" title="主要特性"></a>主要特性</h3></li></ol><ul><li>自动垃圾回收</li><li>更丰富的内置类型</li><li>函数多返回值</li><li>错误处理</li><li>匿名函数和闭包</li><li>类型和接口</li><li>并发编程</li><li>反射</li><li>语言交互性</li><li>高性能/高效开发</li></ul><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ wget https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz</div><div class="line">$ tar -C /usr/local -xzf go1.8.3.linux-amd64.tar.gz</div></pre></td></tr></table></figure><h3 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vim /etc/profile</div></pre></td></tr></table></figure><p>添加对应的GOROOT和GOROOT的配置环境<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">export GOROOT=/usr/local/go</div><div class="line">export GOPATH=$HOME/Projects/golang</div><div class="line">export PATH=$PATH:$GOROOT/bin:$GOPATH/bin</div></pre></td></tr></table></figure></p><p>之后，source /etc/profile 使得其配置文件有效.</p><h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">$ go env</div><div class="line">GOARCH=&quot;amd64&quot;</div><div class="line">GOBIN=&quot;&quot;</div><div class="line">GOEXE=&quot;&quot;</div><div class="line">GOHOSTARCH=&quot;amd64&quot;</div><div class="line">GOHOSTOS=&quot;linux&quot;</div><div class="line">GOOS=&quot;linux&quot;</div><div class="line">GOPATH=&quot;/home/donjote/Projects/golang&quot;</div><div class="line">GORACE=&quot;&quot;</div><div class="line">GOROOT=&quot;/usr/local/go&quot;</div><div class="line">GOTOOLDIR=&quot;/usr/local/go/pkg/tool/linux_amd64&quot;</div><div class="line">GCCGO=&quot;gccgo&quot;</div><div class="line">CC=&quot;gcc&quot;</div><div class="line">GOGCCFLAGS=&quot;-fPIC -m64 -pthread -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build061263866=/tmp/go-build -gno-record-gcc-switches&quot;</div><div class="line">CXX=&quot;g++&quot;</div><div class="line">CGO_ENABLED=&quot;1&quot;</div><div class="line">PKG_CONFIG=&quot;pkg-config&quot;</div><div class="line">CGO_CFLAGS=&quot;-g -O2&quot;</div><div class="line">CGO_CPPFLAGS=&quot;&quot;</div><div class="line">CGO_CXXFLAGS=&quot;-g -O2&quot;</div><div class="line">CGO_FFLAGS=&quot;-g -O2&quot;</div><div class="line">CGO_LDFLAGS=&quot;-g -O2&quot;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;基于-Docker-的安装&quot;&gt;&lt;a href=&quot;#基于-Docker-的安装&quot; class=&quot;headerlink&quot; title=&quot;基于 Docker 的安装&quot;&gt;&lt;/a&gt;基于 Docker 的安装&lt;/h2&gt;&lt;p&gt;首先, &lt;a href=&quot;https://docs.
+        &lt;h2 id=&quot;Golang简介&quot;&gt;&lt;a href=&quot;#Golang简介&quot; class=&quot;headerlink&quot; title=&quot;Golang简介&quot;&gt;&lt;/a&gt;Golang简介&lt;/h2&gt;&lt;p&gt;Go 是 2009 年发布的一种简单的并行开发，且跨平台的类 C 语言。由于其强大的并行性，
       
     
     </summary>
     
-      <category term="深度学习" scheme="http://donjote.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Golang" scheme="http://donjote.github.io/categories/Golang/"/>
     
     
-      <category term="深度学习" scheme="http://donjote.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="神经网络" scheme="http://donjote.github.io/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
-    
-      <category term="TensorFlow" scheme="http://donjote.github.io/tags/TensorFlow/"/>
+      <category term="Golang" scheme="http://donjote.github.io/tags/Golang/"/>
     
   </entry>
   
@@ -378,31 +403,6 @@
       
       
         &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Golang并没有官方最佳管理方案，在Go的世界里存在大量的自制解决方案。go语言的包是没有中央库统一管理的，通过使用go get命令从远程
-      
-    
-    </summary>
-    
-      <category term="Golang" scheme="http://donjote.github.io/categories/Golang/"/>
-    
-    
-      <category term="Golang" scheme="http://donjote.github.io/tags/Golang/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Golang简介与环境搭建</title>
-    <link href="http://donjote.github.io/2017/07/13/golang_install/"/>
-    <id>http://donjote.github.io/2017/07/13/golang_install/</id>
-    <published>2017-07-12T16:00:00.000Z</published>
-    <updated>2018-08-09T05:57:32.933Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Golang简介"><a href="#Golang简介" class="headerlink" title="Golang简介"></a>Golang简介</h2><p>Go 是 2009 年发布的一种简单的并行开发，且跨平台的类 C 语言。由于其强大的并行性，很适合用于网络开发中</p><h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><ul><li>Less can be more</li><li>大道至简,小而蕴真</li><li>让事情变得复杂很容易，让事情变得简单才难</li><li>深刻的工程文化<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3></li></ul><ol><li>自带gc。</li><li>静态编译，编译好后，扔服务器直接运行。</li><li>简单的思想，没有继承，多态，类等。</li><li>丰富的库和详细的开发文档。</li><li>语法层支持并发，和拥有同步并发的channel类型，使并发开发变得非常方便。</li><li>简洁的语法，提高开发效率，同时提高代码的阅读性和可维护性。</li><li>超级简单的交叉编译，仅需更改环境变量。（花了我两天时间编译一个imagemagick到arm平台）</li><li>内含完善、全面的软件工程工具。Go语言自带的命令和工具相当地强大。通过它们，我们可以很轻松地完成Go语言程序的获取、编译、测试、安装、运行、运行分析等一系列工作，这几乎涉及了开发和维护一个软件的所有环节。<h3 id="主要特性"><a href="#主要特性" class="headerlink" title="主要特性"></a>主要特性</h3></li></ol><ul><li>自动垃圾回收</li><li>更丰富的内置类型</li><li>函数多返回值</li><li>错误处理</li><li>匿名函数和闭包</li><li>类型和接口</li><li>并发编程</li><li>反射</li><li>语言交互性</li><li>高性能/高效开发</li></ul><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ wget https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz</div><div class="line">$ tar -C /usr/local -xzf go1.8.3.linux-amd64.tar.gz</div></pre></td></tr></table></figure><h3 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vim /etc/profile</div></pre></td></tr></table></figure><p>添加对应的GOROOT和GOROOT的配置环境<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">export GOROOT=/usr/local/go</div><div class="line">export GOPATH=$HOME/Projects/golang</div><div class="line">export PATH=$PATH:$GOROOT/bin:$GOPATH/bin</div></pre></td></tr></table></figure></p><p>之后，source /etc/profile 使得其配置文件有效.</p><h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">$ go env</div><div class="line">GOARCH=&quot;amd64&quot;</div><div class="line">GOBIN=&quot;&quot;</div><div class="line">GOEXE=&quot;&quot;</div><div class="line">GOHOSTARCH=&quot;amd64&quot;</div><div class="line">GOHOSTOS=&quot;linux&quot;</div><div class="line">GOOS=&quot;linux&quot;</div><div class="line">GOPATH=&quot;/home/donjote/Projects/golang&quot;</div><div class="line">GORACE=&quot;&quot;</div><div class="line">GOROOT=&quot;/usr/local/go&quot;</div><div class="line">GOTOOLDIR=&quot;/usr/local/go/pkg/tool/linux_amd64&quot;</div><div class="line">GCCGO=&quot;gccgo&quot;</div><div class="line">CC=&quot;gcc&quot;</div><div class="line">GOGCCFLAGS=&quot;-fPIC -m64 -pthread -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build061263866=/tmp/go-build -gno-record-gcc-switches&quot;</div><div class="line">CXX=&quot;g++&quot;</div><div class="line">CGO_ENABLED=&quot;1&quot;</div><div class="line">PKG_CONFIG=&quot;pkg-config&quot;</div><div class="line">CGO_CFLAGS=&quot;-g -O2&quot;</div><div class="line">CGO_CPPFLAGS=&quot;&quot;</div><div class="line">CGO_CXXFLAGS=&quot;-g -O2&quot;</div><div class="line">CGO_FFLAGS=&quot;-g -O2&quot;</div><div class="line">CGO_LDFLAGS=&quot;-g -O2&quot;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Golang简介&quot;&gt;&lt;a href=&quot;#Golang简介&quot; class=&quot;headerlink&quot; title=&quot;Golang简介&quot;&gt;&lt;/a&gt;Golang简介&lt;/h2&gt;&lt;p&gt;Go 是 2009 年发布的一种简单的并行开发，且跨平台的类 C 语言。由于其强大的并行性，
       
     
     </summary>
@@ -555,19 +555,19 @@ $ docker-machine create -d virtualbox --engine-registry-mi
   </entry>
   
   <entry>
-    <title>Electron入门简介</title>
-    <link href="http://donjote.github.io/2017/07/09/electron_introdution/"/>
-    <id>http://donjote.github.io/2017/07/09/electron_introdution/</id>
+    <title>快速搭建Electron开发环境</title>
+    <link href="http://donjote.github.io/2017/07/09/electron_install/"/>
+    <id>http://donjote.github.io/2017/07/09/electron_install/</id>
     <published>2017-07-08T16:00:00.000Z</published>
-    <updated>2018-08-09T06:01:27.576Z</updated>
+    <updated>2018-08-09T06:02:04.737Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Electron 可以让你使用纯 JavaScript 调用丰富的原生 APIs 来创造桌面应用。你可以把它看作一个专注于桌面应用的 Node.js 的变体，而不是 Web 服务器。    </p><hr><p>这不意味着 Electron 是绑定了 GUI 库的 JavaScript。相反，Electron 使用 web 页面作为它的 GUI，所以你能把它看作成一个被 JavaScript 控制的，精简版的 Chromium 浏览器。</p><h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><h3 id="主进程"><a href="#主进程" class="headerlink" title="主进程"></a>主进程</h3><p>在 Electron 里，运行 package.json 里 main 脚本的进程被称为主进程。在主进程运行的脚本可以以创建 web 页面的形式展示 GUI。</p><h3 id="渲染进程"><a href="#渲染进程" class="headerlink" title="渲染进程"></a>渲染进程</h3><p>由于 Electron 使用 Chromium 来展示页面，所以 Chromium 的多进程结构也被充分利用。每个 Electron 的页面都在运行着自己的进程，这样的进程我们称之为渲染进程。</p><hr><p>在一般浏览器中，网页通常会在沙盒环境下运行，并且不允许访问原生资源。然而，Electron 用户拥有在网页中调用 Node.js 的 APIs 的能力，可以与底层操作系统直接交互。</p><h3 id="主进程与渲染进程的区别"><a href="#主进程与渲染进程的区别" class="headerlink" title="主进程与渲染进程的区别"></a>主进程与渲染进程的区别</h3><p>主进程使用 BrowserWindow 实例创建页面。每个 BrowserWindow 实例都在自己的渲染进程里运行页面。当一个 BrowserWindow 实例被销毁后，相应的渲染进程也会被终止。</p><hr><p>主进程管理所有页面和与之对应的渲染进程。每个渲染进程都是相互独立的，并且只关心他们自己的页面。</p><hr><p>由于在页面里管理原生 GUI 资源是非常危险而且容易造成资源泄露，所以在页面调用 GUI 相关的 APIs 是不被允许的。如果你想在网页里使用 GUI 操作，其对应的渲染进程必须与主进程进行通讯，请求主进程进行相关的 GUI 操作。</p><hr><p>在 Electron，提供几种方法用于主进程和渲染进程之间的通讯。像 ipcRenderer 和 ipcMain 模块用于发送消息， remote 模块用于 RPC 方式通讯。这些内容都可以在一个 FAQ 中查看 how to share data between web pages。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Nodejs安装"><a href="#Nodejs安装" class="headerlink" title="Nodejs安装"></a>Nodejs安装</h2><p>查看 <a href="https://donjote.github.io/2017/07/07/nodejs_install_config/">Nodejs安装并配置淘宝镜像</a></p><h2 id="Electron的安装"><a href="#Electron的安装" class="headerlink" title="Electron的安装"></a>Electron的安装</h2><p>在~/.npmrc里做如下设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">electron_mirror=&quot;https://npm.taobao.org/mirrors/electron/&quot;</div></pre></td></tr></table></figure></p><p>用下面的命令安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g electron</div></pre></td></tr></table></figure></p><h2 id="打包输出工具"><a href="#打包输出工具" class="headerlink" title="打包输出工具"></a>打包输出工具</h2><p>为了方便最终成果输出，建议安装electron-packager工具，安装也很简单，建议以下面的命令全局安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g electron-packager</div></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;Electron 可以让你使用纯 JavaScript 调用丰富的原生 APIs 来创造桌面应用。你可以把它看作一个专注于桌面应用的 Nod
+        &lt;h2 id=&quot;Nodejs安装&quot;&gt;&lt;a href=&quot;#Nodejs安装&quot; class=&quot;headerlink&quot; title=&quot;Nodejs安装&quot;&gt;&lt;/a&gt;Nodejs安装&lt;/h2&gt;&lt;p&gt;查看 &lt;a href=&quot;https://donjote.github.io/2017/07/
       
     
     </summary>
@@ -582,19 +582,19 @@ $ docker-machine create -d virtualbox --engine-registry-mi
   </entry>
   
   <entry>
-    <title>快速搭建Electron开发环境</title>
-    <link href="http://donjote.github.io/2017/07/09/electron_install/"/>
-    <id>http://donjote.github.io/2017/07/09/electron_install/</id>
+    <title>Electron入门简介</title>
+    <link href="http://donjote.github.io/2017/07/09/electron_introdution/"/>
+    <id>http://donjote.github.io/2017/07/09/electron_introdution/</id>
     <published>2017-07-08T16:00:00.000Z</published>
-    <updated>2018-08-09T06:02:04.737Z</updated>
+    <updated>2018-08-09T06:01:27.576Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Nodejs安装"><a href="#Nodejs安装" class="headerlink" title="Nodejs安装"></a>Nodejs安装</h2><p>查看 <a href="https://donjote.github.io/2017/07/07/nodejs_install_config/">Nodejs安装并配置淘宝镜像</a></p><h2 id="Electron的安装"><a href="#Electron的安装" class="headerlink" title="Electron的安装"></a>Electron的安装</h2><p>在~/.npmrc里做如下设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">electron_mirror=&quot;https://npm.taobao.org/mirrors/electron/&quot;</div></pre></td></tr></table></figure></p><p>用下面的命令安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g electron</div></pre></td></tr></table></figure></p><h2 id="打包输出工具"><a href="#打包输出工具" class="headerlink" title="打包输出工具"></a>打包输出工具</h2><p>为了方便最终成果输出，建议安装electron-packager工具，安装也很简单，建议以下面的命令全局安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g electron-packager</div></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Electron 可以让你使用纯 JavaScript 调用丰富的原生 APIs 来创造桌面应用。你可以把它看作一个专注于桌面应用的 Node.js 的变体，而不是 Web 服务器。    </p><hr><p>这不意味着 Electron 是绑定了 GUI 库的 JavaScript。相反，Electron 使用 web 页面作为它的 GUI，所以你能把它看作成一个被 JavaScript 控制的，精简版的 Chromium 浏览器。</p><h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><h3 id="主进程"><a href="#主进程" class="headerlink" title="主进程"></a>主进程</h3><p>在 Electron 里，运行 package.json 里 main 脚本的进程被称为主进程。在主进程运行的脚本可以以创建 web 页面的形式展示 GUI。</p><h3 id="渲染进程"><a href="#渲染进程" class="headerlink" title="渲染进程"></a>渲染进程</h3><p>由于 Electron 使用 Chromium 来展示页面，所以 Chromium 的多进程结构也被充分利用。每个 Electron 的页面都在运行着自己的进程，这样的进程我们称之为渲染进程。</p><hr><p>在一般浏览器中，网页通常会在沙盒环境下运行，并且不允许访问原生资源。然而，Electron 用户拥有在网页中调用 Node.js 的 APIs 的能力，可以与底层操作系统直接交互。</p><h3 id="主进程与渲染进程的区别"><a href="#主进程与渲染进程的区别" class="headerlink" title="主进程与渲染进程的区别"></a>主进程与渲染进程的区别</h3><p>主进程使用 BrowserWindow 实例创建页面。每个 BrowserWindow 实例都在自己的渲染进程里运行页面。当一个 BrowserWindow 实例被销毁后，相应的渲染进程也会被终止。</p><hr><p>主进程管理所有页面和与之对应的渲染进程。每个渲染进程都是相互独立的，并且只关心他们自己的页面。</p><hr><p>由于在页面里管理原生 GUI 资源是非常危险而且容易造成资源泄露，所以在页面调用 GUI 相关的 APIs 是不被允许的。如果你想在网页里使用 GUI 操作，其对应的渲染进程必须与主进程进行通讯，请求主进程进行相关的 GUI 操作。</p><hr><p>在 Electron，提供几种方法用于主进程和渲染进程之间的通讯。像 ipcRenderer 和 ipcMain 模块用于发送消息， remote 模块用于 RPC 方式通讯。这些内容都可以在一个 FAQ 中查看 how to share data between web pages。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;Nodejs安装&quot;&gt;&lt;a href=&quot;#Nodejs安装&quot; class=&quot;headerlink&quot; title=&quot;Nodejs安装&quot;&gt;&lt;/a&gt;Nodejs安装&lt;/h2&gt;&lt;p&gt;查看 &lt;a href=&quot;https://donjote.github.io/2017/07/
+        &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;Electron 可以让你使用纯 JavaScript 调用丰富的原生 APIs 来创造桌面应用。你可以把它看作一个专注于桌面应用的 Nod
       
     
     </summary>
@@ -716,6 +716,33 @@ $ docker-machine create -d virtualbox --engine-registry-mi
   </entry>
   
   <entry>
+    <title>Weex、React Native 对比</title>
+    <link href="http://donjote.github.io/2017/07/04/weex_react_native/"/>
+    <id>http://donjote.github.io/2017/07/04/weex_react_native/</id>
+    <published>2017-07-03T16:00:00.000Z</published>
+    <updated>2018-08-09T06:05:26.502Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="App三种开发模式"><a href="#App三种开发模式" class="headerlink" title="App三种开发模式"></a>App三种开发模式</h2><p>目前主流的应用大体分成三类：Native App（原生APP）, Web App(H5开发模式), Hybrid App（混合模式）.<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/04/weex_react_native/1.png" alt="App三种开发模式" title="">                </div>                <div class="image-caption">App三种开发模式</div>            </figure></p><h3 id="Native-App特点"><a href="#Native-App特点" class="headerlink" title="Native App特点:"></a>Native App特点:</h3><ul><li>性能好</li><li>完美的用户体验</li><li>开发成本高，无法跨平台</li><li>升级困难(审核),维护成本高</li></ul><h3 id="Web-App特点"><a href="#Web-App特点" class="headerlink" title="Web App特点:"></a>Web App特点:</h3><ul><li>开发成本低,更新快,版本升级容易,自动升级</li><li>跨平台，Write Once , Run Anywhere</li><li>无法调用系统级的API</li><li>临时入口，用户留存度低</li><li>性能差,体验差,设计受限制</li><li>相比Native App，Web App体验中受限于以上5个因素：网络环境，渲染性能，平台特性，受限于浏览器，系统限制。</li></ul><h3 id="Hybrid-App特点"><a href="#Hybrid-App特点" class="headerlink" title="Hybrid App特点:"></a>Hybrid App特点:</h3><ul><li>Native App 和 Web App 折中的方案，保留了 Native App 和 Web App 的优点。</li><li><p>但是还是性能差。页面渲染效率低，在Webview中绘制界面，实现动画，资源消耗都比较大,受限于技术,网速等因素</p><p><img src="/2017/07/04/weex_react_native/2.png" alt="App三种开发模式对比"></p></li></ul><h2 id="Hybrid-App开发框架"><a href="#Hybrid-App开发框架" class="headerlink" title="Hybrid App开发框架"></a>Hybrid App开发框架</h2><h3 id="weex"><a href="#weex" class="headerlink" title="weex"></a>weex</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>weex是阿里巴巴公司与2016年6月开源的一种用于构建移动跨平台的UI框架</p><h4 id="特点"><a href="#特点" class="headerlink" title="特点:"></a>特点:</h4><ul><li>Lightweight:轻量级,语法简单,易于使用</li><li>Extendable:可扩展,丰富内置组件,可扩展的API,</li><li>High Performance:高性能</li><li>核心理念:<ul><li>Write Once Run Everywhere</li><li>基于JS开发框架:</li><li>weex基于vue.js</li></ul></li></ul><h3 id="React-Native"><a href="#React-Native" class="headerlink" title="React Native"></a>React Native</h3><h4 id="简介-1"><a href="#简介-1" class="headerlink" title="简介:"></a>简介:</h4><p>Facebook在2015年3月在F8开发者大会上开源的跨平台UI框架</p><h4 id="核心理念"><a href="#核心理念" class="headerlink" title="核心理念:"></a>核心理念:</h4><p>LEARN ONCE, WRITE ANYWHERE</p><h4 id="基于JS开发框架"><a href="#基于JS开发框架" class="headerlink" title="基于JS开发框架:"></a>基于JS开发框架:</h4><p>React Native基于React</p><h2 id="知识拓展-vue-js和React"><a href="#知识拓展-vue-js和React" class="headerlink" title="知识拓展:vue.js和React"></a>知识拓展:vue.js和React</h2><h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue:"></a>Vue:</h3><p>是一个构建数据驱动的 web 界面的库。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件.</p><h3 id="React"><a href="#React" class="headerlink" title="React:"></a>React:</h3><p>基于HTML的前端界面开发正变得越来越复杂，其本质问题基本都可以归结于如何将来自于服务器端或者用户输入的动态数据高效的反映到复杂的用户界面上。而来自Facebook的React框架正是完全面向此问题的一个解决方案，按官网描述，其出发点为：用于开发数据不断变化的大型应用程序。相比传统型的前端开发，React开辟了一个相当另类的途径，实现了前端界面的高效率高性能开发。</p><h3 id="Vue-js和React的异同"><a href="#Vue-js和React的异同" class="headerlink" title="Vue.js和React的异同:"></a>Vue.js和React的异同:</h3><p><a href="https://cn.vuejs.org/v2/guide/comparison.html" target="_blank" rel="external">Vue和React的区别</a></p><h2 id="Weex和React-Native的异同"><a href="#Weex和React-Native的异同" class="headerlink" title="Weex和React Native的异同"></a>Weex和React Native的异同</h2><h3 id="相同点"><a href="#相同点" class="headerlink" title="相同点:"></a>相同点:</h3><ul><li>都采用Web的开发模式，使用JS开发；</li><li>都可以直接在Chrome中调试JS代码；</li><li>都支持跨平台的开发；</li><li>都可以实现hot reload，边更新代码边查看效果；</li></ul><h3 id="不同点"><a href="#不同点" class="headerlink" title="不同点:"></a>不同点:</h3><h4 id="JS引擎"><a href="#JS引擎" class="headerlink" title="JS引擎"></a>JS引擎</h4><p>  <a href="https://zh.wikipedia.org/wiki/JavaScript%E5%BC%95%E6%93%8E" target="_blank" rel="external">什么是JS引擎</a></p><h4 id="学习成本"><a href="#学习成本" class="headerlink" title="学习成本"></a>学习成本</h4><h5 id="环境配置："><a href="#环境配置：" class="headerlink" title="环境配置："></a>环境配置：</h5><p>ReactNative需要按照文档安装配置很多依赖的工具，相对比较麻烦。 weex安装cli之后就可以使用</p><h6 id="vue-vs-react-上面已经做过对比"><a href="#vue-vs-react-上面已经做过对比" class="headerlink" title="vue vs react:上面已经做过对比"></a>vue vs react:上面已经做过对比</h6><p>react模板JSX学习使用有一定的成本 vue更接近常用的web开发方式，模板就是普通的html，数据绑定使用mustache风格，样式直接使用css</p><h4 id="社区支持"><a href="#社区支持" class="headerlink" title="社区支持"></a>社区支持</h4><ul><li>Weex开源较晚，互联网上相关资料还比较少，社区规模较小；</li><li>React Native社区则比较活跃，可以参考的项目和资料也比较丰富</li></ul><p>一张图:从渲染时间,内存使用,CPU占用,帧率(图形处理器每秒钟能够刷新几次,高的帧率可以得到更流畅、更逼真的动画。每秒钟帧数 （fps） 愈多，所显示的动作就会愈流畅。)<br>  <img src="/2017/07/04/weex_react_native/3.png" alt="App三种开发模式对比"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;App三种开发模式&quot;&gt;&lt;a href=&quot;#App三种开发模式&quot; class=&quot;headerlink&quot; title=&quot;App三种开发模式&quot;&gt;&lt;/a&gt;App三种开发模式&lt;/h2&gt;&lt;p&gt;目前主流的应用大体分成三类：Native App（原生APP）, Web App(H
+      
+    
+    </summary>
+    
+      <category term="跨平台" scheme="http://donjote.github.io/categories/%E8%B7%A8%E5%B9%B3%E5%8F%B0/"/>
+    
+    
+      <category term="Weex" scheme="http://donjote.github.io/tags/Weex/"/>
+    
+      <category term="React Native" scheme="http://donjote.github.io/tags/React-Native/"/>
+    
+  </entry>
+  
+  <entry>
     <title>微服务简介</title>
     <link href="http://donjote.github.io/2017/07/04/micro_services_introdution/"/>
     <id>http://donjote.github.io/2017/07/04/micro_services_introdution/</id>
@@ -740,33 +767,6 @@ $ docker-machine create -d virtualbox --engine-registry-mi
       <category term="微服务" scheme="http://donjote.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
       <category term="架构" scheme="http://donjote.github.io/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Weex、React Native 对比</title>
-    <link href="http://donjote.github.io/2017/07/04/weex_react_native/"/>
-    <id>http://donjote.github.io/2017/07/04/weex_react_native/</id>
-    <published>2017-07-03T16:00:00.000Z</published>
-    <updated>2018-08-09T06:05:26.502Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="App三种开发模式"><a href="#App三种开发模式" class="headerlink" title="App三种开发模式"></a>App三种开发模式</h2><p>目前主流的应用大体分成三类：Native App（原生APP）, Web App(H5开发模式), Hybrid App（混合模式）.<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2017/07/04/weex_react_native/1.png" alt="App三种开发模式" title="">                </div>                <div class="image-caption">App三种开发模式</div>            </figure></p><h3 id="Native-App特点"><a href="#Native-App特点" class="headerlink" title="Native App特点:"></a>Native App特点:</h3><ul><li>性能好</li><li>完美的用户体验</li><li>开发成本高，无法跨平台</li><li>升级困难(审核),维护成本高</li></ul><h3 id="Web-App特点"><a href="#Web-App特点" class="headerlink" title="Web App特点:"></a>Web App特点:</h3><ul><li>开发成本低,更新快,版本升级容易,自动升级</li><li>跨平台，Write Once , Run Anywhere</li><li>无法调用系统级的API</li><li>临时入口，用户留存度低</li><li>性能差,体验差,设计受限制</li><li>相比Native App，Web App体验中受限于以上5个因素：网络环境，渲染性能，平台特性，受限于浏览器，系统限制。</li></ul><h3 id="Hybrid-App特点"><a href="#Hybrid-App特点" class="headerlink" title="Hybrid App特点:"></a>Hybrid App特点:</h3><ul><li>Native App 和 Web App 折中的方案，保留了 Native App 和 Web App 的优点。</li><li><p>但是还是性能差。页面渲染效率低，在Webview中绘制界面，实现动画，资源消耗都比较大,受限于技术,网速等因素</p><p><img src="/2017/07/04/weex_react_native/2.png" alt="App三种开发模式对比"></p></li></ul><h2 id="Hybrid-App开发框架"><a href="#Hybrid-App开发框架" class="headerlink" title="Hybrid App开发框架"></a>Hybrid App开发框架</h2><h3 id="weex"><a href="#weex" class="headerlink" title="weex"></a>weex</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>weex是阿里巴巴公司与2016年6月开源的一种用于构建移动跨平台的UI框架</p><h4 id="特点"><a href="#特点" class="headerlink" title="特点:"></a>特点:</h4><ul><li>Lightweight:轻量级,语法简单,易于使用</li><li>Extendable:可扩展,丰富内置组件,可扩展的API,</li><li>High Performance:高性能</li><li>核心理念:<ul><li>Write Once Run Everywhere</li><li>基于JS开发框架:</li><li>weex基于vue.js</li></ul></li></ul><h3 id="React-Native"><a href="#React-Native" class="headerlink" title="React Native"></a>React Native</h3><h4 id="简介-1"><a href="#简介-1" class="headerlink" title="简介:"></a>简介:</h4><p>Facebook在2015年3月在F8开发者大会上开源的跨平台UI框架</p><h4 id="核心理念"><a href="#核心理念" class="headerlink" title="核心理念:"></a>核心理念:</h4><p>LEARN ONCE, WRITE ANYWHERE</p><h4 id="基于JS开发框架"><a href="#基于JS开发框架" class="headerlink" title="基于JS开发框架:"></a>基于JS开发框架:</h4><p>React Native基于React</p><h2 id="知识拓展-vue-js和React"><a href="#知识拓展-vue-js和React" class="headerlink" title="知识拓展:vue.js和React"></a>知识拓展:vue.js和React</h2><h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue:"></a>Vue:</h3><p>是一个构建数据驱动的 web 界面的库。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件.</p><h3 id="React"><a href="#React" class="headerlink" title="React:"></a>React:</h3><p>基于HTML的前端界面开发正变得越来越复杂，其本质问题基本都可以归结于如何将来自于服务器端或者用户输入的动态数据高效的反映到复杂的用户界面上。而来自Facebook的React框架正是完全面向此问题的一个解决方案，按官网描述，其出发点为：用于开发数据不断变化的大型应用程序。相比传统型的前端开发，React开辟了一个相当另类的途径，实现了前端界面的高效率高性能开发。</p><h3 id="Vue-js和React的异同"><a href="#Vue-js和React的异同" class="headerlink" title="Vue.js和React的异同:"></a>Vue.js和React的异同:</h3><p><a href="https://cn.vuejs.org/v2/guide/comparison.html" target="_blank" rel="external">Vue和React的区别</a></p><h2 id="Weex和React-Native的异同"><a href="#Weex和React-Native的异同" class="headerlink" title="Weex和React Native的异同"></a>Weex和React Native的异同</h2><h3 id="相同点"><a href="#相同点" class="headerlink" title="相同点:"></a>相同点:</h3><ul><li>都采用Web的开发模式，使用JS开发；</li><li>都可以直接在Chrome中调试JS代码；</li><li>都支持跨平台的开发；</li><li>都可以实现hot reload，边更新代码边查看效果；</li></ul><h3 id="不同点"><a href="#不同点" class="headerlink" title="不同点:"></a>不同点:</h3><h4 id="JS引擎"><a href="#JS引擎" class="headerlink" title="JS引擎"></a>JS引擎</h4><p>  <a href="https://zh.wikipedia.org/wiki/JavaScript%E5%BC%95%E6%93%8E" target="_blank" rel="external">什么是JS引擎</a></p><h4 id="学习成本"><a href="#学习成本" class="headerlink" title="学习成本"></a>学习成本</h4><h5 id="环境配置："><a href="#环境配置：" class="headerlink" title="环境配置："></a>环境配置：</h5><p>ReactNative需要按照文档安装配置很多依赖的工具，相对比较麻烦。 weex安装cli之后就可以使用</p><h6 id="vue-vs-react-上面已经做过对比"><a href="#vue-vs-react-上面已经做过对比" class="headerlink" title="vue vs react:上面已经做过对比"></a>vue vs react:上面已经做过对比</h6><p>react模板JSX学习使用有一定的成本 vue更接近常用的web开发方式，模板就是普通的html，数据绑定使用mustache风格，样式直接使用css</p><h4 id="社区支持"><a href="#社区支持" class="headerlink" title="社区支持"></a>社区支持</h4><ul><li>Weex开源较晚，互联网上相关资料还比较少，社区规模较小；</li><li>React Native社区则比较活跃，可以参考的项目和资料也比较丰富</li></ul><p>一张图:从渲染时间,内存使用,CPU占用,帧率(图形处理器每秒钟能够刷新几次,高的帧率可以得到更流畅、更逼真的动画。每秒钟帧数 （fps） 愈多，所显示的动作就会愈流畅。)<br>  <img src="/2017/07/04/weex_react_native/3.png" alt="App三种开发模式对比"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;App三种开发模式&quot;&gt;&lt;a href=&quot;#App三种开发模式&quot; class=&quot;headerlink&quot; title=&quot;App三种开发模式&quot;&gt;&lt;/a&gt;App三种开发模式&lt;/h2&gt;&lt;p&gt;目前主流的应用大体分成三类：Native App（原生APP）, Web App(H
-      
-    
-    </summary>
-    
-      <category term="跨平台" scheme="http://donjote.github.io/categories/%E8%B7%A8%E5%B9%B3%E5%8F%B0/"/>
-    
-    
-      <category term="Weex" scheme="http://donjote.github.io/tags/Weex/"/>
-    
-      <category term="React Native" scheme="http://donjote.github.io/tags/React-Native/"/>
     
   </entry>
   
